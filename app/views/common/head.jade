@@ -1,0 +1,20 @@
+doctype html
+html(lang='en')
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no')
+    link(rel='icon', type='image/png', href='/images/favicon.png')
+    link(type='text/css', href='/css/custom.css', rel='stylesheet')
+    title #{title}
+    body(class=page) 
+    .main
+      .container
+        a.logo
+          if page == "home-page"
+            img(src='/images/logo.png')
+          else
+            img(src='/images/color-logo.png')
+        if page == "home-page"
+          .content
+            h1 Your Shopping Unicorn
+            p One-of-its-kind first shopping assistant App for the Exploring Shopper in you.
+        

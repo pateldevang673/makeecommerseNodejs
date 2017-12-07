@@ -1,0 +1,16 @@
+include common/head
+  
+.blog
+  .container
+    article
+      h1 #{blog.title}
+      .blog-img
+        img(src='http://www.webrexstudio.com:3001/'+'#{blog.blogPicture}')
+      .content.ql-editor
+    .author
+      p !{blog.description}
+      .img
+        img(src='http://www.webrexstudio.com:3001/'+'#{blog.authorImage}')
+      .profile
+        span #{blog.authorName}
+include common/footer

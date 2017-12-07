@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'SofiaPro-Bold';
+  src: url('SofiaPro-Bold.eot?#iefix') format('embedded-opentype'),  url('SofiaPro-Bold.otf')  format('opentype'),
+	     url('SofiaPro-Bold.woff') format('woff'), url('SofiaPro-Bold.ttf')  format('truetype'), url('SofiaPro-Bold.svg#SofiaPro-Bold') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

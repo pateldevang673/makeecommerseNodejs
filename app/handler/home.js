@@ -1,0 +1,44 @@
+
+/**
+ * Created by crosp on 5/9/17.
+ */
+const ValidationError = require(APP_ERROR_PATH + 'validation');
+const NotFoundError = require(APP_ERROR_PATH + 'not-found');
+const BaseAutoBindedClass = require(APP_BASE_PACKAGE_PATH + 'base-autobind');
+var request = require('request');
+var Promise = require('promise');        
+
+class HomeHandler extends BaseAutoBindedClass {
+    constructor() {
+        super();
+        this._validator = require('validator');
+    }
+    getSingleHome(req,res, callback) {    
+        var URLStore = 'http://localhost:3000/blogs/withoutlogin';
+        var optionsStore = {
+            url: URLStore,
+            method: 'GET',
+            // headers: req.headers,
+            headers: {
+                'Authorization' :"maximumvsminimumsecurity",
+                'Content-Type' :"application/json"
+            }
+        };            
+        return new Promise(function(resolve, reject) {
+            request(optionsStore, function (error, response, body) {
+                if(body != null)
+                    resolve(body)
+                else    
+                    reject(new NotFoundError("blog not found"))
+            });
+        }).then((results) => {
+            console.log(results)
+            res.render('index',{title:'ZeepZoop',page:'home-page',blogs:results})
+
+        })
+        // this.requestAsync(req, 'http://' + req.get('host') + '/stores/trendingstore' + queryString, 'trendingStores'),
+    }
+
+}
+
+module.exports = HomeHandler;

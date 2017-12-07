@@ -18,9 +18,17 @@ const routes = require(APP_ROUTE_PATH);
 const ValidationManager = require(APP_MANAGER_PATH + 'validation');
 const authManager = require(APP_MANAGER_PATH + 'auth');
 const validationManager = new ValidationManager();
+const path = require('path');
 // Connect to DB
 mongoose.Promise = global.Promise;
 mongoose.connect(config.db.MONGO_CONNECT_URL);
+
+
+app.set('views', __dirname + '/app/views')
+app.set('view engine', 'jade');
+app.use(express.static(path.join(__dirname, "./assets")));
+//app.use(express.static(__dirname + '/assets'));
+
 // Use json formatter middleware
 app.use(bodyParser.json());
 app.use(authManager.providePassport().initialize());

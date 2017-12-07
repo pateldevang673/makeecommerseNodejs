@@ -4,8 +4,8 @@
 const express = require('express'),
     router = express.Router();
 const ROUTE_V1_PATH = APP_ROUTE_PATH + "v1/";
-router.use('/auth', require(ROUTE_V1_PATH + 'auth'));
-router.use('/users', require(ROUTE_V1_PATH + 'user'));
-router.use('/posts', require(ROUTE_V1_PATH + 'post'));
+router.use('/blogs', require(ROUTE_V1_PATH + 'blog'));
+router.use('/details', require(ROUTE_V1_PATH + 'detail'));
+router.use('/', require(ROUTE_V1_PATH + 'home'));
 
-module.exports = router;
+module.exports = router;        
