@@ -3,7 +3,7 @@
  */
 
 const LocalAuthStrategy = require('passport-local').Strategy;
-const UserModel = require(APP_MODEL_PATH + 'user').UserModel;
+// const UserModel = require(APP_MODEL_PATH + 'user').UserModel;
 const UnauthorizedError = require(APP_ERROR_PATH + 'unauthorized');
 const NotFoundError = require(APP_ERROR_PATH + 'not-found');
 

@@ -13,15 +13,14 @@ const express = require('express');
 const app = express();
 // Include dependencies
 const bodyParser = require('body-parser');
-const mongoose = require('mongoose');
 const routes = require(APP_ROUTE_PATH);
 const ValidationManager = require(APP_MANAGER_PATH + 'validation');
 const authManager = require(APP_MANAGER_PATH + 'auth');
 const validationManager = new ValidationManager();
 const path = require('path');
-// Connect to DB
-mongoose.Promise = global.Promise;
-mongoose.connect(config.db.MONGO_CONNECT_URL);
+// // Connect to DB
+// mongoose.Promise = global.Promise;
+// mongoose.connect(config.db.MONGO_CONNECT_URL);
 
 
 app.set('views', __dirname + '/app/views')
