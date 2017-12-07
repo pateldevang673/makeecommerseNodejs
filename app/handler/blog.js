@@ -16,19 +16,6 @@ class BlogHandler extends BaseAutoBindedClass {
         this._validator = require('validator');
     }
     getBlogs(req,res, callback) {
-    
-        // console.log(req.get('host'));       
-        // var URLStore = 'http://localhost:3000/blogs';
-        // var optionsStore = {
-        //     url: URLStore,
-        //     method: 'GET',
-        //     headers: req.headers
-        // };
-        // console.log(optionsStore);       
-        
-        // request(optionsStore, function (error, response, body) {
-        // });
-        // res.render('blog',{title:'blogs',page:'blogs-page'})
         var optionsStore = {
             url: URLStore+'/blogs/search?startBlogs=0&endBlogs=9',
             method: 'GET',
@@ -56,7 +43,6 @@ class BlogHandler extends BaseAutoBindedClass {
 
 
     getSingleBlog(req,res, callback) {
-            console.log(req.params.url);
             var optionsBlog = {
                 url: URLStore+'/blogs/search?URL=https://webrexstudio.com:3001/blogs/'+req.params.url,
                 method: 'GET',
