@@ -25,7 +25,6 @@ class BlogHandler extends BaseAutoBindedClass {
                 'Content-Type': "application/json"
             }
         };
-
         return new Promise(function (resolve, reject) {
             request(optionsStore, function (error, response, body) {
                 if (body != null) {
@@ -44,9 +43,8 @@ class BlogHandler extends BaseAutoBindedClass {
 
     getSingleBlog(req, res, callback) {
         var optionsBlog = {
-            url: URLStore + '/blogs/search?URL=https://webrexstudio.com:3001/blogs/' + req.params.url,
+            url: URLStore + '/blogs/search?URL=' + req.params.url,
             method: 'GET',
-            // headers: req.headers,
             headers: {
                 'Authorization': "maximumvsminimumsecurity",
                 'Content-Type': "application/json"

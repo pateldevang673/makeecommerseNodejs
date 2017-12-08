@@ -1,4 +1,5 @@
 include common/head
+include common/mixin
 .WhatZeepzoop
   .container
     h1 What is ZeepZoop?
@@ -17,38 +18,6 @@ include common/head
           .right
             .img
               img(src='images/mian.png')
-        //
-          <div class="item">
-          <div class="left">
-          <div class="img">
-          <img src="images/store.png">
-          </div>
-          </div>
-          <div class="right">
-          <p>Be it a confusion to locate the store for the exact product you want or sovereign purchases,
-          comparison between the large and small brick and mortar shops, checking the reliabilities
-          of the shops and products, everything related to the shopping while enjoying the most wonderful
-          experiences of your life will become grateful if ZeepZoop is your companion. </p>
-          <p>It’s not all about shopping, mind you. The product is versatile, all-inclusive and all-rounder
-          mate for you to connect with the customers easily, get alerts and notifications for whatever
-          latest/trendy things introduced in the market. </p>
-          </div>
-          </div>
-          <div class="item">
-          <div class="left">
-          <p>You will also be able to explore the best shops for their exclusive wishes. You can find the
-          related & best offers; bookmark the stores, give ratings, write reviews, read blogs related
-          to art, craft, culture, fashion, home décor and much more. </p>
-          <p>It’s all you need while you travel, isn’t it? Well, there are plenty of invincible features of
-          the products which show the diversity from the market. It is one-of-its-kind shopping stop;
-          we bet you. </p>
-          </div>
-          <div class="right">
-          <div class="img">
-          <img src="images/offer.png">
-          </div>
-          </div>
-          </div>
 .features
   .container
     h1 Features
@@ -124,44 +93,6 @@ include common/head
     h1 Blogs
     .items
       - for (var x = 0; x < length ; x++)
-        a(href='http://localhost:3001/blogs/'+titleURL[x])
-          .img
-            img(src= global.config.variable.apiPath+'/#{blogs[x].blogPicture}')
-          .info
-            h3 #{blogs[x].title}
-            p
-              | It shouldn’t be any surprise that the tech world embraced the blogosphere far before every newspaper
-              | .
-          .author
-            .img
-              img(src=global.config.variable.apiPath+'/#{blogs[x].authorImage}')
-            .profile
-              span #{blogs[x].authorName}
-      //- a
-      //-   .img
-      //-     img(src='http://www.webrexstudio.com:3001/public/2017/11/rsz_20160209-img_1769.jpg')
-      //-   .info
-      //-     h3 Beauty of Clay, Tingle of Bells
-      //-     p
-      //-       | It shouldn’t be any surprise that the tech world embraced the blogosphere far before every newspaper
-      //-       | .
-      //-   .author
-      //-     .img
-      //-       img(src='http://www.webrexstudio.com:3001/public/2017/11/facebook-small.jpg')
-      //-     .profile
-      //-       span Shubharambh
-      //- a
-      //-   .img
-      //-     img(src='http://www.webrexstudio.com:3001/public/2017/11/rsz_20160209-img_1769.jpg')
-      //-   .info
-      //-     h3 Beauty of Clay, Tingle of Bells
-      //-     p
-      //-       | It shouldn’t be any surprise that the tech world embraced the blogosphere far before every newspaper
-      //-       | .
-      //-   .author
-      //-     .img
-      //-       img(src='http://www.webrexstudio.com:3001/public/2017/11/facebook-small.jpg')
-      //-     .profile
-      //-       span Shubharambh
+        +smallBlog(blogs[x], host)
     a.btn(href='blogs') See more
 include common/footer

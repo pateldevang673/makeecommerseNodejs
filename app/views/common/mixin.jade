@@ -1,0 +1,12 @@
+mixin smallBlog(blog)
+    a(href='blogs'+'/#{blog.URL}')
+        .img
+            img(src= global.config.variable.apiPath+'/#{blog.blogPicture}')
+        .info
+            h3 #{blog.title}
+            p #{blog.metaDescription}
+        .author
+            .img
+                img(src=global.config.variable.apiPath+'/#{blog.authorImage}')
+            .profile
+                span #{blog.authorName}

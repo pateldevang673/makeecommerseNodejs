@@ -7,8 +7,9 @@ include common/head
       .blog-img
         img(src='http://www.webrexstudio.com:3001/'+'#{blog.blogPicture}')
       .content.ql-editor
+        !{blog.description}
     .author
-      p !{blog.description}
+      p 
       .img
         img(src='http://www.webrexstudio.com:3001/'+'#{blog.authorImage}')
       .profile
