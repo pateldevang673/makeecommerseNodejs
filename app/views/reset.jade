@@ -1,0 +1,21 @@
+
+include common/head
+include common/mixin
+.reset
+    .container
+        h1 Reset Password
+        .form
+            p Password reset token is invalid or has expired.
+            .input
+                label(for="") New password
+                input(type="password", id="password", placeholder="New password")
+                p Password must be at least 8 characters
+            .input
+                label(for="") Confirm password          
+                input(type="password", id="confirmPassword", placeholder="Confirm password")
+                p Password must be at least 8 characters
+            .input
+                .submit.btn Submit    
+            
+include common/footer
+  

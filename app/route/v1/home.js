@@ -6,5 +6,6 @@ const HomeController = require(APP_CONTROLLER_PATH + 'home');
 let homeController = new HomeController();
 
 router.get('/', homeController.getSingleHome);
+router.get('/reset/', homeController.resetPassword);
 
 module.exports = router;

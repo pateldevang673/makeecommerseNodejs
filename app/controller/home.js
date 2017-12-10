@@ -11,8 +11,13 @@ class HomeController extends BaseController {
     }
 
     getSingleHome(req, res, next) {
-        this._homeHandler.getSingleHome(req,res, this._responseManager.getDefaultResponseHandler(res));
+        this._homeHandler.getSingleHome(req, res);
     }
+
+    resetPassword(req, res, next) {
+        this._homeHandler.resetPassword(req, res);
+    }
+
 }
 
 module.exports = HomeController;

@@ -1,5 +1,5 @@
 mixin smallBlog(blog)
-    a(href='blogs'+'/#{blog.URL}')
+    a(href='/blogs'+'/#{blog.URL}')
         .img
             img(src= global.config.variable.apiPath+'/#{blog.blogPicture}')
         .info

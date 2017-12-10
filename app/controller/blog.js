@@ -11,11 +11,11 @@ class BlogController extends BaseController {
     }
 
     getBlogs(req, res, next) {
-        this._blogHandler.getBlogs(req,res, this._responseManager.getDefaultResponseHandler(res));
+        this._blogHandler.getBlogs(req, res);
     }
 
     getSingleBlog(req, res, next) {
-        this._blogHandler.getSingleBlog(req,res, this._responseManager.getDefaultResponseHandler(res));
+        this._blogHandler.getSingleBlog(req, res);
     }
 }
 

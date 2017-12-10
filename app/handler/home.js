@@ -1,7 +1,3 @@
-
-/**
- * Created by crosp on 5/9/17.
- */
 const ValidationError = require(APP_ERROR_PATH + 'validation');
 const NotFoundError = require(APP_ERROR_PATH + 'not-found');
 const BaseAutoBindedClass = require(APP_BASE_PACKAGE_PATH + 'base-autobind');
@@ -15,12 +11,11 @@ class HomeHandler extends BaseAutoBindedClass {
         super();
         this._validator = require('validator');
     }
-    getSingleHome(req, res, callback) {
-        // var URLStore = URLStore+'/blogs/search?startBlogs=0&endBlogs=9';
+
+    getSingleHome(req, res) {
         var optionsStore = {
             url: URLStore + '/blogs/search?startBlogs=0&endBlogs=2',
             method: 'GET',
-            // headers: req.headers,
             headers: {
                 'Authorization': "maximumvsminimumsecurity",
                 'Content-Type': "application/json"
@@ -40,9 +35,11 @@ class HomeHandler extends BaseAutoBindedClass {
             res.render('index', { title: 'ZeepZoop', page: 'home-page', blogs: JSON.parse(results)['data'], length: JSON.parse(results)['data'].length, titleURL: urlArray, host: req.get('host') })
 
         })
-        // this.requestAsync(req, 'http://' + req.get('host') + '/stores/trendingstore' + queryString, 'trendingStores'),
     }
 
+    resetPassword(req, res) {
+        res.render('reset', { title: 'ZeepZoop', page: 'reset-page' })
+    }
 }
 
 module.exports = HomeHandler;

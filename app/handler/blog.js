@@ -6,6 +6,7 @@ const ValidationError = require(APP_ERROR_PATH + 'validation');
 const NotFoundError = require(APP_ERROR_PATH + 'not-found');
 const BaseAutoBindedClass = require(APP_BASE_PACKAGE_PATH + 'base-autobind');
 var request = require('request');
+var url = require('url');
 
 const URLStore = global.config.variable.apiPath;
 var urlArray = []
@@ -15,11 +16,10 @@ class BlogHandler extends BaseAutoBindedClass {
         super();
         this._validator = require('validator');
     }
-    getBlogs(req, res, callback) {
+    getBlogs(req, res) {
         var optionsStore = {
             url: URLStore + '/blogs/search?startBlogs=0&endBlogs=9',
             method: 'GET',
-            // headers: req.headers,
             headers: {
                 'Authorization': "maximumvsminimumsecurity",
                 'Content-Type': "application/json"
@@ -41,7 +41,8 @@ class BlogHandler extends BaseAutoBindedClass {
     }
 
 
-    getSingleBlog(req, res, callback) {
+    getSingleBlog(req, res) {
+        var q = url.parse(URLStore + '/blogs/search?URL=' + req.params.url, true);
         var optionsBlog = {
             url: URLStore + '/blogs/search?URL=' + req.params.url,
             method: 'GET',
