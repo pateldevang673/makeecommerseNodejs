@@ -53,7 +53,7 @@ $('.reset .form .submit').click(function () {
 
 function passwordRest(password) {
     var token = getUrlVars()["token"];
-    var url = 'http://localhost:3000/auth/reset/' + token;
+    var url = 'http://webrexstudio.com:3001/auth/reset/' + token;
 
     data = {
         password: password
