@@ -372,7 +372,7 @@
             }
         }
         &.active{
-            @for $i from 1 to 8 {
+            @for $i from 1 to 9 {
                 .item:nth-child(#{$i}){
                     opacity: 1;
                     transform: translate(0,0);
@@ -849,6 +849,26 @@ $padding_bottom_heading: 5px;
                 text-align: center  !important;
             }
         }
+    }
+}
+
+.pageNotFound{
+    padding-top: 150px;
+    padding-bottom: 150px;
+    h1{
+        font-size: 100px;
+        text-align: center;
+        color: $brand_color;        
+        font-weight: bold;
+        margin-bottom: 30px;    
+        letter-spacing: 0.01em;
+    }
+    p{
+        text-align: center;
+    }
+    .btn{
+        max-width: 180px;
+        margin: 20px auto;
     }
 }
 

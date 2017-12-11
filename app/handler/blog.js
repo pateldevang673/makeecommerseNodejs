@@ -36,7 +36,18 @@ class BlogHandler extends BaseAutoBindedClass {
                     reject(new NotFoundError("blog not found"))
             });
         }).then((results) => {
-            res.render('blog', { title: 'blogs', page: 'blogs-page', blogs: JSON.parse(results)['data'], length: JSON.parse(results)['data'].length, titleURL: urlArray })
+            var seoData = {
+                title: 'Zeepzoop Blogs',
+                description: 'Read blogs related to Art, Craft, culture, festivals, different cities, fashion, Home décor and much more. It guides you about what to buy from different cities.',
+                keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                type: 'website',
+                url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                site: 'Zeepzoop',
+                domain: 'zeepzoop.com'
+            }
+
+            res.render('blog', { seo: true, seoData: seoData, page: 'blogs-page', blogs: JSON.parse(results)['data'], length: JSON.parse(results)['data'].length, titleURL: urlArray })
         })
     }
 
@@ -56,7 +67,25 @@ class BlogHandler extends BaseAutoBindedClass {
                 resolve(body)
             });
         }).then((results) => {
-            res.render('detail', { title: 'blog-detail', page: 'detail-page', titleurl: req.params.url, blog: JSON.parse(results)['data'][0] })
+            var blog = JSON.parse(results)['data'][0];
+
+            if (blog) {
+                var seoData = {
+                    title: blog.title,
+                    description: blog.metaDescription,
+                    keywords: blog.metaKeyword,
+                    image: global.config.variable.apiPath + '/' + blog.blogPicture,
+                    type: 'article',
+                    url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                    site: 'Zeepzoop',
+                    domain: 'zeepzoop.com'
+                }
+
+                res.render('detail', { seo: true, seoData: seoData, page: 'detail-page', titleurl: req.params.url, blog: blog })
+            } else {
+                res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
+            }
+
         })
     }
 

@@ -23,6 +23,7 @@ $(window).scroll(function (event) {
     });
 });
 
+console.log(localStorage.getItem('apiPath'));
 
 $('.reset .form .submit').click(function () {
 
@@ -53,7 +54,14 @@ $('.reset .form .submit').click(function () {
 
 function passwordRest(password) {
     var token = getUrlVars()["token"];
-    var url = 'http://webrexstudio.com:3001/auth/reset/' + token;
+    if (window.location.href.indexOf("http://www.dev.zeepzoop.com/") > -1) {
+        var url = 'http://webrexstudio.com:3001/auth/reset/' + token;
+    } else if (window.location.href.indexOf("http://www.zeepzoop.com/") > -1) {
+        var url = 'http://dev.api.zeepzoop.com/auth/reset/' + token;
+    } else {
+        var url = 'http://webrexstudio.com:3001/auth/reset/' + token;
+    }
+
 
     data = {
         password: password

@@ -32,13 +32,25 @@ class HomeHandler extends BaseAutoBindedClass {
                     reject(new NotFoundError("blog not found"))
             });
         }).then((results) => {
-            res.render('index', { title: 'ZeepZoop', page: 'home-page', blogs: JSON.parse(results)['data'], length: JSON.parse(results)['data'].length, titleURL: urlArray, host: req.get('host') })
+            console.log(req.protocol + '://' + req.get('host') + req.originalUrl);
+            var seoData = {
+                title: 'Zeepzoop Your Shopping Guide',
+                description: 'One of its kind first shopping assistant App for the Exploring Shopper in you. ZeepZoop is a shopping Assistant App. It makes shopping simpler for you by recommending you the best places to shop from Brick & Mortar as well as Niche E-commerce websites by using user generated ratings and reviews.',
+                keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                type: 'website',
+                url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                site: 'Zeepzoop',
+                domain: 'zeepzoop.com'
+            }
+
+            res.render('index', { seo: true, seoData: seoData, page: 'home-page', blogs: JSON.parse(results)['data'], length: JSON.parse(results)['data'].length, titleURL: urlArray, host: req.get('host') })
 
         })
     }
 
     resetPassword(req, res) {
-        res.render('reset', { title: 'ZeepZoop', page: 'reset-page' })
+        res.render('reset', { seo: false, title: 'ZeepZoop password reset', page: 'reset-page' })
     }
 }
 

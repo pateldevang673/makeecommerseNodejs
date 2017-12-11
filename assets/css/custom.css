@@ -331,6 +331,12 @@ a {
     transition: all 0.5s ease 0.35s; }
     .features .items.active .item:nth-child(7):hover {
       transform: translate(0, 0) scale(1.02); }
+  .features .items.active .item:nth-child(8) {
+    opacity: 1;
+    transform: translate(0, 0);
+    transition: all 0.5s ease 0.4s; }
+    .features .items.active .item:nth-child(8):hover {
+      transform: translate(0, 0) scale(1.02); }
 
 .features .text {
   text-align: center;
@@ -674,3 +680,19 @@ footer {
       font-weight: normal; }
       .ql-editor ul li:before, .ql-editor ol li:before {
         text-align: center  !important; }
+
+.pageNotFound {
+  padding-top: 150px;
+  padding-bottom: 150px; }
+  .pageNotFound h1 {
+    font-size: 100px;
+    text-align: center;
+    color: #9a162d;
+    font-weight: bold;
+    margin-bottom: 30px;
+    letter-spacing: 0.01em; }
+  .pageNotFound p {
+    text-align: center; }
+  .pageNotFound .btn {
+    max-width: 180px;
+    margin: 20px auto; }
