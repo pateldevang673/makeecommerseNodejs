@@ -1,6 +1,6 @@
 if (process.env.NODE_ENV == "devapi") {
     module.exports = {
-        apiPath: 'dev.api.zeepzoop.com'
+        apiPath: 'http://dev.api.zeepzoop.com'
     };
 } else if (process.env.NODE_ENV == "webrex") {
     module.exports = {

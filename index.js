@@ -40,9 +40,6 @@ app.get('*', function (req, res) {
     res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
 });
 
-
-
-
 app.listen(global.config.server.PORT, function () {
     console.log('App is running on ' + global.config.server.PORT);
 });
