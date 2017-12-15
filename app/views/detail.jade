@@ -5,13 +5,13 @@ include common/head
     article
       h1 #{blog.title}
       .blog-img
-        img(src=global.config.variable.apiPath+'#{blog.blogPicture}')
+        img(src=global.config.variable.apiPath+'/'+'#{blog.blogPicture}')
       .content.ql-editor
         !{blog.description}
     .author
       p 
       .img
-        img(src=global.config.variable.apiPath+'#{blog.authorImage}')
+        img(src=global.config.variable.apiPath+'/'+'#{blog.authorImage}')
       .profile
         span #{blog.authorName}
 include common/footer

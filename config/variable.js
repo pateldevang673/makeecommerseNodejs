@@ -9,6 +9,6 @@ if (process.env.NODE_ENV == "devapi") {
 }
 else {
     module.exports = {
-        apiPath: 'http://www.webrexstudio.com:3001'
+        apiPath: 'http://dev.api.zeepzoop.com'
     };
 }
