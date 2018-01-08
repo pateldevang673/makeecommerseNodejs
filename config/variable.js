@@ -1,14 +1,13 @@
-if (process.env.NODE_ENV == "devapi") {
+if (process.env.NODE_ENV == "dev") {
     module.exports = {
         apiPath: 'http://dev.api.zeepzoop.com'
     };
-} else if (process.env.NODE_ENV == "webrex") {
+} else if (process.env.NODE_ENV == "production") {
     module.exports = {
-        apiPath: 'http://www.webrexstudio.com:3001'
+        apiPath: 'http://api.zeepzoop.com'
     };
-}
-else {
+} else {
     module.exports = {
-        apiPath: 'http://dev.api.zeepzoop.com'
+        apiPath: 'http://api.zeepzoop.com'
     };
 }
