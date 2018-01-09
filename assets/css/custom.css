@@ -680,6 +680,12 @@ footer {
       font-weight: normal; }
       .ql-editor ul li:before, .ql-editor ol li:before {
         text-align: center  !important; }
+  .ql-editor .ql-align-justify {
+    text-align: justify; }
+  .ql-editor .ql-align-center {
+    text-align: center; }
+  .ql-editor .ql-align-right {
+    text-align: right; }
 
 .pageNotFound {
   padding-top: 150px;
