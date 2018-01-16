@@ -31,13 +31,16 @@ $('.reset .form .submit').click(function () {
 
     var password = $('#password').val();
     var confirmPassword = $('#confirmPassword').val();
-    if (!password.match(/^[a-zA-Z0-9]{8,}$/)) {
+
+    console.log(password.length, confirmPassword.length);
+
+    if (password.length <= 8) {
         $('#password').parent('.input').addClass('error');
     } else {
         $('#password').parent('.input').removeClass('error');
     }
 
-    if (!confirmPassword.match(/^[a-zA-Z0-9]{8,}$/)) {
+    if (confirmPassword.length <= 8) {
         $('#confirmPassword').parent('.input').addClass('error');
         $('#confirmPassword').parent('.input').children('p').text('Password must be at least 8 characters');
     } else {
