@@ -54,14 +54,13 @@ $('.reset .form .submit').click(function () {
 
 function passwordRest(password) {
     var token = getUrlVars()["token"];
-    if (window.location.href.indexOf("http://www.dev.zeepzoop.com/") > -1) {
-        var url = 'http://webrexstudio.com:3001/auth/reset/' + token;
-    } else if (window.location.href.indexOf("http://www.zeepzoop.com/") > -1) {
+    if (window.location.href.indexOf("http://www.zeepzoop.com/") > -1 || window.location.href.indexOf("http://zeepzoop.com/") > -1) {
+        var url = 'http://api.zeepzoop.com/auth/reset/' + token;
+    } else if (window.location.href.indexOf("http://www.dev.zeepzoop.com/") > -1 || window.location.href.indexOf("http://dev.zeepzoop.com/") > -1) {
         var url = 'http://dev.api.zeepzoop.com/auth/reset/' + token;
     } else {
-        var url = 'http://webrexstudio.com:3001/auth/reset/' + token;
+        var url = 'http://api.zeepzoop.com/auth/reset/' + token;
     }
-
 
     data = {
         password: password
