@@ -33,7 +33,7 @@ html(lang='en')
     .main
       .container
         a.logo(href='/')
-          if page == "home-page"
+          if page == "home-page" || page == "business"
             img(src='/images/logo.png')
           else
             img(src='/images/color-logo.png')
@@ -41,4 +41,9 @@ html(lang='en')
           .content
             h1 Your Shopping Unicorn
             p One-of-its-kind first shopping assistant App for the Exploring Shopper in you.
+            .btn
+              a(href='business') Claim Your Business
+        else if page == "business"  
+          .content
+            <h1>Zeepzoop for businesses</h1>   
         

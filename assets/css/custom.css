@@ -95,6 +95,8 @@ a {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 50px 0px 0px; }
+  .main .container {
+    position: relative; }
   .main .logo {
     max-width: 100px;
     display: block;
@@ -128,8 +130,28 @@ a {
       color: white;
       letter-spacing: 0.03em;
       padding-top: 5px; }
+    .main .content .btn {
+      position: absolute;
+      top: -25px;
+      right: 15px;
+      max-width: initial;
+      font-size: 14px;
+      width: 160px;
+      border: 0px;
+      background: whitesmoke;
+      color: #771223;
+      -webkit-box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.75);
+      -moz-box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.75);
+      box-shadow: 0px 10px 10px -8px rgba(0, 0, 0, 0.75);
+      transition: initial; }
+      .main .content .btn a {
+        color: #771223; }
+      @media screen and (max-width: 767px) {
+        .main .content .btn {
+          position: static;
+          margin-top: 20px; } }
 
-.home-page .main {
+.home-page .main, .business .main {
   background-image: linear-gradient(-100deg, rgba(137, 19, 39, 0.6), rgba(0, 0, 0, 0.6)), url(../images/background.jpg); }
 
 .WhatZeepzoop .container {
@@ -162,6 +184,14 @@ a {
     @media only screen and (max-width: 767px) {
       .WhatZeepzoop .content .items .item {
         flex-direction: column; } }
+    .WhatZeepzoop .content .items .item .business-content {
+      width: 100%;
+      text-align: center; }
+      .WhatZeepzoop .content .items .item .business-content p {
+        max-width: initial; }
+      .WhatZeepzoop .content .items .item .business-content h2 {
+        font-size: 20px;
+        line-height: 32px; }
     .WhatZeepzoop .content .items .item .left {
       width: 50%;
       text-align: center; }
@@ -702,3 +732,198 @@ footer {
   .pageNotFound .btn {
     max-width: 180px;
     margin: 20px auto; }
+
+section h1 {
+  font-size: 28px;
+  color: #9a162d;
+  margin-bottom: 25px;
+  text-transform: capitalize; }
+
+section h2 {
+  margin-bottom: 20px;
+  font-size: 20px;
+  line-height: 32px; }
+  @media screen and (max-width: 479px) {
+    section h2 {
+      font-size: 18px; } }
+  @media screen and (max-width: 767px) {
+    section h2 {
+      font-size: 18px; } }
+
+section p {
+  font-size: 16px; }
+  @media screen and (max-width: 479px) {
+    section p {
+      font-size: 15px; } }
+  @media screen and (max-width: 767px) {
+    section p {
+      font-size: 15px; } }
+
+.business-claim {
+  margin: 60px 0; }
+  @media only screen and (max-width: 767px) {
+    .business-claim {
+      margin: 30px 0; } }
+  .business-claim .content {
+    max-width: initial; }
+    .business-claim .content h1 {
+      font-size: 26px;
+      color: #9a162d;
+      margin-bottom: 25px;
+      text-transform: capitalize; }
+    .business-claim .content .left {
+      float: left;
+      width: 60%;
+      display: flex;
+      height: 500px;
+      flex-direction: column;
+      justify-content: center; }
+      @media only screen and (max-width: 767px) {
+        .business-claim .content .left {
+          float: none;
+          display: block;
+          width: 100%;
+          height: auto;
+          padding: 20px 0; } }
+    .business-claim .content .right {
+      float: right;
+      width: 40%;
+      height: 500px; }
+      @media only screen and (max-width: 767px) {
+        .business-claim .content .right {
+          float: none;
+          display: block;
+          width: 100%;
+          height: 100%; } }
+      .business-claim .content .right .image {
+        margin: 0 auto;
+        width: 230px; }
+        @media screen and (max-width: 767px) {
+          .business-claim .content .right .image {
+            width: 170px; } }
+
+.findbusiness {
+  margin-bottom: 50px; }
+  .findbusiness .container {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 -2px 18px 0 rgba(72, 89, 102, 0.25);
+    width: calc(100% - 30px); }
+  .findbusiness h2 {
+    text-align: center;
+    font-size: 26px;
+    padding: 0;
+    margin-bottom: 30px;
+    color: #BF1A15; }
+    @media only screen and (max-width: 767px) {
+      .findbusiness h2 {
+        font-size: 22px; } }
+    @media only screen and (max-width: 479px) {
+      .findbusiness h2 {
+        font-size: 22px; } }
+  .findbusiness .content {
+    max-width: 900px;
+    margin: 0px auto; }
+    .findbusiness .content .items .item {
+      padding: 60px 0; }
+      @media screen and (max-width: 979px) {
+        .findbusiness .content .items .item {
+          padding: 30px 0; } }
+      .findbusiness .content .items .item p {
+        max-width: initial;
+        text-align: center; }
+        .findbusiness .content .items .item p:first-child {
+          margin-top: 0px; }
+      .findbusiness .content .items .item .register-store {
+        padding-bottom: 30px;
+        position: relative;
+        margin-bottom: 30px; }
+        .findbusiness .content .items .item .register-store .btn {
+          max-width: 200px;
+          margin-top: 20px; }
+        .findbusiness .content .items .item .register-store:after {
+          content: '';
+          position: absolute;
+          width: 90%;
+          left: 5%;
+          height: 1.5px;
+          bottom: 0;
+          background: #ccc; }
+      .findbusiness .content .items .item .knowmore .number {
+        text-align: center; }
+        .findbusiness .content .items .item .knowmore .number p {
+          display: inline-block;
+          vertical-align: middle;
+          margin-bottom: 0;
+          text-align: center;
+          padding: 10px 3px; }
+        .findbusiness .content .items .item .knowmore .number .image {
+          display: inline-block;
+          vertical-align: middle; }
+
+.business .container {
+  max-width: 1170px;
+  margin: 0px auto; }
+  @media screen and (max-width: 979px) {
+    .business .container {
+      margin: 0px 30px;
+      width: calc(100% - 60px); } }
+  @media screen and (max-width: 479px) {
+    .business .container {
+      margin: 0px 20px;
+      width: calc(100% - 40px); } }
+
+@media screen and (max-width: 979px) {
+  .business .main .content {
+    padding: 137px 0px 134px; } }
+
+@media screen and (max-width: 767px) {
+  .business .main .content {
+    padding: 100px 0px 138px; } }
+
+@media screen and (max-width: 979px) {
+  .business .main .logo {
+    max-width: 80px; } }
+
+.business .WhatZeepzoop .container {
+  margin-top: -100px; }
+  @media screen and (max-width: 767px) {
+    .business .WhatZeepzoop .container {
+      padding: 0 25px; } }
+
+@media screen and (max-width: 767px) {
+  .business .WhatZeepzoop .content {
+    padding: 0; } }
+
+.business .WhatZeepzoop .content .items .item {
+  padding: 70px 0; }
+  .business .WhatZeepzoop .content .items .item .business-content h2 {
+    font-size: 26px;
+    line-height: 32px;
+    color: #9a162d;
+    margin-bottom: 40px; }
+    @media screen and (max-width: 767px) {
+      .business .WhatZeepzoop .content .items .item .business-content h2 {
+        font-size: 20px;
+        margin-bottom: 20px; } }
+  .business .WhatZeepzoop .content .items .item .business-content p {
+    width: 80%;
+    max-width: initial;
+    font-size: 18px;
+    margin: 0 auto; }
+    @media screen and (max-width: 767px) {
+      .business .WhatZeepzoop .content .items .item .business-content p {
+        font-size: 16px; } }
+  @media screen and (max-width: 979px) {
+    .business .WhatZeepzoop .content .items .item {
+      padding: 25px 0; } }
+
+.business .business-claim .content {
+  max-width: 980px;
+  margin: 0 auto; }
+  @media screen and (max-width: 767px) {
+    .business .business-claim .content h1 {
+      font-size: 22px; } }
+
+.business .findbusiness .container {
+  box-shadow: 0 2px 18px 0 rgba(72, 89, 102, 0.25); }

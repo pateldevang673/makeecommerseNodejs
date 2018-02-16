@@ -52,6 +52,10 @@ class HomeHandler extends BaseAutoBindedClass {
     resetPassword(req, res) {
         res.render('reset', { seo: false, title: 'ZeepZoop password reset', page: 'reset-page' })
     }
+
+    business(req, res) {
+        res.render('business', { seo: false, title: 'ZeepZoop Business', page: 'business' })
+    }
 }
 
 module.exports = HomeHandler;

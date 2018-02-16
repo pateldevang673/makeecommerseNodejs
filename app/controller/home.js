@@ -18,6 +18,10 @@ class HomeController extends BaseController {
         this._homeHandler.resetPassword(req, res);
     }
 
+    business(req, res, next) {
+        this._homeHandler.business(req, res);
+    }
+
 }
 
 module.exports = HomeController;
