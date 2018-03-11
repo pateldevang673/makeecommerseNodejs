@@ -35,7 +35,7 @@ class HomeHandler extends BaseAutoBindedClass {
             console.log(req.protocol + '://' + req.get('host') + req.originalUrl);
             var seoData = {
                 title: 'Zeepzoop Your Shopping Guide',
-                description: 'One of its kind first shopping assistant App for the Exploring Shopper in you. ZeepZoop is a shopping Assistant App. It makes shopping simpler for you by recommending you the best places to shop from Brick & Mortar as well as Niche E-commerce websites by using user generated ratings and reviews.',
+                description: 'One of its kind first shopping assistant App for the Exploring Shopper in you. It makes shopping simpler for you by recommending you the best places to shop.',
                 keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                 image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                 type: 'website',
