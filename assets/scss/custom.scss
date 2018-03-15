@@ -676,6 +676,7 @@ footer{
         display: block;
         margin: 0px auto 50px;
         text-align: center;
+    
         p{
             font-size: 12px;
         }
@@ -697,6 +698,19 @@ footer{
                 color: $brand_colors;
                 font-weight: bold;
             }
+        }
+        .social-media {
+            padding-top: 20px;
+          
+            a {
+                display: inline-block;
+                &:nth-last-child(1) {
+                    display: none;
+                    @media screen and(max-width: 979px) {
+                        display: inline-block;
+                    }
+                }
+        
         }
     }
 }
@@ -1537,4 +1551,5 @@ section {
             box-shadow: 0 2px 18px 0 rgba(72, 89, 102, 0.25);
         }
     }
+}
 }

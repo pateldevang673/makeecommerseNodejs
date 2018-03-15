@@ -13,6 +13,8 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     getSingleHome(req, res) {
+        console.log(req.query);
+        console.log(req.params);
         var optionsStore = {
             url: URLStore + '/blogs/search?startBlogs=0&endBlogs=2',
             method: 'GET',

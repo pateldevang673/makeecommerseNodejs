@@ -29,7 +29,7 @@ $('.reset .form .submit').click(function () {
 
     $('.reset .form').removeClass('success').removeClass('error');
 
-    var password = $('#password').val();
+
     var confirmPassword = $('#confirmPassword').val();
 
     console.log(password.length, confirmPassword.length);
@@ -95,3 +95,14 @@ function getUrlVars() {
     }
     return vars;
 }
+$('.blog .author .social-media a').on("click", function (event) {
+    event.preventDefault();
+    var window_width = $(window).width();
+    var window_height = $(window).height();
+    var top = window_height - 500;
+    var top_vertical = top / 2;
+    var left = window_width - 500;
+    var left_center = left / 2;
+    var share_link = $(this).prop('href');
+    window.open(share_link, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=" + top_vertical + ",left=" + left_center + ",width=500,height=500");
+});

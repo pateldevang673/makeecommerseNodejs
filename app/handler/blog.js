@@ -81,7 +81,7 @@ class BlogHandler extends BaseAutoBindedClass {
                     domain: 'zeepzoop.com'
                 }
 
-                res.render('detail', { seo: true, seoData: seoData, page: 'detail-page', titleurl: req.params.url, blog: blog })
+                res.render('detail', { seo: true, seoData: seoData, page: 'detail-page', titleurl: req.params.url, blog: blog, shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl })
             } else {
                 res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
             }

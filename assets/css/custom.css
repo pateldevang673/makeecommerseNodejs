@@ -567,39 +567,48 @@ footer {
   .blog .author .profile span {
     color: #BF1A15;
     font-weight: bold; }
+  .blog .author .social-media {
+    padding-top: 20px; }
+    .blog .author .social-media a {
+      display: inline-block; }
+      .blog .author .social-media a:nth-last-child(1) {
+        display: none; }
+        @media screen and (max-width: 979px) {
+          .blog .author .social-media a:nth-last-child(1) {
+            display: inline-block; } }
 
-.reset {
+.blog .reset {
   padding-top: 50px;
   padding-bottom: 150px; }
-  .reset .container {
+  .blog .reset .container {
     max-width: 400px;
     margin: 0px auto; }
-    .reset .container h1 {
+    .blog .reset .container h1 {
       text-align: center;
       font-size: 30px;
       padding: 60px 0px 20px;
       color: #BF1A15;
       font-weight: bold; }
-    .reset .container .form {
+    .blog .reset .container .form {
       max-width: 300px;
       margin: 0px auto; }
-      .reset .container .form > p {
+      .blog .reset .container .form > p {
         font-size: 13px;
         padding-top: 5px;
         display: none;
         padding: 15px 0px; }
-      .reset .container .form.error > p {
+      .blog .reset .container .form.error > p {
         display: block;
         color: red; }
-      .reset .container .form.success > p {
+      .blog .reset .container .form.success > p {
         display: block;
         color: black; }
-      .reset .container .form .input {
+      .blog .reset .container .form .input {
         margin-bottom: 20px; }
-        .reset .container .form .input label {
+        .blog .reset .container .form .input label {
           padding-bottom: 5px;
           display: block; }
-        .reset .container .form .input input {
+        .blog .reset .container .form .input input {
           display: block;
           width: 100%;
           border-radius: 3px;
@@ -607,68 +616,68 @@ footer {
           line-height: 35px;
           padding: 0px 10px;
           border: 1px solid #bfbfbf; }
-        .reset .container .form .input p {
+        .blog .reset .container .form .input p {
           color: red;
           font-size: 13px;
           padding-top: 5px;
           display: none; }
-        .reset .container .form .input.error p {
+        .blog .reset .container .form .input.error p {
           display: block; }
 
-.ql-editor {
+.blog .ql-editor {
   font-family: Helvetica, Arial, sans-serif;
   padding: 20px 0px;
   max-width: 768px;
   margin: 0px auto; }
-  .ql-editor h1 {
+  .blog .ql-editor h1 {
     font-size: 30px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .ql-editor h2 {
+  .blog .ql-editor h2 {
     font-size: 24px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .ql-editor h3 {
+  .blog .ql-editor h3 {
     font-size: 20px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .ql-editor h4 {
+  .blog .ql-editor h4 {
     font-size: 16px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .ql-editor h5 {
+  .blog .ql-editor h5 {
     font-size: 13px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .ql-editor h6 {
+  .blog .ql-editor h6 {
     font-size: 10px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .ql-editor p {
+  .blog .ql-editor p {
     font-size: 16px;
     line-height: 1.4;
     color: #969696;
     padding-bottom: 20px !important;
     font-weight: normal;
     letter-spacing: 0.04em; }
-  .ql-editor strong {
+  .blog .ql-editor strong {
     font-size: 16px;
     line-height: 1.4;
     color: #969696;
     font-weight: 600; }
-  .ql-editor a {
+  .blog .ql-editor a {
     font-size: 16px;
     line-height: 1.4;
     color: black !important;
@@ -678,9 +687,9 @@ footer {
     font-weight: 600;
     vertical-align: initial;
     transition: all 0.2s ease 0s; }
-    .ql-editor a:hover {
+    .blog .ql-editor a:hover {
       color: #9a162d !important; }
-  .ql-editor blockquote {
+  .blog .ql-editor blockquote {
     text-align: center;
     font-style: italic;
     font-size: 20px;
@@ -690,88 +699,88 @@ footer {
     padding: 0px 5% !important;
     color: #9a162d;
     position: relative; }
-    .ql-editor blockquote:before {
+    .blog .ql-editor blockquote:before {
       content: url("../images/blockquote.png");
       padding-right: 10px; }
-  .ql-editor em {
+  .blog .ql-editor em {
     font-style: italic; }
-  .ql-editor img {
+  .blog .ql-editor img {
     max-width: 100%;
     height: auto;
     margin: 0px auto;
     display: block; }
-  .ql-editor ul, .ql-editor ol {
+  .blog .ql-editor ul, .blog .ql-editor ol {
     padding-left: 15px !important;
     padding-bottom: 20px !important; }
-    .ql-editor ul li, .ql-editor ol li {
+    .blog .ql-editor ul li, .blog .ql-editor ol li {
       font-size: 16px;
       line-height: 1.4;
       color: #969696;
       font-weight: normal; }
-      .ql-editor ul li:before, .ql-editor ol li:before {
+      .blog .ql-editor ul li:before, .blog .ql-editor ol li:before {
         text-align: center  !important; }
-  .ql-editor .ql-align-justify {
+  .blog .ql-editor .ql-align-justify {
     text-align: justify; }
-  .ql-editor .ql-align-center {
+  .blog .ql-editor .ql-align-center {
     text-align: center; }
-  .ql-editor .ql-align-right {
+  .blog .ql-editor .ql-align-right {
     text-align: right; }
 
-.pageNotFound {
+.blog .pageNotFound {
   padding-top: 150px;
   padding-bottom: 150px; }
-  .pageNotFound h1 {
+  .blog .pageNotFound h1 {
     font-size: 100px;
     text-align: center;
     color: #9a162d;
     font-weight: bold;
     margin-bottom: 30px;
     letter-spacing: 0.01em; }
-  .pageNotFound p {
+  .blog .pageNotFound p {
     text-align: center; }
-  .pageNotFound .btn {
+  .blog .pageNotFound .btn {
     max-width: 180px;
     margin: 20px auto; }
 
-section h1 {
+.blog section h1 {
   font-size: 28px;
   color: #9a162d;
   margin-bottom: 25px;
   text-transform: capitalize; }
 
-section h2 {
+.blog section h2 {
   margin-bottom: 20px;
   font-size: 20px;
   line-height: 32px; }
   @media screen and (max-width: 479px) {
-    section h2 {
+    .blog section h2 {
       font-size: 18px; } }
   @media screen and (max-width: 767px) {
-    section h2 {
+    .blog section h2 {
       font-size: 18px; } }
 
-section p {
+.blog section p {
   font-size: 16px; }
   @media screen and (max-width: 479px) {
-    section p {
+    .blog section p {
       font-size: 15px; } }
   @media screen and (max-width: 767px) {
-    section p {
+    .blog section p {
       font-size: 15px; } }
 
-.business-claim {
+.blog .business-claim {
   margin: 60px 0; }
   @media only screen and (max-width: 767px) {
-    .business-claim {
+    .blog .business-claim {
       margin: 30px 0; } }
-  .business-claim .content {
+  .blog .business-claim .content {
     max-width: initial; }
-    .business-claim .content h1 {
+    .blog .business-claim .content h1 {
       font-size: 26px;
       color: #9a162d;
       margin-bottom: 25px;
       text-transform: capitalize; }
-    .business-claim .content .left {
+    .blog .business-claim .content .left {
       float: left;
       width: 60%;
       display: flex;
@@ -779,69 +788,69 @@ section p {
       flex-direction: column;
       justify-content: center; }
       @media only screen and (max-width: 767px) {
-        .business-claim .content .left {
+        .blog .business-claim .content .left {
           float: none;
           display: block;
           width: 100%;
           height: auto;
           padding: 20px 0; } }
-    .business-claim .content .right {
+    .blog .business-claim .content .right {
       float: right;
       width: 40%;
       height: 500px; }
       @media only screen and (max-width: 767px) {
-        .business-claim .content .right {
+        .blog .business-claim .content .right {
           float: none;
           display: block;
           width: 100%;
           height: 100%; } }
-      .business-claim .content .right .image {
+      .blog .business-claim .content .right .image {
         margin: 0 auto;
         width: 230px; }
         @media screen and (max-width: 767px) {
-          .business-claim .content .right .image {
+          .blog .business-claim .content .right .image {
             width: 170px; } }
 
-.findbusiness {
+.blog .findbusiness {
   margin-bottom: 50px; }
-  .findbusiness .container {
+  .blog .findbusiness .container {
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 -2px 18px 0 rgba(72, 89, 102, 0.25);
     width: calc(100% - 30px); }
-  .findbusiness h2 {
+  .blog .findbusiness h2 {
     text-align: center;
     font-size: 26px;
     padding: 0;
     margin-bottom: 30px;
     color: #BF1A15; }
     @media only screen and (max-width: 767px) {
-      .findbusiness h2 {
+      .blog .findbusiness h2 {
         font-size: 22px; } }
     @media only screen and (max-width: 479px) {
-      .findbusiness h2 {
+      .blog .findbusiness h2 {
         font-size: 22px; } }
-  .findbusiness .content {
+  .blog .findbusiness .content {
     max-width: 900px;
     margin: 0px auto; }
-    .findbusiness .content .items .item {
+    .blog .findbusiness .content .items .item {
       padding: 60px 0; }
       @media screen and (max-width: 979px) {
-        .findbusiness .content .items .item {
+        .blog .findbusiness .content .items .item {
           padding: 30px 0; } }
-      .findbusiness .content .items .item p {
+      .blog .findbusiness .content .items .item p {
         max-width: initial;
         text-align: center; }
-        .findbusiness .content .items .item p:first-child {
+        .blog .findbusiness .content .items .item p:first-child {
           margin-top: 0px; }
-      .findbusiness .content .items .item .register-store {
+      .blog .findbusiness .content .items .item .register-store {
         padding-bottom: 30px;
         position: relative;
         margin-bottom: 30px; }
-        .findbusiness .content .items .item .register-store .btn {
+        .blog .findbusiness .content .items .item .register-store .btn {
           max-width: 200px;
           margin-top: 20px; }
-        .findbusiness .content .items .item .register-store:after {
+        .blog .findbusiness .content .items .item .register-store:after {
           content: '';
           position: absolute;
           width: 90%;
@@ -849,81 +858,81 @@ section p {
           height: 1.5px;
           bottom: 0;
           background: #ccc; }
-      .findbusiness .content .items .item .knowmore .number {
+      .blog .findbusiness .content .items .item .knowmore .number {
         text-align: center; }
-        .findbusiness .content .items .item .knowmore .number p {
+        .blog .findbusiness .content .items .item .knowmore .number p {
           display: inline-block;
           vertical-align: middle;
           margin-bottom: 0;
           text-align: center;
           padding: 10px 3px; }
-        .findbusiness .content .items .item .knowmore .number .image {
+        .blog .findbusiness .content .items .item .knowmore .number .image {
           display: inline-block;
           vertical-align: middle; }
 
-.business .container {
+.blog .business .container {
   max-width: 1170px;
   margin: 0px auto; }
   @media screen and (max-width: 979px) {
-    .business .container {
+    .blog .business .container {
       margin: 0px 30px;
       width: calc(100% - 60px); } }
   @media screen and (max-width: 479px) {
-    .business .container {
+    .blog .business .container {
       margin: 0px 20px;
       width: calc(100% - 40px); } }
 
 @media screen and (max-width: 979px) {
-  .business .main .content {
+  .blog .business .main .content {
     padding: 137px 0px 134px; } }
 
 @media screen and (max-width: 767px) {
-  .business .main .content {
+  .blog .business .main .content {
     padding: 100px 0px 138px; } }
 
 @media screen and (max-width: 979px) {
-  .business .main .logo {
+  .blog .business .main .logo {
     max-width: 80px; } }
 
-.business .WhatZeepzoop .container {
+.blog .business .WhatZeepzoop .container {
   margin-top: -100px; }
   @media screen and (max-width: 767px) {
-    .business .WhatZeepzoop .container {
+    .blog .business .WhatZeepzoop .container {
       padding: 0 25px; } }
 
 @media screen and (max-width: 767px) {
-  .business .WhatZeepzoop .content {
+  .blog .business .WhatZeepzoop .content {
     padding: 0; } }
 
-.business .WhatZeepzoop .content .items .item {
+.blog .business .WhatZeepzoop .content .items .item {
   padding: 70px 0; }
-  .business .WhatZeepzoop .content .items .item .business-content h2 {
+  .blog .business .WhatZeepzoop .content .items .item .business-content h2 {
     font-size: 26px;
     line-height: 32px;
     color: #9a162d;
     margin-bottom: 40px; }
     @media screen and (max-width: 767px) {
-      .business .WhatZeepzoop .content .items .item .business-content h2 {
+      .blog .business .WhatZeepzoop .content .items .item .business-content h2 {
         font-size: 20px;
         margin-bottom: 20px; } }
-  .business .WhatZeepzoop .content .items .item .business-content p {
+  .blog .business .WhatZeepzoop .content .items .item .business-content p {
     width: 80%;
     max-width: initial;
     font-size: 18px;
     margin: 0 auto; }
     @media screen and (max-width: 767px) {
-      .business .WhatZeepzoop .content .items .item .business-content p {
+      .blog .business .WhatZeepzoop .content .items .item .business-content p {
         font-size: 16px; } }
   @media screen and (max-width: 979px) {
-    .business .WhatZeepzoop .content .items .item {
+    .blog .business .WhatZeepzoop .content .items .item {
       padding: 25px 0; } }
 
-.business .business-claim .content {
+.blog .business .business-claim .content {
   max-width: 980px;
   margin: 0 auto; }
   @media screen and (max-width: 767px) {
-    .business .business-claim .content h1 {
+    .blog .business .business-claim .content h1 {
       font-size: 22px; } }
 
-.business .findbusiness .container {
+.blog .business .findbusiness .container {
   box-shadow: 0 2px 18px 0 rgba(72, 89, 102, 0.25); }
