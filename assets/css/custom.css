@@ -408,7 +408,6 @@ a {
         font-size: 20px;
         font-weight: bold; }
       .blogs .items a .info p {
-        font-weight: 300;
         color: #c1c1c1;
         font-size: 13px;
         line-height: 1.3;
@@ -577,38 +576,38 @@ footer {
           .blog .author .social-media a:nth-last-child(1) {
             display: inline-block; } }
 
-.blog .reset {
+.reset {
   padding-top: 50px;
   padding-bottom: 150px; }
-  .blog .reset .container {
+  .reset .container {
     max-width: 400px;
     margin: 0px auto; }
-    .blog .reset .container h1 {
+    .reset .container h1 {
       text-align: center;
       font-size: 30px;
       padding: 60px 0px 20px;
       color: #BF1A15;
       font-weight: bold; }
-    .blog .reset .container .form {
+    .reset .container .form {
       max-width: 300px;
       margin: 0px auto; }
-      .blog .reset .container .form > p {
+      .reset .container .form > p {
         font-size: 13px;
         padding-top: 5px;
         display: none;
         padding: 15px 0px; }
-      .blog .reset .container .form.error > p {
+      .reset .container .form.error > p {
         display: block;
         color: red; }
-      .blog .reset .container .form.success > p {
+      .reset .container .form.success > p {
         display: block;
         color: black; }
-      .blog .reset .container .form .input {
+      .reset .container .form .input {
         margin-bottom: 20px; }
-        .blog .reset .container .form .input label {
+        .reset .container .form .input label {
           padding-bottom: 5px;
           display: block; }
-        .blog .reset .container .form .input input {
+        .reset .container .form .input input {
           display: block;
           width: 100%;
           border-radius: 3px;
@@ -616,68 +615,68 @@ footer {
           line-height: 35px;
           padding: 0px 10px;
           border: 1px solid #bfbfbf; }
-        .blog .reset .container .form .input p {
+        .reset .container .form .input p {
           color: red;
           font-size: 13px;
           padding-top: 5px;
           display: none; }
-        .blog .reset .container .form .input.error p {
+        .reset .container .form .input.error p {
           display: block; }
 
-.blog .ql-editor {
+.ql-editor {
   font-family: Helvetica, Arial, sans-serif;
   padding: 20px 0px;
   max-width: 768px;
   margin: 0px auto; }
-  .blog .ql-editor h1 {
+  .ql-editor h1 {
     font-size: 30px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .blog .ql-editor h2 {
+  .ql-editor h2 {
     font-size: 24px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .blog .ql-editor h3 {
+  .ql-editor h3 {
     font-size: 20px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .blog .ql-editor h4 {
+  .ql-editor h4 {
     font-size: 16px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .blog .ql-editor h5 {
+  .ql-editor h5 {
     font-size: 13px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .blog .ql-editor h6 {
+  .ql-editor h6 {
     font-size: 10px;
     color: #9a162d;
     line-height: 1.3;
     padding-bottom: 5px !important;
     font-weight: bold; }
-  .blog .ql-editor p {
+  .ql-editor p {
     font-size: 16px;
     line-height: 1.4;
     color: #969696;
     padding-bottom: 20px !important;
     font-weight: normal;
     letter-spacing: 0.04em; }
-  .blog .ql-editor strong {
+  .ql-editor strong {
     font-size: 16px;
     line-height: 1.4;
     color: #969696;
     font-weight: 600; }
-  .blog .ql-editor a {
+  .ql-editor a {
     font-size: 16px;
     line-height: 1.4;
     color: black !important;
@@ -687,9 +686,9 @@ footer {
     font-weight: 600;
     vertical-align: initial;
     transition: all 0.2s ease 0s; }
-    .blog .ql-editor a:hover {
+    .ql-editor a:hover {
       color: #9a162d !important; }
-  .blog .ql-editor blockquote {
+  .ql-editor blockquote {
     text-align: center;
     font-style: italic;
     font-size: 20px;
@@ -699,88 +698,88 @@ footer {
     padding: 0px 5% !important;
     color: #9a162d;
     position: relative; }
-    .blog .ql-editor blockquote:before {
+    .ql-editor blockquote:before {
       content: url("../images/blockquote.png");
       padding-right: 10px; }
-  .blog .ql-editor em {
+  .ql-editor em {
     font-style: italic; }
-  .blog .ql-editor img {
+  .ql-editor img {
     max-width: 100%;
     height: auto;
     margin: 0px auto;
     display: block; }
-  .blog .ql-editor ul, .blog .ql-editor ol {
+  .ql-editor ul, .ql-editor ol {
     padding-left: 15px !important;
     padding-bottom: 20px !important; }
-    .blog .ql-editor ul li, .blog .ql-editor ol li {
+    .ql-editor ul li, .ql-editor ol li {
       font-size: 16px;
       line-height: 1.4;
       color: #969696;
       font-weight: normal; }
-      .blog .ql-editor ul li:before, .blog .ql-editor ol li:before {
+      .ql-editor ul li:before, .ql-editor ol li:before {
         text-align: center  !important; }
-  .blog .ql-editor .ql-align-justify {
+  .ql-editor .ql-align-justify {
     text-align: justify; }
-  .blog .ql-editor .ql-align-center {
+  .ql-editor .ql-align-center {
     text-align: center; }
-  .blog .ql-editor .ql-align-right {
+  .ql-editor .ql-align-right {
     text-align: right; }
 
-.blog .pageNotFound {
+.pageNotFound {
   padding-top: 150px;
   padding-bottom: 150px; }
-  .blog .pageNotFound h1 {
+  .pageNotFound h1 {
     font-size: 100px;
     text-align: center;
     color: #9a162d;
     font-weight: bold;
     margin-bottom: 30px;
     letter-spacing: 0.01em; }
-  .blog .pageNotFound p {
+  .pageNotFound p {
     text-align: center; }
-  .blog .pageNotFound .btn {
+  .pageNotFound .btn {
     max-width: 180px;
     margin: 20px auto; }
 
-.blog section h1 {
+section h1 {
   font-size: 28px;
   color: #9a162d;
   margin-bottom: 25px;
   text-transform: capitalize; }
 
-.blog section h2 {
+section h2 {
   margin-bottom: 20px;
   font-size: 20px;
   line-height: 32px; }
   @media screen and (max-width: 479px) {
-    .blog section h2 {
+    section h2 {
       font-size: 18px; } }
   @media screen and (max-width: 767px) {
-    .blog section h2 {
+    section h2 {
       font-size: 18px; } }
 
-.blog section p {
+section p {
   font-size: 16px; }
   @media screen and (max-width: 479px) {
-    .blog section p {
+    section p {
       font-size: 15px; } }
   @media screen and (max-width: 767px) {
-    .blog section p {
+    section p {
       font-size: 15px; } }
 
-.blog .business-claim {
+.business-claim {
   margin: 60px 0; }
   @media only screen and (max-width: 767px) {
-    .blog .business-claim {
+    .business-claim {
       margin: 30px 0; } }
-  .blog .business-claim .content {
+  .business-claim .content {
     max-width: initial; }
-    .blog .business-claim .content h1 {
+    .business-claim .content h1 {
       font-size: 26px;
       color: #9a162d;
       margin-bottom: 25px;
       text-transform: capitalize; }
-    .blog .business-claim .content .left {
+    .business-claim .content .left {
       float: left;
       width: 60%;
       display: flex;
@@ -788,69 +787,69 @@ footer {
       flex-direction: column;
       justify-content: center; }
       @media only screen and (max-width: 767px) {
-        .blog .business-claim .content .left {
+        .business-claim .content .left {
           float: none;
           display: block;
           width: 100%;
           height: auto;
           padding: 20px 0; } }
-    .blog .business-claim .content .right {
+    .business-claim .content .right {
       float: right;
       width: 40%;
       height: 500px; }
       @media only screen and (max-width: 767px) {
-        .blog .business-claim .content .right {
+        .business-claim .content .right {
           float: none;
           display: block;
           width: 100%;
           height: 100%; } }
-      .blog .business-claim .content .right .image {
+      .business-claim .content .right .image {
         margin: 0 auto;
         width: 230px; }
         @media screen and (max-width: 767px) {
-          .blog .business-claim .content .right .image {
+          .business-claim .content .right .image {
             width: 170px; } }
 
-.blog .findbusiness {
+.findbusiness {
   margin-bottom: 50px; }
-  .blog .findbusiness .container {
+  .findbusiness .container {
     background: #fff;
     border-radius: 15px;
     box-shadow: 0 -2px 18px 0 rgba(72, 89, 102, 0.25);
     width: calc(100% - 30px); }
-  .blog .findbusiness h2 {
+  .findbusiness h2 {
     text-align: center;
     font-size: 26px;
     padding: 0;
     margin-bottom: 30px;
     color: #BF1A15; }
     @media only screen and (max-width: 767px) {
-      .blog .findbusiness h2 {
+      .findbusiness h2 {
         font-size: 22px; } }
     @media only screen and (max-width: 479px) {
-      .blog .findbusiness h2 {
+      .findbusiness h2 {
         font-size: 22px; } }
-  .blog .findbusiness .content {
+  .findbusiness .content {
     max-width: 900px;
     margin: 0px auto; }
-    .blog .findbusiness .content .items .item {
+    .findbusiness .content .items .item {
       padding: 60px 0; }
       @media screen and (max-width: 979px) {
-        .blog .findbusiness .content .items .item {
+        .findbusiness .content .items .item {
           padding: 30px 0; } }
-      .blog .findbusiness .content .items .item p {
+      .findbusiness .content .items .item p {
         max-width: initial;
         text-align: center; }
-        .blog .findbusiness .content .items .item p:first-child {
+        .findbusiness .content .items .item p:first-child {
           margin-top: 0px; }
-      .blog .findbusiness .content .items .item .register-store {
+      .findbusiness .content .items .item .register-store {
         padding-bottom: 30px;
         position: relative;
         margin-bottom: 30px; }
-        .blog .findbusiness .content .items .item .register-store .btn {
+        .findbusiness .content .items .item .register-store .btn {
           max-width: 200px;
           margin-top: 20px; }
-        .blog .findbusiness .content .items .item .register-store:after {
+        .findbusiness .content .items .item .register-store:after {
           content: '';
           position: absolute;
           width: 90%;
@@ -858,81 +857,81 @@ footer {
           height: 1.5px;
           bottom: 0;
           background: #ccc; }
-      .blog .findbusiness .content .items .item .knowmore .number {
+      .findbusiness .content .items .item .knowmore .number {
         text-align: center; }
-        .blog .findbusiness .content .items .item .knowmore .number p {
+        .findbusiness .content .items .item .knowmore .number p {
           display: inline-block;
           vertical-align: middle;
           margin-bottom: 0;
           text-align: center;
           padding: 10px 3px; }
-        .blog .findbusiness .content .items .item .knowmore .number .image {
+        .findbusiness .content .items .item .knowmore .number .image {
           display: inline-block;
           vertical-align: middle; }
 
-.blog .business .container {
+.business .container {
   max-width: 1170px;
   margin: 0px auto; }
   @media screen and (max-width: 979px) {
-    .blog .business .container {
+    .business .container {
       margin: 0px 30px;
       width: calc(100% - 60px); } }
   @media screen and (max-width: 479px) {
-    .blog .business .container {
+    .business .container {
       margin: 0px 20px;
       width: calc(100% - 40px); } }
 
 @media screen and (max-width: 979px) {
-  .blog .business .main .content {
+  .business .main .content {
     padding: 137px 0px 134px; } }
 
 @media screen and (max-width: 767px) {
-  .blog .business .main .content {
+  .business .main .content {
     padding: 100px 0px 138px; } }
 
 @media screen and (max-width: 979px) {
-  .blog .business .main .logo {
+  .business .main .logo {
     max-width: 80px; } }
 
-.blog .business .WhatZeepzoop .container {
+.business .WhatZeepzoop .container {
   margin-top: -100px; }
   @media screen and (max-width: 767px) {
-    .blog .business .WhatZeepzoop .container {
+    .business .WhatZeepzoop .container {
       padding: 0 25px; } }
 
 @media screen and (max-width: 767px) {
-  .blog .business .WhatZeepzoop .content {
+  .business .WhatZeepzoop .content {
     padding: 0; } }
 
-.blog .business .WhatZeepzoop .content .items .item {
+.business .WhatZeepzoop .content .items .item {
   padding: 70px 0; }
-  .blog .business .WhatZeepzoop .content .items .item .business-content h2 {
+  .business .WhatZeepzoop .content .items .item .business-content h2 {
     font-size: 26px;
     line-height: 32px;
     color: #9a162d;
     margin-bottom: 40px; }
     @media screen and (max-width: 767px) {
-      .blog .business .WhatZeepzoop .content .items .item .business-content h2 {
+      .business .WhatZeepzoop .content .items .item .business-content h2 {
         font-size: 20px;
         margin-bottom: 20px; } }
-  .blog .business .WhatZeepzoop .content .items .item .business-content p {
+  .business .WhatZeepzoop .content .items .item .business-content p {
     width: 80%;
     max-width: initial;
     font-size: 18px;
     margin: 0 auto; }
     @media screen and (max-width: 767px) {
-      .blog .business .WhatZeepzoop .content .items .item .business-content p {
+      .business .WhatZeepzoop .content .items .item .business-content p {
         font-size: 16px; } }
   @media screen and (max-width: 979px) {
-    .blog .business .WhatZeepzoop .content .items .item {
+    .business .WhatZeepzoop .content .items .item {
       padding: 25px 0; } }
 
-.blog .business .business-claim .content {
+.business .business-claim .content {
   max-width: 980px;
   margin: 0 auto; }
   @media screen and (max-width: 767px) {
-    .blog .business .business-claim .content h1 {
+    .business .business-claim .content h1 {
       font-size: 22px; } }
 
-.blog .business .findbusiness .container {
+.business .findbusiness .container {
   box-shadow: 0 2px 18px 0 rgba(72, 89, 102, 0.25); }

@@ -1,5 +1,3 @@
-
-
 @font-face {
     font-family: 'HelveticaNeueLTPro';
     src: url('../fonts/HelveticaNeueLTPro-Roman.eot?#iefix') format('embedded-opentype'),  
@@ -465,8 +463,7 @@
                     font-size: 20px;
                     font-weight: bold;
                 }
-                p{
-                    font-weight: 300;
+                p{      
                     color: #c1c1c1;
                     font-size: 13px;
                     line-height: 1.3;
@@ -676,7 +673,6 @@ footer{
         display: block;
         margin: 0px auto 50px;
         text-align: center;
-    
         p{
             font-size: 12px;
         }
@@ -699,9 +695,8 @@ footer{
                 font-weight: bold;
             }
         }
-        .social-media {
+        .social-media {     
             padding-top: 20px;
-          
             a {
                 display: inline-block;
                 &:nth-last-child(1) {
@@ -710,7 +705,7 @@ footer{
                         display: inline-block;
                     }
                 }
-        
+            }
         }
     }
 }
@@ -1538,11 +1533,11 @@ section {
     .business-claim{
         .content{
             max-width: 980px;
-            margin: 0 auto;
+            margin: 0 auto;     
             h1{     
                 @media screen and(max-width:767px){
                     font-size: 22px;
-                }   
+                }                       
             }
         }
     }
@@ -1551,5 +1546,4 @@ section {
             box-shadow: 0 2px 18px 0 rgba(72, 89, 102, 0.25);
         }
     }
-}
 }
