@@ -4,7 +4,7 @@
   "description": "An example of Blog API using NodeJS, Mongoose, Express and JWT",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "SET PORT=3005 && nodemon index.js",
     "production": "PORT=3000 NODE_ENV=production node index.js",
     "dev": "PORT=3002 NODE_ENV=dev node index.js",
     "scss": "node-sass --watch assets/scss/ -o assets/css/"
