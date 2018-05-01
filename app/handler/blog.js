@@ -18,7 +18,7 @@ class BlogHandler extends BaseAutoBindedClass {
     }
     getBlogs(req, res) {
         var optionsStore = {
-            url: URLStore + '/blogs/search?startBlogs=0&endBlogs=9',
+            url: URLStore + '/blogs/search?startBlogs=0&endBlogs=11',
             method: 'GET',
             headers: {
                 'Authorization': "maximumvsminimumsecurity",
@@ -46,7 +46,6 @@ class BlogHandler extends BaseAutoBindedClass {
                 site: 'Zeepzoop',
                 domain: 'zeepzoop.com'
             }
-
             res.render('blog', { seo: true, seoData: seoData, page: 'blogs-page', blogs: JSON.parse(results)['data'], length: JSON.parse(results)['data'].length, titleURL: urlArray })
         })
     }
