@@ -106,3 +106,37 @@ $('.blog .author .social-media a').on("click", function (event) {
     var share_link = $(this).prop('href');
     window.open(share_link, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=" + top_vertical + ",left=" + left_center + ",width=500,height=500");
 });
+
+var startBlogs = 12;
+var endBlogs = startBlogs + 11;
+
+$('#loadMoreBlog').click(function () {
+
+    var request = $.ajax({
+        url: "http://api.zeepzoop.com/blogs/search?startBlogs=" + startBlogs + "&endBlogs=" + endBlogs,
+        type: "get",
+        dataType: 'JSON',
+        headers: {
+            'Authorization': "maximumvsminimumsecurity",
+            'Content-Type': "application/json"
+        },
+    });
+
+    request.done(function (response) {
+        startBlogs = startBlogs + 12;
+        endBlogs = startBlogs + 11;
+        if (response.data.length < 12) {
+            $('#loadMoreBlog').before('<div class="noMore">No more blog</div>');
+            $('#loadMoreBlog').remove();
+        }
+        html = '';
+        for (i = 0; i < response.data.length; i++) {
+            html += '<a href="' + response.data[i].URL + '"> <div class="img"><img src="http://api.zeepzoop.com/' + response.data[i].blogPicture + '"></div><div class="info"> <h3>' + response.data[i].title + '</h3> <p>' + response.data[i].metaDescription + '</p></div><div class="author"> <div class="img"><img src="http://api.zeepzoop.com/' + response.data[i].authorImage + '"></div><div class="profile"><span>' + response.data[i].authorName + '</span></div></div></a>'
+        }
+        $('.blogs .items').append(html);
+    });
+
+    request.fail(function (jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
+    });
+});
