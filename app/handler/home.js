@@ -13,8 +13,6 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     getSingleHome(req, res) {
-        console.log(req.query);
-        console.log(req.params);
         var optionsStore = {
             url: URLStore + '/blogs/search?startBlogs=0&endBlogs=2',
             method: 'GET',
@@ -34,7 +32,6 @@ class HomeHandler extends BaseAutoBindedClass {
                     reject(new NotFoundError("blog not found"))
             });
         }).then((results) => {
-            console.log(req.protocol + '://' + req.get('host') + req.originalUrl);
             var seoData = {
                 title: 'Zeepzoop Your Shopping Guide',
                 description: 'One of its kind first shopping assistant App for the Exploring Shopper in you. It makes shopping simpler for you by recommending you the best places to shop.',
