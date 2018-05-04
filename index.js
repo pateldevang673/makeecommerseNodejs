@@ -34,6 +34,12 @@ app.use(authManager.providePassport().initialize());
 // Set Up validation middleware
 app.use(validationManager.provideDefaultValidator());
 // Setup routes
+
+app.get('/sitemap.xml', function (req, res) {
+    res.type('application/xml')
+    res.sendFile(__dirname + '/sitemap.xml');
+});
+
 app.use('/', routes);
 
 app.get('*', function (req, res) {
