@@ -131,7 +131,7 @@ $('#loadMoreBlog').click(function () {
         }
         html = '';
         for (i = 0; i < response.data.length; i++) {
-            html += '<a href="' + response.data[i].URL + '"> <div class="img"><img src="http://api.zeepzoop.com/' + response.data[i].blogPicture + '"></div><div class="info"> <h3>' + response.data[i].title + '</h3> <p>' + response.data[i].metaDescription + '</p></div><div class="author"> <div class="img"><img src="http://api.zeepzoop.com/' + response.data[i].authorImage + '"></div><div class="profile"><span>' + response.data[i].authorName + '</span></div></div></a>'
+            html += '<a href="blogs/' + response.data[i].URL + '"> <div class="img"><img src="http://api.zeepzoop.com/' + response.data[i].blogPicture + '"></div><div class="info"> <h3>' + response.data[i].title + '</h3> <p>' + response.data[i].metaDescription + '</p></div><div class="author"> <div class="img"><img src="http://api.zeepzoop.com/' + response.data[i].authorImage + '"></div><div class="profile"><span>' + response.data[i].authorName + '</span></div></div></a>'
         }
         $('.blogs .items').append(html);
     });
