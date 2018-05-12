@@ -137,6 +137,7 @@ $('#loadMoreBlog').click(function () {
     });
 
     request.fail(function (jqXHR, textStatus) {
+        console.log("Request failed: " + textStatus);
         alert("Request failed: " + textStatus);
     });
 });
