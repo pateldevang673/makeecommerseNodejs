@@ -40,6 +40,11 @@ app.get('/sitemap.xml', function (req, res) {
     res.sendFile(__dirname + '/sitemap.xml');
 });
 
+app.get('/robots.txt', function (req, res) {
+    res.type('text/plain')
+    res.sendFile(__dirname + '/robots.txt');
+});
+
 app.use('/', routes);
 
 app.get('*', function (req, res) {

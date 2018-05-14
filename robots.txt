@@ -1,0 +1,21 @@
+User-Agent: *
+Disallow:
+sitemap: http://zeepzoop.com/sitemap.xml
+
+User-Agent: Jumpbot
+Disallow: /
+
+User-Agent: Yandex
+Disallow: /
+
+User-Agent: YandexBot
+Disallow: /
+
+User-Agent: Baiduspider/2.0
+Disallow: /
+
+User-Agent: Baiduspider-image
+Disallow: /
+
+User-Agent: Baiduspider-video
+Disallow: /
