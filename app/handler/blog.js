@@ -16,26 +16,59 @@ class BlogHandler extends BaseAutoBindedClass {
         super();
         this._validator = require('validator');
     }
-    getBlogs(req, res) {
-        var optionsStore = {
-            url: URLStore + '/blogs/search?startBlogs=0&endBlogs=11',
-            method: 'GET',
-            headers: {
-                'Authorization': "maximumvsminimumsecurity",
-                'Content-Type': "application/json"
-            }
-        };
+    requestAsync(req, url, type) {
         return new Promise(function (resolve, reject) {
-            request(optionsStore, function (error, response, body) {
-                if (body != null) {
-                    for (var i = 0; i < JSON.parse(body)['data'].length; i++) {
-                        urlArray[i] = JSON.parse(body)['data'][i].title.trim().replace(/\s+/g, '-').toLowerCase()
-                    }
-                    resolve(body)
-                } else
-                    reject(new NotFoundError("blog not found"))
+            var URLStore = url;
+            var optionsStore = {
+                url: URLStore,
+                method: 'GET',
+                headers: {
+                    'Authorization': "maximumvsminimumsecurity",
+                    'Content-Type': "application/json"
+                }
+            };
+            request(optionsStore, type, function (error, response, body) {
+                return resolve([type, JSON.parse(body)['data']]);
             });
-        }).then((results) => {
+        });
+    }
+    objectify(array) {
+        return array.reduce(function (p, c) {
+            console.log("objectify")
+            console.log(p)
+            console.log(c)
+            p[c['fieldname']] = c;
+            return p;
+        }, {});
+    }
+    getBlogs(req, res) {
+            // console.log(req.query)
+            // var optionsStore = {
+            //     url: URLStore + '/collections/latestcollections',
+            //     method: 'GET',
+            //     headers: {
+            //         'Authorization': "maximumvsminimumsecurity",
+            //         'Content-Type': "application/json"
+            //     }
+            // };
+            // console.log(window.localStorage)
+            // LocalStorage.setItem('cityName','Ahmedabad')
+            // var myStorage = window.localStorage;
+            // let cityName=localStorage.getItem('cityName')
+            // console.log("cityName")
+            // console.log(cityName)
+             var mainObj = {};
+            Promise.all([
+                this.requestAsync(req, URLStore + '/blogs/search?startBlogs=0&endBlogs=4&trending=true', 'trendingBlogs'),
+                this.requestAsync(req, URLStore + '/blogs/search?startBlogs=0&endBlogs=4', 'newBlogs'),
+                // this.requestAsync(req, URLStore + '/blogs/search?startBlogs=0&endBlogs=4', 'trendingBlog'),
+                
+            ])
+            .then((results) => {
+                // console.log(results[0][1].length)
+                // results[0] = this.objectify(results[0])
+                // console.log(this.objectify(results[0]))
+                console.log(results)
             var seoData = {
                 title: 'Zeepzoop Blogs',
                 description: 'Read blogs related to Art, Craft, culture, festivals, different cities, fashion, Home décor and much more. It guides you about what to buy from different cities.',
@@ -46,7 +79,7 @@ class BlogHandler extends BaseAutoBindedClass {
                 site: 'Zeepzoop',
                 domain: 'zeepzoop.com'
             }
-            res.render('blog', { seo: true, seoData: seoData, page: 'blogs-page', blogs: JSON.parse(results)['data'], length: JSON.parse(results)['data'].length, titleURL: urlArray })
+            res.render('blog', { seo: true, seoData: seoData, page: 'blogs-page', blogs: results[0][1], length: results[0][1].length, titleURL: urlArray })
         })
     }
 

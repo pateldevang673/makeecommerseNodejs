@@ -1,0 +1,122 @@
+@media screen and (max-width:1199px){
+h3{font-size: 18px;}
+h2{font-size: 34px; margin-bottom: 15px;}	
+.fix-wrap{ padding:0px 15px}
+.owl-carousel .owl-nav button.owl-prev{ left:10px;}
+.owl-carousel .owl-nav button.owl-next{ right:10px;}
+.feature-shops-item{ width:32%; margin-left:2%; margin-bottom:2%}
+.view-all-btn{ margin-top:0px;}
+section{ padding:50px 0;}
+.editorpick-list .editorpick-item{ width:49%; margin-bottom:2%; margin-left:2%}	
+.offers-scn{min-height: 500px;}
+.blog-main-prt{ width:55%;}
+.blog-list-main{ width:43%}
+.blog-thumb-pic{width: 38%;}
+.blog-list-cont{ width:60%;}
+.blog-list-main li h3{ margin-bottom:5px;}
+.visual-stories-list li{ width:32%;margin-left:2%; margin-bottom:2%}
+.visual-stories-list li iframe{ width:100%; height:170px;}
+.gettheapp-img{ width:49%; margin-left:0px;}
+.gettheapp-cont{ width:49%; margin-top:80px; margin-right:0px;}
+.offers-slider-main .owl-item.active{ width:300px !important}
+.offers-slider-main .owl-item.center{ width:335px !important;}
+.offers-slider-main{ padding-left:1.3%}
+.body-blog .owl-carousel .owl-nav button.owl-prev{ top:20%;}
+.body-blog .owl-carousel .owl-nav button.owl-next{ top:20%;}
+.bagsmore-list-main .bagsmore-item{ max-width:49%; margin-left:2%; margin-top:2%; margin-bottom:0px;}
+.paginaton-main{ margin-top:40px;}
+.bag-info-cont p{ font-size:16px;}
+.bag-info-cont .bag-title{ font-size:25px; line-height:30px;}
+.bag-info-cont{ width:80%}
+.bookmarkshare-link a{ margin-left:5px;}
+.bookmarkshare-link{ width:18%;}
+
+
+}
+@media screen and (max-width:1023px) {
+.blog-list-main li h3 {line-height: 20px; font-size: 16px;}	
+.blogs-scn p{ font-size:12px; line-height:16px;}
+.gettheapp-cont{ margin-top:30px;}
+.offers-slider-main .owl-item.active{ width:222px !important}
+.offers-slider-main .owl-item.center{ width:300px !important;}
+.offers-slider-main{ padding-left:1%}
+.body-innerpage header{ padding:10px 0;}
+.info-share-book{ padding:8px;}
+}
+	
+@media screen and (max-width:767px) {
+.logo{ margin-top:0px;}
+h2 {font-size: 26px;margin-bottom:10px;}
+.search-shops-lcn label{ clear:both; font-size:16px; padding-top:0px;}
+.form-group{ width:100%;}
+.form-group input{ margin-right:0px; width:100%}
+.search-btn{ margin:auto; float:none; margin-top:10px;}
+.in-shopse{ margin-top:20px;}
+.banner-scn-main{ min-height:inherit; padding-bottom:20px;}	
+.categories-list li{ width:25%; margin-top:4%; margin-bottom:4%;}
+.feature-shops-item{ width:49%; margin-left:2%; margin-bottom:2%;}
+.feature-shops-item:nth-child(3n+1){ margin-left: 2%; clear:none;}
+.feature-shops-item:nth-child(2n+1){ margin-left:0px; clear:left;}	
+.blog-main-prt, .blog-list-main, .gettheapp-img, .gettheapp-cont{ max-width:100%; width:100%;}
+.blog-list-main{ margin-top:40px;}
+.offers-slider-main .owl-item.active{ width:210px !important}
+.offers-slider-main .owl-item.center{ width:230px !important;}
+.offers-slider-main { padding-left: 0.5%;}
+.blogs-scn .more-btn{ float:none; margin:auto; display:table;}
+.visual-stories-list li{ width:100%; margin-left:0px;}
+.visual-stories-list li iframe{ height:250px;}	
+footer{ padding:30px 0;}
+.ftr-nav{ padding:20px 0;}
+.ftr-nav li a{ font-size:14px}
+.ftr-nav li { margin-left: 10px;}
+.offers-slider-main .owl-item.active .offers-item p{ font-size:10px; line-height:16px;}
+.offers-slider-main .owl-item.center .offers-item p{ line-height:18px; font-size:13px;}
+.feature-info p{ font-size:14px;}
+.famme-dtl .feature-info{ bottom:0px; opacity:1;}
+.feature-shops-item .famme-dtl:before { opacity: 1;}
+.visual-stories-list li{ margin-bottom:6%;}	
+.ftr-nav li{ margin-left:2%; width:32%; padding-top:10px;}
+.ftr-nav li:nth-child(2n+1){ margin-left:0px;}
+.editore-pick-scn{ padding-bottom:40px;}
+.bag-info-cont p {font-size: 14px; line-height: 20px;}
+	}
+	
+@media screen and (max-width:599px) {
+.editorpick-list .editorpick-item, .feature-shops-item{ margin-bottom:4%; margin-left:0px; width:100%;}	
+.offers-slider-main .owl-item.center{ margin:auto; width:360px !important;}
+.offers-slider-main{ width:362px; position:relative; left:0px; margin:auto;}
+.playstore a {margin-left: 5px;}
+.logo{ width:90px}
+.login-register .bdr-btn{ min-width:inherit; margin-top:25px; font-size:12px;}
+.form-group input{ padding-left:28px; padding-right:5px; font-size:13px; background-position:5px 15px;}
+.gettheapp-cont p{ font-size:18px; line-height:24px;}
+.playstore a{ width:49%; margin-left:2%;}
+.socialmedia a{ margin-left:30px;}
+.pagetitle {width: 40%; margin-top: 2px;}
+.loginsinup-btn{min-width: inherit; padding:0 5px; height: 34px; line-height: 30px;}
+.hder-app-txt{ margin:6px 5px 0 0;}	
+.bagsmore-list-main .bagsmore-item{ max-width:100%; margin-top:20px; margin-left:0px;}
+.paginaton-main a, .paginaton-main .p-dot{ margin-left:2px;}
+.ftr-copy{ padding-top:20px;}
+	}
+@media screen and (max-width:479px) {
+.gettheapp a{ font-size:0px;}
+.gettheapp a img{ margin-right:0px;}	
+.categories-list li{ width:33%;}
+	}	
+@media screen and (max-width:374px) {
+.offers-slider-main .owl-item.center{ margin:auto; width:306px !important;}
+.offers-slider-main{ width:310px; position:relative; left:-2px; margin:auto;}	
+.logo {width: 60px;}
+.login-register .bdr-btn {min-width: inherit; margin-top: 15px;font-size: 11px; height: 34px; line-height: 30px;}
+.cont-email-info a{ padding:0 3px; font-size:12px;}
+.cont-email-info a:before{ top:0px;}
+footer:before{ width:200px; height:150px; background-size:100% 100%;}
+.feature-info p {
+    font-size: 13px;
+}
+.paginaton-main a{width: 36px; font-size:14px;}
+.loginsinup-btn{ font-size:11px;}
+.hder-app-txt { margin: 7px 2px 0 0; font-size: 11px;}
+.pagetitle{ margin-top:6px;}
+	}			

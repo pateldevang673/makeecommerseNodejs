@@ -4,14 +4,14 @@
   "description": "An example of Blog API using NodeJS, Mongoose, Express and JWT",
   "main": "index.js",
   "scripts": {
-    "start": "SET PORT=3005 && nodemon index.js",
+    "start": "PORT=3005 nodemon index.js",
     "production": "PORT=3000 NODE_ENV=production node index.js",
     "dev": "PORT=3002 NODE_ENV=dev node index.js",
     "scss": "node-sass --watch assets/scss/ -o assets/css/"
   },
   "repository": {
     "type": "git",
-    "url": "https://dmsachaniya@bitbucket.org/dmsachaniya/zeepzoop-webapp-node.git"
+    "url": "https://dmsachaniya3@bitbucket.org/dmsachaniya3/zeepzoop-web-node.git"
   },
   "keywords": [
     "Blog",
@@ -33,6 +33,7 @@
     "jade": "^1.11.0",
     "jsonwebtoken": "^7.4.0",
     "mongoose": "^4.9.8",
+    "node-localstorage": "^1.3.1",
     "node-sass": "^4.7.2",
     "passport": "^0.3.2",
     "passport-jwt": "^2.2.1",
