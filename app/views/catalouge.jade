@@ -1,0 +1,30 @@
+include common/head
+
+.wrapper
+  .mid-scn-main
+    section.catalouges-scn
+      .fix-wrap
+        .breadcream
+          ul
+            li
+              a(href='/') Home
+            li.active Catalouge
+        .catalouges-pdt-main
+          - for(var x = 0; x < catelougelength ; x++)
+            .catalouges-item
+              .catalouges-pic
+                a(href='/store/#{catelouge[x].storeId}')
+                  img.catimagesize(src=global.config.variable.apiPath+'/#{catelouge[x].catalogUrl}', alt='')
+              span.cate-listitile #{catelouge[x].catalogDescription}
+        a.load-more(id="loadcatalouge",style="cursor: pointer;") Load More
+    // section.catalouges-featured
+    //   .fix-wrap
+    //     h2 Featured shops
+    //     p
+    //       | Per ante nonummy metus platea ipsum porttitor neque justo mauris nec laoreet. Eu euismod tincidunt neque quam feugiat lacinia cras laoreet magnis placerat cras aenean tempus ultricies elit maecenas sit egestas ante egestas blandit sodales feugiat cursus donec lectus dictum hendrerit dictumst potenti eros, mus eu auctor enim, commodo integer fusce, luctus. Auctor magna dictum euismod fringilla sapien nascetur. Nec. Lacinia, facilisi metus. Libero. Ac nunc maecenas vehicula, quam fusce ligula iaculis ut pharetra id.
+    //     p
+    //       | Lacinia ac iaculis vulputate mattis imperdiet. Lobortis hendrerit. Magna arcu fermentum Duis feugiat. Leo eu purus nam ridiculus donec augue, egestas porttitor magna. Augue nullam. Sociis adipiscing interdum sed id, vivamus pede fringilla penatibus pede faucibus suscipit volutpat nostra, non sollicitudin quisque faucibus eleifend elementum hendrerit, nibh habitant nam condimentum sapien torquent nisl nostra mauris dapibus aliquet placerat ornare morbi orci, suspendisse euismod felis quam pellentesque vehicula bibendum mi vel quisque. Purus. Ullamcorper quisque aliquet sodales. Ad dis ipsum morbi. Ridiculus et magnis litora. Non. Potenti augue, dignissim consequat, euismod enim dictum, convallis felis, sapien morbi ligula viverra eu, ac pretium malesuada nulla nostra hendrerit quisque a erat tortor. Laoreet cum molestie ridiculus condimentum. Ac eros nulla, ultrices erat mauris leo. Erat habitant nulla dictumst.
+
+include common/footer
+script.
+  document.body.classList.add("body-register");

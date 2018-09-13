@@ -1,251 +1,368 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    title ::Zeepzoop::
-    meta(name='viewport', content='minimum-scale=1, initial-scale=1,user-scalable=no')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i|Oswald:400,500,600,700', rel='stylesheet')
-    link(href='css/owl.carousel.min.css', rel='stylesheet')
-    link(href='css/style.css', rel='stylesheet')
-    link(href='css/media.css', rel='stylesheet')
-  body
-    .wrapper
-      header
-        section.hdr-topscn
-          .fix-wrap
-            .pull-left.cont-email-info
-              a(href='tel:+91 94 24 85 11 99') +91 94 24 85 11 99
-              a(href='mailto:connect@zeepzoop.com') connect@zeepzoop.com
-            .pull-right.gettheapp
-              a(href='#')
-                img(src='images/aap-phone-icon.png', width='18', height='29', alt='')
-                | Get the App
-      section.banner-scn-main(style='background-image:url(images/home-hero.jpg)')
+include common/head
+
+.wrapper
+  section.banner-scn-main(style='background-image:url(images/home-bnr-hero.jpg); background-attachment: fixed;')
+    .fix-wrap
+      h2.discovermost-bnr
+        | Discover Most
+        br
+        | Amazing and Unique Brands
+      .search-shops-lcn
+        .in-shopse
+          span.inshops-eshops In-Shops
+          .shops-slt
+            span.shops-sltbtn
+          span.inshops-eshops.eshops-txt E-Shops
+        .location-slt
+          select(name='cities')
+            option(selected='') Select City
+              - for (var x=0;x<citiesLength;x++) {
+                option #{cities[x].cityName}
+              - }
+  .mid-scn-main
+    // section.home-offer-scn
+    //   .owl-carousel.homeofferSlider
+    //     .item
+    //       img(src='images/men-spectacular-bnr.jpg', alt='')
+    //     .item
+    //       img(src='images/men-spectacular-bnr1.jpg', alt='')
+    //     .item
+    //       img(src='images/men-spectacular-bnr2.jpg', alt='')
+    if lengthofflineCollections > 0
+      section.collection-scn.offlinecollectiondiv
         .fix-wrap
-          .login-register
-            a.bdr-btn.register-brand-btn(href='#') Register Your Brand
-            a.logo(href='#')
-              img(src='images/logo.png', width='164', height='164')
-            a.bdr-btn.loginsinup-btn(href='#') Login / SignUp 
-          .search-shops-lcn
-            form(action='')
-              label Lorem lpsum is simply dummy text of the printing
-              .form-group
-                input(name='', placeholder='Search  by Shop Name or Type of product', type='text')
-                
-                button.dft-btn.search-btn(type='button' ,onclick='something()') SEARCH
-            .in-shopse
-              span.inshops-eshops In-Shops
-              .shops-slt
-                span.shops-sltbtn
-              span.inshops-eshops.eshops-txt E-Shops
-            .location-slt
-              select(name='cities')
-                //- option(selected='') Ahmedabad
-                - for(var x=0;x<citiesLength;x++)
-                  option #{cities[x].cityName}
-      section.categories-scn
-        .fix-wrap
-          ul.categories-list
+          h2 COLLECTIONS
+          .owl-carousel.collectionsSlider
+            - for (var x = 0; x < lengthofflineCollections ; x++)
+              .item
+                a.collection-pic(href='/collection/'+'#{offlineCollections[x]._id}')
+                  img(src=global.config.variable.apiPath+'/#{offlineCollections[x].collectionPicture}', alt='')
+    section.collection-scn.onlinecollectiondiv
+      .fix-wrap
+        h2 COLLECTIONS
+        .owl-carousel.collectionsSlider
+          - for (var x = 0; x < lengthonlineCollections ; x++)
+            .item
+              a.collection-pic(href='/collection/'+'#{onlineCollections[x]._id}')
+                img(src=global.config.variable.apiPath+'/#{onlineCollections[x].collectionPicture}', alt='')
+    section.feature-shops-scn.offlinestorediv
+      .fix-wrap
+        h2 Popular
+        .feature-shops-list
+          - for (var x = 0; x < storesLength ; x++)
+            .feature-shops-item
+              a.famme-dtl(href='/#{stores[x].URL}/#{stores[x]._id}')
+                img(style="height: 200px;",src=global.config.variable.apiPath+'/#{stores[x].storeBanner}', alt='')
+                .feature-info
+                  h3 #{stores[x].storeName}
+                  // p #{stores[x].storeDiscription}
+        .view-all-btn
+          //- a.cmn-btn(href='/fshop?buisnessOffline=true') View All
+          a.cmn-btn.newsebtn(name="/fshop?buisnessOffline=true",id="Populer") View ALL
+    section.sponsered-added-scn.offlinenewstore
+      .fix-wrap
+        .main_heading
+          h2 Sponsored
+          .see_all
+            // a.newsebtn(name="/fshop?buisnessOnline=true") SEE ALL
+        .newlyadded-list
+          .owl-carousel.newlyAdded
+            - for (var x = 0; x < sponsoredOffline.length; x++)
+              .item
+                .newlyadded-item
+                  a.famme-dtl(href='/#{sponsoredOffline[x].URL}/#{sponsoredOffline[x]._id}') 
+                    img(src=global.config.variable.apiPath+'/#{sponsoredOffline[x].storeBanner}', alt='')
+                    .feature-info
+                      h3(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;") #{sponsoredOffline[x].storeName}
+    section.catelouges-scn.offlinestorediv(style="background: #f1f1f1;")
+      .fix-wrap
+        .main_heading
+          h2 CATALOUGES
+          .see_all
+            a(href='/catalouge') SEE ALL
+        .owl-carousel.catelougesSlider
+          - for (var x = 0; x < storesLength ; x++)
+            .item
+              a.catelouges-item(href='/#{stores[x].URL}/#{stores[x]._id}')
+                .cate-pic
+                  if stores[x].featureCatalog!==null
+                    img(src=global.config.variable.apiPath+'/#{stores[x].featureCatalog.catalogUrl}', alt='')
+                  if stores[x].featureCatalog!==null
+                    //- span.catalouges-title #{stores[x].featureCatalog.catalogDescription}
+    section.feature-shops-scn.onlinestorediv
+      .fix-wrap
+        h2 Popular
+        .feature-shops-list
+          - for (var x = 0; x < onlineStoresLength ; x++)
+            .feature-shops-item
+              a.famme-dtl(href='/#{onlineStores[x].URL}/#{onlineStores[x]._id}')
+                img(src=global.config.variable.apiPath+'/#{onlineStores[x].storeBanner}', alt='')
+                .feature-info
+                  h3 #{onlineStores[x].storeName}
+                  //- p #{onlineStores[x].storeDiscription}
+        .view-all-btn
+          //- a.cmn-btn(href='/fshop?buisnessOnline=true') View All
+          a.cmn-btn.newsebtn(name="/fshop?buisnessOnline=true",id="Populer") View ALL
+    section.sponsered-added-scn.onlinenewstore
+      .fix-wrap
+        .main_heading
+          h2 Sponsored
+          .see_all
+            //- a.newsebtn(name="/fshop?buisnessOnline=true") SEE ALL
+        .newlyadded-list
+          .owl-carousel.newlyAdded
+            - for (var x = 0; x < sponsoredOnline.length; x++)
+              .item
+                .newlyadded-item
+                  a.famme-dtl(href='/#{sponsoredOnline[x].URL}/#{sponsoredOnline[x]._id}') 
+                    img(src=global.config.variable.apiPath+'/#{sponsoredOnline[x].storeBanner}', alt='')
+                    .feature-info
+                      h3(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;") #{sponsoredOnline[x].storeName}    
+    section.feature-shops-scn.onlinestorediv
+      .fix-wrap
+        .main_heading
+          h2 CATALOUGES
+          .see_all
+            a(href='/catalouge') SEE ALL
+        .owl-carousel.catelougesSlider
+          - for (var x = 0; x < onlineStoresLength ; x++)
+            .item
+              a.catelouges-item(href='/#{onlineStores[x].URL}/#{onlineStores[x]._id}')
+                .cate-pic
+                  if onlineStores[x].featureCatalog!==null
+                    img(src=global.config.variable.apiPath+'/#{onlineStores[x].featureCatalog.catalogUrl}', alt='')
+                  if onlineStores[x].featureCatalog!==null
+                    //- span.catalouges-title #{onlineStores[x].featureCatalog.catalogDescription}
+    section.editore-pick-scn
+      .fix-wrap
+        h2 EDITOR’S PICK
+        .editorpick-list.responsiv_seam_height
+          - for (var x = 0; x < offlineeditorlength ; x++)
+            .editorpick-item
+              a.famme-dtl(href='/#{offlineeditor[x].URL}/#{offlineeditor[x]._id}')
+                img(src=global.config.variable.apiPath+'/#{offlineeditor[x].storeBanner}', alt='')
+                span.cmn-btn.viewstore-btn VIEW STORE
+                .feature-info
+                  h3 #{offlineeditor[x].storeName}
+                  p #{offlineeditor[x].storeDiscription}
+    section.newly-added-scn.offlinenewstore
+      .fix-wrap
+        .main_heading
+          h2 Newly ADDED
+          .see_all
+            //- a.newsebtn(href='/fshop?buisnessOffline=true',name="/fshop?buisnessOffline=true") SEE ALL
+            a.newsebtn(name="/fshop?buisnessOffline=true",id="Newly_Added") SEE ALL
+        .newlyadded-list
+          .owl-carousel.newlyAdded
+            - for (var x = 0; x < newStoresOfflineLength; x++)
+              .item
+                .newlyadded-item
+                  a.famme-dtl(href='/#{newStoresOffline[x].URL}/#{newStoresOffline[x]._id}') 
+                    img(src=global.config.variable.apiPath+'/#{newStoresOffline[x].storeBanner}', alt='')
+                    .feature-info
+                      h3 #{newStoresOffline[x].storeName}
+    section.newly-added-scn.onlinenewstore
+      .fix-wrap
+        .main_heading
+          h2 Newly ADDED
+          .see_all
+            a.newsebtn(name="/fshop?buisnessOnline=true",id="Newly_Added") SEE ALL
+        .newlyadded-list
+          .owl-carousel.newlyAdded
+            - for (var x = 0; x < newStoresOnlineLength; x++)
+              .item
+                .newlyadded-item
+                  a.famme-dtl(href='/#{newStoresOnline[x].URL}/#{newStoresOnline[x]._id}') 
+                    img(src=global.config.variable.apiPath+'/#{newStoresOnline[x].storeBanner}', alt='')
+                    .feature-info
+                      h3 #{newStoresOnline[x].storeName}
+    //- section.offers-scn(style='background-image:url(images/offers-bg.jpg)')
+    //-   .fix-wrap
+    //-     .main_heading
+    //-       h2 Offers
+    //-       .see_all
+    //-         a(href='#') SEE ALL
+    //-   .offers-slider-main
+    //-     .owl-carousel.offersSlider
+           - for (var x = 0; x < lengthOffersOnline; x++)
+            .item
+              .offers-item
+                img(src=global.config.variable.apiPath+'/#{offersOnline[x].offerPicture}', alt='')
+                a.flatoffer-btn(href=global.config.variable.apiPath+'/#{offersOnline[x].storeId.URL}/#{offersOnline[x].storeId._id}') #{offersOnline[x].offerName}
+                p
+                  | #{offersOnline[x].offerDescription}
+    section.blogs-scn
+      .fix-wrap
+        h2 BLOGs
+        .blog-main-prt
+          a(href='http://www.zeepzoop.com/blogs'+'/#{blogs[0].URL}')
+            img(src=global.config.variable.apiPath+'/#{blogs[0].blogPicture}', alt='')
+            h3
+              | #{blogs[0].title}
+            p
+              | #{blogs[0].metaDescription}
+        .blog-list-main
+          ul
+            - for (var x = 1; x < lengthBlogs; x++)
+              li
+                a(href='http://www.zeepzoop.com/blogs'+'/#{blogs[x].URL}')
+                  span.blog-thumb-pic
+                    img(src=global.config.variable.apiPath+'/#{blogs[x].blogPicture}', alt='')
+                  .blog-list-cont
+                    h3(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;")
+                      | #{blogs[x].title}
+                    p
+                      | #{blogs[x].metaDescription}
+        a.more-btn(href='/blogs') Read More
+    section.gettheapp-scn
+      .fix-wrap
+        .gettheapp-img
+          img(src='images/phone-get-img.png', alt='')
+        .gettheapp-cont
+          h2 GET THE ZEEPZOOP APP
+          p Browse designer collection from Country's Best Designer Labels for Clothing, Jewellery, Accessories and Home Decor.
+          .playstore
+            a(href='https://itunes.apple.com/us/app/zeepzoop/id1332324465?ls=1&mt=8',target="_blank")
+              img(src='images/app-store-icon.png', alt='')
+            a(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user',target="_blank")
+              img(src='images/googleplay-icon.png', alt='')
+    section.visual-stories-scn
+      .fix-wrap
+        h2 VISUAL STORies
+        ul.visual-stories-list
+          - for (var x = 1; x < lengthVideos; x++)
             li
-              a(href='#')
-                i
-                  img(src='images/c-clothing-icon.png', alt='')
-                span Clothing
-            li
-              a(href='#')
-                i
-                  img(src='images/c-jewellery-icon.png', alt='')
-                span Jewellery
-            li
-              a(href='#')
-                i
-                  img(src='images/c-bag-icon.png', alt='')
-                span Bags & More
-            li
-              a(href='#')
-                i
-                  img(src='images/shoes-icon.png', alt='')
-                span Shoes
-            li
-              a(href='#')
-                i
-                  img(src='images/artwotks-icon.png', alt='')
-                span Artwotks
-            li
-              a(href='#')
-                i
-                  img(src='images/souvenirs-icon.png', alt='')
-                span Souvenirs
-            li
-              a(href='#')
-                i
-                  img(src='images/home-decor-icon.png', alt='')
-                span Home Decor
-            li
-              a(href='#')
-                i
-                  img(src='images/furniture-icon.png', alt='')
-                span Furniture
-      .mid-scn-main
-        section.collection-scn
-          .fix-wrap
-            h2 COLLECTIONS
-            .owl-carousel.collectionsSlider
-              - for (var x = 0; x < lengthCollection ; x++)
-                .item
-                  a.collection-pic(href=global.config.variable.apiPath+'/#{collections[x].collectionPicture}')
-                    img(src=global.config.variable.apiPath+'/#{collections[x].collectionPicture}', alt='')
-        section.catelouges-scn
-          .fix-wrap
-            h2 CATALOUGES
-            .owl-carousel.catelougesSlider
-              - for (var x = 0; x < lengthCatalogs ; x++)
-                .item
-                  a.catelouges-item(href=global.config.variable.apiPath+'/#{catalogs[x].catalogUrl}')
-                    .cate-pic
-                      img(src=global.config.variable.apiPath+'/#{catalogs[x].catalogUrl}', alt='')
-                    span.catalouges-title '#{catalogs[x].catalogDescription}'
-        section.feature-shops-scn
-          .fix-wrap
-            h2 Featured ShopS
-              .feature-shops-list
-                - for (var x = 0; x < lengthStores ; x++)
-                  .feature-shops-item
-                    a.famme-dtl(href=global.config.variable.apiPath+'/#{stores[x].storeBanner}')
-                      img(src=global.config.variable.apiPath+'/#{stores[x].storeBanner}', alt='')
-                      .feature-info
-                        h3 '#{stores[x].storeName}'
-                        p '#{stores[x].storeDiscription}'
-            .view-all-btn
-              a.cmn-btn(href='#') View All
-        section.editore-pick-scn
-          .fix-wrap
-            h2 EDITORâ€™S PICK
-            .editorpick-list
-              .editorpick-item
-                a.famme-dtl(href='#')
-                  img(src='images/get-hooked-img1.jpg', alt='')
-                  span.cmn-btn.viewstore-btn VIEW STORE
-                  .feature-info
-                    h3 FAMME
-                    p Lorem lpsum is simply dummy text of the printing and typesetting industry
-              .editorpick-item
-                a.famme-dtl(href='#')
-                  img(src='images/no-26-img.jpg', alt='')
-                  span.cmn-btn.viewstore-btn VIEW STORE
-                  .feature-info
-                    h3 FAMME
-                    p Lorem lpsum is simply dummy text of the printing and typesetting industry
-              .editorpick-item
-                a.famme-dtl(href='#')
-                  img(src='images/get-hooked-img1.jpg', alt='')
-                  span.cmn-btn.viewstore-btn VIEW STORE
-                  .feature-info
-                    h3 FAMME
-                    p Lorem lpsum is simply dummy text of the printing and typesetting industry
-              .editorpick-item
-                a.famme-dtl(href='#')
-                  img(src='images/no-26-img.jpg', alt='')
-                  span.cmn-btn.viewstore-btn VIEW STORE
-                  .feature-info
-                    h3 FAMME
-                    p Lorem lpsum is simply dummy text of the printing and typesetting industry
-        section.newly-added-scn
-          .fix-wrap
-            h2 Newly ADDED
-            .newlyadded-list
-              .owl-carousel.newlyAdded
-              newStores
-                - for (var x = 0; x < newStoresLength ; x++)
-                  .item
-                    .newlyadded-item
-                      img(src=global.config.variable.apiPath+'/#{newStores[x].storeBanner}', alt='')
-                      .feature-info
-                        h3 '#{newStores[x].storeName}'
-                        p '#{newStores[x].storeDiscription}''
-        section.offers-scn(style='background-image:url(images/offers-bg.jpg)')
-          .fix-wrap
-            h2 Offers
-          .offers-slider-main
-            .owl-carousel.offersSlider
-              - for (var x = 0; x < lengthOffers ; x++)
-                .item
-                  .offers-item
-                    img(src=global.config.variable.apiPath+'/#{offers[x].offerPicture}', alt='')
-                    a.flatoffer-btn(href=global.config.variable.apiPath+'/#{offers[x].offerPicture}') '#{offers[x].offerName}'
-                    p '#{offers[x].offerDescription}'
-        section.blogs-scn
-          .fix-wrap
-            h2 BLOGs
-            .blog-main-prt
-              a(href='http://www.zeepzoop.com/blogs'+'/#{blogs[0].blogPicture}')
-                img(src=global.config.variable.apiPath+'/#{blogs[0].blogPicture}', alt='')
-                h3 '#{blogs[0].title}'
-                p '#{blogs[0].metaDescription}'
-            .blog-list-main
-              ul
-                - for (var x = 1; x < lengthBlogs ; x++)
-                  li
-                    a(href='http://www.zeepzoop.com/blogs'+'/#{blogs[x].URL}')
-                      span.blog-thumb-pic
-                        img(src=global.config.variable.apiPath+'/#{blogs[x].blogPicture}', alt='')
-                      .blog-list-cont
-                        h3 '#{blogs[x].title}'
-                        p '#{blogs[x].metaDescription}'
-            a.more-btn(href='http://localhost:3005/blogs') Read More
-        section.visual-stories-scn
-          .fix-wrap
-            h2 VISUAL STORies
-            ul.visual-stories-list
-              li
-                iframe(width='382', height='214', src='https://www.youtube.com/embed/mwfIVnxI95Q?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
-              li
-                iframe(width='382', height='214', src='https://www.youtube.com/embed/mwfIVnxI95Q?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
-              li
-                iframe(width='382', height='214', src='https://www.youtube.com/embed/mwfIVnxI95Q?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
-            a.more-btn(href='#') EXPLORE MORE
-        section.gettheapp-scn
-          .fix-wrap
-            .gettheapp-img
-              img(src='images/phone-get-img.png', alt='')
-            .gettheapp-cont
-              h2 GET THE APP
-              p
-                | Lorem Ipsum is simply dummy text of the
-                | printing and typesetting industry.
-              .playstore
-                a(href='#')
-                  img(src='images/app-store-icon.png', alt='')
-                a(href='#')
-                  img(src='images/googleplay-icon.png', alt='')
-      footer
-        .fix-wrap
-          .socialmedia
-            a(href='#')
-              img(src='images/fb-icon.png', alt='')
-            a(href='#')
-              img(src='images/inst-icon.png', alt='')
-            a(href='#')
-              img(src='images/youtube-icon.png', alt='')
-            a(href='#')
-              img(src='images/pnts-icon.png', alt='')
-          .ftr-nav
-            ul
-              li
-                a(href='#') Our Story
-              li
-                a(href='#') Our Team
-              li
-                a(href='#') Contact us
-              li
-                a(href='#') Privacy Policy
-              li
-                a(href='#') Register Your Brand
-              li
-                a(href='#') Get Featured
-          .ftr-copy  Copyright © Zeepzoop Incorporation LLP - All Rights Reserved-2018
-    script(src='js/jquery.min.js')
-    script(type='text/javascript', src='js/owl.carousel.js')
-    script(type='text/javascript')
-    script(src="js/custom.js")
+              iframe(width='382', height='214', src='https://www.youtube.com/embed/#{videos[x].id.videoId}?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+        a.more-btn(href='https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/videos?pbjreload=10',target="_blank") EXPLORE MORE
+include common/footer
+script(src='js/jquery.min.js')
+script(type='text/javascript', src='js/owl.carousel.js')
+script(type='text/javascript', src='js/custom.js')
+script(type='text/javascript').
+  $(document).ready(function() {
+      if(localStorage.getItem('storetype') && localStorage.getItem('storetype')=="online"){
+        $(".shops-slt").addClass("shopsSlt-current");
+      }
+    $('.shops-slt').click(function(e) {
+      $(this).toggleClass('shopsSlt-current')
+      if($(this).hasClass("shopsSlt-current")){
+        localStorage.setItem('storetype', "online")
+      }else{
+        localStorage.removeItem('storetype')
+      
+      }
+    });
+    $('.homeofferSlider').owlCarousel({
+    loop: true,
+    dots: false,
+    autoplay: true,
+    nav: true,
+    items: 1,
+    })
+    $('.catelougesSlider').owlCarousel({
+    loop: true,
+    margin: 60,
+    responsiveClass: true,
+    dots: false,
+    nav: true,
+    responsive: {
+    0: {
+    items: 1,
+    loop: true,
+    margin: 30,
+    },
+    600: {
+    items: 2,
+    margin: 30,
+    },
+    1000: {
+    items: 3,
+    margin: 30,
+    }
+    }
+    })
+    $('.collectionsSlider').owlCarousel({
+    loop: true,
+    margin: 15,
+    dots: false,
+    nav: true,
+    responsiveClass: true,
+    responsive: {
+    0: {
+    items: 1,
+    },
+    600: {
+    items: 2,
+    },
+    1000: {
+    items: 3,
+    }
+    }
+    })
+    $('.offersSlider').owlCarousel({
+    autoplay: true,
+    nav: true,
+    margin: 30,
+    center: true,
+    loop: true,
+    nav: false,
+    responsive: {
+    0: {
+    items: 1,
+    margin: 2,
+    },
+    600: {
+    items: 3,
+    margin: 5,
+    },
+    1000: {
+    items: 3,
+    },
+    1100: {
+    items: 5,
+    }
+    }
+    });
+    $('.newlyAdded').owlCarousel({
+    loop: true,
+    margin: 60,
+    dots: false,
+    nav: true,
+    responsiveClass: true,
+    responsive: {
+    0: {
+    items: 1,
+    margin: 20,
+    },
+    600: {
+    items: 2,
+    margin: 20,
+    },
+    1000: {
+    items: 3,
+    margin: 20,
+    }
+    }
+    });
+    //- var input = document.getElementById("myInput"); 
+    //-   input.addEventListener("keyup", function(event) {
+    //-   event.preventDefault();
+    //-   if (event.keyCode === 13) {
+    //-     document.getElementById("searchbuttin").click();
+    //-   }
+    //- });
+    //- $("#categoryicon a").on('click',function(e){
+    //-   var id =$(this).attr('id');
+    //-   var categoryName =$(this).attr('name');
+    //-   if ($('.shops-slt').hasClass('shopsSlt-current')) {
+    //-     if (categoryName=='Home Decor') {
+    //-     window.location.href= "/category/Home-Decor/" + $(this).attr('id')+"?buisnessOnline=true";
+    //-     }else{
+    //-     window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOnline=true";
+    //-     }
+    //-   }else{
+    //-     window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOffline=true";
+
+    //-   }
+    //- });
+  });

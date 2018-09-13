@@ -1,1485 +1,476 @@
-doctype html
-html
-  head
-    meta(charset='utf-8')
-    title ::Zeepzoop::
-    meta(name='viewport', content='minimum-scale=1, initial-scale=1,user-scalable=no')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i|Oswald:400,500,600,700', rel='stylesheet')
-    link(href='css/owl.carousel.min.css', rel='stylesheet')
-    link(href='css/style.css', rel='stylesheet')
-    link(href='css/media.css', rel='stylesheet')
-  body
-    .wrapper
-      header
-        .fix-wrap
-          .pull-left.pagetitle
-            img(src='images/zeepzopblog-title.png', alt='')
-          |       
-          .pull-right
-            a.hder-app-txt(href='#') Get the App
-            |  
-            a.bdr-btn.loginsinup-btn(href='#') Login / SignUp 
-      |   
-      section.innerpage-hero
-        img(src='images/blog-hero-img.jpg')
-      |   
-      .mid-scn-main
-        section.trendding-scn
-          .fix-wrap
-            h2 TRENDING
-            |         
-            .owl-carousel.trenddingSlider
-              - for(var x=0;x<length;x++)
+include common/head
 
-                .item
-                  .blogslide-item
-                    a(href=global.config.variable.apiPath+'/#{blogs[x].blogPicture}')
-                      img(src=global.config.variable.apiPath+'/#{blogs[x].blogPicture}', alt='')
-                    |               
-                    .blogslide-cont
-                      h3
-                        a(href='http://www.zeepzoop.com/blogs'+'/#{blogs[x].URL}') '#{blogs[x].title}'
-                      |                 
-                      p
-                        '#{blogs[x].metaDescription}'
-                      |                 
-                      .blog-user-share
-                        .pull-left
-                          span.blog-usepic
-                            img(src=global.config.variable.apiPath+'/#{blogs[x].authorImage}', alt='')
-                          |                     
-                          .blog-name-date
-                            '#{blogs[x].authorName}'
-                            br
-                            |                       '#{blogs[x].time}'
-                        |                   
-                        .bookmarkshare-link
-                          a(href='#')
-                            img(src='images/bookmark-icon.png', alt='')
-                          |  
-                          a(href='#')
-                            img(src='images/thumb-icon.png', alt='')
-                          |  
-                          a(href='#')
-                            img(src='images/share-icon.png', alt='')
-                |           
-        section.lightgrey-bg.newlyadded-scn
-          .fix-wrap
-            h2 NEWLY ADDED
-            |         
-            .owl-carousel.newlyAddedSlider
+.wrapper
+  section.innerpage-hero
+    img(src='images/blog-hero-img.jpg')
+  |   
+  .mid-scn-main
+    section.trendding-scn
+      .fix-wrap
+        h2 TRENDING
+        |         
+        .owl-carousel.trenddingSlider
+          - for(var x=0;x<trendingBlogslength;x++)
+            .item
+              .blogslide-item
+                a(href=global.config.variable.apiPath+'/#{trendingBlogs[x].blogPicture}')
+                  img(src=global.config.variable.apiPath+'/#{trendingBlogs[x].blogPicture}', alt='')
+                |               
+                .blogslide-cont
+                  h3
+                    a(href='http://www.zeepzoop.com/blogs'+'/#{trendingBlogs[x].URL}') #{trendingBlogs[x].title}
+                  |                 
+                  p
+                    | #{trendingBlogs[x].metaDescription}
+                  |                 
+                  .blog-user-share
+                    .pull-left
+                      span.blog-usepic
+                        img(src=global.config.variable.apiPath+'/#{trendingBlogs[x].authorImage}', alt='')
+                      |                     
+                      .blog-name-date
+                        | #{trendingBlogs[x].authorName}
+                        br
+                        |                       #{trendingBlogs[x].time}
+                    |                   
+                    // .bookmarkshare-link
+                    //   a(href='#')
+                    //     img(src='images/bookmark-icon.png', alt='')
+                    //   |  
+                    //   a(href='#')
+                    //     img(src='images/thumb-icon.png', alt='')
+                    //   |  
+                    //   a(href='#')
+                    //     img(src='images/share-icon.png', alt='')
+                    //   |  
+            |           
+    section.lightgrey-bg.newlyadded-scn
+      .fix-wrap
+        h2 NEWLY ADDED
+        |         
+        .owl-carousel.newlyAddedSlider
+          - for(var x=0;x<newBlogslength;x++)
+            .item
+              .blogslide-item
+                a(href=global.config.variable.apiPath+'/#{newBlogs[x].blogPicture}')
+                  img(src=global.config.variable.apiPath+'/#{newBlogs[x].blogPicture}', alt='')
+                |               
+                .blogslide-cont
+                  h3
+                    a(href='http://www.zeepzoop.com/blogs'+'/#{newBlogs[x].URL}') #{newBlogs[x].title}
+                  |                 
+                  p
+                    | #{newBlogs[x].metaDescription}
+                  |                 
+                  .blog-user-share
+                    .pull-left
+                      span.blog-usepic
+                        img(src=global.config.variable.apiPath+'/#{newBlogs[x].authorImage}', alt='')
+                      |                     
+                      .blog-name-date
+                        | #{newBlogs[x].authorName}
+                        br
+                        |                       #{newBlogs[x].time}
+                    |                   
+                    //- .bookmarkshare-link
+                    //-   a(href='#')
+                    //-     img(src='images/bookmark-icon.png', alt='')
+                    //-   |  
+                    //-   a(href='#')
+                    //-     img(src='images/thumb-icon.png', alt='')
+                    //-   |  
+                    //-   a(href='#')
+                    //-     img(src='images/share-icon.png', alt='')
+                    //-   |  
+            |       
+    section.trendding-scn
+      .fix-wrap
+        h2 BRAND STORIES
+        |         
+        .owl-carousel.BrandStorysSlider
+          - for(var x=0;x<brandStorieslength;x++)
+            .item
+              .blogslide-item
+                a(href=global.config.variable.apiPath+'/#{brandStories[x].blogPicture}')
+                  img(src=global.config.variable.apiPath+'/#{brandStories[x].blogPicture}', alt='')
+                |               
+                .blogslide-cont
+                  h3
+                    a(href='http://www.zeepzoop.com/blogs'+'/#{brandStories[x].URL}') #{brandStories[x].title}
+                  |                 
+                  p
+                    | #{brandStories[x].metaDescription}
+                  |                 
+                  .blog-user-share
+                    .pull-left
+                      span.blog-usepic
+                        img(src=global.config.variable.apiPath+'/#{brandStories[x].authorImage}', alt='')
+                      |                     
+                      .blog-name-date
+                        | #{brandStories[x].authorName}
+                        br
+                        |                       #{brandStories[x].time}
+                    |                   
+                    // .bookmarkshare-link
+                    //   a(href='#')
+                    //     img(src='images/bookmark-icon.png', alt='')
+                    //   |  
+                    //   a(href='#')
+                    //     img(src='images/thumb-icon.png', alt='')
+                    //   |  
+                    //   a(href='#')
+                    //     img(src='images/share-icon.png', alt='')
+            |           
+    section.lightgrey-bg.fashionhacks-scn
+      .fix-wrap
+        h2 FASHION
+        |         
+        .owl-carousel.fashionhacksSlider
+            - for(var x=0;x<fashionlength;x++)
               .item
                 .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img1.jpg', alt='')
+                  a(href=global.config.variable.apiPath+'/#{fashion[x].blogPicture}')
+                    img(src=global.config.variable.apiPath+'/#{fashion[x].blogPicture}', alt='')
                   |               
                   .blogslide-cont
                     h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
+                      a(href='http://www.zeepzoop.com/blogs'+'/#{fashion[x].URL}') #{fashion[x].title}
                     |                 
                     p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
+                      | #{fashion[x].metaDescription}
                     |                 
                     .blog-user-share
                       .pull-left
                         span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
+                          img(src=global.config.variable.apiPath+'/#{fashion[x].authorImage}', alt='')
                         |                     
                         .blog-name-date
-                          | Hetal Shah
+                          | #{fashion[x].authorName}
                           br
-                          |                       6th June 2018
+                          |                       #{fashion[x].time}
                       |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-        |     
-        section.trendding-scn
-          .fix-wrap
-            h2 BRAND STORIES
-            |         
-            .owl-carousel.BrandStorysSlider
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img1.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-        |     
-        section.lightgrey-bg.fashionhacks-scn
-          .fix-wrap
-            h2 FASHION
-            |         
-            .owl-carousel.fashionhacksSlider
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img1.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-        |     
-        section.aroundworld-scn
-          .fix-wrap
-            h2 AROUND THE WORLD
-            |         
-            .owl-carousel.aroundworldSlider
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img1.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-        |     
-        section.lightgrey-bg.aroundworld-scn
-          .fix-wrap
-            h2 HOME DECOR
-            |         
-            .owl-carousel.homedecorSlider
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img1.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-        |     
-        section.weddingbells-scn
-          .fix-wrap
-            h2 WEDDING
-            |         
-            .owl-carousel.weddingbellsSlider
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img1.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-        |     
-        section.lightgrey-bg.culture-heritage-scn
-          .fix-wrap
-            h2 CULTURE &amp; HERITAGE
-            |         
-            .owl-carousel.cultureheritageSlider
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img1.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img2.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-              |           
-              .item
-                .blogslide-item
-                  a(href='#')
-                    img(src='images/blog-img3.jpg', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='#') 6 Types Of Bengali Sarees To Must Try In Life
-                    |                 
-                    p
-                      | India is a land of different cultures. With
-                      | different cultures, emerge  different costumes.
-                      | Here, every culture has different and incredible
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src='images/blog-user-pic.jpg', alt='')
-                        |                     
-                        .blog-name-date
-                          | Hetal Shah
-                          br
-                          |                       6th June 2018
-                      |                   
-                      .bookmarkshare-link
-                        a(href='#')
-                          img(src='images/bookmark-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/thumb-icon.png', alt='')
-                        |  
-                        a(href='#')
-                          img(src='images/share-icon.png', alt='')
-      |   
-      footer
-        .fix-wrap
-          .socialmedia
-            a(href='#')
-              img(src='images/fb-icon.png', alt='')
-            |  
-            a(href='#')
-              img(src='images/inst-icon.png', alt='')
-            |  
-            a(href='#')
-              img(src='images/youtube-icon.png', alt='')
-            |  
-            a(href='#')
-              img(src='images/pnts-icon.png', alt='')
-          |       
-          .ftr-nav
-            ul
-              li
-                a(href='#') Our Story
-              |           
-              li
-                a(href='#') Our Team
-              |           
-              li
-                a(href='#') Contact us
-              |           
-              li
-                a(href='#') Privacy Policy
-              |           
-              li
-                a(href='#') Register Your Brand
-              |           
-              li
-                a(href='#') Get Featured
-          |       
-          .ftr-copy  Copyright &copy; Zeepzoop Incorporation LLP - All Rights Reserved-2018
-    script.
-      document.body.classList.add("body-blog");
-    |  
-    script(src='js/jquery.min.js')
-    |  
-    script(type='text/javascript', src='js/owl.carousel.js')
-    |  
-    script(type='text/javascript').
-      $(document).ready(function(){
-      $('.shops-slt').click(function(e) {
-      $(this).toggleClass('shopsSlt-current')
-      });
-      $('.trenddingSlider').owlCarousel({
-      loop:true,
-      margin:15,
-      responsiveClass:true,
-      dots: false,
-      nav:true,
-      responsive:{
-      0:{
-      items:1,
-      },
-      600:{
-      items:2,
-      },
-      1000:{
-      items:3,
-      }
-      }
-      })
-      $('.newlyAddedSlider').owlCarousel({
-      loop:true,
-      margin:15,
-      responsiveClass:true,
-      nav:true,
-      dots: false,
-      responsive:{
-      0:{
-      items:1,
-      },
-      600:{
-      items:2,
-      },
-      1000:{
-      items:3,
-      }
-      }
-      })
-      $('.BrandStorysSlider').owlCarousel({
-      loop:true,
-      margin:15,
-      responsiveClass:true,
-      nav:true,
-      dots: false,
-      responsive:{
-      0:{
-      items:1,
-      },
-      600:{
-      items:2,
-      },
-      1000:{
-      items:3,
-      }
-      }
-      })
-      $('.fashionhacksSlider').owlCarousel({
-      loop:true,
-      margin:15,
-      nav:true,
-      responsiveClass:true,
-      dots: false,
-      responsive:{
-      0:{
-      items:1,
-      },
-      600:{
-      items:2,
-      },
-      1000:{
-      items:3,
-      }
-      }
-      })
-      $('.aroundworldSlider').owlCarousel({
-      loop:true,
-      margin:15,
-      nav:true,
-      responsiveClass:true,
-      dots: false,
-      responsive:{
-      0:{
-      items:1,
-      },
-      600:{
-      items:2,
-      },
-      1000:{
-      items:3,
-      }
-      }
-      })
-      $('.homedecorSlider').owlCarousel({
-      loop:true,
-      margin:15,
-      nav:true,
-      responsiveClass:true,
-      dots: false,
-      responsive:{
-      0:{
-      items:1,
-      },
-      600:{
-      items:2,
-      },
-      1000:{
-      items:3,
-      }
-      }
-      })
-      $('.weddingbellsSlider').owlCarousel({
-      loop:true,
-      margin:15,
-      nav:true,
-      responsiveClass:true,
-      dots: false,
-      nav:true,
-      responsive:{
-      0:{
-      items:1,
-      },
-      600:{
-      items:2,
-      },
-      1000:{
-      items:3,
-      }
-      }
-      })
-      $('.cultureheritageSlider').owlCarousel({
-      loop:true,
-      margin:15,
-      nav:true,
-      responsiveClass:true,
-      dots: false,
-      nav:true,
-      responsive:{
-      0:{
-      items:1,
-      },
-      600:{
-      items:2,
-      },
-      1000:{
-      items:3,
-      }
-      }
-      })
-      });
+                      //- .bookmarkshare-link
+                      //-   a(href='#')
+                      //-     img(src='images/bookmark-icon.png', alt='')
+                      //-   |  
+                      //-   a(href='#')
+                      //-     img(src='images/thumb-icon.png', alt='')
+                      //-   |  
+                      //-   a(href='#')
+                      //-     img(src='images/share-icon.png', alt='')
+    |     
+    section.aroundworld-scn
+      .fix-wrap
+        h2 AROUND THE WORLD
+        |         
+        .owl-carousel.aroundworldSlider
+          - for(var x=0;x<AroundTheWorldlength;x++)
+            .item
+              .blogslide-item
+                a(href=global.config.variable.apiPath+'/#{AroundTheWorld[x].blogPicture}')
+                  img(src=global.config.variable.apiPath+'/#{AroundTheWorld[x].blogPicture}', alt='')
+                |               
+                .blogslide-cont
+                  h3
+                    a(href='http://www.zeepzoop.com/blogs'+'/#{AroundTheWorld[x].URL}') #{AroundTheWorld[x].title}
+                  |                 
+                  p
+                    | #{AroundTheWorld[x].metaDescription}
+                  |                 
+                  .blog-user-share
+                    .pull-left
+                      span.blog-usepic
+                        img(src=global.config.variable.apiPath+'/#{AroundTheWorld[x].authorImage}', alt='')
+                      |                     
+                      .blog-name-date
+                        | #{AroundTheWorld[x].authorName}
+                        br
+                        |                       #{AroundTheWorld[x].time}
+                    |                   
+                    // .bookmarkshare-link
+                    //   a(href='#')
+                    //     img(src='images/bookmark-icon.png', alt='')
+                    //   |  
+                    //   a(href='#')
+                    //     img(src='images/thumb-icon.png', alt='')
+                    //   |  
+                    //   a(href='#')
+                    //     img(src='images/share-icon.png', alt='')
+            |           
+    section.lightgrey-bg.aroundworld-scn
+      .fix-wrap
+        h2 HOME DECOR
+        |         
+        .owl-carousel.homedecorSlider
+          - for(var x=0;x<HomeDecorlength;x++)
+            .item
+              .blogslide-item
+                a(href=global.config.variable.apiPath+'/#{HomeDecor[x].blogPicture}')
+                  img(src=global.config.variable.apiPath+'/#{HomeDecor[x].blogPicture}', alt='')
+                |               
+                .blogslide-cont
+                  h3
+                    a(href='http://www.zeepzoop.com/blogs'+'/#{HomeDecor[x].URL}') #{HomeDecor[x].title}
+                  |                 
+                  p
+                    | #{HomeDecor[x].metaDescription}
+                  |                 
+                  .blog-user-share
+                    .pull-left
+                      span.blog-usepic
+                        img(src=global.config.variable.apiPath+'/#{HomeDecor[x].authorImage}', alt='')
+                      |                     
+                      .blog-name-date
+                        | #{HomeDecor[x].authorName}
+                        br
+                        |                       #{HomeDecor[x].time}
+                    |                   
+                    //- .bookmarkshare-link
+                    //-   a(href='#')
+                    //-     img(src='images/bookmark-icon.png', alt='')
+                    //-   |  
+                    //-   a(href='#')
+                    //-     img(src='images/thumb-icon.png', alt='')
+                    //-   |  
+                    //-   a(href='#')
+                    //-     img(src='images/share-icon.png', alt='')
+            |           
+         
+    |     
+    section.weddingbells-scn
+      .fix-wrap
+        h2 WEDDING
+        |         
+        .owl-carousel.weddingbellsSlider
+          - for(var x=0;x<WeddingBellslength;x++)
+            .item
+              .blogslide-item
+                a(href=global.config.variable.apiPath+'/#{WeddingBells[x].blogPicture}')
+                  img(src=global.config.variable.apiPath+'/#{WeddingBells[x].blogPicture}', alt='')
+                |               
+                .blogslide-cont
+                  h3
+                    a(href='http://www.zeepzoop.com/blogs'+'/#{WeddingBells[x].URL}') #{WeddingBells[x].title}
+                  |                 
+                  p
+                    | #{WeddingBells[x].metaDescription}
+                  |                 
+                  .blog-user-share
+                    .pull-left
+                      span.blog-usepic
+                        img(src=global.config.variable.apiPath+'/#{WeddingBells[x].authorImage}', alt='')
+                      |                     
+                      .blog-name-date
+                        | #{WeddingBells[x].authorName}
+                        br
+                        |                       #{WeddingBells[x].time}
+                    |                   
+                    // .bookmarkshare-link
+                    //   a(href='#')
+                    //     img(src='images/bookmark-icon.png', alt='')
+                    //   |  
+                    //   a(href='#')
+                    //     img(src='images/thumb-icon.png', alt='')
+                    //   |  
+                    //   a(href='#')
+                    //     img(src='images/share-icon.png', alt='') 
+    |     
+    section.lightgrey-bg.culture-heritage-scn
+      .fix-wrap
+        h2 CULTURE &amp; HERITAGE
+        |         
+        .owl-carousel.cultureheritageSlider
+           - for(var x=0;x<CultureHeritagelength;x++)
+            .item
+              .blogslide-item
+                a(href=global.config.variable.apiPath+'/#{CultureHeritage[x].blogPicture}')
+                  img(src=global.config.variable.apiPath+'/#{CultureHeritage[x].blogPicture}', alt='')
+                |               
+                .blogslide-cont
+                  h3
+                    a(href='http://www.zeepzoop.com/blogs'+'/#{CultureHeritage[x].URL}') #{CultureHeritage[x].title}
+                  |                 
+                  p
+                    | #{CultureHeritage[x].metaDescription}
+                  |                 
+                  .blog-user-share
+                    .pull-left
+                      span.blog-usepic
+                        img(src=global.config.variable.apiPath+'/#{CultureHeritage[x].authorImage}', alt='')
+                      |                     
+                      .blog-name-date
+                        | #{CultureHeritage[x].authorName}
+                        br
+                        |                       #{CultureHeritage[x].time}
+                    |                   
+                    //- .bookmarkshare-link
+                    //-   a(href='#')
+                    //-     img(src='images/bookmark-icon.png', alt='')
+                    //-   |  
+                    //-   a(href='#')
+                    //-     img(src='images/thumb-icon.png', alt='')
+                    //-   |  
+                    //-   a(href='#')
+                    //-     img(src='images/share-icon.png', alt='')
+            |           
+  |   
+include common/footer
+script.
+  document.body.classList.add("body-blog");
+|  
+script(src='js/jquery.min.js')
+|  
+script(type='text/javascript', src='js/owl.carousel.js')
+|  
+script(type='text/javascript').
+  $(document).ready(function(){
+  $('.shops-slt').click(function(e) {
+  $(this).toggleClass('shopsSlt-current')
+  });
+  $('.trenddingSlider').owlCarousel({
+  loop:true,
+  margin:15,
+  responsiveClass:true,
+  dots: false,
+  nav:true,
+  responsive:{
+  0:{
+  items:1,
+  },
+  600:{
+  items:2,
+  },
+  1000:{
+  items:3,
+  }
+  }
+  })
+  $('.newlyAddedSlider').owlCarousel({
+  loop:true,
+  margin:15,
+  responsiveClass:true,
+  nav:true,
+  dots: false,
+  responsive:{
+  0:{
+  items:1,
+  },
+  600:{
+  items:2,
+  },
+  1000:{
+  items:3,
+  }
+  }
+  })
+  $('.BrandStorysSlider').owlCarousel({
+  loop:true,
+  margin:15,
+  responsiveClass:true,
+  nav:true,
+  dots: false,
+  responsive:{
+  0:{
+  items:1,
+  },
+  600:{
+  items:2,
+  },
+  1000:{
+  items:3,
+  }
+  }
+  })
+  $('.fashionhacksSlider').owlCarousel({
+  loop:true,
+  margin:15,
+  nav:true,
+  responsiveClass:true,
+  dots: false,
+  responsive:{
+  0:{
+  items:1,
+  },
+  600:{
+  items:2,
+  },
+  1000:{
+  items:3,
+  }
+  }
+  })
+  $('.aroundworldSlider').owlCarousel({
+  loop:true,
+  margin:15,
+  nav:true,
+  responsiveClass:true,
+  dots: false,
+  responsive:{
+  0:{
+  items:1,
+  },
+  600:{
+  items:2,
+  },
+  1000:{
+  items:3,
+  }
+  }
+  })
+  $('.homedecorSlider').owlCarousel({
+  loop:true,
+  margin:15,
+  nav:true,
+  responsiveClass:true,
+  dots: false,
+  responsive:{
+  0:{
+  items:1,
+  },
+  600:{
+  items:2,
+  },
+  1000:{
+  items:3,
+  }
+  }
+  })
+  $('.weddingbellsSlider').owlCarousel({
+  loop:true,
+  margin:15,
+  nav:true,
+  responsiveClass:true,
+  dots: false,
+  nav:true,
+  responsive:{
+  0:{
+  items:1,
+  },
+  600:{
+  items:2,
+  },
+  1000:{
+  items:3,
+  }
+  }
+  })
+  $('.cultureheritageSlider').owlCarousel({
+  loop:true,
+  margin:15,
+  nav:true,
+  responsiveClass:true,
+  dots: false,
+  nav:true,
+  responsive:{
+  0:{
+  items:1,
+  },
+  600:{
+  items:2,
+  },
+  1000:{
+  items:3,
+  }
+  }
+  })
+  });

@@ -1,0 +1,86 @@
+include common/head
+
+.wrapper
+  .contact_page
+    .cpage_top_bottom_margin
+      .page_in_big_images.padding_bottom_45
+        img(src='')
+      .cont
+        .contact_form
+          .contact_form_head
+          form
+            .left_part_form
+              input.contact_field(type='text', name='namw',id="nameIn", placeholder='Name')
+              input.contact_field(type='text', name='City',id="cityIn", placeholder='City')
+            .right_part_form
+              input.contact_field(type='email', name='email',id="emailIn", placeholder='Email')
+              input.contact_field(type='text', name='Phone',id="phoneIn", placeholder='Phone')
+            .capcha_and_submit
+              .left_part_form.capch_code
+              .right_part_form.submit_butt_part
+                input.submit_butt(type='button',style="margin: -91px;margin-bottom: 5px;", name='submit_butt', value='Submit')
+include common/footer
+script.
+  document.body.classList.add("body-register");
+script(type='text/javascript').
+  $('.submit_butt').click(function(e){
+      var nameReg = /^[A-Za-z]+$/;
+      var numberReg =  /^[0-9]+$/;
+      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+
+      var names = $('#nameIn').val();
+      var city = $('#cityIn').val();
+      var email = $('#emailIn').val();
+      var telephone = $('#phoneIn').val();
+
+      var inputVal = new Array(names, city, email, telephone);
+
+      //- var inputMessage = new Array("name", "city", "email address", "telephone number", "message");
+
+      $('.error').hide();
+
+      if(names== ""){
+          alert('Please enter your name');
+      }  else if(email == ""){
+          alert('Please enter your email');
+      } else if(!emailReg.test(email)){
+          alert(' Please enter a valid email address');
+      } else if(city == ""){
+          alert('Please enter your city');
+      }  else if(telephone == ""){
+          alert(' Please enter your phone');
+      } else if(!numberReg.test(telephone)){
+          alert(' Numbers only');
+      } 
+      var obj={};
+      obj.name = names;
+      obj.email = city;
+      obj.city = email;
+      obj.message = message;
+      obj.phone = telephone;
+
+      var request = $.ajax({
+        headers: {
+            'Authorization': "maximumvsminimumsecurity",
+            'Content-Type': "application/json;charset=UTF-8"
+        },
+        type: "POST",
+        url: "https://api.zeepzoop.com/feedbacks/createcontact",
+        data: JSON.stringify(obj),
+        dataType: "json"
+      });
+      request.done(function(response) {
+          alert("Your detail's is submitted")
+      }); 
+      request.fail(function(jqXHR, textStatus) {
+          alert("Request failed: " + textStatus);
+      });
+      $("#nameIn").val('');
+      $("#cityIn").val('');
+      $("#emailIn").val('');
+      $("#phoneIn").val('');
+      $("#descIn").val('');
+      
+      
+  })
+

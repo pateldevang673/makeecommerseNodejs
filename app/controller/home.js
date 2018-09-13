@@ -11,6 +11,7 @@ class HomeController extends BaseController {
     }
 
     getSingleHome(req, res, next) {
+
         this._homeHandler.getSingleHome(req, res);
     }
 
@@ -20,6 +21,34 @@ class HomeController extends BaseController {
 
     business(req, res, next) {
         this._homeHandler.business(req, res);
+    }
+
+    team(req, res, next) {
+        this._homeHandler.team(req, res);
+    }
+
+    partners(req, res, next) {
+        this._homeHandler.partners(req, res);
+    }
+
+    userProfile(req, res, next) {
+        this._homeHandler.userProfile(req, res);
+    }
+
+    story(req, res, next) {
+        this._homeHandler.story(req, res);
+    }
+
+    contactus(req, res, next) {
+        this._homeHandler.contactus(req, res);
+    }
+
+    ceo(req, res, next) {
+        this._homeHandler.ceo(req, res);
+    }
+
+    registerbrand(req, res, next) {
+        this._homeHandler.registerbrand(req, res);
     }
 
 }

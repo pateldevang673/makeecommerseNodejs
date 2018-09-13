@@ -1,0 +1,126 @@
+include common/head
+
+.wrapper
+  .mid-scn-main
+    section.auther-info-scn
+      .fix-wrap
+        .auther-user-pic
+          img(src=global.config.variable.apiPath+'/#{authorBlogs[0].authorImage}', alt='')
+        .auther-user-cont
+          h3 #{authorBlogs[0].authorName}
+          p
+            | #{authorBlogs[0].autherInfo}
+    section.blog-post-scn.author-mid-scn
+      .fix-wrap
+        .blog-post-cont
+          .mostv-txt-img
+            h3
+              | Most Viewed 
+              img(src='/images/auther-drop-icon.png', alt='')
+          .author-main-info
+            img(src=global.config.variable.apiPath+'/#{authorBlogs[0].blogPicture}', alt='')
+            h3 #{authorBlogs[0].title}
+            p
+              | #{authorBlogs[0].metaDescription}
+          ul.author-list-main
+            - for (var x = 1; x < authorBlogslength ; x++)
+              li
+                .author-list-img
+                  img(src=global.config.variable.apiPath+'/#{authorBlogs[x].blogPicture}', alt='')
+                .author-list-cont
+                  h3 #{authorBlogs[x].title}
+                  p
+                    | #{authorBlogs[x].metaDescription}
+        .blog-post-rcmnd
+          h4 Recommended
+          .blogslide-item
+            a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[0].URL}')
+              img(src=global.config.variable.apiPath+'/#{recommendedBlogs[0].blogPicture}', alt='')
+            .blogslide-cont
+              h3
+                a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[0].URL}') #{recommendedBlogs[0].title}
+              p
+                | #{recommendedBlogs[0].metaDescription}
+              .blog-user-share
+                .pull-left
+                  span.blog-usepic
+                    img(src=global.config.variable.apiPath+'/#{recommendedBlogs[0].authorImage}', alt='')
+                  .blog-name-date
+                    | #{recommendedBlogs[0].authorName}
+                    br
+                    | #{recommendedBlogs[0].time}
+                // .bookmarkshare-link
+                //   a(href='#')
+                //     img(src='/images/bookmark-icon.png', alt='')
+                //   a(href='#')
+                //     img(src='/images/thumb-icon.png', alt='')
+                //   a(href='#')
+                //     img(src='/images/share-icon.png', alt='')
+          .blogslide-item
+            a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[1].URL}')
+              img(src=global.config.variable.apiPath+'/#{recommendedBlogs[1].blogPicture}', alt='')
+            .blogslide-cont
+              h3
+                a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[1].URL}') #{recommendedBlogs[1].title}
+              p
+                | #{recommendedBlogs[1].metaDescription}
+              .blog-user-share
+                .pull-left
+                  span.blog-usepic
+                    img(src=global.config.variable.apiPath+'/#{recommendedBlogs[1].authorImage}', alt='')
+                  .blog-name-date
+                    | #{recommendedBlogs[1].authorName}
+                    br
+                    |  #{recommendedBlogs[1].time}
+                // .bookmarkshare-link
+                //   a(href='#')
+                //     img(src='/images/bookmark-icon.png', alt='')
+                //   a(href='#')
+                //     img(src='/images/thumb-icon.png', alt='')
+                //   a(href='#')
+                //     img(src='/images/share-icon.png', alt='')
+          .blogslide-item
+            a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[2].URL}')
+              img(src=global.config.variable.apiPath+'/#{recommendedBlogs[2].blogPicture}', alt='')
+            .blogslide-cont
+              h3
+                a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[2].URL}') #{recommendedBlogs[2].title}
+              p
+                | #{recommendedBlogs[2].metaDescription}
+              .blog-user-share
+                .pull-left
+                  span.blog-usepic
+                    img(src=global.config.variable.apiPath+'/#{recommendedBlogs[2].authorImage}', alt='')
+                  .blog-name-date
+                    | #{recommendedBlogs[2].authorName}
+                    br
+                    |  #{recommendedBlogs[2].time}
+                // .bookmarkshare-link
+                //   a(href='#')
+                //     img(src='/images/bookmark-icon.png', alt='')
+                //   a(href='#')
+                //     img(src='/images/thumb-icon.png', alt='')
+                //   a(href='#')
+                //     img(src='/images/share-icon.png', alt='')
+    section.blog-newsletter
+      .fix-wrap
+        .blognewletter-prt
+          form.form-newsletter
+            label
+              | Subscribe to the ZeepZoop
+              br
+              | Newsletter
+            .newsletter-group
+              input(name='', placeholder='Enter Your Email id', type='text')
+              button.cmn-btn.subscribe-btn(type='submit') Subscribe
+        .blog-app-prt
+          .playstore
+            a(href='https://itunes.apple.com/us/app/zeepzoop/id1332324465?ls=1&mt=8',target="_blank")
+              img(src='/images/app-store-icon.png', alt='')
+            a(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user',target="_blank")
+              img(src='/images/googleplay-icon.png', alt='')
+              
+include common/footer
+script.
+  document.body.classList.add("body-register");
+script(src='/js/jquery.min.js')

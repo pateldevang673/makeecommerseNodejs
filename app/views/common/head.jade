@@ -10,6 +10,7 @@ html(lang='en')
       title #{seoData.title}
       <meta name="google-site-verification" content="rD5rxrkDCG1kJkDXi-n3cUDlJzu3qO0hmVuSfBsz7GE" />
       <meta name="p:domain_verify" content="91902f4712e6104ccddc22456d17e290"/>
+      <meta name="google-signin-client_id" content="236831263233-2nn50m12rks8l1dt9ucnove3f55bibqq.apps.googleusercontent.com">
       meta(name='description', content='#{seoData.description}')
       meta(name='keywords', content='#{seoData.keywords}')
 
@@ -31,9 +32,20 @@ html(lang='en')
     else
       title #{title}
 
-    link(rel='icon', type='image/png', href='/images/favicon.png')
-    link(type='text/css', href='/css/custom.css', rel='stylesheet')
+    //- link(rel='icon', type='image/png', href='/images/favicon.png')
+    //- link(type='text/css', href='/css/custom.css', rel='stylesheet')
     // Global site tag (gtag.js) - Google Analytics
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i|Oswald:400,500,600,700', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700', rel='stylesheet')
+    link(href='/css/owl.carousel.min.css', rel='stylesheet')
+    link(href='/css/style.css', rel='stylesheet')
+    link(href='/css/media.css', rel='stylesheet')
+    link(href='https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/css-stars.css', rel='stylesheet')
+    script(src='/js/jquery.min.js')
+    script(type='text/javascript', src='/js/owl.carousel.js')
+    script(type='text/javascript', src='/js/custom.js')
+    script(type='text/javascript',src='https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js')
+    script(src="https://apis.google.com/js/platform.js", async="", defer="") 
     script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-118251424-1')
     script.
       window.dataLayer = window.dataLayer || [];
@@ -42,20 +54,315 @@ html(lang='en')
       gtag('config', 'UA-118251424-1');
 
   body(class=page) 
+  #signinpopup.zeep-popup-main.signinpopup
+    span.zeeppopup-close
+    .signin-inner
+      a.signin-weblogo(href='#')
+        img(src='/images/signin-web-logo.png', alt='')
+      p Sign in to get the best out of zeepzoop
+      ul.cnt-fb-gl
+        li
+          a(id="FBlogin",style="cursor:pointer;")
+            img(src='/images/signin-fb.png', alt='')
+            | Sign in
+        li
+          .g-signin2(data-onsuccess="onSignIn")
+          //- a(id="Googlelogin",style="cursor:pointer;")
+          //-   img(src='images/signin-gl.png', alt='')
+          //-   | Continue with Google
+          
+      span.by-cnt-agree By continuing you agree to
+      a.popup-terms-link(href='#') Terms & Conditions
   .main
     .container
-      a.logo(href='/')
-        if page == "home-page" || page == "business"
-          img(src='/images/logo.png')
-        else
-          img(src='/images/color-logo.png')
-      if page == "home-page"
-        .content
-          h1 Your Shopping Unicorn
-          p One-of-its-kind first shopping assistant App for the Exploring Shopper in you.
-          .btn
-            a(href='business') Claim Your Business
-      else if page == "business"  
-        .content
-          <h1>Zeepzoop for Business</h1>   
-        
+      span.overlay-bg
+      .sidebarmenu
+        h4
+          | CATEGORIES 
+          span.side-menu-close
+        ul.list-sidemenu
+          li.dekstopn_noone
+              input.search.myInput(type='search', placeholder='Search')
+          li.clothing-link.categoryicon
+            a(name="Clothing",id="5a51e507ff645771bf57dc14")
+              span
+              | Clothing
+          li.jewellery-link.categoryicon
+            a(name="Jewellery",id="5a51e528ff645771bf57dc15")
+              span
+              | Jewellery
+          li.accessories-link.categoryicon
+            a(name="Accessories",id="5a51e544ff645771bf57dc16")
+              span
+              | Accessories
+          li.home-decor-link.categoryicon
+            a(name="Home-Decor",id="5a51e626ff645771bf57dc1a")
+              span
+              | Home Decor
+          li.dekstopn_noone
+            a.getappstore(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user', target='_blank') Get the App
+          li.header_responsiv_comp-drpdawon.dekstopn_noone
+            .company-nav
+              ul
+                li.dropdown-nav
+                  a.cmp-link(href='javascript:void(0)') Company
+                  ul
+                    li
+                      a(href='/our_story') Our Story
+                    li
+                      a(href='/team') Our Team
+                    li
+                      a(href='/partners') Partners
+                    li
+                      a(href='/ceo') Meet The CEO
+                    //- li
+                    //-   a(href='javascript:void(0)') Join Z-Force
+          li.dekstopn_noone
+            a(href='javascript:void(0)') Register Your Brand
+          li.dekstopn_noone
+            a(class="loginsinup") Log in
+        .sidebar-social-icons
+          a.fb-icon(href='https://www.facebook.com/Zeepzoopofficial', target='_blank')
+          a.inst-icon(href='https://www.instagram.com/zeepzoopofficial/', target='_blank')
+          a.yt(href='https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/videos?pbjreload=10',target="_blank")
+          a.phone-icon(href='tel:9624851199', target='_blank')
+          a.email-icon(href="https://mail.google.com/mail/u/?authuser=connect@zeepzoop.com", target='_blank')
+      header.hdr-main
+        .fix-wrap
+          .hdr-inner
+            .pull-left.hdr-menu-app
+              span.nav-toggle
+              .get-appstore.responsiv_none
+                a.getappstore(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user',target='_blank') Get the App
+              .company-nav.responsiv_none
+                ul
+                  li.dropdown-nav
+                    a.cmp-link(href='javascript:void(0)') Company
+                    ul
+                      li
+                        a(href='/our_story') Our Story
+                      li
+                        a(href='/team') Our Team
+                      li
+                        a(href='/partners') Partners
+                      li
+                        a(href='/ceo') Meet The CEO
+                      //- li
+                      //-   a(href='javascript:void(0)') Join Z-Force
+            .cmn-logo
+              a(href='/')
+                img(src='/images/logo-new.png', alt='',style="height:23px;margin-top: 5px;")
+            .pull-right.rgstr-login-srch
+              ul
+                li
+                  form#demo-2.header_search
+                    input.search.myInput(type='search', placeholder='Search')
+                li.responsiv_none
+                  a(href='') Register Your Brand
+                li.responsiv_none.bflog
+                  a(class="loginsinup") Log in
+                li.dropdown-nav.aflog(style="display:none")
+                  a(href='javascript:void(0)') Hello,
+                    span.uname 
+                  ul(style="margin-left: 83%;")
+                    li
+                      a.usrpro My Profile
+                    li
+                      a(href='/',id="logout") Log out
+  script(type='text/javascript').
+    $(document).ready(function(){
+      $(".categoryicon a").on('click',function(e){
+        var id =$(this).attr('id');
+        var categoryName =$(this).attr('name');
+        if ($('.shops-slt').hasClass('shopsSlt-current')) {
+          window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOnline=true";
+        }else{
+          window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOffline=true";
+        }
+      });
+      $('.myInput').keyup(function(event) {
+        event.preventDefault();
+        var value=$(this).val();
+        if (event.keyCode === 13) {
+          if (value !== undefined && value !== null && value !== '') {
+              //- window.location.href="/ceo"
+            if ($('.shops-slt').hasClass('shopsSlt-current')) {
+                var online = true;
+            } else {
+                var online = false;
+            }
+            var cityName = $('select[name="cities"]').val();
+            if (cityName && cityName !== "Select City") {
+                return false;
+                if (online == true) {
+                    window.location.href = "/search?searchFor=" + value +
+                        "&location=" + cityName + "&buisnessOnline=true";
+                } else {
+                    window.location.href = "/search?searchFor=" + value +
+                        "&location=" + cityName + "&buisnessOffline=true";
+                }
+                $(".searchval").val('')
+            } else {
+                if (online == true) {
+                    window.location.href = "/search?searchFor=" + value +
+                        "&buisnessOnline=true";
+                } else {
+                    window.location.href = "/search?searchFor=" + value +
+                        "&buisnessOffline=true";
+                }
+                $(".searchval").val('')
+            }
+          } else {
+              alert("Please Enter Value of Search Box")
+          }
+        }
+      });
+      $('.usrpro').click(function(e) {
+        if(localStorage.getItem('userD')!==undefined){
+          var id = localStorage.getItem('userD');
+          window.location.href="/profile/"+id;
+        }else{
+          alert("You Have To Login First")
+        }
+      });
+      $('#logout').click(function(e) {
+        localStorage.clear();
+        FB.logout();
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+          console.log('User signed out.');
+        });
+      });
+      $('.loginsinup').click(function(e) {
+        $('#signinpopup').show();
+        $('body').addClass('zeeppopup-body');
+      });
+      $('.zeeppopup-close').click(function(e) {
+        $('#signinpopup, #authorPopup').hide();
+        $('body').removeClass('zeeppopup-body');
+      });
+     
+      $.ajaxSetup({ cache: true });
+      $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+        FB.init({
+          appId: '2209143222700416',
+          version: 'v3.1' 
+        });     
+      });
+      $('#FBlogin').click(function(e) {
+        FB.getLoginStatus(function(response) {
+          statusChangeCallback(response);
+        });
+      });
+      function statusChangeCallback(response) {
+        if (response.status === 'connected') {
+          FB.api('/me', { locale: 'tr_TR', fields: 'name, email,birthday, hometown,education,gender,website,work' },
+          function(response) {
+            var obj={
+                "name": response.name,
+                "fbToken": response.id,
+                "isUser": true,
+                "provider":"Facebook"
+            }
+            if(response.email){
+              obj.email=response.email
+            }
+           var request = $.ajax({
+              headers: {
+                  'Authorization': "maximumvsminimumsecurity",
+                  'Content-Type': "application/json;charset=UTF-8"
+              },
+              type: "POST",
+              url: "https://api.zeepzoop.com/users/webusers",
+              data: JSON.stringify(obj),
+              dataType: "json"
+            });
+
+            request.done(function(response) {
+                localStorage.setItem('UserTo', response.data.token)
+                localStorage.setItem('userD', response.data._id)
+                localStorage.setItem('userName', response.data.name)
+                window.location.reload();
+            });
+          });
+        } else {
+          FB.login(function(response) {
+            FB.api('/me', { locale: 'tr_TR', fields: 'name, email,birthday, hometown,education,gender,website,work' },function(response) {
+              var obj={
+                  "name": response.name,
+                  "fbToken": response.id,
+                  "isUser": true,
+                  "provider":"Facebook"
+              }
+              if(response.email){
+                obj.email=response.email
+              }
+              var request = $.ajax({
+                headers: {
+                    'Authorization': "maximumvsminimumsecurity",
+                    'Content-Type': "application/json;charset=UTF-8"
+                },
+                type: "POST",
+                url: "https://api.zeepzoop.com/users/webusers",
+                data: JSON.stringify(obj),
+                dataType: "json"
+              });
+
+              request.done(function(response) {
+                  localStorage.setItem('UserTo', response.data.token)
+                  localStorage.setItem('userD', response.data._id)
+                  localStorage.setItem('userName', response.data.name)
+                  window.location.reload();
+              });
+              request.fail(function(jqXHR, textStatus) {
+                  alert("Request failed: " + textStatus);
+              });
+            });
+          });
+        }
+      }
+
+      function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        var obj={
+            "name": profile.getName(),
+            "fbToken": profile.getId(),
+            "provider":"Google",
+            "email":profile.getEmail(),
+            "isUser": true
+        }
+        var request = $.ajax({
+          headers: {
+              'Authorization': "maximumvsminimumsecurity",
+              'Content-Type': "application/json;charset=UTF-8"
+          },
+          type: "POST",
+          url: "https://api.zeepzoop.com/users/webusers",
+          data: JSON.stringify(obj),
+          dataType: "json"
+        });
+
+        request.done(function(response) {
+            localStorage.setItem('UserTo', response.data.token)
+            localStorage.setItem('userD', response.data._id)
+            localStorage.setItem('userName', response.data.name)
+            window.location.reload();
+        });
+        request.fail(function(jqXHR, textStatus) {
+           alert("Request failed: " + textStatus);
+        });
+      }   
+
+      function loginhs() {
+        if(localStorage.getItem('UserTo')!==null&&localStorage.getItem('userD')!==null&&localStorage.getItem('userName')!==null){
+            $('.bflog').css("display", "none");
+            $('.uname').append(localStorage.getItem('userName'));
+            $('.aflog').css("display", "block");
+        }else{
+            $('.bflog').css("display", "block");
+            //- $('.aflog').css("display", "none");
+        }
+      }
+      loginhs();
+
+    });

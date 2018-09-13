@@ -1,0 +1,281 @@
+include common/head
+.wrapper
+  .mid-scn-main
+    section.edit-profile-scn
+      .fix-wrap
+        .user-pic-name
+          .edituser-pic
+            img(src='/images/user-profile-pic.jpg', alt='')
+          span.edituser-name Nutankumar NK
+        .editprofile-info-main
+          .editprofile-tab
+            ul
+              li.active(data-tab='MyProfile') My Profile
+              //- li(data-tab='Notifications') Notifications
+              li(data-tab='Bookmarks') Bookmarks
+              li(data-tab='Reviews') Reviews
+              li(data-tab='MyLists') My Lists
+              li(data-tab='Blogs') Blogs
+              //- li(data-tab='Offers') Offers
+          .editprofiletab-cont
+            #MyProfile.editprofiletab-item
+              .editprofile-data
+                form
+                  .editprofileform
+                    h3 Profile Information
+                    .form-grp
+                      label Your Name
+                      input(type='text',value="#{userdata.name}",id="nameInput")
+                    .form-grp
+                      label Your Email
+                      input(type='email',value="#{userdata.email}",id="emailInput")
+                    .form-grp
+                      label Your Phone
+                      input(type='tel',value="#{userdata.phone}",id="telInput")
+                    //- .form-grp
+                      label Your Password
+                      input(type='password',id="passInput")
+                  .editprofilep-upload
+                    img(src='/images/userupload-pic.jpg', alt='')
+                    input(name='', type='file')
+                  .pull-right.clear
+                    button.editsubmit-btn.profilesubmit(type='button') Save
+            #Notifications.editprofiletab-item
+              .nfts-data
+                ul
+                  li
+                    .nfts-pic
+                      img(src='/images/user-profile-pic.jpg', alt='')
+                    .nfts-cont
+                      | Creative and modern examples of how businesses are starting to display their executive team. See more ideas about Design websites
+                  li
+                    .nfts-pic
+                      img(src='/images/user-profile-pic.jpg', alt='')
+                    .nfts-cont
+                      | Creative and modern examples of how businesses are starting to display their executive team. See more ideas about Design websites
+                  li
+                    .nfts-pic
+                      img(src='/images/user-profile-pic.jpg', alt='')
+                    .nfts-cont
+                      | Creative and modern examples of how businesses are starting to display their executive team. See more ideas about Design websites
+                  li
+                    .nfts-pic
+                      img(src='/images/user-profile-pic.jpg', alt='')
+                    .nfts-cont
+                      | Creative and modern examples of how businesses are starting to display their executive team. See more ideas about Design websites
+                  li
+                    .nfts-pic
+                      img(src='/images/user-profile-pic.jpg', alt='')
+                    .nfts-cont
+                      | Creative and modern examples of how businesses are starting to display their executive team. See more ideas about Design websites
+                  li
+                    .nfts-pic
+                      img(src='/images/user-profile-pic.jpg', alt='')
+                    .nfts-cont
+                      | Creative and modern examples of how businesses are starting to display their executive team. See more ideas about Design websites
+                  li
+                    .nfts-pic
+                      img(src='/images/user-profile-pic.jpg', alt='')
+                    .nfts-cont
+                      | Creative and modern examples of how businesses are starting to display their executive team. See more ideas about Design websites
+            #Bookmarks.editprofiletab-item
+              .bookmarks-data
+                .bagsmore-list-main
+                  - for (var x = 0; x < Usrbookmarklength; x++)
+                    .bagsmore-item
+                      img(src=global.config.variable.apiPath+'/#{Userbookmark[x].storeBanner}', alt='')
+                      .watermark-logo
+                        img(src='/images/img-watermark-icon.png', alt='')
+                        span #{Userbookmark[x].avgRating}
+                      .info-share-book
+                        .bag-info-cont
+                          a.bag-title(href='/#{Userbookmark[x].URL}/#{Userbookmark[x]._id}') FAMME
+                          p #{Userbookmark[x].storeDiscription} 
+                        .bookmarkshare-link
+                          a(href='#')
+                            img(src='/images/bookmark-icon.png', alt='')
+                          a(href='#')
+                            img(src='/images/share-icon.png', alt='')
+                  //- .bagsmore-item
+                  //-   img(src='/images/bags-more-img.jpg', alt='')
+                  //-   .watermark-logo
+                  //-     img(src='/images/img-watermark-icon.png', alt='')
+                  //-     span 4.5
+                  //-   .info-share-book
+                  //-     .bag-info-cont
+                  //-       a.bag-title(href='#') FAMME
+                  //-       p Lorem lpsum is simply dummy text of theprinting and typesetting industry
+                  //-     .bookmarkshare-link
+                  //-       a(href='#')
+                  //-         img(src='/images/bookmark-icon.png', alt='')
+                  //-       a(href='#')
+                  //-         img(src='/images/share-icon.png', alt='')
+            #Reviews.editprofiletab-item
+              .edit-reviewData
+                .top-cst-r-prt
+                  ul
+                    - for (var x = 0; x < Userreviewlength; x++)
+                      li
+                        .review-username-pic
+                          span.review-pic
+                          span.review-username-txt #{Userreview[x].storeId.storeName}
+                        .shopreview-info
+                          .shopreview-nicepdt
+                            .write-star-main
+                              select(class="staterate")
+                                option(value='1') 1
+                                |   
+                                option(value='2') 2
+                                |   
+                                option(value='3') 3
+                                |   
+                                option(value='4') 4
+                                |   
+                                option(value='5') 5
+                              script(type='text/javascript').
+                                $('.staterate').barrating({theme:'css-stars',readonly: true,initialRating:'#{Userreview[x].ratingScale}'})
+                          p
+                            | #{Userreview[x].description}
+                        //- .review-edit-delete
+                        //-   a.rv-edit-icon(href='#')
+                        //-     img(src='/images/edit-review-icon.png', alt='')
+                        //-   a.rv-delete-icon(href='#')
+                        //-     img(src='/images/review-delete-icon.png', alt='')
+            #MyLists.editprofiletab-item
+              .mylists-main
+                .mylists-accouding-main
+                  ul.accordion-main
+                    li.active
+                      span
+                        em #{UserMylist[0].listName}
+                        i
+                      ul.acc-dtl.first-acc-dtl
+                        li
+                          .mylists-list
+                            .bagsmore-list-main
+                              - for(var x=0;x<UserMylist[0].stores.length;x++)
+                                .bagsmore-item
+                                  img(src=global.config.variable.apiPath+'/#{UserMylist[0].stores[x].storeBanner}', alt='')
+                                  .watermark-logo
+                                    img(src='/images/img-watermark-icon.png', alt='')
+                                    span #{UserMylist[0].stores[x].avgRating}
+                                  .info-share-book
+                                    .bag-info-cont
+                                      a.bag-title(href='/#{UserMylist[0].stores[x].URL}/#{UserMylist[0].stores[x]._id}') #{UserMylist[0].stores[x].storeName}
+                                      p #{UserMylist[0].stores[x].storeDiscription}
+                                    .bookmarkshare-link
+                                      a.mylist-delete(href='#')
+                                        img(src='/images/delete-icon.png', alt='')
+                                      a(href='#')
+                                        img(src='/images/share-icon.png', alt='')
+                    - for(var x=1;x<UserMylistlength;x++)                    
+                      li.custom-acc
+                        span
+                          em #{UserMylist[x].listName}
+                          i
+                        ul.acc-dtl
+                          li
+                            .mylists-list
+                              .bagsmore-list-main
+                                - for(var j=0;j<UserMylist[x].stores.length;j++)
+                                  .bagsmore-item
+                                    img(src=global.config.variable.apiPath+'/#{UserMylist[x].stores[j].storeBanner}', alt='')
+                                    .watermark-logo
+                                      img(src='/images/img-watermark-icon.png', alt='')
+                                      span #{UserMylist[x].stores[j].avgRating}
+                                    .info-share-book
+                                      .bag-info-cont
+                                        a.bag-title('/#{UserMylist[x].stores[j].URL}/#{UserMylist[x].stores[j]._id}') #{UserMylist[x].stores[j].storeName}
+                                        p #{UserMylist[x].stores[j].storeDiscription}
+                                      .bookmarkshare-link
+                                        a.mylist-delete(href='#')
+                                          img(src='/images/delete-icon.png', alt='')
+                                        a(href='#')
+                                          img(src='/images/share-icon.png', alt='')
+            #Blogs.editprofiletab-item
+              .editblog-main
+                - for(var x=0;x<UserBlogslength;x++)
+                  .blogslide-item
+                    a(href=global.config.variable.apiPath+'/#{UserBlogs[x].blogPicture}')
+                      img(src=global.config.variable.apiPath+'/#{UserBlogs[x].blogPicture}', alt='')
+                    .blogslide-cont
+                      h3
+                        a(href='http://www.zeepzoop.com/blogs'+'/#{UserBlogs[x].URL}') #{UserBlogs[x].title}
+                      p
+                        | #{UserBlogs[x].metaDescription}
+                      .blog-user-share
+                        .pull-left
+                          span.blog-usepic
+                            img(src=global.config.variable.apiPath+'/#{UserBlogs[x].authorImage}', alt='')
+                          .blog-name-date
+                            | #{UserBlogs[x].authorName}
+                            br
+                            |  #{UserBlogs[x].time}
+                        .bookmarkshare-link
+                          a.bookmark-icon(href='#')
+                          a.thumb-icon(href='#')
+                          a.share-icon(href='#')
+                
+            #Offers.editprofiletab-item
+              .editprofile-offer
+                .editpfl-ofr-item
+                  img(src='/images/offer-img1.jpg', alt='')
+                  .editpfl-ofr-cont
+                    a.offerflat-btn(href='#') FLAT 50%-80% OFF*
+                    p
+                      | However, if you're fed up seeing the faux Latin nonsense, we've found more than 30 placeholder text generators that offer ....
+                    .bookmarkshare-link
+                      a.bookmark-icon(href='#')
+                      a.share-icon(href='#')
+                .editpfl-ofr-item
+                  img(src='/images/offer-img1.jpg', alt='')
+                  .editpfl-ofr-cont
+                    a.offerflat-btn(href='#') FLAT 50%-80% OFF*
+                    p
+                      | However, if you're fed up seeing the faux Latin nonsense, we've found more than 30 placeholder text generators that offer ....
+                    .bookmarkshare-link
+                      a.bookmark-icon(href='#')
+                      a.share-icon(href='#')
+                .editpfl-ofr-item
+                  img(src='/images/offer-img1.jpg', alt='')
+                  .editpfl-ofr-cont
+                    a.offerflat-btn(href='#') FLAT 50%-80% OFF*
+                    p
+                      | However, if you're fed up seeing the faux Latin nonsense, we've found more than 30 placeholder text generators that offer ....
+                    .bookmarkshare-link
+                      a.bookmark-icon(href='#')
+                      a.share-icon(href='#')
+                .editpfl-ofr-item
+                  img(src='/images/offer-img1.jpg', alt='')
+                  .editpfl-ofr-cont
+                    a.offerflat-btn(href='#') FLAT 50%-80% OFF*
+                    p
+                      | However, if you're fed up seeing the faux Latin nonsense, we've found more than 30 placeholder text generators that offer ....
+                    .bookmarkshare-link
+                      a.bookmark-icon(href='#')
+                      a.share-icon(href='#')
+include common/footer
+script.
+  document.body.classList.add("body-editprofile");
+script(type='text/javascript').
+  $(document).ready(function(e) {
+    $('.accordion-main li>span').click(function() {
+      $('.accordion-main li').removeClass('active')
+      $(this).parent('li').addClass('active')
+      $('.accordion-main li:first-child').find('.acc-dtl').removeClass('first-acc-dtl');
+      if ($(this).hasClass('custom-acc')) {
+      $('.accordion-main li').addClass('custom-acc')
+      $(this).removeClass('custom-acc')
+      } else {
+      $(this).addClass('custom-acc')
+    //$('.accordion-main li:first-child').find('.acc-dtl').addClass('first-acc-dtl');
+    }
+  })
+  $('.editprofile-tab li').click(function() {
+    tabbing($(this).data('tab'));
+  })
+  })
+  function tabbing(tab_id) {
+  $('[data-tab="' + tab_id + '"]').addClass('active').siblings().removeClass('active');
+  $('#' + tab_id).show().siblings().hide();
+  }

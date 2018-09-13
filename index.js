@@ -35,22 +35,22 @@ app.use(authManager.providePassport().initialize());
 app.use(validationManager.provideDefaultValidator());
 // Setup routes
 
-app.get('/sitemap.xml', function (req, res) {
+app.get('/sitemap.xml', function(req, res) {
     res.type('application/xml')
     res.sendFile(__dirname + '/sitemap.xml');
 });
 
-app.get('/robots.txt', function (req, res) {
+app.get('/robots.txt', function(req, res) {
     res.type('text/plain')
     res.sendFile(__dirname + '/robots.txt');
 });
 
 app.use('/', routes);
 
-app.get('*', function (req, res) {
+app.get('*', function(req, res) {
     res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
 });
 
-app.listen(global.config.server.PORT, function () {
+app.listen(global.config.server.PORT, function() {
     console.log('App is running on ' + global.config.server.PORT);
 });

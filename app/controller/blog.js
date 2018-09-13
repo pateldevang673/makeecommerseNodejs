@@ -17,6 +17,10 @@ class BlogController extends BaseController {
     getSingleBlog(req, res, next) {
         this._blogHandler.getSingleBlog(req, res);
     }
+
+    getAuthorBlogs(req, res, next) {
+        this._blogHandler.getAuthorBlogs(req, res);
+    }
 }
 
 module.exports = BlogController;
