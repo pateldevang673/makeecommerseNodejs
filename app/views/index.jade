@@ -226,14 +226,15 @@ include common/head
               img(src='images/app-store-icon.png', alt='')
             a(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user',target="_blank")
               img(src='images/googleplay-icon.png', alt='')
-    section.visual-stories-scn
-      .fix-wrap
-        h2 VISUAL STORies
-        ul.visual-stories-list
-          - for (var x = 1; x < lengthVideos; x++)
-            li
-              iframe(width='382', height='214', src='https://www.youtube.com/embed/#{videos[x].id.videoId}?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
-        a.more-btn(href='https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/videos?pbjreload=10',target="_blank") EXPLORE MORE
+    if lengthVideos > 0
+      section.visual-stories-scn
+        .fix-wrap
+          h2 VISUAL STORies
+          ul.visual-stories-list
+            - for (var x = 1; x < lengthVideos; x++)
+              li
+                iframe(width='382', height='214', src='https://www.youtube.com/embed/#{videos[x].id.videoId}?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+          a.more-btn(href='https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/videos?pbjreload=10',target="_blank") EXPLORE MORE
 include common/footer
 script(src='js/jquery.min.js')
 script(type='text/javascript', src='js/owl.carousel.js')
