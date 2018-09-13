@@ -116,7 +116,7 @@ $(function() {
             html = '';
             for (i = 0; i < response.data.length; i++) {
                 html += '<div class="bagsmore-item">' +
-                    '<img src="http://api.zeepzoop.com/' + response.data[i].storeBanner + '" alt="">' +
+                    '<img src="https://api.zeepzoop.com/' + response.data[i].storeBanner + '" alt="">' +
                     '<div class="watermark-logo"> <img src="images/img-watermark-icon.png" alt=""> <span>' + response.data[i].avgRating + '</span> </div>' +
                     '<div class="info-share-book">' +
                     '<div class="bag-info-cont"> <a href="/' + response.data[i].URL + '/' + response.data[i]._id + '" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;" class="bag-title">' + response.data[i].storeName + '</a>' +
@@ -159,7 +159,7 @@ $(function() {
 
                 html += '<div class="catalouges-item">' +
                     '<div class="catalouges-pic">' +
-                    '<a href="/store/' + response.data[i].storeId + '""><img class="catimagesize" src="http://api.zeepzoop.com/' + response.data[i].catalogUrl + '"alt="" /></a>' +
+                    '<a href="/store/' + response.data[i].storeId + '""><img class="catimagesize" src="https://api.zeepzoop.com/' + response.data[i].catalogUrl + '"alt="" /></a>' +
                     '</div><span class="cate-listitile">' + response.data[i].catalogDescription + '</span>' +
                     '</div>';
             }
