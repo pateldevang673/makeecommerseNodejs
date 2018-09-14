@@ -13,7 +13,7 @@ router.get('/partners', homeController.partners);
 router.get('/profile/:id', homeController.userProfile);
 router.get('/zeepzoop_story', homeController.story);
 router.get('/contactus', homeController.contactus);
-router.get('/brand_reg', homeController.registerbrand);
+router.get('/register_your_brand', homeController.registerbrand);
 router.get('/bhavyamodi_founderceo', homeController.ceo);
 // router.get('/:cityName', homeController.getSingleHome);
 

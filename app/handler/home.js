@@ -107,9 +107,6 @@ class HomeHandler extends BaseAutoBindedClass {
             })
             .then((results) => {
 
-                console.log("results['videos'] ========================")
-                console.log(results['videos'] ? results['videos'] : [])
-
                 var seoData = {
                     title: 'ZeepZoop - Shopping Guide for Clothing, Jewellery, Accessories & Home Décor',
                     description: 'India’s First Shopping Guide Mobile App and website with Top Fashion Designers and Their Labels Listed to Buy Designer Clothes, Jewellery, Accessories and Home Décor.',
