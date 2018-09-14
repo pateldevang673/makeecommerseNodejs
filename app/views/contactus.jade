@@ -20,7 +20,7 @@ include common/head
             .capcha_and_submit
               .left_part_form.capch_code
               .right_part_form.submit_butt_part
-                input.submit_butt(type='button', name='submit_butt', value='Submit')
+                input.submit_butt(type='button', name='submit_butt',style="margin-left: -93px;", value='Submit')
       .googlemap_part(id="map")
       .last_part_contact
         .contact_form_head
@@ -44,7 +44,7 @@ script.
     }
     var map = new google.maps.Map(document.getElementById("map"), mapOptions);
   }
-script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyA0sW2OOpuVrTvxLBKQI-wTFp7G3DuJAqs&callback=myMap')
+script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc&callback=myMap')
 script(type='text/javascript').
   $('.submit_butt').click(function(e){
       var nameReg = /^[A-Za-z]+$/;
