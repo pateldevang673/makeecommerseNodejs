@@ -110,6 +110,44 @@ h3 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***Common button CSS***/
 
 .dft-btn {
@@ -208,6 +246,44 @@ h3 {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***Common button CSS***/
 
 input {
@@ -229,6 +305,44 @@ textarea {
     border: none;
     border-radius: 6px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -500,6 +614,44 @@ header {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***New Header***/
 
 rgstr-login-srch {
@@ -706,6 +858,44 @@ ul li.dropdown-nav ul li a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***Header Section End Here***/
 
 
@@ -739,6 +929,44 @@ ul li.dropdown-nav ul li a:hover {
 .hder-app-txt:hover {
     color: #f1f1f1
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -848,6 +1076,44 @@ footer:before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***Banner Section Start Here***/
 
 
@@ -908,6 +1174,44 @@ footer:before {
     object-fit: cover;
     height: 227px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1394,6 +1698,44 @@ footer:before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*.offers-slider-main .owl-item.active:nth-child(1n){ width:200px !important;}*/
 
 .offers-slider-main .owl-item.active .offers-item p {
@@ -1433,6 +1775,44 @@ footer:before {
     color: #fff;
     background: #cd3349
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1484,6 +1864,44 @@ span.abcRioButtonContents {
     font-size: 16px !important;
     float: left;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1701,6 +2119,44 @@ span.abcRioButtonContents {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***Blog Page Style Here***/
 
 .blogslide-item {
@@ -1773,6 +2229,44 @@ span.abcRioButtonContents {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -2452,6 +2946,44 @@ span.abcRioButtonContents {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***Edit Profile Start Here***/
 
 .body-editprofile header,
@@ -2789,6 +3321,44 @@ span.abcRioButtonContents {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***My Lists Start Here***/
 
 .mylists-main {
@@ -2890,6 +3460,44 @@ span.abcRioButtonContents {
 .editprofile-info-main .bookmarkshare-link .mylist-delete img {
     max-width: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -3035,6 +3643,44 @@ span.abcRioButtonContents {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***Footer Section Start Here***/
 
 footer {
@@ -3113,6 +3759,44 @@ footer:before {
     padding-top: 25px;
     border-top: #fff 1px solid;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4286,6 +4970,44 @@ footer:before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***Team Section***/
 
 .mid-team-scn {
@@ -4384,6 +5106,44 @@ footer:before {
     color: #000;
     background: #fff;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4493,6 +5253,44 @@ footer:before {
     line-height: 23px;
     margin-bottom: 0px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -4699,6 +5497,44 @@ footer:before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /***Business Page End ***/
 
 
@@ -4836,6 +5672,44 @@ footer:before {
     line-height: 27px;
     padding: 0px 10px 0px 10px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5101,6 +5975,44 @@ footer:before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*new_css*/
 
 .list-sidemenu .cmp-link {
@@ -5255,11 +6167,53 @@ ul li.dropdown-nav ul:before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*new_css_end*/
 
 
 /*story_page*/
 
+.padding_0 {
+    padding: 0px !important;
+}
+
 .our_story_content {
     font-size: 18px;
     letter-spacing: 1px;
@@ -5267,6 +6221,7 @@ ul li.dropdown-nav ul:before {
     color: rgb(0, 0, 0);
     display: inline-block;
     width: 100%;
+    text-align: justify;
 }
 
 .headings_three_part {
@@ -5422,6 +6377,44 @@ ul li.dropdown-nav ul:before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*story_page_end*/
 
 
@@ -5465,6 +6458,44 @@ ul li.dropdown-nav ul:before {
     width: 48%;
     float: right;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5637,6 +6668,44 @@ ul li.dropdown-nav ul:before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*story_page_end*/
 
 
@@ -5680,6 +6749,44 @@ ul li.dropdown-nav ul:before {
     width: 48%;
     float: right;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5786,6 +6893,44 @@ ul li.dropdown-nav ul:before {
 .padding_bottom_150 {
     padding-bottom: 150px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -5835,6 +6980,44 @@ ul li.dropdown-nav ul:before {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /**/
 
 
@@ -5936,6 +7119,44 @@ ul li.dropdown-nav ul:before {
 .padding_bottom_150 {
     padding-bottom: 150px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -6067,6 +7288,8 @@ ul li.dropdown-nav ul:before {
     letter-spacing: 1px;
     line-height: 35px;
     color: rgb(0, 0, 0);
+    text-align: justify !important;
+    display: inherit;
 }
 
 .full_div {
@@ -6152,6 +7375,44 @@ hr.small_border_line_centre {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*search*/
 
 .header_search input[type=search] {
@@ -6212,6 +7473,44 @@ hr.small_border_line_centre {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*search*/
 
 .right_button {
@@ -6242,6 +7541,10 @@ section.before_opectiy_color:before {
 
 .fix_height_width_img_content .info-share-book {
     min-height: 110px;
+}
+
+h3.patners_main_heading {
+    margin-bottom: 35px;
 }
 
 @media all and (max-width:1320px) and (min-width:1201px) {
@@ -6312,6 +7615,16 @@ section.before_opectiy_color:before {
     .bagsmore-list-main.fix_height_width_img_content .bagsmore-item {
         height: 370px !important;
     }
+
+    /**/
+    .cont {
+        margin: 0px auto !important;
+        width: 975px !important;
+    }
+    .first_images {
+        padding: 15px 0 70px 0;
+    }
+    /**/
 }
 
 @media all and (max-width:991px) and (min-width:769px) {
@@ -6372,6 +7685,9 @@ section.before_opectiy_color:before {
         width: 70px !important
     }
 
+    .padding_top_100 {
+        padding-top: 70px;
+    }
 
     .home-offer-scn .owl-carousel .owl-item img {
         height: 270px !important;
@@ -6410,6 +7726,10 @@ section.before_opectiy_color:before {
 
 
     /*story_page*/
+    .padding_left_right {
+        margin: 0 37px !important;
+    }
+
     .cpage_top_bottom_margin {
         margin: 49px 0 0 0 !important;
     }
@@ -6469,6 +7789,13 @@ section.before_opectiy_color:before {
     .padding_bottom_150 {
         padding-bottom: 100px !important;
     }
+    .first_images {
+        padding: 15px 0 50px 0;
+    }
+    .content_pere {
+        font-size: 16px !important;
+        line-height: 30px !important;
+    }
     /**/
 }
 
@@ -6497,8 +7824,26 @@ section.before_opectiy_color:before {
 @media all and (max-width:768px) and (min-width:1px) {
     .list-sidemenu input.search {
         border: 1px solid #d8d8d8;
-        padding: 10px 10px;
+        padding: 10px10px;
         height: 36px;
+    }
+
+    .about_part_all.revers_part {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .revers_part .right_content {
+        margin-bottom: 30px;
+    }
+
+    .cont {
+        width: 100% !important;
+        padding: 0 15px;
+    }
+
+    .first_images {
+        padding: 15px 0 50px 0;
     }
 
     .catimagesize {
@@ -6643,6 +7988,22 @@ section.before_opectiy_color:before {
         width: 48% !important;
         margin: 1%;
     }
+
+    .images_part {
+        height: 200px !important;
+    }
+    .three_parts_seam_clss .headings_three_part {
+        font-size: 17px !important;
+        padding: 12px 0;
+    }
+
+    .padding_left_right {
+        margin: 0 27px;
+    }
+    .content_pere {
+        font-size: 16px !important;
+        line-height: 30px !important;
+    }
 }
 
 @media all and (max-width:768px) and (min-width:480px) {
@@ -6704,7 +8065,6 @@ section.before_opectiy_color:before {
     }
 
 
-
     /*contact_page*/
     .main_red_heading {
         font-size: 24px !important;
@@ -6746,9 +8106,28 @@ section.before_opectiy_color:before {
         padding: 35px 0 18px 0 !important;
     }
 
-
     /**/
 }
+
+
+
+@media screen and (max-width:575px) {
+    .three_parts_seam_clss {
+        width: 100% !important;
+    }
+    .padding_left_right {
+        margin: 0 0px !important;
+    }
+    .top_img img {
+        width: 70% !important;
+    }
+    .content_pere {
+        font-size: 14px !important;
+        line-height: 30px !important;
+    }
+}
+
+
 
 
 
@@ -6795,52 +8174,121 @@ section.before_opectiy_color:before {
 }
 
 
+
+
 @media all and (max-width:479px) and (min-width:1px) {
+    /*contact_page*/
+    .main_red_heading {
+        font-size: 24px !important;
+        padding: 0 0 30px 0 !important;
+    }
+
+    .googlemap_part {
+        height: 200px !important;
+        margin-top: 30px !important;
+    }
+
+    .page_in_big_images {
+        height: 250px !important;
+    }
+
+    .responsiv_hheight_100 {
+        height: 100% !important;
+    }
+
+    .contact_field {
+        font-size: 16px !important;
+    }
+
+    .contact_field::-webkit-input-placeholder {
+        font-size: 16px;
+    }
+
+    .textera_part {
+        height: 150px !important;
+    }
+
+    .submit_butt {
+        width: 135px !important;
+        font-size: 16px !important;
+        height: 42px !important;
+    }
+
+    .last_part_contact address {
+        font-size: 12px !important;
+        line-height: 26px !important
+    }
+    .padding_bottom_45 {
+        padding-bottom: 25px !important;
+    }
+    .last_part_contact .contact_form_head .main_red_heading {
+        padding: 35px 0 18px 0 !important;
+    }
+
+    .left_part_form {
+        width: 100% !important;
+    }
+    .right_part_form {
+        width: 100% !important;
+    }
+
+    /**/
     /*story_end*/
     .our_story_content {
         font-size: 14px !important;
     }
+
     .storypage_ul_li li {
         font-size: 14px !important;
     }
+
     .headings_three_part {
         font-size: 18px !important;
         line-height: 25px !important;
     }
+
     .red_butt {
-        font-size: 10px !important padding: 10px 15px !important;
+        font-size: 10px !important;
+        padding: 10px 15px !important;
     }
+
     .last_pere_contnet p {
         font-size: 14px !important;
     }
+
     .last_pere_contnet p a {
         font-size: 14px !important;
     }
     /*story_ens*/
     /*menu*/
-    /*menu*/
     .footer_app_google_icon img {
         height: 41px !important;
         width: 135px !important;
     }
+
     .sidebarmenu {
         width: 280px !important;
     }
+
     .sidebarmenu h4 {
         font-size: 18px !important;
     }
+
     .side-menu-close {
         width: 14px;
         height: 14px;
         background-size: cover;
     }
+
     .list-sidemenu li a span {
         width: 90px !important;
         height: 90px !important;
     }
+
     .sidebar-social-icons a {
         margin-left: 16px !important;
     }
+
     .list-sidemenu li {
         padding: 20px 10px 15px 50px !important;
     }
@@ -6848,21 +8296,26 @@ section.before_opectiy_color:before {
     .banner-scn-main {
         min-height: 400px !important;
     }
+
     .discovermost-bnr {
         font-size: 22px !important;
     }
+
     .inshops-eshops {
         font-size: 16px !important;
     }
+
     .shops-sltbtn {
         width: 35px !important;
         height: 35px !important;
         top: -13px !important;
     }
+
     .shops-slt {
         margin-top: 6px !important;
         width: 70px !important;
     }
+
     .location-slt {
         margin-top: 5px !important;
     }
@@ -6870,12 +8323,15 @@ section.before_opectiy_color:before {
     .home-offer-scn .owl-carousel .owl-item img {
         height: 160px !important;
     }
+
     .home-offer-scn .owl-carousel .owl-nav button {
         transform: scale(0.5);
     }
+
     .home-offer-scn .owl-carousel .owl-nav button.owl-prev {
         left: 0px !important;
     }
+
     .home-offer-scn .owl-carousel .owl-nav button.owl-next {
         right: 0px !important;
     }
@@ -6883,9 +8339,11 @@ section.before_opectiy_color:before {
     .owl-carousel .owl-nav button {
         top: 45% !important;
     }
+
     .ftr-nav li a {
         font-size: 12px !important;
     }
+
     .gettheapp-img img {
         margin: 0px auto;
     }
@@ -6896,6 +8354,44 @@ section.before_opectiy_color:before {
         height: 142px !important;
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
