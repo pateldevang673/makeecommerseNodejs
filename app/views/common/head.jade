@@ -34,8 +34,6 @@ html(lang='en')
 
     link(rel='icon', type='image/png', href='/images/favicon.png')
     link(rel='canonical', href='https://www.zeepzoop.com/')
-    //- link(type='text/css', href='/css/custom.css', rel='stylesheet')
-    // Global site tag (gtag.js) - Google Analytics
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i|Oswald:400,500,600,700', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700', rel='stylesheet')
     link(href='/css/owl.carousel.min.css', rel='stylesheet')
@@ -67,11 +65,7 @@ html(lang='en')
             img(src='/images/signin-fb.png', alt='')
             | Sign in
         li
-          .g-signin2(data-onsuccess="onSignIn")
-          //- a(id="Googlelogin",style="cursor:pointer;")
-          //-   img(src='images/signin-gl.png', alt='')
-          //-   | Continue with Google
-          
+          .g-signin2(data-onsuccess="onSignIn")          
       span.by-cnt-agree By continuing you agree to
       a.popup-terms-link(href='#') Terms & Conditions
   .main
@@ -116,8 +110,6 @@ html(lang='en')
                       a(href='/partners') Partners
                     li
                       a(href='/bhavyamodi_founderceo') Meet The CEO
-                    //- li
-                    //-   a(href='javascript:void(0)') Join Z-Force
           li.dekstopn_noone
             a(href='/register_your_brand') Register Your Brand
           li.dekstopn_noone
@@ -148,8 +140,6 @@ html(lang='en')
                         a(href='/partners') Partners
                       li
                         a(href='/bhavyamodi_founderceo') Meet The CEO
-                      //- li
-                      //-   a(href='javascript:void(0)') Join Z-Force
             .cmn-logo
               a(href='/')
                 img(src='/images/logo-new.png', alt='',style="height:23px;margin-top: 5px;")
@@ -186,7 +176,6 @@ html(lang='en')
         var value=$(this).val();        
         if (event.keyCode === 13) {
           if (value !== undefined && value !== null && value !== '') {
-              //- window.location.href="/ceo"
             if ($('.shops-slt').hasClass('shopsSlt-current')) {
                 var online = true;
             } else {
@@ -361,7 +350,6 @@ html(lang='en')
             $('.aflog').css("display", "block");
         }else{
             $('.bflog').css("display", "block");
-            //- $('.aflog').css("display", "none");
         }
       }
       loginhs();
