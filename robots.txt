@@ -1,6 +1,9 @@
 User-Agent: *
 Disallow:
-sitemap: http://zeepzoop.com/sitemap.xml
+sitemap: https://www.zeepzoop.com/sitemap.xml
+
+User-agent: *
+Disallow: /search?*
 
 User-Agent: Jumpbot
 Disallow: /

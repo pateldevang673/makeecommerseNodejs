@@ -243,7 +243,10 @@ script.
 |      
 script(type="text/javascript").
   $(document).ready(function(e) {
-  $('.blog-post-cont h2').css("font-size","35px")
+  $('.blog-post-cont h2').css("font-size","35px");
+  $('.blog-post-cont a').attr("rel", "nofollow");  
+  $('.blog-post-cont a').css("font-size","20px");
+  $('.blog-post-cont a').css("color","blue")
   $('#loginsinup').click(function(e) {
   $('#signinpopup').show();
   $('body').addClass('zeeppopup-body');

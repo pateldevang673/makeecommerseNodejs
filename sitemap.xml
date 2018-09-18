@@ -1,82 +1,75 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
-
-<url>
-  <loc>http://www.zeepzoop.com/</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/business</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/story-of-mayuri-a-beautiful-young-woman-with-an-inspirational-journey-which-proves-that-with-hard-work-and-faith-nothing-is-impossible</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/beauty-of-clay-tingle-of-bells</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/an-evolution-of-luxury-an-endangered-skill</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/the-new-vibe</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/making-of-terracotta-an-art-and-a-science</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/meet-the-woman-who-turned-an-experiment-into-one-of-the-prominent-and-entrusted-fashion-beauty-lifestyle-blog-in-india</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/anuraag-a-man-of-ethics-and-values-with-a-creative-edge-who-proves-that-an-essential-aspect-to-creativity-is-not-being-afraid-to-fail</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/a-living-inspiration-of-how-far-your-passion-can-take-you</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/aditi-rao-hydari-gives-major-fashion-goals-with-stunning-jewellery-looks</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/5-musthave-sarees-to-own-flaunt</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>http://www.zeepzoop.com/blogs/5-jewellery-trends-to-watch-out-for-the-year-2018</loc>
-  <lastmod>2018-05-03T05:09:30+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-
-
+    <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+    <url>
+        <loc>https://www.zeepzoop.com/</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>1.00</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/business</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/story-of-mayuri-a-beautiful-young-woman-with-an-inspirational-journey-which-proves-that-with-hard-work-and-faith-nothing-is-impossible</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/beauty-of-clay-tingle-of-bells</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/an-evolution-of-luxury-an-endangered-skill</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.80</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/the-new-vibe</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/making-of-terracotta-an-art-and-a-science</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/meet-the-woman-who-turned-an-experiment-into-one-of-the-prominent-and-entrusted-fashion-beauty-lifestyle-blog-in-india</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/anuraag-a-man-of-ethics-and-values-with-a-creative-edge-who-proves-that-an-essential-aspect-to-creativity-is-not-being-afraid-to-fail</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/a-living-inspiration-of-how-far-your-passion-can-take-you</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/aditi-rao-hydari-gives-major-fashion-goals-with-stunning-jewellery-looks</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/5-musthave-sarees-to-own-flaunt</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/5-jewellery-trends-to-watch-out-for-the-year-2018</loc>
+        <lastmod>2018-05-03T05:09:30+00:00</lastmod>
+        <priority>0.64</priority>
+    </url>
 </urlset>
