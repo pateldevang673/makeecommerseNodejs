@@ -60,7 +60,7 @@ include common/head
         .blog-post-rcmnd
           h4 Recommended
           |                         
-          - for(var x=1;x<catBlog.length;x++)
+          - for(var x=1;x<catBlogLength;x++)
             .blogslide-item
               a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[x].URL}")
                 img(src=global.config.variable.apiPath+'/'+'#{catBlog[x].blogPicture}', alt="")

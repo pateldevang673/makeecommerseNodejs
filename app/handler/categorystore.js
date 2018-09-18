@@ -49,6 +49,8 @@ class CategoryHandler extends BaseAutoBindedClass {
             var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;
         } else if (req.query.buisnessOnline) {
             var urls = '/stores/search?trending=true&isActive=true&buisnessOnline=true&category=' + req.params.id;
+        } else {
+            var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;
         }
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'categoryStore'),
