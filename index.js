@@ -47,9 +47,28 @@ app.get('/robots.txt', function(req, res) {
 
 app.use('/', routes);
 
+app.get('/our_story', function(req, res) {
+    res.redirect(301, '/zeepzoop_story')
+});
+
+app.get('/team', function(req, res) {
+    res.redirect(301, '/zeepzoop_team')
+});
+
+app.get('/ceo', function(req, res) {
+    res.redirect(301, '/bhavyamodi_founderceo')
+});
+
+app.get('/brand_reg', function(req, res) {
+    res.redirect(301, '/register_your_brand')
+});
+
+
+
 app.get('*', function(req, res) {
     res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
 });
+
 
 app.listen(global.config.server.PORT, function() {
     console.log('App is running on ' + global.config.server.PORT);
