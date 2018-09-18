@@ -7,7 +7,7 @@ let homeController = new HomeController();
 
 router.get('/', homeController.getSingleHome);
 router.get('/reset/', homeController.resetPassword);
-router.get('/business/', homeController.business);
+// router.get('/business/', homeController.business);
 router.get('/zeepzoop_team', homeController.team);
 router.get('/partners', homeController.partners);
 router.get('/profile/:id', homeController.userProfile);

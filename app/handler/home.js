@@ -216,9 +216,9 @@ class HomeHandler extends BaseAutoBindedClass {
         })
     }
 
-    business(req, res) {
-        res.render('business', { seo: false, title: 'ZeepZoop Business', page: 'business' })
-    }
+    // business(req, res) {
+    //     res.render('business', { seo: false, title: 'ZeepZoop Business', page: 'business' })
+    // }
 
     partners(req, res) {
         var seoData = {
