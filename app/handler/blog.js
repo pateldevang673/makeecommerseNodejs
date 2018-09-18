@@ -183,7 +183,7 @@ class BlogHandler extends BaseAutoBindedClass {
                     res.render('detail', {
                         seo: true,
                         seoData: seoData,
-                        catBlog: catBlog,
+                        catBlog: catBlog.length > 5 ? 5 : catBlog.length,
                         page: 'detail-page',
                         titleurl: req.params.url,
                         blog: blog,

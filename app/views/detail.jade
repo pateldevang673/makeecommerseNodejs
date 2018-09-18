@@ -60,89 +60,90 @@ include common/head
         .blog-post-rcmnd
           h4 Recommended
           |                         
-          .blogslide-item
-            a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[1].URL}")
-              img(src=global.config.variable.apiPath+'/'+'#{catBlog[1].blogPicture}', alt="")
-            |                             
-            .blogslide-cont
-              h3
-                a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[1].URL}") #{catBlog[1].title}
-              |                                 
-              p
-                | #{catBlog[1].metaDescription}
-              |                                 
-              .blog-user-share
-                .pull-left
-                  span.blog-usepic
-                    img(src=global.config.variable.apiPath+'/'+'#{catBlog[1].authorImage}', alt="")
-                  |                                         
-                  .blog-name-date
-                    | #{catBlog[1].authorName}
-                    br
-                    |  #{catBlog[1].time}
-                |                                     
-                //- .bookmarkshare-link
-                //-   a(href="#")
-                //-     img(src="/images/bookmark-icon.png", alt="")
-                //-   |  
-                //-   a(href="#")
-                //-     img(src="/images/thumb-icon.png", alt="")
-                //-   |  
-                //-   a(href="#")
-                //-     img(src="/images/share-icon.png", alt="")
-          |                         
-          .blogslide-item
-            a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[2].URL}")
-              img(src=global.config.variable.apiPath+'/'+'#{catBlog[2].blogPicture}', alt="")
-            |                             
-            .blogslide-cont
-              h3
-                a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[2].URL}") #{catBlog[2].title}
-              |                                 
-              p
-                | #{catBlog[2].metaDescription}
-              |                                 
-              .blog-user-share
-                .pull-left
-                  span.blog-usepic
-                    img(src=global.config.variable.apiPath+'/'+'#{catBlog[2].authorImage}', alt="")
-                  |                                         
-                  .blog-name-date
-                    | #{catBlog[2].authorName}
-                    br
-                    |  #{catBlog[2].time}
-                |                                     
-                //- .bookmarkshare-link
-                //-   a(href="#")
-                //-     img(src="/images/bookmark-icon.png", alt="")
-                //-   |  
-                //-   a(href="#")
-                //-     img(src="/images/thumb-icon.png", alt="")
-                //-   |  
-                //-   a(href="#")
-                //-     img(src="/images/share-icon.png", alt="")
-          |                         
-          .blogslide-item
-            a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[3].URL}")
-              img(src=global.config.variable.apiPath+'/'+'#{catBlog[3].blogPicture}', alt="")
-            |                             
-            .blogslide-cont
-              h3
-                a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[3].URL}") #{catBlog[3].title}
-              |                                 
-              p
-                | #{catBlog[3].metaDescription}
-              |                                 
-              .blog-user-share
-                .pull-left
-                  span.blog-usepic
-                    img(src=global.config.variable.apiPath+'/'+'#{catBlog[3].authorImage}', alt="")
-                  |                                         
-                  .blog-name-date
-                    | #{catBlog[3].authorName}
-                    br
-                    |  #{catBlog[3].time}
-                |                                     
+          - for(var x=1;x<catBlog.length;x++)
+            .blogslide-item
+              a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[x].URL}")
+                img(src=global.config.variable.apiPath+'/'+'#{catBlog[x].blogPicture}', alt="")
+              |                             
+              .blogslide-cont
+                h3
+                  a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[x].URL}") #{catBlog[x].title}
+                |                                 
+                p
+                  | #{catBlog[x].metaDescription}
+                |                                 
+                .blog-user-share
+                  .pull-left
+                    span.blog-usepic
+                      img(src=global.config.variable.apiPath+'/'+'#{catBlog[x].authorImage}', alt="")
+                    |                                         
+                    .blog-name-date
+                      | #{catBlog[x].authorName}
+                      br
+                      |  #{catBlog[x].time}
+                  |                                     
+                  //- .bookmarkshare-link
+                  //-   a(href="#")
+                  //-     img(src="/images/bookmark-icon.png", alt="")
+                  //-   |  
+                  //-   a(href="#")
+                  //-     img(src="/images/thumb-icon.png", alt="")
+                  //-   |  
+                  //-   a(href="#")
+                  //-     img(src="/images/share-icon.png", alt="")
+            |                         
+          //- .blogslide-item
+          //-   a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[2].URL}")
+          //-     img(src=global.config.variable.apiPath+'/'+'#{catBlog[2].blogPicture}', alt="")
+          //-   |                             
+          //-   .blogslide-cont
+          //-     h3
+          //-       a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[2].URL}") #{catBlog[2].title}
+          //-     |                                 
+          //-     p
+          //-       | #{catBlog[2].metaDescription}
+          //-     |                                 
+          //-     .blog-user-share
+          //-       .pull-left
+          //-         span.blog-usepic
+          //-           img(src=global.config.variable.apiPath+'/'+'#{catBlog[2].authorImage}', alt="")
+          //-         |                                         
+          //-         .blog-name-date
+          //-           | #{catBlog[2].authorName}
+          //-           br
+          //-           |  #{catBlog[2].time}
+          //-       |                                     
+          //-       //- .bookmarkshare-link
+          //-       //-   a(href="#")
+          //-       //-     img(src="/images/bookmark-icon.png", alt="")
+          //-       //-   |  
+          //-       //-   a(href="#")
+          //-       //-     img(src="/images/thumb-icon.png", alt="")
+          //-       //-   |  
+          //-       //-   a(href="#")
+          //-       //-     img(src="/images/share-icon.png", alt="")
+          //- |                         
+          //- .blogslide-item
+          //-   a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[3].URL}")
+          //-     img(src=global.config.variable.apiPath+'/'+'#{catBlog[3].blogPicture}', alt="")
+          //-   |                             
+          //-   .blogslide-cont
+          //-     h3
+          //-       a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[3].URL}") #{catBlog[3].title}
+          //-     |                                 
+          //-     p
+          //-       | #{catBlog[3].metaDescription}
+          //-     |                                 
+          //-     .blog-user-share
+          //-       .pull-left
+          //-         span.blog-usepic
+          //-           img(src=global.config.variable.apiPath+'/'+'#{catBlog[3].authorImage}', alt="")
+          //-         |                                         
+          //-         .blog-name-date
+          //-           | #{catBlog[3].authorName}
+          //-           br
+          //-           |  #{catBlog[3].time}
+          //-       |                                     
                 //- .bookmarkshare-link
                 //-   a(href="#")
                 //-     img(src="/images/bookmark-icon.png", alt="")
