@@ -5,7 +5,8 @@ include common/head
     section.auther-info-scn
       .fix-wrap
         .auther-user-pic
-          img(src=global.config.variable.apiPath+'/#{authorBlogs[0].authorImage}', alt='')
+          if authorBlogs[0].authorImage
+            img(src=global.config.variable.apiPath+'/#{authorBlogs[0].authorImage}', alt='')
         .auther-user-cont
           h3 #{authorBlogs[0].authorName}
           p
