@@ -73,12 +73,22 @@ $(function() {
     });
 
     $('#loadmoreshop').click(function() {
+        var catid = '';
 
+        if ($(this).attr('name') == 'Home-Decor') {
+            catid = "5a51e626ff645771bf57dc1a"
+        } else if ($(this).attr('name') == 'Clothing') {
+            catid = "5a51e507ff645771bf57dc14"
+        } else if ($(this).attr('name') == 'Jewellery') {
+            catid = "5a51e528ff645771bf57dc15"
+        } else {
+            catid = "5a51e544ff645771bf57dc16"
+        }
         var buisnessOffline = GetParameterValues('buisnessOffline');
         var buisnessOnline = GetParameterValues('buisnessOnline');
         var cityName = GetParameterValues('city');
 
-        var urls = "https://api.zeepzoop.com/stores/search?startStores=" + startStores + "&endStores=" + endStores;
+        var urls = "https://api.zeepzoop.com/stores/search?category=" + catid + "&startStores=" + startStores + "&endStores=" + endStores;
         if (buisnessOffline) {
             urls += '&buisnessOffline=true';
         } else if (buisnessOnline) {

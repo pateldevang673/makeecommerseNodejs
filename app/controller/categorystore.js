@@ -10,12 +10,21 @@ class CategoryController extends BaseController {
         this._passport = require('passport');
     }
 
-    getcategegorystore(req, res, next) {
-        this._categoryHandler.getcategegorystore(req, res);
+    getClothingstore(req, res, next) {
+        this._categoryHandler.getClothingstore(req, res);
     }
-    // getcategegorystore(req, res, next) {
-    //     this._collectionHandler.getcategegorystore(req, res);
-    // }
+
+    getJewellerystore(req, res, next) {
+        this._categoryHandler.getJewellerystore(req, res);
+    }
+
+    getAccessoriesstore(req, res, next) {
+        this._categoryHandler.getAccessoriesstore(req, res);
+    }
+
+    getHomedecorstore(req, res, next) {
+        this._categoryHandler.getHomedecorstore(req, res);
+    }
 }
 
 module.exports = CategoryController;

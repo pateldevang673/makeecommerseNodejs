@@ -166,10 +166,15 @@ html(lang='en')
         var id =$(this).attr('id');
         var categoryName =$(this).attr('name');
         if ($('.shops-slt').hasClass('shopsSlt-current')) {
-          window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOnline=true";
+          window.location.href= "/category/" + $(this).attr('name') +"?buisnessOnline=true";
         }else{
-          window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOffline=true";
+          window.location.href= "/category/" + $(this).attr('name') +"?buisnessOffline=true";
         }
+        //- if ($('.shops-slt').hasClass('shopsSlt-current')) {
+        //-   window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOnline=true";
+        //- }else{
+        //-   window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOffline=true";
+        //- }
       });
       $('.myInput').keyup(function(event) {
         event.preventDefault();

@@ -1,0 +1,56 @@
+include common/head
+
+.wrapper      
+  section.innerpage-hero
+    img(src='/images/Clothing.jpg', alt='')
+  .mid-scn-main
+    section.bagsmore-scn
+      .fix-wrap
+        .breadcream
+          ul
+            li
+              a(href='/') Home
+            li.active #{category.category}
+        .bagsmore-list-main.fix_height_width_img_content
+          - for(var x=0;x<12;x++)
+            .bagsmore-item
+              img(src=global.config.variable.apiPath+'/#{categoryStore[x].storeBanner}', alt='')
+              .watermark-logo
+                img(src='/images/img-watermark-icon.png', alt='')
+                span #{categoryStore[x].avgRating}
+              .info-share-book
+                .bag-info-cont
+                  a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",href='/#{categoryStore[x].URL}/#{categoryStore[x]._id}') #{categoryStore[x].storeName}
+                  p(style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;") #{categoryStore[x].storeDiscription}
+                .bookmarkshare-link
+                  // a(href='#')
+                  //   img(src='/images/bookmark-icon.png', alt='')
+                  // a(href='#')
+                  //   img(src='/images/share-icon.png', alt='')
+        .view-all-btn
+        a.right_button.cmn-btn(id="loadmoreshop",name="Clothing", style="cursor: pointer;margin-left: 495px;") Load More
+        // .paginaton-main
+        //   a.p-prev(href='#')
+        //   a(href='#') 1
+        //   a.active(href='#') 2
+        //   a(href='#') 3
+        //   a(href='#') 4
+        //   span.p-dot ...
+        //   a(href='#') 10
+        //   a.p-next(href='#')
+include common/footer
+script(type='text/javascript').
+  document.body.classList.add("body-innerpage");
+script(type='text/javascript').
+
+  function GetParameterValues(param) {
+      var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+      //- for (var i = 0; i < url.length; i++) {
+      //-     var urlparam = url[i].split('=');
+      //-     if (urlparam[0] == param) {
+      //-         return urlparam[1];
+      //-     }
+      //- }
+  }
+
+
