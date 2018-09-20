@@ -84,14 +84,14 @@ class BlogHandler extends BaseAutoBindedClass {
 
         var mainObj = {};
         Promise.all([
-                this.requestAsync(req, URLStore + '/blogs/search?startBlogs=5&endBlogs=8&trending=true', 'trendingBlogs'),
-                this.requestAsync(req, URLStore + '/blogs/search?startBlogs=0&endBlogs=4', 'newBlogs'),
-                this.requestAsync(req, URLStore + '/blogs/search?&category=Brand+Stories&startBlogs=0&endBlogs=11', 'brandStories'),
-                this.requestAsync(req, URLStore + '/blogs/search?&category=Around+The+World&startBlogs=0&endBlogs=11', 'AroundTheWorld'),
-                this.requestAsync(req, URLStore + '/blogs/search?&category=Fashion&startBlogs=0&endBlogs=11', 'fashion'),
-                this.requestAsync(req, URLStore + '/blogs/search?&category=Wedding+Bells&startBlogs=0&endBlogs=11', 'WeddingBells'),
-                this.requestAsync(req, URLStore + '/blogs/search?&category=Home+Decor&startBlogs=0&endBlogs=11', 'HomeDecor'),
-                this.requestAsync(req, URLStore + '/blogs/search?&category=Culture+and+Heritage&startBlogs=0&endBlogs=11', 'CultureHeritage'),
+                this.requestAsync(req, URLStore + '/blogs/search?trending=true', 'trendingBlogs'),
+                this.requestAsync(req, URLStore + '/blogs/search', 'newBlogs'),
+                this.requestAsync(req, URLStore + '/blogs/search?&category=Brand+Stories', 'brandStories'),
+                this.requestAsync(req, URLStore + '/blogs/search?&category=Around+The+World', 'AroundTheWorld'),
+                this.requestAsync(req, URLStore + '/blogs/search?&category=Fashion', 'fashion'),
+                this.requestAsync(req, URLStore + '/blogs/search?&category=Wedding+Bells', 'WeddingBells'),
+                this.requestAsync(req, URLStore + '/blogs/search?&category=Home+Decor', 'HomeDecor'),
+                this.requestAsync(req, URLStore + '/blogs/search?&category=Culture+and+Heritage', 'CultureHeritage'),
             ])
             .then(function(allData) {
                 return new Promise(function(resolve, reject) {
