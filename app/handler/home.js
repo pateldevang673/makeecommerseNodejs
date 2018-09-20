@@ -86,10 +86,11 @@ class HomeHandler extends BaseAutoBindedClass {
                 this.requestAsync(req, URLStore + '/stores/newStore?buisnessOnline=true', 'newStoresOnline'),
                 this.requestAsync(req, URLStore + '/stores/newStore?buisnessOffline=true&location=' + cityName, 'newStoresOffline'),
                 this.requestAsync(req, URLStore + '/stores/search?buisnessOnline=true&startStores=8&endStores=12', 'sponsoredOnline'),
-                this.requestAsync(req, URLStore + '/stores/search?buisnessOffline=true&startStores=15&endStores=19&location=' + cityName, 'sponsoredOffline'),
+                this.requestAsync(req, URLStore + '/stores/search?buisnessOffline=true&startStores=12&endStores=16&location=' + cityName, 'sponsoredOffline'),
                 this.requestAsync(req, URLStore + '/blogs/search?startBlogs=0&endBlogs=5', 'trendingBlogs'),
                 this.requestAsync(req, URLStore + '/cities', 'cities'),
-                this.requestVideo(req, "https://www.googleapis.com/youtube/v3/search?order=date&part=snippet&channelId=UCQajBUKn91xbZ22StHqeOzg&maxResults=4&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc", 'videos')
+                this.requestVideo(req, "https://www.googleapis.com/youtube/v3/search?order=videocount&part=snippet&channelId=UCQajBUKn91xbZ22StHqeOzg&maxResults=4&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc", 'videos')
+                // 'date type of orders'. Allowed values: [date, rating, relevance, title, videocount, viewcount]
             ])
             .then(function(allData) {
                 mainObj['trendingCollections'] = [];

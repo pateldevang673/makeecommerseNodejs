@@ -21,7 +21,8 @@ include common/head
                 span #{collectionOnStore[x].avgRating}
               .info-share-book
                 .bag-info-cont
-                  a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",href='/#{collectionOnStore[x].URL}/#{collectionOnStore[x]._id}') #{collectionOnStore[x].storeName}
+                  a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",
+                    href='/brand/#{collectionOnStore[x].URL}') #{collectionOnStore[x].storeName}
                   p(style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;") #{collectionOnStore[x].storeDiscription}
                 .bookmarkshare-link
                   a.bookmarkicon(href='javascript:void(0)')

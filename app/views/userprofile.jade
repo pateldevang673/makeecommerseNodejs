@@ -89,7 +89,7 @@ include common/head
                         span #{Userbookmark[x].avgRating}
                       .info-share-book
                         .bag-info-cont
-                          a.bag-title(href='/#{Userbookmark[x].URL}/#{Userbookmark[x]._id}') FAMME
+                          a.bag-title(href='/brand/#{Userbookmark[x].URL}') FAMME
                           p #{Userbookmark[x].storeDiscription} 
                         .bookmarkshare-link
                           a(href='#')
@@ -161,7 +161,7 @@ include common/head
                                     span #{UserMylist[0].stores[x].avgRating}
                                   .info-share-book
                                     .bag-info-cont
-                                      a.bag-title(href='/#{UserMylist[0].stores[x].URL}/#{UserMylist[0].stores[x]._id}') #{UserMylist[0].stores[x].storeName}
+                                      a.bag-title(href='/brand/#{UserMylist[0].stores[x].URL}') #{UserMylist[0].stores[x].storeName}
                                       p #{UserMylist[0].stores[x].storeDiscription}
                                     .bookmarkshare-link
                                       a.mylist-delete(href='#')
@@ -185,7 +185,7 @@ include common/head
                                       span #{UserMylist[x].stores[j].avgRating}
                                     .info-share-book
                                       .bag-info-cont
-                                        a.bag-title('/#{UserMylist[x].stores[j].URL}/#{UserMylist[x].stores[j]._id}') #{UserMylist[x].stores[j].storeName}
+                                        a.bag-title('/brand/#{UserMylist[x].stores[j].URL}') #{UserMylist[x].stores[j].storeName}
                                         p #{UserMylist[x].stores[j].storeDiscription}
                                       .bookmarkshare-link
                                         a.mylist-delete(href='#')

@@ -10,7 +10,7 @@ include common/head
           ul
             li
               a(href='/') Home
-            li.active Search
+            li.active #{searchfor}
         .bagsmore-list-main
           - for (var x = 0; x < stores.length; x++)
             .bagsmore-item
@@ -20,7 +20,8 @@ include common/head
                 span #{stores[x].avgRating}
               .info-share-book
                 .bag-info-cont
-                  a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",href='/#{stores[x].URL}/#{stores[x]._id}') #{stores[x].storeName}
+                  a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",
+                    href='/brand/#{stores[x].URL}') #{stores[x].storeName}
                   p(style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;") #{stores[x].storeDiscription}
                 .bookmarkshare-link
                   a(href='#')

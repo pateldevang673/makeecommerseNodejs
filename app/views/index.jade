@@ -51,7 +51,7 @@ include common/head
         .feature-shops-list
           - for (var x = 0; x < storesLength ; x++)
             .feature-shops-item
-              a.famme-dtl(href='/#{stores[x].URL}/#{stores[x]._id}')
+              a.famme-dtl(href='/brand/#{stores[x].URL}')
                 img(style="height: 200px;",src=global.config.variable.apiPath+'/#{stores[x].storeBanner}', alt='')
                 .feature-info
                   h3 #{stores[x].storeName}
@@ -70,7 +70,7 @@ include common/head
             - for (var x = 0; x < sponsoredOffline.length; x++)
               .item
                 .newlyadded-item
-                  a.famme-dtl(href='/#{sponsoredOffline[x].URL}/#{sponsoredOffline[x]._id}') 
+                  a.famme-dtl(href='/brand/#{sponsoredOffline[x].URL}') 
                     img(src=global.config.variable.apiPath+'/#{sponsoredOffline[x].storeBanner}', alt='')
                     .feature-info
                       h3(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;") #{sponsoredOffline[x].storeName}
@@ -83,7 +83,7 @@ include common/head
         .owl-carousel.catelougesSlider
           - for (var x = 0; x < storesLength ; x++)
             .item
-              a.catelouges-item(href='/#{stores[x].URL}/#{stores[x]._id}')
+              a.catelouges-item(href='/brand/#{stores[x].URL}')
                 .cate-pic
                   if stores[x].featureCatalog!==null
                     img(src=global.config.variable.apiPath+'/#{stores[x].featureCatalog.catalogUrl}', alt='')
@@ -95,7 +95,7 @@ include common/head
         .feature-shops-list
           - for (var x = 0; x < onlineStoresLength ; x++)
             .feature-shops-item
-              a.famme-dtl(href='/#{onlineStores[x].URL}/#{onlineStores[x]._id}')
+              a.famme-dtl(href='/brand/#{onlineStores[x].URL}')
                 img(src=global.config.variable.apiPath+'/#{onlineStores[x].storeBanner}', alt='')
                 .feature-info
                   h3 #{onlineStores[x].storeName}
@@ -114,7 +114,7 @@ include common/head
             - for (var x = 0; x < sponsoredOnline.length; x++)
               .item
                 .newlyadded-item
-                  a.famme-dtl(href='/#{sponsoredOnline[x].URL}/#{sponsoredOnline[x]._id}') 
+                  a.famme-dtl(href='/brand/#{sponsoredOnline[x].URL}') 
                     img(src=global.config.variable.apiPath+'/#{sponsoredOnline[x].storeBanner}', alt='')
                     .feature-info
                       h3(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;") #{sponsoredOnline[x].storeName}    
@@ -127,7 +127,7 @@ include common/head
         .owl-carousel.catelougesSlider
           - for (var x = 0; x < onlineStoresLength ; x++)
             .item
-              a.catelouges-item(href='/#{onlineStores[x].URL}/#{onlineStores[x]._id}')
+              a.catelouges-item(href='/brand/#{onlineStores[x].URL}')
                 .cate-pic
                   if onlineStores[x].featureCatalog!==null
                     img(src=global.config.variable.apiPath+'/#{onlineStores[x].featureCatalog.catalogUrl}', alt='')
@@ -139,7 +139,7 @@ include common/head
         .editorpick-list.responsiv_seam_height
           - for (var x = 0; x < offlineeditorlength ; x++)
             .editorpick-item
-              a.famme-dtl(href='/#{offlineeditor[x].URL}/#{offlineeditor[x]._id}')
+              a.famme-dtl(href='/brand/#{offlineeditor[x].URL}')
                 img(src=global.config.variable.apiPath+'/#{offlineeditor[x].storeBanner}', alt='')
                 span.cmn-btn.viewstore-btn VIEW STORE
                 .feature-info
@@ -157,10 +157,10 @@ include common/head
             - for (var x = 0; x < newStoresOfflineLength; x++)
               .item
                 .newlyadded-item
-                  a.famme-dtl(href='/#{newStoresOffline[x].URL}/#{newStoresOffline[x]._id}') 
+                  a.famme-dtl(href='/brand/#{newStoresOffline[x].URL}') 
                     img(src=global.config.variable.apiPath+'/#{newStoresOffline[x].storeBanner}', alt='')
                     .feature-info
-                      h3 #{newStoresOffline[x].storeName}
+                      h3(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;") #{newStoresOffline[x].storeName}
     section.newly-added-scn.onlinenewstore
       .fix-wrap
         .main_heading
@@ -172,10 +172,10 @@ include common/head
             - for (var x = 0; x < newStoresOnlineLength; x++)
               .item
                 .newlyadded-item
-                  a.famme-dtl(href='/#{newStoresOnline[x].URL}/#{newStoresOnline[x]._id}') 
+                  a.famme-dtl(href='/brand/#{newStoresOnline[x].URL}') 
                     img(src=global.config.variable.apiPath+'/#{newStoresOnline[x].storeBanner}', alt='')
                     .feature-info
-                      h3 #{newStoresOnline[x].storeName}
+                      h3(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;") #{newStoresOnline[x].storeName}
     //- section.offers-scn(style='background-image:url(images/offers-bg.jpg)')
     //-   .fix-wrap
     //-     .main_heading
@@ -188,7 +188,7 @@ include common/head
             .item
               .offers-item
                 img(src=global.config.variable.apiPath+'/#{offersOnline[x].offerPicture}', alt='')
-                a.flatoffer-btn(href=global.config.variable.apiPath+'/#{offersOnline[x].storeId.URL}/#{offersOnline[x].storeId._id}') #{offersOnline[x].offerName}
+                a.flatoffer-btn(href=global.config.variable.apiPath+'/brand/#{offersOnline[x].storeId.URL}') #{offersOnline[x].offerName}
                 p
                   | #{offersOnline[x].offerDescription}
     section.blogs-scn

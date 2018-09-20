@@ -11,8 +11,7 @@ router.use('/fshop', require(ROUTE_V1_PATH + 'fshop'));
 router.use('/search', require(ROUTE_V1_PATH + 'search'));
 router.use('/category', require(ROUTE_V1_PATH + 'categorystore'));
 router.use('/catalouge', require(ROUTE_V1_PATH + 'catalouge'));
-router.use('/:storeName', require(ROUTE_V1_PATH + 'storedetail'));
-
+router.use('/brand', require(ROUTE_V1_PATH + 'storedetail'));
 
 
 module.exports = router;

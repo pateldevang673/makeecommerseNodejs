@@ -103,6 +103,8 @@ h3 {
 }
 
 
+
+
 /***Common button CSS***/
 
 .dft-btn {
@@ -194,6 +196,8 @@ h3 {
 }
 
 
+
+
 /***Common button CSS***/
 
 input {
@@ -215,6 +219,8 @@ textarea {
     border: none;
     border-radius: 6px;
 }
+
+
 
 
 /***Header Section Start Here***/
@@ -471,6 +477,8 @@ header {
 }
 
 
+
+
 /***New Header***/
 
 rgstr-login-srch {
@@ -669,6 +677,8 @@ ul li.dropdown-nav ul li a:hover {
 }
 
 
+
+
 /***Header Section End Here***/
 
 
@@ -702,6 +712,8 @@ ul li.dropdown-nav ul li a:hover {
 .hder-app-txt:hover {
     color: #f1f1f1
 }
+
+
 
 
 /***Inner Header Section End Here***/
@@ -797,6 +809,8 @@ footer:before {
     padding-top: 25px;
     border-top: #fff 1px solid;
 }
+
+
 
 
 /***Banner Section Start Here***/
@@ -1328,6 +1342,8 @@ footer:before {
 }
 
 
+
+
 /*.offers-slider-main .owl-item.active:nth-child(1n){ width:200px !important;}*/
 
 .offers-slider-main .owl-item.active .offers-item p {
@@ -1367,6 +1383,8 @@ footer:before {
     color: #fff;
     background: #cd3349
 }
+
+
 
 
 /*new*/
@@ -1411,6 +1429,8 @@ span.abcRioButtonContents {
     font-size: 16px !important;
     float: left;
 }
+
+
 
 
 /***Middle Section End Here***/
@@ -1615,6 +1635,8 @@ span.abcRioButtonContents {
 }
 
 
+
+
 /***Blog Page Style Here***/
 
 .blogslide-item {
@@ -1687,6 +1709,8 @@ span.abcRioButtonContents {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
+
+
 
 
 /***Shop Both Page Style Here***/
@@ -2353,6 +2377,8 @@ span.abcRioButtonContents {
 }
 
 
+
+
 /***Edit Profile Start Here***/
 
 .body-editprofile header,
@@ -2682,6 +2708,8 @@ span.abcRioButtonContents {
 }
 
 
+
+
 /***My Lists Start Here***/
 
 .mylists-main {
@@ -2783,6 +2811,8 @@ span.abcRioButtonContents {
 .editprofile-info-main .bookmarkshare-link .mylist-delete img {
     max-width: 100%;
 }
+
+
 
 
 /***My Lists Start Here***/
@@ -2916,6 +2946,8 @@ span.abcRioButtonContents {
 }
 
 
+
+
 /***Footer Section Start Here***/
 
 footer {
@@ -2994,6 +3026,8 @@ footer:before {
     padding-top: 25px;
     border-top: #fff 1px solid;
 }
+
+
 
 
 /***Footer Section End Here***/
@@ -4155,6 +4189,8 @@ footer:before {
 }
 
 
+
+
 /***Team Section***/
 
 .mid-team-scn {
@@ -4253,6 +4289,8 @@ footer:before {
     color: #000;
     background: #fff;
 }
+
+
 
 
 /***Author Page Start ***/
@@ -4354,6 +4392,8 @@ footer:before {
     line-height: 23px;
     margin-bottom: 0px;
 }
+
+
 
 
 /***Auther Page End ***/
@@ -4548,6 +4588,8 @@ footer:before {
 }
 
 
+
+
 /***Business Page End ***/
 
 
@@ -4629,7 +4671,7 @@ footer:before {
 .catalouges-pic {
     overflow: hidden;
     width: 100%;
-    height: 467px;
+    height: 555px;
 }
 
 .cate-listitile {
@@ -4685,6 +4727,8 @@ footer:before {
     line-height: 27px;
     padding: 0px 10px 0px 10px;
 }
+
+
 
 
 /***Catagouges Page End ***/
@@ -4938,6 +4982,8 @@ footer:before {
 }
 
 
+
+
 /*new_css*/
 
 .list-sidemenu .cmp-link {
@@ -5084,6 +5130,8 @@ ul li.dropdown-nav ul:before {
 .black_bookmarkicon .none_img {
     display: block !important;
 }
+
+
 
 
 /*new_css_end*/
@@ -5253,6 +5301,8 @@ ul li.dropdown-nav ul:before {
 
 
 
+
+
 /*story_page_end*/
 
 
@@ -5296,6 +5346,8 @@ ul li.dropdown-nav ul:before {
     width: 48%;
     float: right;
 }
+
+
 
 
 /*story_page*/
@@ -5456,6 +5508,8 @@ ul li.dropdown-nav ul:before {
 }
 
 
+
+
 /*contact*/
 
 .main_red_heading {
@@ -5498,6 +5552,8 @@ ul li.dropdown-nav ul:before {
 }
 
 
+
+
 /*ceo_*/
 
 .images_part {
@@ -5593,6 +5649,8 @@ ul li.dropdown-nav ul:before {
 .padding_bottom_150 {
     padding-bottom: 150px;
 }
+
+
 
 
 /*registar_your_brand*/
@@ -5629,6 +5687,8 @@ ul li.dropdown-nav ul:before {
 }
 
 
+
+
 /*ceo_*/
 
 .images_part {
@@ -5724,6 +5784,8 @@ ul li.dropdown-nav ul:before {
 .padding_bottom_150 {
     padding-bottom: 150px;
 }
+
+
 
 
 /*registar_your_brand*/
@@ -5919,6 +5981,8 @@ hr.small_border_line_centre {
 }
 
 
+
+
 /*search*/
 
 .header_search input[type=search] {
@@ -5974,6 +6038,8 @@ hr.small_border_line_centre {
     color: #c11d38;
     cursor: pointer;
 }
+
+
 
 
 /*search*/
@@ -6827,6 +6893,8 @@ h3.patners_main_heading {
         height: 142px !important;
     }
 }
+
+
 
 
 /*new*/

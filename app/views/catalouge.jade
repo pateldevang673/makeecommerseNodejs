@@ -15,7 +15,7 @@ include common/head
               .catalouges-pic
                 a(href='/store/#{catelouge[x].storeId}')
                   img.catimagesize(src=global.config.variable.apiPath+'/#{catelouge[x].catalogUrl}', alt='')
-              span.cate-listitile #{catelouge[x].catalogDescription}
+              // span.cate-listitile #{catelouge[x].catalogDescription}
         a.load-more(id="loadcatalouge",style="cursor: pointer;") Load More
     // section.catalouges-featured
     //   .fix-wrap

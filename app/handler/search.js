@@ -74,6 +74,7 @@ class SearchHandler extends BaseAutoBindedClass {
                     res.render('search', {
                         seo: true,
                         seoData: seoData,
+                        searchfor: req.query.searchFor,
                         page: 'search-page',
                         stores: results['searchResult'],
                         lengthStores: results['searchResult'].length,

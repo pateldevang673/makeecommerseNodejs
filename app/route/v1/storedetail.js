@@ -5,6 +5,6 @@ const router = require('express').Router();
 const SdetailController = require(APP_CONTROLLER_PATH + 'storedetail');
 let sdetailController = new SdetailController();
 
-router.get('/:id', sdetailController.getSingleStore);
+router.get('/:url', sdetailController.getSingleStore);
 
 module.exports = router;

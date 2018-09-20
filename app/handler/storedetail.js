@@ -47,9 +47,8 @@ class SdetailHandler extends BaseAutoBindedClass {
 
     getSingleStore(req, res) {
 
-        var q = url.parse(URLStore + '/stores/' + req.params.id, true);
         var optionsBlog = {
-            url: URLStore + '/stores/' + req.params.id,
+            url: URLStore + '/stores/search?URL=' + req.params.url,
             method: 'GET',
             headers: {
                 'Authorization': "maximumvsminimumsecurity",
@@ -61,38 +60,52 @@ class SdetailHandler extends BaseAutoBindedClass {
                 resolve(body)
             });
         }).then((results) => {
-            var store = JSON.parse(results)['data'];
-            if (store) {
-                var seoData = {
-                    title: store.storeName,
-                    description: store.storeDiscription,
-                    keywords: store.keyword,
-                    image: global.config.variable.apiPath + '/' + store.storeLogo,
-                    type: 'store',
-                    url: req.protocol + '://' + req.get('host') + req.originalUrl,
-                    site: 'Zeepzoop',
-                    domain: 'zeepzoop.com'
+            var store = JSON.parse(results)['data'][0];
+
+            var catBlogs = {
+                url: URLStore + '/stores/' + store._id,
+                method: 'GET',
+                headers: {
+                    'Authorization': "maximumvsminimumsecurity",
+                    'Content-Type': "application/json"
                 }
-
-                res.render('storedetail', {
-                    seo: true,
-                    seoData: seoData,
-                    page: 'storedetail-page',
-                    titleurl: req.params.url,
-                    store: store,
-                    storeCatalogs: store.storeCatalogs,
-                    lengthstoreCatalogs: store.storeCatalogs.length,
-                    storeOffers: store.storeOffers,
-                    reviews: store.reviews,
-                    reviewslength: store.reviews.length,
-                    moment: moment,
-                    lengthstoreOffers: store.storeOffers.length,
-                    shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl
-                })
-            } else {
-                res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
-            }
-
+            };
+            return new Promise(function(resolve, reject) {
+                request(catBlogs, function(error, response, body) {
+                    resolve(body)
+                });
+            }).then((storedata) => {
+                var storedatas = JSON.parse(storedata)['data'];
+                if (store) {
+                    var seoData = {
+                        title: storedatas.storeName,
+                        description: storedatas.storeDiscription,
+                        keywords: storedatas.keyword,
+                        image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                        type: 'store',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                    res.render('storedetail', {
+                        seo: true,
+                        seoData: seoData,
+                        page: 'storedetail-page',
+                        titleurl: req.params.url,
+                        store: storedatas,
+                        storeCatalogs: storedatas.storeCatalogs,
+                        lengthstoreCatalogs: storedatas.storeCatalogs.length,
+                        storeOffers: storedatas.storeOffers,
+                        reviews: storedatas.reviews,
+                        reviewslength: storedatas.reviews.length,
+                        moment: moment,
+                        lengthstoreOffers: storedatas.storeOffers.length,
+                        shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl
+                    })
+                } else {
+                    res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
+                }
+            });
         })
     }
 }

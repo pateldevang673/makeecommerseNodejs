@@ -20,7 +20,8 @@ include common/head
                 span #{categoryStore[x].avgRating}
               .info-share-book
                 .bag-info-cont
-                  a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",href='/#{categoryStore[x].URL}/#{categoryStore[x]._id}') #{categoryStore[x].storeName}
+                  a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",
+                    href='/brand/#{categoryStore[x].URL}') #{categoryStore[x].storeName}
                   p(style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;") #{categoryStore[x].storeDiscription}
                 .bookmarkshare-link
                   // a(href='#')

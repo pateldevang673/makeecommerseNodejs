@@ -75,20 +75,25 @@ $(function() {
     $('#loadmoreshop').click(function() {
         var catid = '';
 
+        var urls = "https://api.zeepzoop.com/stores/search?startStores=" + startStores + "&endStores=" + endStores;
         if ($(this).attr('name') == 'Home-Decor') {
             catid = "5a51e626ff645771bf57dc1a"
+            urls += "&category=" + catid;
         } else if ($(this).attr('name') == 'Clothing') {
             catid = "5a51e507ff645771bf57dc14"
+            urls += "&category=" + catid;
         } else if ($(this).attr('name') == 'Jewellery') {
             catid = "5a51e528ff645771bf57dc15"
-        } else {
+            urls += "&category=" + catid;
+        } else if ($(this).attr('name') == "Accessories") {
             catid = "5a51e544ff645771bf57dc16"
+            urls += "&category=" + catid;
         }
+
         var buisnessOffline = GetParameterValues('buisnessOffline');
         var buisnessOnline = GetParameterValues('buisnessOnline');
         var cityName = GetParameterValues('city');
 
-        var urls = "https://api.zeepzoop.com/stores/search?category=" + catid + "&startStores=" + startStores + "&endStores=" + endStores;
         if (buisnessOffline) {
             urls += '&buisnessOffline=true';
         } else if (buisnessOnline) {
@@ -97,7 +102,6 @@ $(function() {
         if (cityName) {
             urls += '&location=' + cityName;
         }
-
 
         // if (buisnessOffline) {
         //     var urls = "https://api.zeepzoop.com/stores/search?buisnessOffline=true&startStores=" + startStores + "&endStores=" + endStores
@@ -143,8 +147,8 @@ $(function() {
         });
     });
 
-    var startcatalouge = 6;
-    var endcatalouge = startcatalouge + 5;
+    var startcatalouge = 22;
+    var endcatalouge = startcatalouge + 23;
 
     $('#loadcatalouge').click(function() {
         var urls = "https://api.zeepzoop.com/catalogs/featurecatalog?startCatalogs=" + startcatalouge + "&endCatalogs=" + endcatalouge;
@@ -158,8 +162,8 @@ $(function() {
             },
         });
         request.done(function(response) {
-            startcatalouge = startcatalouge + 6;
-            endcatalouge = startcatalouge + 5;
+            startcatalouge = startcatalouge + 22;
+            endcatalouge = startcatalouge + 23;
             if (response.data.length < 6) {
                 $('#loadmoreshop').before('<div class="noMore">No more Catalogs</div>');
                 $('#loadmoreshop').remove();
@@ -170,7 +174,8 @@ $(function() {
                 html += '<div class="catalouges-item">' +
                     '<div class="catalouges-pic">' +
                     '<a href="/store/' + response.data[i].storeId + '""><img class="catimagesize" src="https://api.zeepzoop.com/' + response.data[i].catalogUrl + '"alt="" /></a>' +
-                    '</div><span class="cate-listitile">' + response.data[i].catalogDescription + '</span>' +
+                    // '</div><span class="cate-listitile">' + response.data[i].catalogDescription + '</span>' +
+                    '</div>' +
                     '</div>';
             }
             $('.mid-scn-main .catalouges-pdt-main').append(html);
