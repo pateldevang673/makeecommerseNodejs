@@ -133,7 +133,7 @@ $(function() {
                     '<img src="https://api.zeepzoop.com/' + response.data[i].storeBanner + '" alt="">' +
                     '<div class="watermark-logo"> <img src="images/img-watermark-icon.png" alt=""> <span>' + response.data[i].avgRating + '</span> </div>' +
                     '<div class="info-share-book">' +
-                    '<div class="bag-info-cont"> <a href="/' + response.data[i].URL + '/' + response.data[i]._id + '" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;" class="bag-title">' + response.data[i].storeName + '</a>' +
+                    '<div class="bag-info-cont"> <a href="/brand/' + response.data[i].URL + '" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;" class="bag-title">' + response.data[i].storeName + '</a>' +
                     '<p style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">' + response.data[i].storeDiscription + '</p></div>' +
                     // '<div class="bookmarkshare-link"> <a href="#"><img src="images/bookmark-icon.png" alt=""></a> <a href="#"><img src="images/share-icon.png" alt=""></a> </div>' +
                     '</div></div>';
