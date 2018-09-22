@@ -65,18 +65,25 @@ script(type='text/javascript').
 
       if(names== ""){
           alert('Please enter your name');
+          return false;
       }  else if(email == ""){
           alert('Please enter your email');
+          return false;
       } else if(!emailReg.test(email)){
           alert(' Please enter a valid email address');
+          return false;
       } else if(city == ""){
           alert('Please enter your city');
+          return false;
       }  else if(telephone == ""){
           alert(' Please enter your phone');
+          return false;
       } else if(!numberReg.test(telephone)){
           alert(' Numbers only');
+          return false;
       } else if(message== ""){
           alert(' Please enter your message');
+          return false;
       } 
 
       var obj={};
@@ -85,6 +92,7 @@ script(type='text/javascript').
       obj.city = email;
       obj.message = message;
       obj.phone = telephone;
+      obj.contactfor = "contact Registration";
 
       var request = $.ajax({
         headers: {

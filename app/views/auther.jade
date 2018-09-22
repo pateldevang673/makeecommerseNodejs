@@ -19,19 +19,21 @@ include common/head
               | Most Viewed 
               img(src='/images/auther-drop-icon.png',style="width: 15px;", alt='')
           .author-main-info
-            img(src=global.config.variable.apiPath+'/#{authorBlogs[0].blogPicture}', alt='')
-            h3 #{authorBlogs[0].title}
-            p
-              | #{authorBlogs[0].metaDescription}
+            a(href='http://www.zeepzoop.com/blogs'+'/#{authorBlogs[0].URL}')
+              img(src=global.config.variable.apiPath+'/#{authorBlogs[0].blogPicture}', alt='')
+              h3 #{authorBlogs[0].title}
+              p
+                | #{authorBlogs[0].metaDescription}
           ul.author-list-main
             - for (var x = 1; x < authorBlogslength ; x++)
               li
-                .author-list-img
-                  img(src=global.config.variable.apiPath+'/#{authorBlogs[x].blogPicture}', alt='')
-                .author-list-cont
-                  h3 #{authorBlogs[x].title}
-                  p
-                    | #{authorBlogs[x].metaDescription}
+                a(href='http://www.zeepzoop.com/blogs'+'/#{authorBlogs[x].URL}')
+                  .author-list-img
+                    img(src=global.config.variable.apiPath+'/#{authorBlogs[x].blogPicture}', alt='')
+                  .author-list-cont
+                    h3 #{authorBlogs[x].title}
+                    p
+                      | #{authorBlogs[x].metaDescription}
         .blog-post-rcmnd
           h4 Recommended
           .blogslide-item
