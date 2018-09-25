@@ -160,129 +160,99 @@ html(lang='en')
                         a.usrpro My Profile
                       li
                         a(href='/',id="logout") Log out
-  script.
-    $(document).ready(function(){
-      $(".categoryicon a").on('click',function(e){
-        var id =$(this).attr('id');
-        var categoryName =$(this).attr('name');
-        if ($('.shops-slt').hasClass('shopsSlt-current')) {
-          window.location.href= "/category/" + $(this).attr('name') +"?buisnessOnline=true";
-        }else{
-          window.location.href= "/category/" + $(this).attr('name') +"?buisnessOffline=true";
-        }
-        //- if ($('.shops-slt').hasClass('shopsSlt-current')) {
-        //-   window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOnline=true";
-        //- }else{
-        //-   window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOffline=true";
-        //- }
-      });
-      $('.myInput').keyup(function(event) {
-        event.preventDefault();
-        var value=$(this).val();        
-        if (event.keyCode === 13) {
-          if (value !== undefined && value !== null && value !== '') {
-            if ($('.shops-slt').hasClass('shopsSlt-current')) {
-                var online = true;
-            } else {
-                var online = false;
-            }
-            var cityName = $('select[name="cities"]').val();
-            if (cityName && cityName !== "Select City") {
-                return false;
-                if (online == true) {
-                    window.location.href = "/search?searchFor=" + value +
-                        "&location=" + cityName + "&buisnessOnline=true";
-                } else {
-                    window.location.href = "/search?searchFor=" + value +
-                        "&location=" + cityName + "&buisnessOffline=true";
-                }
-                $(".searchval").val('')
-            } else {
-                if (online == true) {
-                    window.location.href = "/search?searchFor=" + value +
-                        "&buisnessOnline=true";
-                } else {
-                    window.location.href = "/search?searchFor=" + value +
-                        "&buisnessOffline=true";
-                }
-                $(".searchval").val('')
-            }
-          } else {
-              alert("Please Enter Value of Search Box")
+    script.
+      $(document).ready(function(){
+        $(".categoryicon a").on('click',function(e){
+          var id =$(this).attr('id');
+          var categoryName =$(this).attr('name');
+          if ($('.shops-slt').hasClass('shopsSlt-current')) {
+            window.location.href= "/category/" + $(this).attr('name') +"?buisnessOnline=true";
+          }else{
+            window.location.href= "/category/" + $(this).attr('name') +"?buisnessOffline=true";
           }
-        }
-      });
-      $('.usrpro').click(function(e) {
-        if(localStorage.getItem('userD')!==undefined){
-          var id = localStorage.getItem('userD');
-          window.location.href="/profile/"+id;
-        }else{
-          alert("You Have To Login First")
-        }
-      });
-      $('#logout').click(function(e) {
-        localStorage.clear();
-        FB.logout();
-        var auth2 = gapi.auth2.getAuthInstance();
-        auth2.signOut().then(function () {
-          console.log('User signed out.');
+          //- if ($('.shops-slt').hasClass('shopsSlt-current')) {
+          //-   window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOnline=true";
+          //- }else{
+          //-   window.location.href= "/category/" + $(this).attr('name') + "/" + $(this).attr('id')+"?buisnessOffline=true";
+          //- }
         });
-      });
-      $('.loginsinup').click(function(e) {
-        $('#signinpopup').show();
-        $('body').addClass('zeeppopup-body');
-      });
-      $('.zeeppopup-close').click(function(e) {
-        $('#signinpopup, #authorPopup').hide();
-        $('body').removeClass('zeeppopup-body');
-      });
-     
-      $.ajaxSetup({ cache: true });
-      $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
-        FB.init({
-          appId: '2209143222700416',
-          version: 'v3.1' 
-        });     
-      });
-      $('#FBlogin').click(function(e) {
-        FB.getLoginStatus(function(response) {
-          statusChangeCallback(response);
+        $('.myInput').keyup(function(event) {
+          event.preventDefault();
+          var value=$(this).val();        
+          if (event.keyCode === 13) {
+            if (value !== undefined && value !== null && value !== '') {
+              if ($('.shops-slt').hasClass('shopsSlt-current')) {
+                  var online = true;
+              } else {
+                  var online = false;
+              }
+              var cityName = $('select[name="cities"]').val();
+              if (cityName && cityName !== "Select City") {
+                  return false;
+                  if (online == true) {
+                      window.location.href = "/search?searchFor=" + value +
+                          "&location=" + cityName + "&buisnessOnline=true";
+                  } else {
+                      window.location.href = "/search?searchFor=" + value +
+                          "&location=" + cityName + "&buisnessOffline=true";
+                  }
+                  $(".searchval").val('')
+              } else {
+                  if (online == true) {
+                      window.location.href = "/search?searchFor=" + value +
+                          "&buisnessOnline=true";
+                  } else {
+                      window.location.href = "/search?searchFor=" + value +
+                          "&buisnessOffline=true";
+                  }
+                  $(".searchval").val('')
+              }
+            } else {
+                alert("Please Enter Value of Search Box")
+            }
+          }
         });
-      });
-      function statusChangeCallback(response) {
-        if (response.status === 'connected') {
-          FB.api('/me', { locale: 'tr_TR', fields: 'name, email,birthday, hometown,education,gender,website,work' },
-          function(response) {
-            var obj={
-                "name": response.name,
-                "fbToken": response.id,
-                "isUser": true,
-                "provider":"Facebook"
-            }
-            if(response.email){
-              obj.email=response.email
-            }
-           var request = $.ajax({
-              headers: {
-                  'Authorization': "maximumvsminimumsecurity",
-                  'Content-Type': "application/json;charset=UTF-8"
-              },
-              type: "POST",
-              url: "https://api.zeepzoop.com/users/webusers",
-              data: JSON.stringify(obj),
-              dataType: "json"
-            });
-
-            request.done(function(response) {
-                localStorage.setItem('UserTo', response.data.token)
-                localStorage.setItem('userD', response.data._id)
-                localStorage.setItem('userName', response.data.name)
-                window.location.reload();
-            });
+        $('.usrpro').click(function(e) {
+          if(localStorage.getItem('userD')!==undefined){
+            var id = localStorage.getItem('userD');
+            window.location.href="/profile/"+id;
+          }else{
+            alert("You Have To Login First")
+          }
+        });
+        $('#logout').click(function(e) {
+          localStorage.clear();
+          FB.logout();
+          var auth2 = gapi.auth2.getAuthInstance();
+          auth2.signOut().then(function () {
+            console.log('User signed out.');
           });
-        } else {
-          FB.login(function(response) {
-            FB.api('/me', { locale: 'tr_TR', fields: 'name, email,birthday, hometown,education,gender,website,work' },function(response) {
+        });
+        $('.loginsinup').click(function(e) {
+          $('#signinpopup').show();
+          $('body').addClass('zeeppopup-body');
+        });
+        $('.zeeppopup-close').click(function(e) {
+          $('#signinpopup, #authorPopup').hide();
+          $('body').removeClass('zeeppopup-body');
+        });
+       
+        $.ajaxSetup({ cache: true });
+        $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
+          FB.init({
+            appId: '2209143222700416',
+            version: 'v3.1' 
+          });     
+        });
+        $('#FBlogin').click(function(e) {
+          FB.getLoginStatus(function(response) {
+            statusChangeCallback(response);
+          });
+        });
+        function statusChangeCallback(response) {
+          if (response.status === 'connected') {
+            FB.api('/me', { locale: 'tr_TR', fields: 'name, email,birthday, hometown,education,gender,website,work' },
+            function(response) {
               var obj={
                   "name": response.name,
                   "fbToken": response.id,
@@ -292,7 +262,7 @@ html(lang='en')
               if(response.email){
                 obj.email=response.email
               }
-              var request = $.ajax({
+             var request = $.ajax({
                 headers: {
                     'Authorization': "maximumvsminimumsecurity",
                     'Content-Type': "application/json;charset=UTF-8"
@@ -309,54 +279,84 @@ html(lang='en')
                   localStorage.setItem('userName', response.data.name)
                   window.location.reload();
               });
-              request.fail(function(jqXHR, textStatus) {
-                  alert("Request failed: " + textStatus);
+            });
+          } else {
+            FB.login(function(response) {
+              FB.api('/me', { locale: 'tr_TR', fields: 'name, email,birthday, hometown,education,gender,website,work' },function(response) {
+                var obj={
+                    "name": response.name,
+                    "fbToken": response.id,
+                    "isUser": true,
+                    "provider":"Facebook"
+                }
+                if(response.email){
+                  obj.email=response.email
+                }
+                var request = $.ajax({
+                  headers: {
+                      'Authorization': "maximumvsminimumsecurity",
+                      'Content-Type': "application/json;charset=UTF-8"
+                  },
+                  type: "POST",
+                  url: "https://api.zeepzoop.com/users/webusers",
+                  data: JSON.stringify(obj),
+                  dataType: "json"
+                });
+
+                request.done(function(response) {
+                    localStorage.setItem('UserTo', response.data.token)
+                    localStorage.setItem('userD', response.data._id)
+                    localStorage.setItem('userName', response.data.name)
+                    window.location.reload();
+                });
+                request.fail(function(jqXHR, textStatus) {
+                    alert("Request failed: " + textStatus);
+                });
               });
             });
+          }
+        }
+
+        function onSignIn(googleUser) {
+          var profile = googleUser.getBasicProfile();
+          var obj={
+              "name": profile.getName(),
+              "fbToken": profile.getId(),
+              "provider":"Google",
+              "email":profile.getEmail(),
+              "isUser": true
+          }
+          var request = $.ajax({
+            headers: {
+                'Authorization': "maximumvsminimumsecurity",
+                'Content-Type': "application/json;charset=UTF-8"
+            },
+            type: "POST",
+            url: "https://api.zeepzoop.com/users/webusers",
+            data: JSON.stringify(obj),
+            dataType: "json"
           });
+
+          request.done(function(response) {
+              localStorage.setItem('UserTo', response.data.token)
+              localStorage.setItem('userD', response.data._id)
+              localStorage.setItem('userName', response.data.name)
+              window.location.reload();
+          });
+          request.fail(function(jqXHR, textStatus) {
+             alert("Request failed: " + textStatus);
+          });
+        }   
+
+        function loginhs() {
+          if(localStorage.getItem('UserTo')!==null&&localStorage.getItem('userD')!==null&&localStorage.getItem('userName')!==null){
+              $('.bflog').css("display", "none");
+              $('.uname').append(localStorage.getItem('userName'));
+              $('.aflog').css("display", "block");
+          }else{
+              $('.bflog').css("display", "block");
+          }
         }
-      }
+        loginhs();
 
-      function onSignIn(googleUser) {
-        var profile = googleUser.getBasicProfile();
-        var obj={
-            "name": profile.getName(),
-            "fbToken": profile.getId(),
-            "provider":"Google",
-            "email":profile.getEmail(),
-            "isUser": true
-        }
-        var request = $.ajax({
-          headers: {
-              'Authorization': "maximumvsminimumsecurity",
-              'Content-Type': "application/json;charset=UTF-8"
-          },
-          type: "POST",
-          url: "https://api.zeepzoop.com/users/webusers",
-          data: JSON.stringify(obj),
-          dataType: "json"
-        });
-
-        request.done(function(response) {
-            localStorage.setItem('UserTo', response.data.token)
-            localStorage.setItem('userD', response.data._id)
-            localStorage.setItem('userName', response.data.name)
-            window.location.reload();
-        });
-        request.fail(function(jqXHR, textStatus) {
-           alert("Request failed: " + textStatus);
-        });
-      }   
-
-      function loginhs() {
-        if(localStorage.getItem('UserTo')!==null&&localStorage.getItem('userD')!==null&&localStorage.getItem('userName')!==null){
-            $('.bflog').css("display", "none");
-            $('.uname').append(localStorage.getItem('userName'));
-            $('.aflog').css("display", "block");
-        }else{
-            $('.bflog').css("display", "block");
-        }
-      }
-      loginhs();
-
-    });
+      });
