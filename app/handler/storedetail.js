@@ -8,6 +8,7 @@ var request = require('request');
 var moment = require('moment');
 var Rating = require('rating');
 var url = require('url');
+var _ = require('lodash');
 
 const URLStore = global.config.variable.apiPath;
 var urlArray = [];
@@ -75,18 +76,43 @@ class SdetailHandler extends BaseAutoBindedClass {
                     resolve(body)
                 });
             }).then((storedata) => {
+
                 var storedatas = JSON.parse(storedata)['data'];
+                var catkeyword = _.map(storedatas.categoriesIds, 'category');
+                var cat = '';
+
+                if (catkeyword.length > 1) {
+                    cat = catkeyword[0] + ", " + catkeyword[1];
+                } else {
+                    cat = catkeyword[0]
+                }
+
+                var seoData = '';
                 if (store) {
-                    var seoData = {
-                        title: storedatas.storeName,
-                        description: storedatas.storeDiscription,
-                        keywords: storedatas.keyword,
-                        image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                        type: 'store',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
-                        site: 'Zeepzoop',
-                        domain: 'zeepzoop.com'
+                    if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
+                        seoData = {
+                            title: storedatas.storeName + " For " + cat + " in " + storedatas.storeCity + ", " + storedatas.storeState + " | Zeepzoop",
+                            description: "Check Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", " + storedatas.storeState + ".Visit Zeepzoop for " + storedatas.storeName + " address, contact number, reviews & catalogue",
+                            keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    } else if (storedatas.buisnessOnline) {
+                        seoData = {
+                            title: storedatas.storeName + " For " + cat + " Shop Online | Zeepzoop",
+                            description: "Check Designer " + cat + " By " + storedatas.storeName + " .Visit " + storedatas.storeName + " Website from ZeepZoop for Online Shopping.",
+                            keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
                     }
+
                     res.render('storedetail', {
                         seo: true,
                         seoData: seoData,

@@ -102,9 +102,6 @@ h3 {
     background: #f4f4f4
 }
 
-
-
-
 /***Common button CSS***/
 
 .dft-btn {
@@ -195,9 +192,6 @@ h3 {
     border-color: #c11d38
 }
 
-
-
-
 /***Common button CSS***/
 
 input {
@@ -219,9 +213,6 @@ textarea {
     border: none;
     border-radius: 6px;
 }
-
-
-
 
 /***Header Section Start Here***/
 
@@ -476,9 +467,6 @@ header {
     padding-right: 20px;
 }
 
-
-
-
 /***New Header***/
 
 rgstr-login-srch {
@@ -676,11 +664,7 @@ ul li.dropdown-nav ul li a:hover {
     margin: 0px;
 }
 
-
-
-
 /***Header Section End Here***/
-
 
 /***Inner Header Section Start Here***/
 
@@ -712,9 +696,6 @@ ul li.dropdown-nav ul li a:hover {
 .hder-app-txt:hover {
     color: #f1f1f1
 }
-
-
-
 
 /***Inner Header Section End Here***/
 
@@ -809,8 +790,6 @@ footer:before {
     padding-top: 25px;
     border-top: #fff 1px solid;
 }
-
-
 
 
 /***Banner Section Start Here***/
@@ -1341,9 +1320,6 @@ footer:before {
     padding-top: 30px;
 }
 
-
-
-
 /*.offers-slider-main .owl-item.active:nth-child(1n){ width:200px !important;}*/
 
 .offers-slider-main .owl-item.active .offers-item p {
@@ -1383,8 +1359,6 @@ footer:before {
     color: #fff;
     background: #cd3349
 }
-
-
 
 
 /*new*/
@@ -1429,9 +1403,6 @@ span.abcRioButtonContents {
     font-size: 16px !important;
     float: left;
 }
-
-
-
 
 /***Middle Section End Here***/
 
@@ -1634,9 +1605,6 @@ span.abcRioButtonContents {
     float: left;
 }
 
-
-
-
 /***Blog Page Style Here***/
 
 .blogslide-item {
@@ -1709,9 +1677,6 @@ span.abcRioButtonContents {
     -webkit-box-orient: vertical;
     overflow: hidden;
 }
-
-
-
 
 /***Shop Both Page Style Here***/
 
@@ -2376,9 +2341,6 @@ span.abcRioButtonContents {
     color: #fff;
 }
 
-
-
-
 /***Edit Profile Start Here***/
 
 .body-editprofile header,
@@ -2707,9 +2669,6 @@ span.abcRioButtonContents {
     margin-left: 0px;
 }
 
-
-
-
 /***My Lists Start Here***/
 
 .mylists-main {
@@ -2811,9 +2770,6 @@ span.abcRioButtonContents {
 .editprofile-info-main .bookmarkshare-link .mylist-delete img {
     max-width: 100%;
 }
-
-
-
 
 /***My Lists Start Here***/
 
@@ -2945,9 +2901,6 @@ span.abcRioButtonContents {
     margin-top: 5px;
 }
 
-
-
-
 /***Footer Section Start Here***/
 
 footer {
@@ -3026,9 +2979,6 @@ footer:before {
     padding-top: 25px;
     border-top: #fff 1px solid;
 }
-
-
-
 
 /***Footer Section End Here***/
 
@@ -3325,9 +3275,11 @@ footer:before {
 
 .blog-post-cont img {
     margin-bottom: 30px;
-    object-fit: cover;
-    max-height: 450px;
-    width: 100%;
+    /*object-fit: cover;*/
+    margin-left: auto;
+    max-height: 420px;
+    /*width: 100%;*/
+    margin-right: auto;
 }
 
 .blog-post-rcmnd h4 {
@@ -4188,9 +4140,6 @@ footer:before {
     background: #000;
 }
 
-
-
-
 /***Team Section***/
 
 .mid-team-scn {
@@ -4289,9 +4238,6 @@ footer:before {
     color: #000;
     background: #fff;
 }
-
-
-
 
 /***Author Page Start ***/
 
@@ -4392,9 +4338,6 @@ footer:before {
     line-height: 23px;
     margin-bottom: 0px;
 }
-
-
-
 
 /***Auther Page End ***/
 
@@ -4587,9 +4530,6 @@ footer:before {
     background-color: #ca3150
 }
 
-
-
-
 /***Business Page End ***/
 
 
@@ -4728,11 +4668,7 @@ footer:before {
     padding: 0px 10px 0px 10px;
 }
 
-
-
-
 /***Catagouges Page End ***/
-
 
 /***New Home Page Start***/
 
@@ -4981,9 +4917,6 @@ footer:before {
     background-position: -169px -40px;
 }
 
-
-
-
 /*new_css*/
 
 .list-sidemenu .cmp-link {
@@ -5131,11 +5064,7 @@ ul li.dropdown-nav ul:before {
     display: block !important;
 }
 
-
-
-
 /*new_css_end*/
-
 
 /*story_page*/
 
@@ -5299,12 +5228,7 @@ ul li.dropdown-nav ul:before {
     color: #000;
 }
 
-
-
-
-
 /*story_page_end*/
-
 
 /*contact*/
 
@@ -5346,9 +5270,6 @@ ul li.dropdown-nav ul:before {
     width: 48%;
     float: right;
 }
-
-
-
 
 /*story_page*/
 
@@ -5507,9 +5428,6 @@ ul li.dropdown-nav ul:before {
     color: #000;
 }
 
-
-
-
 /*contact*/
 
 .main_red_heading {
@@ -5551,9 +5469,6 @@ ul li.dropdown-nav ul:before {
     float: right;
 }
 
-
-
-
 /*ceo_*/
 
 .images_part {
@@ -5649,9 +5564,6 @@ ul li.dropdown-nav ul:before {
 .padding_bottom_150 {
     padding-bottom: 150px;
 }
-
-
-
 
 /*registar_your_brand*/
 
@@ -5686,9 +5598,6 @@ ul li.dropdown-nav ul:before {
     max-width: 250px;
 }
 
-
-
-
 /*ceo_*/
 
 .images_part {
@@ -5784,9 +5693,6 @@ ul li.dropdown-nav ul:before {
 .padding_bottom_150 {
     padding-bottom: 150px;
 }
-
-
-
 
 /*registar_your_brand*/
 
@@ -5979,8 +5885,6 @@ hr.small_border_line_centre {
 .padding_top_100 {
     padding-top: 100px;
 }
-
-
 
 
 /*search*/
