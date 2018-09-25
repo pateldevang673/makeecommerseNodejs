@@ -90,8 +90,6 @@ $(function() {
             urls += "&category=" + catid;
         }
 
-        console.log("urls=----------------------------")
-        console.log(urls)
         var buisnessOffline = GetParameterValues('buisnessOffline');
         var buisnessOnline = GetParameterValues('buisnessOnline');
         var cityName = GetParameterValues('city');

@@ -34,7 +34,7 @@ html(lang='en')
 
     link(rel='icon', type='image/png', href='/images/favicon.png')
     link(rel='canonical', href='https://www.zeepzoop.com/')
-    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i|Oswald:400,500,600,700', rel='stylesheet')
+    link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i%7COswald:400,500,600,700', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700', rel='stylesheet')
     link(href='/css/owl.carousel.min.css', rel='stylesheet')
     link(href='/css/style.css', rel='stylesheet')
@@ -68,66 +68,36 @@ html(lang='en')
             .g-signin2(data-onsuccess="onSignIn")          
         span.by-cnt-agree By continuing you agree to
         a.popup-terms-link(href='#') Terms & Conditions
-  .main
-    .container
-      span.overlay-bg
-      .sidebarmenu
-        h4
-          | CATEGORIES 
-          span.side-menu-close
-        ul.list-sidemenu
-          li.dekstopn_noone
-              input.search.myInput(type='search', placeholder='Search')
-          li.clothing-link.categoryicon
-            a(name="Clothing",id="5a51e507ff645771bf57dc14")
-              span
-              | Clothing
-          li.jewellery-link.categoryicon
-            a(name="Jewellery",id="5a51e528ff645771bf57dc15")
-              span
-              | Jewellery
-          li.accessories-link.categoryicon
-            a(name="Accessories",id="5a51e544ff645771bf57dc16")
-              span
-              | Accessories
-          li.home-decor-link.categoryicon
-            a(name="Home-Decor",id="5a51e626ff645771bf57dc1a")
-              span
-              | Home Decor
-          li.dekstopn_noone
-            a.getappstore(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user', target='_blank') Get the App
-          li.header_responsiv_comp-drpdawon.dekstopn_noone
-            .company-nav
-              ul
-                li.dropdown-nav
-                  a.cmp-link(href='javascript:void(0)') Company
-                  ul
-                    li
-                      a(href='/zeepzoop_story') Our Story
-                    li
-                      a(href='/zeepzoop_team') Our Team
-                    li
-                      a(href='/partners') Partners
-                    li
-                      a(href='/bhavyamodi_founderceo') Meet The CEO
-          li.dekstopn_noone
-            a(href='/register_your_brand') Register Your Brand
-          li.dekstopn_noone
-            a(class="loginsinup") Log in
-        .sidebar-social-icons
-          a.fb-icon(href='https://www.facebook.com/Zeepzoopofficial', target='_blank')
-          a.inst-icon(href='https://www.instagram.com/zeepzoopofficial/', target='_blank')
-          a.yt(href='https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/videos?pbjreload=10',target="_blank")
-          a.phone-icon(href='tel:9624851199', target='_blank')
-          a.email-icon(href="https://mail.google.com/mail/u/?authuser=connect@zeepzoop.com", target='_blank')
-      header.hdr-main
-        .fix-wrap
-          .hdr-inner
-            .pull-left.hdr-menu-app
-              span.nav-toggle
-              .get-appstore.responsiv_none
-                a.getappstore(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user',target='_blank') Get the App
-              .company-nav.responsiv_none
+    .main
+      .container
+        span.overlay-bg
+        .sidebarmenu
+          h4
+            | CATEGORIES 
+            span.side-menu-close
+          ul.list-sidemenu
+            li.dekstopn_noone
+                input.search.myInput(type='search', placeholder='Search')
+            li.clothing-link.categoryicon
+              a(name="Clothing",id="5a51e507ff645771bf57dc14")
+                span
+                | Clothing
+            li.jewellery-link.categoryicon
+              a(name="Jewellery",id="5a51e528ff645771bf57dc15")
+                span
+                | Jewellery
+            li.accessories-link.categoryicon
+              a(name="Accessories",id="5a51e544ff645771bf57dc16")
+                span
+                | Accessories
+            li.home-decor-link.categoryicon
+              a(name="Home-Decor",id="5a51e626ff645771bf57dc1a")
+                span
+                | Home Decor
+            li.dekstopn_noone
+              a.getappstore(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user', target='_blank') Get the App
+            li.header_responsiv_comp-drpdawon.dekstopn_noone
+              .company-nav
                 ul
                   li.dropdown-nav
                     a.cmp-link(href='javascript:void(0)') Company
@@ -140,26 +110,56 @@ html(lang='en')
                         a(href='/partners') Partners
                       li
                         a(href='/bhavyamodi_founderceo') Meet The CEO
-            .cmn-logo
-              a(href='/')
-                img(src='/images/logo-new.png', alt='',style="height:23px;margin-top: 5px;")
-            .pull-right.rgstr-login-srch
-              ul
-                li
-                  form#demo-2.header_search
-                    input.search.myInput(type='search', placeholder='Search')
-                li.responsiv_none
-                  a(href='/register_your_brand') Register Your Brand
-                li.responsiv_none.bflog
-                  a(class="loginsinup") Log in
-                li.dropdown-nav.aflog(style="display:none")
-                  a(href='javascript:void(0)') Hello,
-                    span.uname 
-                  ul(style="margin-left: 83%;")
-                    li
-                      a.usrpro My Profile
-                    li
-                      a(href='/',id="logout") Log out
+            li.dekstopn_noone
+              a(href='/register_your_brand') Register Your Brand
+            li.dekstopn_noone
+              a(class="loginsinup") Log in
+          .sidebar-social-icons
+            a.fb-icon(href='https://www.facebook.com/Zeepzoopofficial', target='_blank')
+            a.inst-icon(href='https://www.instagram.com/zeepzoopofficial/', target='_blank')
+            a.yt(href='https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/videos?pbjreload=10',target="_blank")
+            a.phone-icon(href='tel:9624851199', target='_blank')
+            a.email-icon(href="https://mail.google.com/mail/u/?authuser=connect@zeepzoop.com", target='_blank')
+        header.hdr-main
+          .fix-wrap
+            .hdr-inner
+              .pull-left.hdr-menu-app
+                span.nav-toggle
+                .get-appstore.responsiv_none
+                  a.getappstore(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user',target='_blank') Get the App
+                .company-nav.responsiv_none
+                  ul
+                    li.dropdown-nav
+                      a.cmp-link(href='javascript:void(0)') Company
+                      ul
+                        li
+                          a(href='/zeepzoop_story') Our Story
+                        li
+                          a(href='/zeepzoop_team') Our Team
+                        li
+                          a(href='/partners') Partners
+                        li
+                          a(href='/bhavyamodi_founderceo') Meet The CEO
+              .cmn-logo
+                a(href='/')
+                  img(src='/images/logo-new.png', alt='',style="height:23px;margin-top: 5px;")
+              .pull-right.rgstr-login-srch
+                ul
+                  li
+                    form#demo-2.header_search
+                      input.search.myInput(type='search', placeholder='Search')
+                  li.responsiv_none
+                    a(href='/register_your_brand') Register Your Brand
+                  li.responsiv_none.bflog
+                    a(class="loginsinup") Log in
+                  li.dropdown-nav.aflog(style="display:none")
+                    a(href='javascript:void(0)') Hello,
+                      span.uname 
+                    ul(style="margin-left: 83%;")
+                      li
+                        a.usrpro My Profile
+                      li
+                        a(href='/',id="logout") Log out
   script.
     $(document).ready(function(){
       $(".categoryicon a").on('click',function(e){
