@@ -1,4 +1,5 @@
 include common/head
+link(rel='canonical', href='https://www.zeepzoop.com/blogs/#{blog.URL}')
 
 #authorPopup.zeep-popup-main.autherpopup
   span.zeeppopup-close.auther-p-close
@@ -15,12 +16,12 @@ include common/head
       | #{blog.autherInfo}
     |             
     //- .auther-social
-
-    a.load-more(href='/blogs/auther/'+ '#{blog.authorURL}', style="cursor: pointer;") Read More
-      |                 
-      //- a.tw-icon(href="#")
-      //- |                 
-      //- a.lnk-icon(href="#")
+    if blog.authorURL !==undefined
+      a.load-more(href='/blogs/auther/'+ '#{blog.authorURL}', style="cursor: pointer;") Read More
+        |                 
+        //- a.tw-icon(href="#")
+        //- |                 
+        //- a.lnk-icon(href="#")
 .wrapper
   section.innerpage-hero.blogdtl-bnr
     img(src=global.config.variable.apiPath+'/'+'#{blog.blogPicture}', alt="")
