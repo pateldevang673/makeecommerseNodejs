@@ -35,7 +35,7 @@ include common/head
           .owl-carousel.collectionsSlider
             - for (var x = 0; x < lengthofflineCollections ; x++)
               .item
-                a.collection-pic(href='/collection/'+'#{offlineCollections[x]._id}')
+                a.collection-pic(href='/collection/'+'#{offlineCollections[x].collectionURL}')
                   img(src=global.config.variable.apiPath+'/#{offlineCollections[x].collectionPicture}', alt='')
     section.collection-scn.onlinecollectiondiv
       .fix-wrap
@@ -43,7 +43,7 @@ include common/head
         .owl-carousel.collectionsSlider
           - for (var x = 0; x < lengthonlineCollections ; x++)
             .item
-              a.collection-pic(href='/collection/'+'#{onlineCollections[x]._id}')
+              a.collection-pic(href='/collection/'+'#{onlineCollections[x].collectionURL}')
                 img(src=global.config.variable.apiPath+'/#{onlineCollections[x].collectionPicture}', alt='')
     section.feature-shops-scn.offlinestorediv
       .fix-wrap
@@ -237,9 +237,9 @@ include common/head
           a.more-btn(href='https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/videos?pbjreload=10',target="_blank") EXPLORE MORE
 include common/footer
 script(src='js/jquery.min.js')
-script(type='text/javascript', src='js/owl.carousel.js')
-script(type='text/javascript', src='js/custom.js')
-script(type='text/javascript').
+script(src='js/owl.carousel.js')
+script(src='js/custom.js')
+script.
   $(document).ready(function() {
       if(localStorage.getItem('storetype') && localStorage.getItem('storetype')=="online"){
         $(".shops-slt").addClass("shopsSlt-current");

@@ -1,10 +1,10 @@
 doctype html
 html(lang='en')
   head
-    meta(http-equiv='Content-Type', content='text/html;')
+    meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     meta(name='viewport', content='width=device-width, initial-scale=1.0,maximum-scale=1.0, user-scalable=0')
     meta(property='og:locale', content='en_US')
-    meta(charset='utf-8')
+    //- meta(charset='utf-8')
 
     if seo==true
       title #{seoData.title}
@@ -41,9 +41,9 @@ html(lang='en')
     link(href='/css/media.css', rel='stylesheet')
     link(href='https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/css-stars.css', rel='stylesheet')
     script(src='/js/jquery.min.js')
-    script(type='text/javascript', src='/js/owl.carousel.js')
-    script(type='text/javascript', src='/js/custom.js')
-    script(type='text/javascript',src='https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js')
+    script(src='/js/owl.carousel.js')
+    script(src='/js/custom.js')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/jquery.barrating.min.js')
     script(src="https://apis.google.com/js/platform.js", async="", defer="") 
     script(async='', src='https://www.googletagmanager.com/gtag/js?id=UA-118251424-1')
     script.
@@ -53,21 +53,21 @@ html(lang='en')
       gtag('config', 'UA-118251424-1');
 
   body(class=page) 
-  #signinpopup.zeep-popup-main.signinpopup
-    span.zeeppopup-close
-    .signin-inner
-      a.signin-weblogo(href='#')
-        img(src='/images/signin-web-logo.png', alt='')
-      p Sign in to get the best out of zeepzoop
-      ul.cnt-fb-gl
-        li
-          a(id="FBlogin",style="cursor:pointer;")
-            img(src='/images/signin-fb.png', alt='')
-            | Sign in
-        li
-          .g-signin2(data-onsuccess="onSignIn")          
-      span.by-cnt-agree By continuing you agree to
-      a.popup-terms-link(href='#') Terms & Conditions
+    #signinpopup.zeep-popup-main.signinpopup
+      span.zeeppopup-close
+      .signin-inner
+        a.signin-weblogo(href='javascript:void(0)')
+          img(src='/images/signin-web-logo.png', alt='')
+        p Sign in to get the best out of zeepzoop
+        ul.cnt-fb-gl
+          li
+            a(id="FBlogin",style="cursor:pointer;")
+              img(src='/images/signin-fb.png', alt='')
+              | Sign in
+          li
+            .g-signin2(data-onsuccess="onSignIn")          
+        span.by-cnt-agree By continuing you agree to
+        a.popup-terms-link(href='#') Terms & Conditions
   .main
     .container
       span.overlay-bg
@@ -160,7 +160,7 @@ html(lang='en')
                       a.usrpro My Profile
                     li
                       a(href='/',id="logout") Log out
-  script(type='text/javascript').
+  script.
     $(document).ready(function(){
       $(".categoryicon a").on('click',function(e){
         var id =$(this).attr('id');

@@ -90,19 +90,17 @@ class CollectionHandler extends BaseAutoBindedClass {
     getBlogs(req, res) {
         var mainObj = {};
         Promise.all([
-                this.requestAsync(req, URLStore + '/collections/' + req.params.id, 'collectionStore'),
+                this.requestAsync(req, URLStore + '/collections/search?collectionURL=' + req.params.url, 'collectionStore'),
             ])
             .then(function(allData) {
                 return new Promise(function(resolve, reject) {
                     for (let i = 0; i < allData.length; i++) {
-
                         mainObj[allData[i][0]] = allData[i][1];
                     }
                     resolve(mainObj);
                 });
             })
             .then((results) => {
-
                 var seoData = {
                     title: 'Zeepzoop Collection',
                     description: 'Read Collection related to Art, Craft, culture, festivals, different cities, fashion, Home décor and much more. It guides you about what to buy from different cities.',
@@ -118,9 +116,9 @@ class CollectionHandler extends BaseAutoBindedClass {
                     seo: true,
                     seoData: seoData,
                     page: 'collection-page',
-                    collectiondata: results['collectionStore'],
-                    collectionOnStore: results['collectionStore'].storeId,
-                    collectionOnStorelength: results['collectionStore'].storeId.length,
+                    collectiondata: results['collectionStore'][0],
+                    collectionOnStore: results['collectionStore'][0].storeId,
+                    collectionOnStorelength: results['collectionStore'][0].storeId.length,
                     titleURL: urlArray
                 })
             })
