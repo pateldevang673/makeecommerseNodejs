@@ -79,7 +79,7 @@ include common/head
         .main_heading
           h2 CATALOUGES
           .see_all
-            a(href='/catalouge') SEE ALL
+            a.catlg(name='/catalouge?buisnessOffline=true') SEE ALL
         .owl-carousel.catelougesSlider
           - for (var x = 0; x < storesLength ; x++)
             .item
@@ -123,7 +123,7 @@ include common/head
         .main_heading
           h2 CATALOUGES
           .see_all
-            a(href='/catalouge') SEE ALL
+            a.catlg(name='/catalouge?buisnessOnline=true') SEE ALL
         .owl-carousel.catelougesSlider
           - for (var x = 0; x < onlineStoresLength ; x++)
             .item

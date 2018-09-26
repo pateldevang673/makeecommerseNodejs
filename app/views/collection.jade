@@ -14,23 +14,24 @@ include common/head
             li.active #{collectiondata.collectionName}
         .bagsmore-list-main
           - for (var x = 0; x < collectionOnStore.length; x++)
-            .bagsmore-item
-              img(src=global.config.variable.apiPath+'/#{collectionOnStore[x].storeBanner}', alt='')
-              .watermark-logo
-                img(src='/images/img-watermark-icon.png', alt='')
-                span #{collectionOnStore[x].avgRating}
-              .info-share-book
-                .bag-info-cont
-                  a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",
-                    href='/brand/#{collectionOnStore[x].URL}') #{collectionOnStore[x].storeName}
-                  p(style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;") #{collectionOnStore[x].storeDiscription}
-                .bookmarkshare-link
-                  a.bookmarkicon(href='javascript:void(0)')
-                    img.none_img(src='/images/bookmark_black.png', alt='')
-                    img.block_img(src='/images/bookmark-icon.png', alt='')
-                  a.like_icon(href='javascript:void(0)')
-                    img.like_block_img(src='/images/thumb-icon.png', alt='')
-                    img.like_none_img(src='/images/blue_like.png', alt='')
+            if collectionOnStore[x].isActive==true  
+              .bagsmore-item
+                img(src=global.config.variable.apiPath+'/#{collectionOnStore[x].storeBanner}', alt='')
+                .watermark-logo
+                  img(src='/images/img-watermark-icon.png', alt='')
+                  span #{collectionOnStore[x].avgRating}
+                .info-share-book
+                  .bag-info-cont
+                    a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",
+                      href='/brand/#{collectionOnStore[x].URL}') #{collectionOnStore[x].storeName}
+                    p(style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;") #{collectionOnStore[x].storeDiscription}
+                  .bookmarkshare-link
+                    a.bookmarkicon(href='javascript:void(0)')
+                      img.none_img(src='/images/bookmark_black.png', alt='')
+                      img.block_img(src='/images/bookmark-icon.png', alt='')
+                    a.like_icon(href='javascript:void(0)')
+                      img.like_block_img(src='/images/thumb-icon.png', alt='')
+                      img.like_none_img(src='/images/blue_like.png', alt='')
 
         // .paginaton-main
         

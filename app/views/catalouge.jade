@@ -4,6 +4,7 @@ include common/head
   .mid-scn-main
     section.catalouges-scn
       .fix-wrap
+        br
         .breadcream
           ul
             li
@@ -13,7 +14,7 @@ include common/head
           - for(var x = 0; x < catelougelength ; x++)
             .catalouges-item
               .catalouges-pic
-                a(href='/store/#{catelouge[x].storeId}')
+                a(href='/brand/#{catelouge[x].storeURL}')
                   img.catimagesize(src=global.config.variable.apiPath+'/#{catelouge[x].catalogUrl}', alt='')
               // span.cate-listitile #{catelouge[x].catalogDescription}
         a.load-more(id="loadcatalouge",style="cursor: pointer;") Load More

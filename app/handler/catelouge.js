@@ -45,8 +45,20 @@ class CatalougeHandler extends BaseAutoBindedClass {
 
     getcatalouge(req, res) {
         var mainObj = {};
+        var urls = "/catalogs/featurecatalog?startCatalogs=0&endCatalogs=5"
+        if (req.query.buisnessOffline) {
+            urls += '&buisnessOffline=true';
+        } else if (req.query.buisnessOnline) {
+            urls += '&buisnessOnline=true';
+        }
+
+        if (req.query.city) {
+            var cityName = req.query.city;
+            urls += '&location=' + cityName;
+        }
+
         Promise.all([
-                this.requestAsync(req, URLStore + '/catalogs/featurecatalog?startCatalogs=0&endCatalogs=5', 'catalougsStore'),
+                this.requestAsync(req, URLStore + urls, 'catalougsStore'),
             ])
             .then(function(allData) {
                 return new Promise(function(resolve, reject) {
