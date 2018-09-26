@@ -183,6 +183,7 @@ $(function() {
                 'Content-Type': "application/json"
             },
         });
+
         request.done(function(response) {
             startcatalouge = startcatalouge + 22;
             endcatalouge = startcatalouge + 23;
@@ -192,7 +193,8 @@ $(function() {
             }
             html = '';
             for (i = 0; i < response.data.length; i++) {
-                if (response.data[i].storeURL && response.data[i].storeURL !== null) {
+
+                if (response.data[i] && response.data[i].storeURL !== null) {
                     html += '<div class="catalouges-item">' +
                         '<div class="catalouges-pic">' +
                         '<a href="/brand/' + response.data[i].storeURL + '""><img class="catimagesize" src="https://api.zeepzoop.com/' + response.data[i].catalogUrl + '"alt="" /></a>' +
