@@ -62,33 +62,32 @@ class SdetailHandler extends BaseAutoBindedClass {
             });
         }).then((results) => {
             var store = JSON.parse(results)['data'][0];
+            if (store !== undefined) {
+                var catBlogs = {
+                    url: URLStore + '/stores/' + store._id,
+                    method: 'GET',
+                    headers: {
+                        'Authorization': "maximumvsminimumsecurity",
+                        'Content-Type': "application/json"
+                    }
+                };
+                return new Promise(function(resolve, reject) {
+                    request(catBlogs, function(error, response, body) {
+                        resolve(body)
+                    });
+                }).then((storedata) => {
 
-            var catBlogs = {
-                url: URLStore + '/stores/' + store._id,
-                method: 'GET',
-                headers: {
-                    'Authorization': "maximumvsminimumsecurity",
-                    'Content-Type': "application/json"
-                }
-            };
-            return new Promise(function(resolve, reject) {
-                request(catBlogs, function(error, response, body) {
-                    resolve(body)
-                });
-            }).then((storedata) => {
+                    var storedatas = JSON.parse(storedata)['data'];
+                    var catkeyword = _.map(storedatas.categoriesIds, 'category');
+                    var cat = '';
 
-                var storedatas = JSON.parse(storedata)['data'];
-                var catkeyword = _.map(storedatas.categoriesIds, 'category');
-                var cat = '';
+                    if (catkeyword.length > 1) {
+                        cat = catkeyword[0] + ", " + catkeyword[1];
+                    } else {
+                        cat = catkeyword[0]
+                    }
 
-                if (catkeyword.length > 1) {
-                    cat = catkeyword[0] + ", " + catkeyword[1];
-                } else {
-                    cat = catkeyword[0]
-                }
-
-                var seoData = '';
-                if (store) {
+                    var seoData = '';
                     if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
                         seoData = {
                             title: storedatas.storeName + " For " + cat + " in " + storedatas.storeCity + ", " + storedatas.storeState + " | Zeepzoop",
@@ -128,10 +127,10 @@ class SdetailHandler extends BaseAutoBindedClass {
                         lengthstoreOffers: storedatas.storeOffers.length,
                         shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl
                     })
-                } else {
-                    res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
-                }
-            });
+                });
+            } else {
+                res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
+            }
         })
     }
 }

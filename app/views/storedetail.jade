@@ -72,15 +72,16 @@ meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
     //-       li
     //-         i.successcolor
     //-         | Credit/Debit Card accepted
-    section.before_opectiy_color.offers-scn.catelouge-scn(style='background-image:url('+global.config.variable.apiPath+'/#{storeCatalogs[0].catalogUrl}'+')')
-      .fix-wrap
-        h2 CATALOUGE
-      .offers-slider-main.storedetail_slider_height
-        .owl-carousel.catelougeSlider
-          - for (var x = 0; x < lengthstoreCatalogs; x++)
-            .item
-              .offers-item
-                img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='')
+    if storeCatalogs[0] !==undefined
+      section.before_opectiy_color.offers-scn.catelouge-scn(style='background-image:url('+global.config.variable.apiPath+'/#{storeCatalogs[0].catalogUrl}'+')')
+        .fix-wrap
+          h2 CATALOUGE
+        .offers-slider-main.storedetail_slider_height
+          .owl-carousel.catelougeSlider
+            - for (var x = 0; x < lengthstoreCatalogs; x++)
+              .item
+                .offers-item
+                  img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='')
     section.shop-topoffer-scn
       .fix-wrap
         //- .owl-carousel.offername
