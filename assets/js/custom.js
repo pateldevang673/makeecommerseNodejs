@@ -192,13 +192,14 @@ $(function() {
             }
             html = '';
             for (i = 0; i < response.data.length; i++) {
-
-                html += '<div class="catalouges-item">' +
-                    '<div class="catalouges-pic">' +
-                    '<a href="/brand/' + response.data[i].storeURL + '""><img class="catimagesize" src="https://api.zeepzoop.com/' + response.data[i].catalogUrl + '"alt="" /></a>' +
-                    // '</div><span class="cate-listitile">' + response.data[i].catalogDescription + '</span>' +
-                    '</div>' +
-                    '</div>';
+                if (response.data[i].storeURL != null) {
+                    html += '<div class="catalouges-item">' +
+                        '<div class="catalouges-pic">' +
+                        '<a href="/brand/' + response.data[i].storeURL + '""><img class="catimagesize" src="https://api.zeepzoop.com/' + response.data[i].catalogUrl + '"alt="" /></a>' +
+                        // '</div><span class="cate-listitile">' + response.data[i].catalogDescription + '</span>' +
+                        '</div>' +
+                        '</div>';
+                }
             }
             $('.mid-scn-main .catalouges-pdt-main').append(html);
         });
