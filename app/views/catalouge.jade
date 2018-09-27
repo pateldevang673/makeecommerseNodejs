@@ -12,11 +12,12 @@ include common/head
             li.active Catalouge
         .catalouges-pdt-main
           - for(var x = 0; x < catelougelength ; x++)
-            .catalouges-item
-              .catalouges-pic
-                a(href='/brand/#{catelouge[x].storeURL}')
-                  img.catimagesize(src=global.config.variable.apiPath+'/#{catelouge[x].catalogUrl}', alt='')
-              // span.cate-listitile #{catelouge[x].catalogDescription}
+            if catelouge[x]
+              .catalouges-item
+                .catalouges-pic
+                  a(href='/brand/#{catelouge[x].storeURL}')
+                    img.catimagesize(src=global.config.variable.apiPath+'/#{catelouge[x].catalogUrl}', alt='')
+                // span.cate-listitile #{catelouge[x].catalogDescription}
         a.load-more(id="loadcatalouge",style="cursor: pointer;") Load More
     // section.catalouges-featured
     //   .fix-wrap

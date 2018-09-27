@@ -11,7 +11,7 @@ include common/head
           form
             .left_part_form
               input.contact_field(type='text', name='namw',id="nameIn", placeholder='Name')
-              input.contact_field(type='text', name='City',id="cityIn", placeholder='City')
+              input.contact_field(type='text', name='City',id="searchTextField", placeholder='City')
             .right_part_form
               input.contact_field(type='email', name='email',id="emailIn", placeholder='Email')
               input.contact_field(type='text', name='Phone',id="phoneIn", placeholder='Phone')
@@ -20,16 +20,22 @@ include common/head
               .right_part_form.submit_butt_part
                 input.submit_butt(type='button',style="margin: -91px;margin-bottom: 5px;", name='submit_butt', value='Submit')
 include common/footer
+script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc&libraries=places')
 script.
   document.body.classList.add("body-register");
 script.
+  function initialize() {
+    var input = document.getElementById('searchTextField');
+    new google.maps.places.Autocomplete(input);
+  }
+  google.maps.event.addDomListener(window, 'load', initialize);
   $('.submit_butt').click(function(e){
       var nameReg = /^[A-Za-z]+$/;
       var numberReg =  /^[0-9]+$/;
       var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
       var names = $('#nameIn').val();
-      var city = $('#cityIn').val();
+      var city = $('#searchTextField').val();
       var email = $('#emailIn').val();
       var telephone = $('#phoneIn').val();
 
@@ -82,11 +88,9 @@ script.
           alert("Request failed: " + textStatus);
       });
       $("#nameIn").val('');
-      $("#cityIn").val('');
+      $("#searchTextField").val('');
       $("#emailIn").val('');
       $("#phoneIn").val('');
-      $("#descIn").val('');
-      
-      
+      $("#descIn").val(''); 
   })
 

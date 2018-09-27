@@ -157,8 +157,8 @@ $(function() {
         });
     });
 
-    var startcatalouge = 22;
-    var endcatalouge = startcatalouge + 23;
+    var startcatalouge = 21;
+    var endcatalouge = startcatalouge + 22;
 
     $('#loadcatalouge').click(function() {
         var urls = "https://api.zeepzoop.com/catalogs/featurecatalog?startCatalogs=" + startcatalouge + "&endCatalogs=" + endcatalouge;
@@ -185,8 +185,8 @@ $(function() {
         });
 
         request.done(function(response) {
-            startcatalouge = startcatalouge + 22;
-            endcatalouge = startcatalouge + 23;
+            startcatalouge = startcatalouge + 21;
+            endcatalouge = startcatalouge + 22;
             if (response.data.length < 6) {
                 $('#loadcatalouge').before('<div class="noMore">No more Catalogs</div>');
                 $('#loadcatalouge').remove();

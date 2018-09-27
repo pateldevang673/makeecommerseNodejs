@@ -45,7 +45,7 @@ class CatalougeHandler extends BaseAutoBindedClass {
 
     getcatalouge(req, res) {
         var mainObj = {};
-        var urls = "/catalogs/featurecatalog?startCatalogs=0&endCatalogs=21"
+        var urls = "/catalogs/featurecatalog?startCatalogs=0&endCatalogs=20"
         if (req.query.buisnessOffline) {
             urls += '&buisnessOffline=true';
         } else if (req.query.buisnessOnline) {
