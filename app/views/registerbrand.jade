@@ -60,7 +60,11 @@ script.
       }  else if(telephone == ""){
           alert(' Please enter your phone');
           return false;
-      } else if(!numberReg.test(telephone)){
+      }else if(telephone.length > 10){
+          alert(' Please enter valid phone');
+          return false;
+      }
+       else if(!numberReg.test(telephone)){
           alert(' Numbers only');
           return false;
       } 

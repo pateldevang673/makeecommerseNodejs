@@ -84,7 +84,7 @@ class BlogHandler extends BaseAutoBindedClass {
 
         var mainObj = {};
         Promise.all([
-                this.requestAsync(req, URLStore + '/blogs/search?trending=true', 'trendingBlogs'),
+                this.requestAsync(req, URLStore + '/blogs/search?sort=true', 'trendingBlogs'),
                 this.requestAsync(req, URLStore + '/blogs/search', 'newBlogs'),
                 this.requestAsync(req, URLStore + '/blogs/search?&category=Brand+Stories', 'brandStories'),
                 this.requestAsync(req, URLStore + '/blogs/search?&category=Around+The+World', 'AroundTheWorld'),
