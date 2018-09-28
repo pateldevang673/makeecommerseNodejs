@@ -44,9 +44,6 @@ class CollectionHandler extends BaseAutoBindedClass {
 
     // getcategegorystore(req, res) {
 
-    //     console.log("req.params================")
-    //     console.log(req.params)
-
     //     var mainObj = {};
     //     Promise.all([
     //             // this.requestAsync(req, URLStore + '/collections/' + req.params.id, 'collectionStore'),
