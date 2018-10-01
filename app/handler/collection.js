@@ -78,14 +78,47 @@ class CollectionHandler extends BaseAutoBindedClass {
     //                 titleURL: urlArray
     //             })
     //         })
-
-
-
     // }
 
 
     getBlogs(req, res) {
         var mainObj = {};
+        if (req.params.url == "5b97a34bad670834810a2c73") {
+            res.redirect(301, '/collection/wedding-special')
+        }
+        if (req.params.url == "5b98ef6cc745cd5c18b700c5") {
+            res.redirect(301, '/collection/mens-choice')
+        }
+        if (req.params.url == "5b990da562282263f3416da5") {
+            res.redirect(301, '/collection/festive-vibes-ahmedabad')
+        }
+        if (req.params.url == "5b97a1b3ad670834810a2c69") {
+            res.redirect(301, '/collection/designer-saree')
+        }
+        if (req.params.url == "5b98f063c745cd5c18b700ce") {
+            res.redirect(301, '/collection/minimal-homes')
+        }
+        if (req.params.url == "5b98f4cbc745cd5c18b700dc") {
+            res.redirect(301, '/collection/designer-saree-ahmedabad')
+        }
+        if (req.params.url == "5b98f337c745cd5c18b700d6") {
+            res.redirect(301, '/collection/casually-classy-ahmedabad')
+        }
+        if (req.params.url == "5b97976d676fab31885d6b7f") {
+            res.redirect(301, '/collection/casually-classy')
+        }
+        if (req.params.url == "5b98f5a7c745cd5c18b700e8") {
+            res.redirect(301, '/collection/mens-choice-ahmedabad')
+        }
+        if (req.params.url == "5b98eab9c745cd5c18b700bc") {
+            res.redirect(301, '/collection/festive-vibes')
+        }
+        if (req.params.url == "5b98f530c745cd5c18b700e2") {
+            res.redirect(301, '/collection/wedding-special-ahmedabad')
+        }
+        if (req.params.url == "5b98f660c745cd5c18b700ee") {
+            res.redirect(301, '/collection/minimal-homes-ahmedabad')
+        }
         Promise.all([
                 this.requestAsync(req, URLStore + '/collections/search?collectionURL=' + req.params.url, 'collectionStore'),
             ])
@@ -109,18 +142,20 @@ class CollectionHandler extends BaseAutoBindedClass {
                     domain: 'zeepzoop.com'
                 }
 
-                res.render('collection', {
-                    seo: true,
-                    seoData: seoData,
-                    page: 'collection-page',
-                    collectiondata: results['collectionStore'][0],
-                    collectionOnStore: results['collectionStore'][0].storeId,
-                    collectionOnStorelength: results['collectionStore'][0].storeId.length,
-                    titleURL: urlArray
-                })
+                if (results['collectionStore'].length > 0) {
+                    res.render('collection', {
+                        seo: true,
+                        seoData: seoData,
+                        page: 'collection-page',
+                        collectiondata: results['collectionStore'][0],
+                        collectionOnStore: results['collectionStore'][0].storeId,
+                        collectionOnStorelength: results['collectionStore'][0].storeId.length,
+                        host: req.get('host'),
+                        titleURL: urlArray
+                    })
+                }
             })
     }
-
 }
 
 module.exports = CollectionHandler;
