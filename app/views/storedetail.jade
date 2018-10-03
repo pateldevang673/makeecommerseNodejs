@@ -43,7 +43,7 @@ include common/head
                     i
                 if store.buisnessOnline==true
                   //- a.bdr-btn.shopnow-btn(onClick="trackOutboundLink(this)")
-                  a.bdr-btn.shopnow-btn(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;", target="_blank")
+                  a.bdr-btn.shopnow-btn(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;",rel="nofollow", target="_blank")
                     | SHOP NOW
                     i
         .goback-shop.clear
