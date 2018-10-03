@@ -1,5 +1,5 @@
 include common/head
-link(rel='canonical', href='https://www.zeepzoop.com/collection/#{collectiondata.collectionURL}')
+
 .wrapper
   section.innerpage-hero
     img(src=global.config.variable.apiPath+'/#{collectiondata.collectionPicture}', alt='')
@@ -25,24 +25,13 @@ link(rel='canonical', href='https://www.zeepzoop.com/collection/#{collectiondata
                     a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",
                       href='/brand/#{collectionOnStore[x].URL}') #{collectionOnStore[x].storeName}
                     p(style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;") #{collectionOnStore[x].storeDiscription}
-                  .bookmarkshare-link
-                    a.bookmarkicon(href='javascript:void(0)')
-                      img.none_img(src='/images/bookmark_black.png', alt='')
-                      img.block_img(src='/images/bookmark-icon.png', alt='')
-                    a.like_icon(href='javascript:void(0)')
-                      img.like_block_img(src='/images/thumb-icon.png', alt='')
-                      img.like_none_img(src='/images/blue_like.png', alt='')
-
-        // .paginaton-main
-        
-        //   a.p-prev(href='#')
-        //   a(href='#') 1
-        //   a.active(href='#') 2
-        //   a(href='#') 3
-        //   a(href='#') 4
-        //   span.p-dot ...
-        //   a(href='#') 10
-        //   a.p-next(href='#')
+                  // .bookmarkshare-link
+                  //   a.bookmarkicon(href='javascript:void(0)')
+                  //     img.none_img(src='/images/bookmark_black.png', alt='')
+                  //     img.block_img(src='/images/bookmark-icon.png', alt='')
+                  //   a.like_icon(href='javascript:void(0)')
+                  //     img.like_block_img(src='/images/thumb-icon.png', alt='')
+                  //     img.like_none_img(src='/images/blue_like.png', alt='')      
 include common/footer
 script.
   document.body.classList.add("body-innerpage");

@@ -1,5 +1,5 @@
 include common/head
-link(rel='canonical', href='https://www.zeepzoop.com/category/Home-Decor')
+
 .wrapper      
   section.innerpage-hero
     img(src='/images/Home-Decor.jpg', alt='')
@@ -29,29 +29,9 @@ link(rel='canonical', href='https://www.zeepzoop.com/category/Home-Decor')
                   // a(href='#')
                   //   img(src='/images/share-icon.png', alt='')
         .view-all-btn
-        a.right_button.cmn-btn(id="loadmoreshop",name="Home-Decor", style="cursor: pointer;margin-left: 495px;") Load More
-        // .paginaton-main
-        //   a.p-prev(href='#')
-        //   a(href='#') 1
-        //   a.active(href='#') 2
-        //   a(href='#') 3
-        //   a(href='#') 4
-        //   span.p-dot ...
-        //   a(href='#') 10
-        //   a.p-next(href='#')
+        a.right_button.cmn-btn(id="loadmoreshop",name="Home-Decor", style="cursor: pointer;margin-left: 495px;") Load More       
 include common/footer
 script.
   document.body.classList.add("body-innerpage");
-script.
-
-  function GetParameterValues(param) {
-      var url = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
-      //- for (var i = 0; i < url.length; i++) {
-      //-     var urlparam = url[i].split('=');
-      //-     if (urlparam[0] == param) {
-      //-         return urlparam[1];
-      //-     }
-      //- }
-  }
 
 

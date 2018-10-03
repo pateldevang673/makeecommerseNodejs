@@ -1,42 +1,4 @@
-// let something = function(event) {
-//     console.log(event)
-// }
-
 $(function() {
-
-    // $('.searchbutton').click(function(e) {
-    //     var value = $(".searchval").val();
-    //     if (value !== undefined && value !== null && value !== '') {
-    //         if ($('.shops-slt').hasClass('shopsSlt-current')) {
-    //             var online = true;
-    //         } else {
-    //             var online = false;
-    //         }
-    //         var cityName = $('select[name="cities"]').val();
-    //         if (cityName !== "Select City") {
-    //             if (online == true) {
-    //                 window.location.href = "/search?searchFor=" + value +
-    //                     "&&trending=true&&location=" + cityName + "&&buisnessOnline=true";
-    //             } else {
-    //                 window.location.href = "/search?searchFor=" + value +
-    //                     "&&trending=true&&location=" + cityName + "&&buisnessOffline=true";
-    //             }
-    //             $(".searchval").val('')
-    //         } else {
-    //             if (online == true) {
-    //                 window.location.href = "/search?searchFor=" + value +
-    //                     "&&trending=true&&buisnessOnline=true";
-    //             } else {
-    //                 window.location.href = "/search?searchFor=" + value +
-    //                     "&&trending=true&&buisnessOffline=true";
-    //             }
-    //             $(".searchval").val('')
-    //         }
-    //     } else {
-    //         alert("Please Enter Value of Search Box")
-    //     }
-    // });
-
     var startStores = 12;
     var endStores = startStores + 11;
 
@@ -49,17 +11,14 @@ $(function() {
             }
         }
     }
-
     var numberReg = /^[0-9]+$/;
     var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
-
     $('.profilesubmit').click(function() {
         if ($('#nameInput').val() == "") {
             console.log("in the if")
         } else {
             console.log("in else")
         }
-        // validateForm();
     });
 
     $('.catlg').click(function() {
@@ -111,16 +70,7 @@ $(function() {
         if (cityName) {
             urls += '&location=' + cityName;
         }
-
-        // if (buisnessOffline) {
-        //     var urls = "https://api.zeepzoop.com/stores/search?buisnessOffline=true&startStores=" + startStores + "&endStores=" + endStores
-        // }
-        // if (buisnessOnline) {
-        //     var urls = "https://api.zeepzoop.com/stores/search?buisnessOnline=true&startStores=" + startStores + "&endStores=" + endStores
-        // }
-
         var request = $.ajax({
-            // url: "https://api.zeepzoop.com/stores/search?startStores=" + startStores + "&endStores=" + endStores,
             url: urls,
             type: "get",
             dataType: 'JSON',
@@ -286,11 +236,6 @@ $(document).ready(function() {
         $('.offlineoffer').css("display", "block");
     }
 
-    // $('.onlinecollectiondiv').css("display", "none");
-    // $('.onlinestorediv').css("display", "none");
-    // $('.onlinenewstore').css("display", "none");
-    // $('.onlineoffer').css("display", "none");
-
     $('.shops-slt').click(function(e) {
         $(this).toggleClass('shopsSlt-current')
         if ($(this).hasClass('shopsSlt-current')) {
@@ -317,7 +262,6 @@ $(document).ready(function() {
             $('.onlineoffer').css("display", "block");
         }
     });
-
 
     $(window).on('scroll', function() {
         if ($(window).scrollTop() > 25) {

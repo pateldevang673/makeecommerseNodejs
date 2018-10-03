@@ -78,6 +78,7 @@ class SearchHandler extends BaseAutoBindedClass {
                         page: 'search-page',
                         stores: results['searchResult'],
                         lengthStores: results['searchResult'].length,
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
                         host: req.get('host')
                     })
                 } else {

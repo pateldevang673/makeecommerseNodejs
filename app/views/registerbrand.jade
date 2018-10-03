@@ -1,5 +1,5 @@
 include common/head
-link(rel='canonical', href='https://www.zeepzoop.com/register_your_brand')
+
 .wrapper
   .contact_page
     .cpage_top_bottom_margin
@@ -60,12 +60,13 @@ script.
       }  else if(telephone == ""){
           alert(' Please enter your phone');
           return false;
-      }else if(telephone.length > 10){
+      }     
+      if(telephone.length < 10){
           alert(' Please enter valid phone');
           return false;
       }
-       else if(!numberReg.test(telephone)){
-          alert(' Numbers only');
+      if(!numberReg.test(telephone)){
+          alert('Please enter Numbers only in phone');
           return false;
       } 
       var obj={};

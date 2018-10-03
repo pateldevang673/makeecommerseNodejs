@@ -1,5 +1,4 @@
 include common/head
-link(rel='canonical', href='https://www.zeepzoop.com/blogs/#{blog.URL}')
 
 #authorPopup.zeep-popup-main.autherpopup
   span.zeeppopup-close.auther-p-close
@@ -41,18 +40,18 @@ link(rel='canonical', href='https://www.zeepzoop.com/blogs/#{blog.URL}')
   |         
   .mid-scn-main
     section.blog-post-scn
-      .blogpost-social
-        a.fb-icon(href="https://www.facebook.com/sharer/sharer.php?u="+shareUrl,target="_blank")
-        |                     
-        a.wt-icon(href="https://web.whatsapp.com/send?text="+shareUrl, target="_blank" data-action="share/whatsapp/share")
-        |                     
-        //- a.pnt-icon(href="#")
-        a.pnt-icon(href="http://pinterest.com/pin/create/button/?url="+shareUrl, class="pin-it-button",target="_blank", count-layout="horizontal")
-        |                     
-        a.tw-icon(href="http://twitter.com/share?url="+shareUrl+"&amp;hashtags=ZeepZoop",target="_blank")
-        |                     
-        a.eml-icon(href="https://mail.google.com/mail/u/?authuser=connect@zeepzoop.com",target="_blank")
-      |                 
+      //- .blogpost-social
+      //-   a.fb-icon(href="https://www.facebook.com/sharer/sharer.php?u="+shareUrl,target="_blank")
+      //-   |                     
+      //-   a.wt-icon(href="https://web.whatsapp.com/send?text="+shareUrl, target="_blank" data-action="share/whatsapp/share")
+      //-   |                     
+      //-   //- a.pnt-icon(href="#")
+      //-   a.pnt-icon(href="http://pinterest.com/pin/create/button/?url="+shareUrl, class="pin-it-button",target="_blank", count-layout="horizontal")
+      //-   |                     
+      //-   a.tw-icon(href="http://twitter.com/share?url="+shareUrl+"&amp;hashtags=ZeepZoop",target="_blank")
+      //-   |                     
+      //-   a.eml-icon(href="https://mail.google.com/mail/u/?authuser=connect@zeepzoop.com",target="_blank")
+      //- |                 
       .fix-wrap
         .blog-post-cont
           !{blog.description}
@@ -92,128 +91,7 @@ link(rel='canonical', href='https://www.zeepzoop.com/blogs/#{blog.URL}')
                   //-   |  
                   //-   a(href="#")
                   //-     img(src="/images/share-icon.png", alt="")
-            |                         
-          //- .blogslide-item
-          //-   a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[2].URL}")
-          //-     img(src=global.config.variable.apiPath+'/'+'#{catBlog[2].blogPicture}', alt="")
-          //-   |                             
-          //-   .blogslide-cont
-          //-     h3
-          //-       a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[2].URL}") #{catBlog[2].title}
-          //-     |                                 
-          //-     p
-          //-       | #{catBlog[2].metaDescription}
-          //-     |                                 
-          //-     .blog-user-share
-          //-       .pull-left
-          //-         span.blog-usepic
-          //-           img(src=global.config.variable.apiPath+'/'+'#{catBlog[2].authorImage}', alt="")
-          //-         |                                         
-          //-         .blog-name-date
-          //-           | #{catBlog[2].authorName}
-          //-           br
-          //-           |  #{catBlog[2].time}
-          //-       |                                     
-          //-       //- .bookmarkshare-link
-          //-       //-   a(href="#")
-          //-       //-     img(src="/images/bookmark-icon.png", alt="")
-          //-       //-   |  
-          //-       //-   a(href="#")
-          //-       //-     img(src="/images/thumb-icon.png", alt="")
-          //-       //-   |  
-          //-       //-   a(href="#")
-          //-       //-     img(src="/images/share-icon.png", alt="")
-          //- |                         
-          //- .blogslide-item
-          //-   a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[3].URL}")
-          //-     img(src=global.config.variable.apiPath+'/'+'#{catBlog[3].blogPicture}', alt="")
-          //-   |                             
-          //-   .blogslide-cont
-          //-     h3
-          //-       a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[3].URL}") #{catBlog[3].title}
-          //-     |                                 
-          //-     p
-          //-       | #{catBlog[3].metaDescription}
-          //-     |                                 
-          //-     .blog-user-share
-          //-       .pull-left
-          //-         span.blog-usepic
-          //-           img(src=global.config.variable.apiPath+'/'+'#{catBlog[3].authorImage}', alt="")
-          //-         |                                         
-          //-         .blog-name-date
-          //-           | #{catBlog[3].authorName}
-          //-           br
-          //-           |  #{catBlog[3].time}
-          //-       |                                     
-                //- .bookmarkshare-link
-                //-   a(href="#")
-                //-     img(src="/images/bookmark-icon.png", alt="")
-                //-   |  
-                //-   a(href="#")
-                //-     img(src="/images/thumb-icon.png", alt="")
-                //-   |  
-                //-   a(href="#")
-                //-     img(src="/images/share-icon.png", alt="")
-          //- .blogslide-item
-          //-   a(href="http://www.zeepzoop.com/blogs'+'/#{catBlog[4].URL}")
-          //-     img(src=global.config.variable.apiPath+'/'+'#{catBlog[4].blogPicture}', alt="")
-          //-   |                             
-          //-   .blogslide-cont
-          //-     h3
-          //-       a(href="http://www.zeepzoop.com/blogs'+'/#{catBlog[4].URL}") #{catBlog[4].title}
-          //-     |                                 
-          //-     p
-          //-       | #{catBlog[4].metaDescription}
-          //-     |                                 
-          //-     .blog-user-share
-          //-       .pull-left
-          //-         span.blog-usepic
-          //-           img(src=global.config.variable.apiPath+'/'+'#{catBlog[4].authorImage}', alt="")
-          //-         |                                         
-          //-         .blog-name-date
-          //-           | #{catBlog[4].authorName}
-          //-           br
-          //-           |  #{catBlog[4].time}
-          //-       |                                     
-          //-       //- .bookmarkshare-link
-          //-       //-   a(href="#")
-          //-       //-     img(src="/images/bookmark-icon.png", alt="")
-          //-       //-   |  
-          //-       //-   a(href="#")
-          //-       //-     img(src="/images/thumb-icon.png", alt="")
-          //-       //-   |  
-          //-       //-   a(href="#")
-          //-       //-     img(src="/images/share-icon.png", alt="")
-          //- .blogslide-item
-          //-   a(href="http://www.zeepzoop.com/blogs'+'/#{catBlog[5].URL}")
-          //-     img(src=global.config.variable.apiPath+'/'+'#{catBlog[5].blogPicture}', alt="")
-          //-   |                             
-          //-   .blogslide-cont
-          //-     h3
-          //-       a(href="http://www.zeepzoop.com/blogs'+'/#{catBlog[5].URL}") #{catBlog[5].title}
-          //-     |                                 
-          //-     p
-          //-       | #{catBlog[5].metaDescription}
-          //-     |                                 
-          //-     .blog-user-share
-          //-       .pull-left
-          //-         span.blog-usepic
-          //-           img(src=global.config.variable.apiPath+'/'+'#{catBlog[5].authorImage}', alt="")
-          //-         |                                         
-          //-         .blog-name-date
-          //-           | #{catBlog[5].authorName}
-          //-           br
-          //-           |  #{catBlog[5].time}
-          //-       |                                     
-          //-       //- .bookmarkshare-link
-          //-       //-   a(href="#")
-          //-       //-     img(src="/images/bookmark-icon.png", alt="")
-          //-       //-   |  
-          //-       //-   a(href="#")
-          //-       //-     img(src="/images/thumb-icon.png", alt="")
-          //-       //-   |  
-          //-       //-   a(href="#")
-          //-       //-     img(src="/images/share-icon.png", alt="")
+            |                                  
     |             
     //- section.blog-newsletter
     //-   .fix-wrap
@@ -242,6 +120,7 @@ include common/footer
 script.
   document.body.classList.add("body-blog");
 |      
+script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bb3426196915581')
 script.
   $(document).ready(function(e) {
   $('.blog-post-cont h2').css("font-size","35px");

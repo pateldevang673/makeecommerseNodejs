@@ -63,53 +63,9 @@ app.get('/brand_reg', function(req, res) {
     res.redirect(301, '/register_your_brand');
 });
 
-// app.get('/collection/5b97a34bad670834810a2c73', function(req, res) {
-//     res.redirect(301, '/collection/wedding-special');
-// });
-
-// app.get('/collection/5b98ef6cc745cd5c18b700c5', function(req, res) {
-//     res.redirect(301, '/collection/mens-choice');
-// });
-
-// app.get('/collection/5b990da562282263f3416da5', function(req, res) {
-//     res.redirect(301, '/collection/festive-vibes-ahmedabad');
-// });
-
-// app.get('/collection/5b97a1b3ad670834810a2c69', function(req, res) {
-//     res.redirect(301, '/collection/designer-saree');
-// });
-
-// app.get('/collection/5b98f063c745cd5c18b700ce', function(req, res) {
-//     res.redirect(301, '/collection/minimal-homes');
-// });
-
-// app.get('/collection/5b98f4cbc745cd5c18b700dc', function(req, res) {
-//     res.redirect(301, '/collection/designer-saree-ahmedabad');
-// });
-
-// app.get('/collection/5b98f337c745cd5c18b700d6', function(req, res) {
-//     res.redirect(301, '/collection/casually-classy-ahmedabad');
-// });
-
-// app.get('/collection/5b97976d676fab31885d6b7f', function(req, res) {
-//     res.redirect(301, '/collection/casually-classy');
-// });
-
-// app.get('/collection/5b98f5a7c745cd5c18b700e8', function(req, res) {
-//     res.redirect(301, '/collection/mens-choice-ahmedabad');
-// });
-
-// app.get('/collection/5b98eab9c745cd5c18b700bc', function(req, res) {
-//     res.redirect(301, '/collection/festive-vibes');
-// });
-
-// app.get('/collection/5b98f530c745cd5c18b700e2', function(req, res) {
-//     res.redirect(301, '/collection/wedding-special-ahmedabad');
-// });
-
-// app.get('/collection/5b98f660c745cd5c18b700ee', function(req, res) {
-//     res.redirect(301, '/collection/minimal-homes-ahmedabad');
-// });
+app.get('/business', function(req, res) {
+    res.redirect(301, '/register_your_brand');
+});
 
 app.get('*', function(req, res) {
     res.render('404', { seo: false, title: '404 page not found', page: '404-page' })

@@ -1,5 +1,5 @@
 include common/head
-link(rel='canonical', href='https://www.zeepzoop.com/contactus')
+
 .wrapper
   .contact_page
     .cpage_top_bottom_margin
@@ -84,7 +84,11 @@ script.
       } else if(message== ""){
           alert(' Please enter your message');
           return false;
-      } 
+      }  
+      if(telephone.length < 10){
+          alert(' Please enter valid phone');
+          return false;
+      }
 
       var obj={};
       obj.name = names;

@@ -23,6 +23,7 @@ html(lang='en')
       meta(property='fb:pages', content='266063187234418')
       
       meta(name='twitter:card', content='summary')
+      link(rel='canonical', href='#{seoData.url}')
       meta(name='twitter:description', content='#{seoData.description}')
       meta(name='twitter:title', content='#{seoData.title}')
       meta(name='twitter:site', content='@'+'#{seoData.site}')
@@ -32,8 +33,7 @@ html(lang='en')
     else
       title #{title}
 
-    link(rel='icon', type='image/png', href='/images/favicon.png')
-    link(rel='canonical', href='https://www.zeepzoop.com/')
+    link(rel='icon', type='image/png', href='/images/favicon.png')   
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i%7COswald:400,500,600,700', rel='stylesheet')
     link(href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700', rel='stylesheet')
     link(href='/css/owl.carousel.min.css', rel='stylesheet')
@@ -51,6 +51,12 @@ html(lang='en')
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'UA-118251424-1');
+      var trackOutboundLink = function(url) {
+        ga('send', 'event', 'outbound', 'click', url, {
+            'transport': 'beacon',
+            'hitCallback': function() { document.location = url; }
+        });
+      }
 
   body(class=page) 
     #signinpopup.zeep-popup-main.signinpopup
@@ -119,7 +125,7 @@ html(lang='en')
             a.inst-icon(href='https://www.instagram.com/zeepzoopofficial/', target='_blank')
             a.yt(href='https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/videos?pbjreload=10',target="_blank")
             a.phone-icon(href='tel:9624851199', target='_blank')
-            a.email-icon(href="https://mail.google.com/mail/u/?authuser=connect@zeepzoop.com", target='_blank')
+            a.email-icon(href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@zeepzoop.com", target='_blank')
         header.hdr-main
           .fix-wrap
             .hdr-inner

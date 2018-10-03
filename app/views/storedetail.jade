@@ -1,6 +1,4 @@
 include common/head
-link(rel='canonical', href='https://www.zeepzoop.com/brand/#{store.URL}')
-meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
 
 .wrapper
   section.innerpage-hero
@@ -40,12 +38,12 @@ meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
                 //- i.hours-arrow
               .direction-shownow-btn
                 if store.buisnessOffline==true
-                  a.bdr-btn.getdir-btn(href='https://www.google.com/maps/?q=#{store.address}' target="_blank")
+                  a.bdr-btn.getdir-btn(href='https://www.google.com/maps/?q=#{store.address}', target="_blank")
                     | GET direction
                     i
                 if store.buisnessOnline==true
                   //- a.bdr-btn.shopnow-btn(onClick="trackOutboundLink(this)")
-                  a.bdr-btn.shopnow-btn(href="#{store.webAddress}", rel="nofollow", target="_blank")
+                  a.bdr-btn.shopnow-btn(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;", target="_blank")
                     | SHOP NOW
                     i
         .goback-shop.clear
@@ -81,7 +79,7 @@ meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
             - for (var x = 0; x < lengthstoreCatalogs; x++)
               .item
                 .offers-item
-                  img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='')
+                  img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='#{store.storeName}')
     section.shop-topoffer-scn
       .fix-wrap
         //- .owl-carousel.offername
