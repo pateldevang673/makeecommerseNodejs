@@ -200,7 +200,7 @@ include common/head
                       img(src=global.config.variable.apiPath+'/#{UserBlogs[x].blogPicture}', alt='')
                     .blogslide-cont
                       h3
-                        a(href='http://www.zeepzoop.com/blogs'+'/#{UserBlogs[x].URL}') #{UserBlogs[x].title}
+                        a(href='/blogs'+'/#{UserBlogs[x].URL}') #{UserBlogs[x].title}
                       p
                         | #{UserBlogs[x].metaDescription}
                       .blog-user-share

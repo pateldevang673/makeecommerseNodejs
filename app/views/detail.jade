@@ -61,12 +61,12 @@ include common/head
           |                         
           - for(var x=1;x<catBlogLength;x++)
             .blogslide-item
-              a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[x].URL}")
+              a(href="/blogs"+"/#{catBlog[x].URL}")
                 img(src=global.config.variable.apiPath+'/'+'#{catBlog[x].blogPicture}', alt="")
               |                             
               .blogslide-cont
                 h3
-                  a(href="http://www.zeepzoop.com/blogs"+"/#{catBlog[x].URL}") #{catBlog[x].title}
+                  a(href="/blogs"+"/#{catBlog[x].URL}") #{catBlog[x].title}
                 |                                 
                 p
                   | #{catBlog[x].metaDescription}

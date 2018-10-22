@@ -19,7 +19,7 @@ include common/head
               | Most Viewed 
               img(src='/images/auther-drop-icon.png',style="width: 15px;", alt='')
           .author-main-info
-            a(href='http://www.zeepzoop.com/blogs'+'/#{authorBlogs[0].URL}')
+            a(href='/blogs'+'/#{authorBlogs[0].URL}')
               img(src=global.config.variable.apiPath+'/#{authorBlogs[0].blogPicture}', alt='')
               h3 #{authorBlogs[0].title}
               p
@@ -27,7 +27,7 @@ include common/head
           ul.author-list-main
             - for (var x = 1; x < authorBlogslength ; x++)
               li
-                a(href='http://www.zeepzoop.com/blogs'+'/#{authorBlogs[x].URL}')
+                a(href='/blogs'+'/#{authorBlogs[x].URL}')
                   .author-list-img
                     img(src=global.config.variable.apiPath+'/#{authorBlogs[x].blogPicture}', alt='')
                   .author-list-cont
@@ -37,11 +37,11 @@ include common/head
         .blog-post-rcmnd
           h4 Recommended
           .blogslide-item
-            a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[0].URL}')
+            a(href='/blogs'+'/#{recommendedBlogs[0].URL}')
               img(src=global.config.variable.apiPath+'/#{recommendedBlogs[0].blogPicture}', alt='')
             .blogslide-cont
               h3
-                a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[0].URL}') #{recommendedBlogs[0].title}
+                a(href='/blogs'+'/#{recommendedBlogs[0].URL}') #{recommendedBlogs[0].title}
               p
                 | #{recommendedBlogs[0].metaDescription}
               .blog-user-share
@@ -53,11 +53,11 @@ include common/head
                     br
                     | #{recommendedBlogs[0].time}
           .blogslide-item
-            a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[1].URL}')
+            a(href='/blogs'+'/#{recommendedBlogs[1].URL}')
               img(src=global.config.variable.apiPath+'/#{recommendedBlogs[1].blogPicture}', alt='')
             .blogslide-cont
               h3
-                a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[1].URL}') #{recommendedBlogs[1].title}
+                a(href='/blogs'+'/#{recommendedBlogs[1].URL}') #{recommendedBlogs[1].title}
               p
                 | #{recommendedBlogs[1].metaDescription}
               .blog-user-share
@@ -69,11 +69,11 @@ include common/head
                     br
                     |  #{recommendedBlogs[1].time}
           .blogslide-item
-            a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[2].URL}')
+            a(href='/blogs'+'/#{recommendedBlogs[2].URL}')
               img(src=global.config.variable.apiPath+'/#{recommendedBlogs[2].blogPicture}', alt='')
             .blogslide-cont
               h3
-                a(href='http://www.zeepzoop.com/blogs'+'/#{recommendedBlogs[2].URL}') #{recommendedBlogs[2].title}
+                a(href='/blogs'+'/#{recommendedBlogs[2].URL}') #{recommendedBlogs[2].title}
               p
                 | #{recommendedBlogs[2].metaDescription}
               .blog-user-share

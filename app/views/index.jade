@@ -195,7 +195,7 @@ include common/head
       .fix-wrap
         h2 BLOGs
         .blog-main-prt
-          a(href='http://www.zeepzoop.com/blogs'+'/#{blogs[0].URL}')
+          a(href='/blogs'+'/#{blogs[0].URL}')
             img(src=global.config.variable.apiPath+'/#{blogs[0].blogPicture}', alt='')
             h3
               | #{blogs[0].title}
@@ -205,7 +205,7 @@ include common/head
           ul
             - for (var x = 1; x < lengthBlogs; x++)
               li
-                a(href='http://www.zeepzoop.com/blogs'+'/#{blogs[x].URL}')
+                a(href='/blogs'+'/#{blogs[x].URL}')
                   span.blog-thumb-pic
                     img(src=global.config.variable.apiPath+'/#{blogs[x].blogPicture}', alt='')
                   .blog-list-cont

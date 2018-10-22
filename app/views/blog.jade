@@ -13,12 +13,12 @@ include common/head
           - for(var x=0;x<trendingBlogslength;x++)
             .item
               .blogslide-item
-                a(href='http://www.zeepzoop.com/blogs'+'/#{trendingBlogs[x].URL}')
+                a(href='/blogs'+'/#{trendingBlogs[x].URL}')
                   img(src=global.config.variable.apiPath+'/#{trendingBlogs[x].blogPicture}', alt='')
                 |               
                 .blogslide-cont
                   h3
-                    a(href='http://www.zeepzoop.com/blogs'+'/#{trendingBlogs[x].URL}') #{trendingBlogs[x].title}
+                    a(href='/blogs'+'/#{trendingBlogs[x].URL}') #{trendingBlogs[x].title}
                   |                 
                   p
                     | #{trendingBlogs[x].metaDescription}
@@ -42,12 +42,12 @@ include common/head
           - for(var x=0;x<newBlogslength;x++)
             .item
               .blogslide-item
-                a(href='http://www.zeepzoop.com/blogs'+'/#{newBlogs[x].URL}')
+                a(href='/blogs'+'/#{newBlogs[x].URL}')
                   img(src=global.config.variable.apiPath+'/#{newBlogs[x].blogPicture}', alt='')
                 |               
                 .blogslide-cont
                   h3
-                    a(href='http://www.zeepzoop.com/blogs'+'/#{newBlogs[x].URL}') #{newBlogs[x].title}
+                    a(href='/blogs'+'/#{newBlogs[x].URL}') #{newBlogs[x].title}
                   |                 
                   p
                     | #{newBlogs[x].metaDescription}
@@ -71,12 +71,12 @@ include common/head
           - for(var x=0;x<brandStorieslength;x++)
             .item
               .blogslide-item
-                a(href='http://www.zeepzoop.com/blogs'+'/#{brandStories[x].URL}')
+                a(href='/blogs'+'/#{brandStories[x].URL}')
                   img(src=global.config.variable.apiPath+'/#{brandStories[x].blogPicture}', alt='')
                 |               
                 .blogslide-cont
                   h3
-                    a(href='http://www.zeepzoop.com/blogs'+'/#{brandStories[x].URL}') #{brandStories[x].title}
+                    a(href='/blogs'+'/#{brandStories[x].URL}') #{brandStories[x].title}
                   |                 
                   p
                     | #{brandStories[x].metaDescription}
@@ -100,12 +100,12 @@ include common/head
             - for(var x=0;x<fashionlength;x++)
               .item
                 .blogslide-item
-                  a(href='http://www.zeepzoop.com/blogs'+'/#{fashion[x].URL}')
+                  a(href='/blogs'+'/#{fashion[x].URL}')
                     img(src=global.config.variable.apiPath+'/#{fashion[x].blogPicture}', alt='')
                   |               
                   .blogslide-cont
                     h3
-                      a(href='http://www.zeepzoop.com/blogs'+'/#{fashion[x].URL}') #{fashion[x].title}
+                      a(href='/blogs'+'/#{fashion[x].URL}') #{fashion[x].title}
                     |                 
                     p
                       | #{fashion[x].metaDescription}
@@ -129,12 +129,12 @@ include common/head
           - for(var x=0;x<AroundTheWorldlength;x++)
             .item
               .blogslide-item
-                a(href='http://www.zeepzoop.com/blogs'+'/#{AroundTheWorld[x].URL}')
+                a(href='/blogs'+'/#{AroundTheWorld[x].URL}')
                   img(src=global.config.variable.apiPath+'/#{AroundTheWorld[x].blogPicture}', alt='')
                 |               
                 .blogslide-cont
                   h3
-                    a(href='http://www.zeepzoop.com/blogs'+'/#{AroundTheWorld[x].URL}') #{AroundTheWorld[x].title}
+                    a(href='/blogs'+'/#{AroundTheWorld[x].URL}') #{AroundTheWorld[x].title}
                   |                 
                   p
                     | #{AroundTheWorld[x].metaDescription}
@@ -158,12 +158,12 @@ include common/head
           - for(var x=0;x<HomeDecorlength;x++)
             .item
               .blogslide-item
-                a(href='http://www.zeepzoop.com/blogs'+'/#{HomeDecor[x].URL}')
+                a(href='/blogs'+'/#{HomeDecor[x].URL}')
                   img(src=global.config.variable.apiPath+'/#{HomeDecor[x].blogPicture}', alt='')
                 |               
                 .blogslide-cont
                   h3
-                    a(href='http://www.zeepzoop.com/blogs'+'/#{HomeDecor[x].URL}') #{HomeDecor[x].title}
+                    a(href='/blogs'+'/#{HomeDecor[x].URL}') #{HomeDecor[x].title}
                   |                 
                   p
                     | #{HomeDecor[x].metaDescription}
@@ -189,12 +189,12 @@ include common/head
           - for(var x=0;x<WeddingBellslength;x++)
             .item
               .blogslide-item
-                a(href='http://www.zeepzoop.com/blogs'+'/#{WeddingBells[x].URL}')
+                a(href='/blogs'+'/#{WeddingBells[x].URL}')
                   img(src=global.config.variable.apiPath+'/#{WeddingBells[x].blogPicture}', alt='')
                 |               
                 .blogslide-cont
                   h3
-                    a(href='http://www.zeepzoop.com/blogs'+'/#{WeddingBells[x].URL}') #{WeddingBells[x].title}
+                    a(href='/blogs'+'/#{WeddingBells[x].URL}') #{WeddingBells[x].title}
                   |                 
                   p
                     | #{WeddingBells[x].metaDescription}
@@ -218,12 +218,12 @@ include common/head
            - for(var x=0;x<CultureHeritagelength;x++)
             .item
               .blogslide-item
-                a(href='http://www.zeepzoop.com/blogs'+'/#{CultureHeritage[x].URL}')
+                a(href='/blogs'+'/#{CultureHeritage[x].URL}')
                   img(src=global.config.variable.apiPath+'/#{CultureHeritage[x].blogPicture}', alt='')
                 |               
                 .blogslide-cont
                   h3
-                    a(href='http://www.zeepzoop.com/blogs'+'/#{CultureHeritage[x].URL}') #{CultureHeritage[x].title}
+                    a(href='/blogs'+'/#{CultureHeritage[x].URL}') #{CultureHeritage[x].title}
                   |                 
                   p
                     | #{CultureHeritage[x].metaDescription}
