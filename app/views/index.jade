@@ -236,21 +236,17 @@ include common/head
                 iframe(width='382', height='214', src='https://www.youtube.com/embed/#{videos[x].id.videoId}?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
           a.more-btn(href='https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/videos?pbjreload=10',target="_blank") EXPLORE MORE
 include common/footer
-script(src='js/jquery.min.js')
-script(src='js/owl.carousel.js')
+// script(src='js/jquery.min.js')
+// script(src='js/owl.carousel.js')
 script(src='js/custom.js')
 script.
   $(document).ready(function() {
-      if(localStorage.getItem('storetype') && localStorage.getItem('storetype')=="online"){
-        $(".shops-slt").addClass("shopsSlt-current");
-      }
     $('.shops-slt').click(function(e) {
       $(this).toggleClass('shopsSlt-current')
       if($(this).hasClass("shopsSlt-current")){
-        localStorage.setItem('storetype', "online")
+        localStorage.setItem('storetype', "online");
       }else{
-        localStorage.removeItem('storetype')
-      
+        localStorage.removeItem('storetype');
       }
     });
     $('.homeofferSlider').owlCarousel({

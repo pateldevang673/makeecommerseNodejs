@@ -131,15 +131,91 @@ class CollectionHandler extends BaseAutoBindedClass {
                 });
             })
             .then((results) => {
-                var seoData = {
-                    title: 'Zeepzoop Collection',
-                    description: 'Read Collection related to Art, Craft, culture, festivals, different cities, fashion, Home décor and much more. It guides you about what to buy from different cities.',
-                    keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
-                    image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
-                    type: 'website',
-                    url: req.protocol + '://' + req.get('host') + req.originalUrl,
-                    site: 'Zeepzoop',
-                    domain: 'zeepzoop.com'
+                var seourl = req.params.url;
+                if (seourl == "casually-classy-ahmedabad" || seourl == "casually-classy-delhi" || seourl == "casually-classy-mumbai") {
+                    var seoData = {
+                        title: 'Browse Casual Collection | Best Casual Wear Designers in ' + results['collectionStore'][0].cityName[0],
+                        description: 'Browse Causal Collection like Smart Casuals, Kurtas, Kurtis and Dresses from Best Casual Wear Designers in ' + results['collectionStore'][0].cityName[0] + '. Casual Classy Designer Labels for Men and Women.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seourl == "designer-saree-ahmedabad" || seourl == "designer-saree-delhi" || seourl == "designer-saree-mumbai") {
+                    var seoData = {
+                        title: 'Designer Sarees in ' + results['collectionStore'][0].cityName[0] + ' for Festivals & Wedding Shopping',
+                        description: 'Looking for Designer Sarees in ' + results['collectionStore'][0].cityName[0] + ' for Festive Shopping and Wedding Wear? List of best Saree Designers in ' + results['collectionStore'][0].cityName[0] + ' for Unique & Traditional Saree Designs as per the Latest Trend.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seourl == "wedding-special-ahmedabad" || seourl == "wedding-special-delhi" || seourl == "wedding-special-mumbai") {
+                    var seoData = {
+                        title: 'Designer Labels for Wedding Shopping in ' + results['collectionStore'][0].cityName[0] + '| Bridalwear Shopping',
+                        description: 'Best Bridal wear Designers in ' + results['collectionStore'][0].cityName[0] + ' for Wedding Shopping for Bride’s trousseau Shopping. Look for Best Fashion Designers for Wedding Saree, Lehenga, Indo Western & Evening Gowns.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seourl == "mens-choice-ahmedabad" || seourl == "mens-choice-delhi" || seourl == "mens-choice-mumbai") {
+                    var seoData = {
+                        title: 'Best Menswear Designers in ' + results['collectionStore'][0].cityName[0] + '| Designer Wedding Wear for Men',
+                        description: 'Buy Designer Menswear in ' + results['collectionStore'][0].cityName[0] + '. Look for Designer Sherwani, Indowestern, Pathani, Bandhgala and Jodhpuris for Wedding Shopping for Men.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+
+                if (seourl == "minimal-homes-ahmedabad") {
+                    var seoData = {
+                        title: 'Designer Home Décor Products in ' + results['collectionStore'][0].cityName[0] + '| Interior Designer Labels',
+                        description: 'Love Minimalist Home and Looking for Designer Home Décor Products in ' + results['collectionStore'][0].cityName[0] + '? Check Best Interior Designer Labels for Interior Design and Home Decoration.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seourl == "festive-vibes-ahmedabad" || seourl == "festive-vibes-delhi" || seourl == "festive-vibes-mumbai") {
+                    var seoData = {
+                        title: 'Festive & Occasion Wear Designers in ' + results['collectionStore'][0].cityName[0] + '| Exclusive Designer Wear',
+                        description: 'Looking for Designer Festive wear Collection in ' + results['collectionStore'][0].cityName[0] + '? Best Fashion Designers for Men & Women offering Festive & Occasion Wear for Sarees, Lehenga, Suit, Sherwani & Evening Gowns.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seoData == undefined) {
+                    var seoData = {
+                        title: results['collectionStore'][0].collectionName + ' in ' + results['collectionStore'][0].cityName[0],
+                        description: 'Looking for Designer Festive wear Collection in ' + results['collectionStore'][0].cityName[0] + '? Best Fashion Designers for Men & Women offering Festive & Occasion Wear for Sarees, Lehenga, Suit, Sherwani & Evening Gowns.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
                 }
 
                 if (results['collectionStore'].length > 0) {

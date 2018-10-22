@@ -87,6 +87,10 @@ class SdetailHandler extends BaseAutoBindedClass {
                         cat = catkeyword[0]
                     }
 
+                    if (catkeyword == undefined || cat == undefined) {
+                        cat = 'Clothing Home-Decor Accessories Jewellery';
+                    }
+
                     var seoData = '';
                     if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
                         seoData = {

@@ -18,6 +18,7 @@ const ValidationManager = require(APP_MANAGER_PATH + 'validation');
 const authManager = require(APP_MANAGER_PATH + 'auth');
 const validationManager = new ValidationManager();
 const path = require('path');
+const cookieParser = require('cookie-parser');
 // // Connect to DB
 // mongoose.Promise = global.Promise;
 // mongoose.connect(config.db.MONGO_CONNECT_URL);
@@ -30,6 +31,7 @@ app.use(express.static(path.join(__dirname, "./assets")));
 
 // Use json formatter middleware
 app.use(bodyParser.json());
+app.use(cookieParser());
 app.use(authManager.providePassport().initialize());
 // Set Up validation middleware
 app.use(validationManager.provideDefaultValidator());

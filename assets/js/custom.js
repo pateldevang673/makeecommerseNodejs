@@ -91,11 +91,10 @@ $(function() {
                 if (response.data[i].storeCity !== 'Surat' && response.data[i].storeCity !== 'Vadodara')
                     html += '<div class="bagsmore-item">' +
                     '<img src="https://api.zeepzoop.com/' + response.data[i].storeBanner + '" alt="">' +
-                    '<div class="watermark-logo"> <img src="images/img-watermark-icon.png" alt=""> <span>' + response.data[i].avgRating + '</span> </div>' +
+                    '<div class="watermark-logo"> <img src="/images/img-watermark-icon.png" alt=""> <span>' + response.data[i].avgRating + '</span> </div>' +
                     '<div class="info-share-book">' +
                     '<div class="bag-info-cont"> <a href="/brand/' + response.data[i].URL + '" style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;" class="bag-title">' + response.data[i].storeName + '</a>' +
                     '<p style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;">' + response.data[i].storeDiscription + '</p></div>' +
-                    // '<div class="bookmarkshare-link"> <a href="#"><img src="images/bookmark-icon.png" alt=""></a> <a href="#"><img src="images/share-icon.png" alt=""></a> </div>' +
                     '</div></div>';
             }
             $('.mid-scn-main .bagsmore-list-main').append(html);
@@ -148,7 +147,6 @@ $(function() {
                     html += '<div class="catalouges-item">' +
                         '<div class="catalouges-pic">' +
                         '<a href="/brand/' + response.data[i].storeURL + '""><img class="catimagesize" src="https://api.zeepzoop.com/' + response.data[i].catalogUrl + '"alt="" /></a>' +
-                        // '</div><span class="cate-listitile">' + response.data[i].catalogDescription + '</span>' +
                         '</div>' +
                         '</div>';
                 }
@@ -171,48 +169,6 @@ $(function() {
 });
 
 $(document).ready(function() {
-
-    // var geocoder = new google.maps.Geocoder();
-    // var city = null;
-
-    // function getlocation() {
-    //     if (navigator.geolocation) {
-    //         navigator.geolocation.getCurrentPosition(function(data, err) {
-    //             if (data) {
-    //                 var latlng = {
-    //                     lat: data.coords.latitude,
-    //                     lng: data.coords.longitude
-    //                 }
-    //                 new google.maps.Geocoder().geocode({ 'latLng': latlng }, function(results, status) {
-    //                     if (status == google.maps.GeocoderStatus.OK) {
-    //                         if (results[1]) {
-    //                             var city = null;
-    //                             var c, lc, component;
-    //                             for (var r = 0, rl = results.length; r < rl; r += 1) {
-    //                                 var result = results[r];
-    //                                 if (!city && result.types[0] === 'locality') {
-    //                                     for (c = 0, lc = result.address_components.length; c < lc; c += 1) {
-    //                                         component = result.address_components[c];
-    //                                         if (component.types[0] === 'locality') {
-    //                                             city = component.long_name;
-    //                                             break;
-    //                                         }
-    //                                     }
-    //                                 }
-    //                                 if (city) {
-    //                                     break;
-    //                                 }
-    //                             }
-    //                         }
-    //                     }
-    //                 });
-    //             } else {
-    //                 alert("Location failed");
-    //             }
-    //         });
-    //     }
-    // }
-    // getlocation()
 
     if (localStorage.getItem('storetype') && localStorage.getItem('storetype') == "online") {
         $('select[name="cities"]').css("display", "none");
@@ -281,5 +237,4 @@ $(document).ready(function() {
         $('.sidebarmenu').removeClass('sidebarmenu-show')
         $('.overlay-bg').removeClass('overlay-bg-show')
     });
-
 });

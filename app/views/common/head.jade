@@ -184,7 +184,7 @@ html(lang='en')
         });
         $('.myInput').keyup(function(event) {
           event.preventDefault();
-          var value=$(this).val();        
+          var value=$(this).val();
           if (event.keyCode === 13) {
             if (value !== undefined && value !== null && value !== '') {
               if ($('.shops-slt').hasClass('shopsSlt-current')) {
