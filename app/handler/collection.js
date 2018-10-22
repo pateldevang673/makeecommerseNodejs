@@ -207,8 +207,8 @@ class CollectionHandler extends BaseAutoBindedClass {
                 }
                 if (seoData == undefined) {
                     var seoData = {
-                        title: results['collectionStore'][0].collectionName + ' in ' + results['collectionStore'][0].cityName[0],
-                        description: 'Looking for Designer Festive wear Collection in ' + results['collectionStore'][0].cityName[0] + '? Best Fashion Designers for Men & Women offering Festive & Occasion Wear for Sarees, Lehenga, Suit, Sherwani & Evening Gowns.',
+                        title: 'Zeepzoop Collection',
+                        description: 'Looking for Designer Festive wear Collection in Different cities? Best Fashion Designers for Men & Women offering Festive & Occasion Wear for Sarees, Lehenga, Suit, Sherwani & Evening Gowns.',
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',

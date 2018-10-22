@@ -241,6 +241,9 @@ include common/footer
 script(src='js/custom.js')
 script.
   $(document).ready(function() {
+    if(localStorage.getItem('storetype') && localStorage.getItem('storetype')=="online"){
+      $(".shops-slt").addClass("shopsSlt-current");
+    }
     $('.shops-slt').click(function(e) {
       $(this).toggleClass('shopsSlt-current')
       if($(this).hasClass("shopsSlt-current")){
