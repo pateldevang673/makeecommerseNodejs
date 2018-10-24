@@ -129,7 +129,7 @@ section.shopBothInfPgeMainCont
       - for (var x = 0; x < reviewslength; x++)
         li
           .reviewAuthWrp
-            if reviews[x].userId.userImage!=''
+            if reviews[x].userId
               img(src=global.config.variable.apiPath+'/#{reviews[x].userId.userImage}', alt='img')
             else
               span.reviewpic
