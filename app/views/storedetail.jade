@@ -13,13 +13,15 @@ section.shopBothInfPgeMainCont
       a.shopProfilPicMainWrp(data-fancybox='', href=global.config.variable.apiPath+'/#{store.storeLogo}')
         img(src=global.config.variable.apiPath+'/#{store.storeLogo}', alt='img')
       .shopInfWrap
-        h1.shpTtle.posRel
-          | #{store.storeName}
-          //- img.icnVerified(src='/images/icon-verified.svg', alt='img')
-        if store.address!="<null>" 
-          .shopAdres #{store.address}
+        if store.buisnessOnline==true
+          h1.shpTtle.posRel(style="margin-bottom: 15px;")
+            | #{store.storeName}
+            //- img.icnVerified(src='/images/icon-verified.svg', alt='img')
         else
-          .shopAdres #{store.storeCity}
+          h1.shpTtle.posRel
+            | #{store.storeName}
+        if store.address!="<null>"
+          .shopAdres #{store.address}
         .secDesc
           p
             | #{store.storeDiscription}
