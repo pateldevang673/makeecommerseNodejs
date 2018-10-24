@@ -113,7 +113,7 @@ class HomeHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                    url: 'https://www.zeepzoop.com/',
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }
