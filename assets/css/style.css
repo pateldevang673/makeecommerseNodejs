@@ -2646,7 +2646,7 @@ textarea.frmInpt {
     margin-top: 30px;
     object-fit: cover;
     object-position: 50% 50%;
-    /*height: 450px;*/
+    height: 450px;
 }
 
 .blgPostMainCont ul,
