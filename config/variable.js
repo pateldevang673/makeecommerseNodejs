@@ -1,6 +1,6 @@
 if (process.env.NODE_ENV == "dev") {
     module.exports = {
-        apiPath: 'https://dev.api.zeepzoop.com'
+        apiPath: 'http://dev.api.zeepzoop.com'
     };
 } else if (process.env.NODE_ENV == "production") {
     module.exports = {

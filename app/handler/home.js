@@ -71,6 +71,8 @@ class HomeHandler extends BaseAutoBindedClass {
         } else {
             var cityName = "Ahmedabad";
         }
+        console.log("URLStore----------------")
+        console.log(URLStore)
 
         var mainObj = {};
         Promise.all([
@@ -86,7 +88,7 @@ class HomeHandler extends BaseAutoBindedClass {
                 this.requestAsync(req, URLStore + '/stores/newStore?buisnessOffline=true&location=' + cityName, 'newStoresOffline'),
                 this.requestAsync(req, URLStore + '/stores/search?buisnessOnline=true&startStores=8&endStores=12', 'sponsoredOnline'),
                 this.requestAsync(req, URLStore + '/stores/search?buisnessOffline=true&startStores=12&endStores=16&location=' + cityName, 'sponsoredOffline'),
-                // this.requestAsync(req, URLStore + '/blogs/search?startBlogs=0&endBlogs=5', 'trendingBlogs'),
+                this.requestAsync(req, URLStore + '/blogs/search?startBlogs=0&endBlogs=5', 'trendingBlogs'),
                 this.requestAsync(req, URLStore + '/cities', 'cities'),
                 this.requestVideo(req, "https://www.googleapis.com/youtube/v3/search?order=videocount&part=snippet&channelId=UCQajBUKn91xbZ22StHqeOzg&maxResults=4&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc", 'videos')
                 // 'date type of orders'. Allowed values: [date, rating, relevance, title, videocount, viewcount]
@@ -135,9 +137,8 @@ class HomeHandler extends BaseAutoBindedClass {
                     newStoresOnlineLength: results['newStoresOnline'].length > 6 ? 6 : results['newStoresOnline'].length,
                     newStoresOffline: results['newStoresOffline'],
                     newStoresOfflineLength: results['newStoresOffline'].length > 6 ? 6 : results['newStoresOffline'].length,
-                    // blogs: results['trendingBlogs'],
-                    blogs: [],
-                    lengthBlogs: 0,
+                    blogs: results['trendingBlogs'],
+                    lengthBlogs: 5,
                     cities: results['cities'],
                     citiesLength: results['cities'].length,
                     offersOnline: results['offersOnline'],
