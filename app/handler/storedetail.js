@@ -78,7 +78,9 @@ class SdetailHandler extends BaseAutoBindedClass {
                 }).then((storedata) => {
 
                     var storedatas = JSON.parse(storedata)['data'];
-                    var catkeyword = _.map(storedatas.categoriesIds, 'category');
+                    if (storedatas.storeCatalogs) {
+                        var catkeyword = _.map(storedatas.categoriesIds, 'category');
+                    }
                     var cat = '';
 
                     if (catkeyword.length > 1) {

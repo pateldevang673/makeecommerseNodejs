@@ -7,7 +7,6 @@ const URLStore = global.config.variable.apiPath;
 var LocalStorage = require('node-localstorage').LocalStorage,
     localStorage = new LocalStorage('./scratch');
 
-
 class HomeHandler extends BaseAutoBindedClass {
     constructor() {
         super();

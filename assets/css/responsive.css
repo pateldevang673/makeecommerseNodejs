@@ -1,0 +1,3392 @@
+@media screen and (max-width:1250px) {
+    .headLinksMainWrap>li>a {
+        font-size: 13px
+    }
+
+    .headLinksMainWrap>li {
+        margin-left: 15px
+    }
+
+    .hmeSldTtle {
+        font-size: 42px;
+        line-height: 50px;
+        letter-spacing: 3px
+    }
+
+    .inEshpSelect,
+    .inEShopSwitchWrap {
+        margin-top: 50px
+    }
+
+    .inEshpLbl {
+        font-size: 18px
+    }
+
+    .hmeMainPrlxCont {
+        background-size: cover
+    }
+
+    .main-fullwid-slider .swiper-button-next,
+    .main-fullwid-slider .swiper-button-prev {
+        width: 40px;
+        height: 40px
+    }
+
+    .secTtle {
+        font-size: 38px;
+        line-height: 40px
+    }
+
+    .mb2 {
+        margin-bottom: 15px
+    }
+
+    .mb3 {
+        margin-bottom: 20px
+    }
+
+    .secPad {
+        padding-top: 70px;
+        padding-bottom: 70px
+    }
+
+    .collection-swiper-cont .swiper-slide a {
+        height: 180px
+    }
+
+    .visStoryWrap li,
+    .popularGridWrap li {
+        width: 31.3%;
+        margin-right: 3%;
+        height: 280px;
+        overflow: hidden;
+    }
+
+    .popularGridWrap li {
+        margin-top: 30px
+    }
+
+    .popGrdDesc {
+        font-size: 12px;
+        line-height: 18px
+    }
+
+    .seAlLink {
+        top: 11px;
+        font-size: 15px
+    }
+
+    .home-catalogue-cont .swiper-slide img {
+        height: 390px
+    }
+
+    .editrGridMainWrap li a img {
+        height: 250px
+    }
+
+    .hmeBlgLstImg img {
+        height: 115px
+    }
+
+    .hmeBlgListWrp li {
+        margin-bottom: 20px
+    }
+
+    .apMockupInf .secDesc p {
+        font-size: 18px;
+        line-height: 26px
+    }
+
+    .apMockupInf .secDesc p br {
+        display: none
+    }
+
+    .scrlTpIcon {
+        right: 30px;
+        bottom: 20px;
+        width: 48px;
+        height: 48px
+    }
+
+    .ftrLinks a {
+        font-size: 15px
+    }
+
+    .ftrSocial a {
+        margin: 0 8px 20px;
+        width: 36px
+    }
+
+    .regBrndCatagory li div i,
+    .sideNavMainWrp ul li a i {
+        width: 70px;
+        height: 70px
+    }
+
+    .sideNavMainWrp ul li a {
+        padding: 10px 15px 10px 30px
+    }
+
+    .sideNavTtleWrp {
+        padding-left: 40px
+    }
+
+    .loginLogo {
+        margin: 0 auto 20px;
+        width: 70px
+    }
+
+    .loginTtle {
+        font-size: 19px
+    }
+
+    .loginNote {
+        font-size: 14px;
+        padding-top: 10px
+    }
+
+    .loginMainWrap {
+        width: 410px;
+        padding: 55px 50px
+    }
+
+    .ourStryCont .centerAlign {
+        width: 90%
+    }
+
+    .bnrMainCont {
+        height: 410px
+    }
+
+    .ourStryCont .secDesc ul li,
+    .ourStryCont .secDesc p {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .stryBgTtl {
+        font-size: 29px;
+        padding-top: 10px
+    }
+
+    .ourStryCont .secDesc h2,
+    .ourStryCont .secDesc h3,
+    .ourStryCont .secDesc h4 {
+        font-size: 22px;
+        padding-top: 5px
+    }
+
+    .inrBrndRegTtle {
+        font-size: 26px;
+        margin-bottom: 16px
+    }
+
+    .inrBrndBtn {
+        padding: 6px 20px;
+        font-size: 15px
+    }
+
+    .secTtleLine {
+        font-size: 22px;
+        line-height: 33px
+    }
+
+    .ssZepZopStepWrp li span {
+        font-size: 15px
+    }
+
+    .teamTtle {
+        font-size: 29px;
+        letter-spacing: 1px;
+        margin-bottom: 3px
+    }
+
+    .teamDes {
+        margin-bottom: 10px;
+        font-size: 16px
+    }
+
+    .teamInfWrp {
+        padding: 25px
+    }
+
+    .ourTeamMainWrap li {
+        margin-bottom: 35px
+    }
+
+    .joinZForceFtrCont a {
+        font-size: 23px;
+        margin: 40px 0 150px
+    }
+
+    .joinZForceFtrCont {
+        background-size: auto 100%;
+        background-position: 20% 100%
+    }
+
+    .mgkGrp li {
+        width: 27%
+    }
+
+    .mgkGrp li span {
+        font-size: 20px
+    }
+
+    .sidePads {
+        padding-left: 3%;
+        padding-right: 3%
+    }
+
+    .blgPostMainCont ul li,
+    .secDescx2 p {
+        font-size: 17px;
+        line-height: 27px
+    }
+
+    .fndMemTtle {
+        font-family: 'Open Sans', sans-serif;
+        font-size: 26px
+    }
+
+    .ttleInfSidebyWrp p {
+        font-size: 17px;
+        line-height: 26px
+    }
+
+    .joinZTtle {
+        font-size: 30px;
+        line-height: 38px
+    }
+
+    .curOpninListWrap li a {
+        margin-top: 20px;
+        font-size: 13px;
+        padding: 8px 16px
+    }
+
+    .jobTtle {
+        font-size: 20px;
+        margin-bottom: 3px
+    }
+
+    .jobReqDsc p {
+        font-size: 14px;
+        line-height: 17px
+    }
+
+    .curOpninListWrap li {
+        margin-top: 25px;
+        padding: 25px
+    }
+
+    .aplyNowFormBoxWrp {
+        width: 90%
+    }
+
+    .frmSubBtn {
+        font-size: 15px;
+        padding: 10px 28px
+    }
+
+    .frmInpt2 {
+        font-size: 13px;
+        padding: 8px 13px
+    }
+
+    .regBrndForm {
+        width: 100%;
+        margin-top: -70px
+    }
+
+    .regBrandTtleWrp .secDesc {
+        width: 70%
+    }
+
+    .regBrandTtleWrp .secTtle {
+        font-size: 26px;
+        margin-bottom: 3px
+    }
+
+    .regBrandTtleWrp {
+        bottom: 100px
+    }
+
+    .secTtle2 {
+        font-size: 28px;
+        margin-bottom: 8px
+    }
+
+    .frmInpt {
+        padding: 10px 16px;
+        font-size: 15px;
+        margin-bottom: 24px
+    }
+
+    .mapBlck {
+        height: 500px
+    }
+
+    .blgLstImg img {
+        height: 170px
+    }
+
+    .blgLstTtle {
+        font-size: 18px;
+        line-height: 25px
+    }
+
+    .act_icn i {
+        width: 24px;
+        height: 24px
+    }
+
+    .act_icn {
+        margin: 0 2px
+    }
+
+    .blgLstAuthInf div {
+        font-size: 12px;
+        line-height: 16px
+    }
+
+    .blgLstAuthImg {
+        width: 40px;
+        height: 40px;
+        margin-right: 2px
+    }
+
+    .blgIntTtle {
+        font-size: 36px;
+        line-height: 42px;
+        width: 80%
+    }
+
+    .blgInrTtleFtrWrp .act_icn i {
+        width: 30px;
+        height: 30px
+    }
+
+    .blgPostMainCont>img {
+        margin-top: 20px;
+        height: 400px
+    }
+
+    .contErrMsg>div {
+        margin: 20px 0;
+        padding: 10px 16px;
+        font-size: 13px
+    }
+
+    .secTtleSml {
+        font-size: 32px;
+        line-height: 35px;
+        margin-bottom: 3px
+    }
+
+    .authFeatInfWrp .secDescx2 p,
+    .authInrInfWrp .secDesc p {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .trndIcn {
+        height: 24px
+    }
+
+    .authBlgTtle {
+        margin-bottom: 7px;
+        font-size: 24px;
+        line-height: 24px
+    }
+
+    .authPostItmInf {
+        padding-left: 280px
+    }
+
+    .authPostItmImg {
+        width: 250px
+    }
+
+    .subNwsltrMainWrp {
+        width: 50%;
+        margin-left: 6%
+    }
+
+    .bredCrumbWrp li {
+        font-size: 14px
+    }
+
+    .feaListMainWrp li a img {
+        height: 360px
+    }
+
+    .feaListMainWrp li a span {
+        font-size: 15px;
+        padding: 15px 30px;
+        letter-spacing: 0
+    }
+
+    .feaListMainWrp li {
+        width: 31.3%;
+        margin-right: 3%;
+        margin-bottom: 30px
+    }
+
+    .featShpRate {
+        right: 10px;
+        top: 15px;
+        width: 40px;
+        line-height: 24px;
+        font-size: 12px
+    }
+
+    .shpDireShpNwBtn {
+        margin-top: 20px
+    }
+
+    .shpDireShpNwBtn a {
+        display: block;
+        float: right;
+        clear: both;
+        margin-top: 20px
+    }
+
+    .ratingShpImg {
+        width: 130px
+    }
+
+    .ratingStarMainWrp img {
+        height: 20px
+    }
+
+    .mt30 {
+        margin-top: 20px
+    }
+
+    .editBlgSlde {
+        width: 32%;
+        margin-right: 2%
+    }
+
+    .blgLstInfWrp {
+        padding: 20px
+    }
+
+    .edtProOferBnr {
+        font-size: 14px;
+        padding: 6px 18px;
+        margin-bottom: 7px
+    }
+
+    .edtProfOfferInf {
+        padding: 12px 13px 45px
+    }
+
+    .profPicMainCont img {
+        width: 130px;
+        margin-right: 20px
+    }
+
+    .profPicMainCont .secTtle {
+        font-size: 34px
+    }
+
+    .profPicMainCont {
+        padding: 25px 50px
+    }
+
+    .editFormMainWrp {
+        padding: 30px 0 0
+    }
+
+    .editProfOfferMainCont li img {
+        height: 140px
+    }
+
+    .hmeMainPrlxCont {
+        background-attachment: scroll;
+    }
+
+    .siteMapLinks li a {
+        font-size: 16px;
+    }
+
+    .regBrandMainCont {
+        display: block;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .hide1000 {
+        display: none !important
+    }
+
+    .headOpnMenuIcn {
+        width: 26px;
+        height: 19px
+    }
+
+    .hmeSldTtle {
+        font-size: 40px;
+        line-height: 46px
+    }
+
+    .logoBlck {
+        width: 130px
+    }
+
+    .headSearchOlay .srchInpBx {
+        padding: 15px 15px 15px 45px;
+        font-size: 16px
+    }
+
+    .headSearchOlay .bigSrchIcn {
+        width: 20px;
+        height: 20px
+    }
+
+    .headSrchClse {
+        width: 20px;
+        height: 20px
+    }
+
+    .headSearchOlay {
+        padding-top: 5px
+    }
+
+    .inEshpSelect select {
+        padding: 8px 40px 8px 15px;
+        font-size: 13px
+    }
+
+    .main-fullwid-slider .swiper-button-next,
+    .main-fullwid-slider .swiper-button-prev {
+        width: 34px;
+        height: 34px
+    }
+
+    .secTtle {
+        font-size: 30px;
+        line-height: 34px
+    }
+
+    .collection-swiper-cont .swiper-slide a {
+        height: 145px
+    }
+
+    .swip-ctrlWrp .swiper-button-next,
+    .swip-ctrlWrp .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+        top: 55%
+    }
+
+    .secPad {
+        padding-top: 60px;
+        padding-bottom: 60px
+    }
+
+    .popGrdDesc {
+        font-size: 12px;
+        line-height: 16px
+    }
+
+    .popGridInf {
+        padding: 40px 20px 15px
+    }
+
+    .seAlLink {
+        top: 9px
+    }
+
+    .popGrdTtle {
+        font-size: 16px
+    }
+
+    .home-catalogue-cont .swiper-slide img {
+        height: 310px
+    }
+
+    .editrGridMainWrap li a img {
+        height: 200px
+    }
+
+    .editrGridMainWrap li {
+        margin-top: 30px
+    }
+
+    .hmeBlgFeatImg img {
+        height: 300px
+    }
+
+    .hmeBlgFeatTtle {
+        margin-top: 15px;
+        font-size: 20px;
+        line-height: 25px;
+        width: 100%
+    }
+
+    .blgPostMainCont ul li,
+    .secDesc p {
+        font-size: 13px;
+        line-height: 20px
+    }
+
+    .hmeBlgLstImg img {
+        height: 90px
+    }
+
+    .defBtn {
+        font-size: 13px;
+        padding: 9px 41px 9px 15px
+    }
+
+    .hmeBlgLstTtle {
+        font-size: 16px;
+        margin-bottom: 2px
+    }
+
+    .hmeBlgListWrp {
+        width: 37%;
+        margin-left: 2%
+    }
+
+    .apMockupInf .secDesc p {
+        font-size: 16px;
+        line-height: 24px
+    }
+
+    .appLnkWrp a img {
+        height: 40px
+    }
+
+    .appLnkWrp a {
+        margin: 0 3px
+    }
+
+    .appLnkWrp {
+        margin-top: 30px
+    }
+
+    .ftrSocial a {
+        margin: 0 6px 16px;
+        width: 30px
+    }
+
+    .ftrLinks li {
+        margin: 0 5px
+    }
+
+    .ftMainCont {
+        padding: 60px 0 30px
+    }
+
+    .ftrLinks {
+        margin-bottom: 0
+    }
+
+    .ftrAppLnksWrp {
+        margin: 20px 0;
+    }
+
+    .ftrAppLnksWrp a {
+        width: 120px;
+    }
+
+    .cpyRghtWrp {
+        padding-top: 20px;
+        margin-top: 0
+    }
+
+    .scrlTpIcon {
+        right: 15px;
+        bottom: 15px;
+        width: 44px;
+        height: 44px
+    }
+
+    .hsSubMenu {
+        padding-top: 20px
+    }
+
+    .hsSubMenu:before {
+        top: 7px
+    }
+
+    .sideNavTtleWrp span {
+        font-size: 24px;
+        letter-spacing: 3px
+    }
+
+    .sideNavTtleWrp {
+        padding: 30px 30px 30px 45px
+    }
+
+    .sideMenClose {
+        width: 30px;
+        height: 30px;
+        top: 33px
+    }
+
+    .regBrndCatagory li div i,
+    .sideNavMainWrp ul li a i {
+        width: 60px;
+        height: 60px
+    }
+
+    .loginBtns a {
+        padding: 10px 40px 10px 20px;
+        margin-bottom: 15px
+    }
+
+    .loginBtns a img {
+        width: 20px;
+        margin-right: 10px
+    }
+
+    .loginBtns a span {
+        font-size: 13px
+    }
+
+    .loginMainWrap {
+        padding: 50px
+    }
+
+    .bnrMainCont {
+        height: 390px
+    }
+
+    .bnrBg {
+        background-attachment: scroll;
+        background-size: cover;
+        background-position: 50% 50% !important
+    }
+
+    .ourStryCont .secDesc ul li,
+    .ourStryCont .secDesc p {
+        font-size: 14px;
+        line-height: 22px
+    }
+
+    .ourStryCont .secDesc p,
+    .ourStryCont .secDesc ul {
+        margin-bottom: 20px
+    }
+
+    .ourStryCont .secDesc ul li {
+        padding-left: 18px;
+        background-size: 10px auto
+    }
+
+    .stryBgTtl {
+        font-size: 26px;
+        padding-top: 5px
+    }
+
+    .ourStryCont .secDesc h2,
+    .ourStryCont .secDesc h3,
+    .ourStryCont .secDesc h4 {
+        font-size: 19px
+    }
+
+    .inrBrndRegTtle {
+        font-size: 24px
+    }
+
+    .inrBrndRegiMainCont {
+        padding: 55px 0
+    }
+
+    .secTtleLine {
+        font-size: 20px;
+        line-height: 28px
+    }
+
+    .ssZepZopStepWrp li {
+        padding: 0 15px
+    }
+
+    .ssZepZopStepWrp li span {
+        font-size: 14px
+    }
+
+    .ssZepZopStepWrp li img {
+        margin: 0 auto 10px
+    }
+
+    .ourTeamMainWrap li:nth-child(3n+3),
+    .ourTeamMainWrap li {
+        width: 48%;
+        margin-right: 4%
+    }
+
+    .ourTeamMainWrap li:nth-child(even) {
+        margin-right: 0
+    }
+
+    .joinZForceFtrCont a {
+        font-size: 20px;
+        padding: 12px 22px
+    }
+
+    .blgPostMainCont ul li,
+    .secDescx2 p {
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: 0
+    }
+
+    .joinZTtle {
+        font-size: 26px;
+        line-height: 34px
+    }
+
+    .ttleInfSidebyWrp,
+    .ttleSideByWrp {
+        padding: 0 20px
+    }
+
+    .curOpninListWrap {
+        margin: 30px auto 0
+    }
+
+    .curOpninListWrap li:nth-child(3n+3),
+    .curOpninListWrap li {
+        width: 48%;
+        margin-right: 4%
+    }
+
+    .curOpninListWrap li:nth-child(2n+2) {
+        margin-right: 0
+    }
+
+    .regBrandTtleWrp .secTtle {
+        font-size: 24px
+    }
+
+    .regBrndInpt {
+        padding: 7px 12px;
+        font-size: 14px
+    }
+
+    .regBrndForm {
+        padding: 50px 60px;
+        margin-bottom: 100px;
+    }
+
+    .joinPortMainCont {
+        width: 100%;
+    }
+
+    .frmInpt {
+        padding: 9px 14px;
+        font-size: 14px;
+        margin-bottom: 17px
+    }
+
+    .formMainWrp {
+        padding-top: 10px
+    }
+
+    .mapBlck {
+        height: 440px
+    }
+
+    .contTtle {
+        font-size: 18px;
+        margin-bottom: 5px
+    }
+
+    .blgSideLble {
+        font-size: 17px;
+        margin-bottom: 9px
+    }
+
+    .blgInrSidebarBlck .blgLstAuthInfWrap,
+    .blgInrSidebarBlck .blgLstActionBtns {
+        float: none;
+        clear: both
+    }
+
+    .blgInrSidebarBlck .blgLstActionBtns {
+        margin-top: 15px
+    }
+
+    .contErrMsg>div {
+        margin: 15px 0;
+        padding: 9px 16px;
+        font-size: 12px
+    }
+
+    .blgPostMainCont>h1 {
+        font-size: 30px
+    }
+
+    .blgPostMainCont>h2,
+    .blgPostMainCont>h3 {
+        font-size: 28px
+    }
+
+    .blgPostMainCont>h4 {
+        font-size: 26px
+    }
+
+    .blgPostMainCont>h5 {
+        font-size: 24px
+    }
+
+    .blgPostMainCont>h6 {
+        font-size: 20px
+    }
+
+    .authorFeatPostWrap .sclHov img {
+        height: 290px
+    }
+
+    .authFeatInfWrp .secDescx2 p,
+    .authInrInfWrp .secDesc p {
+        font-size: 15px;
+        line-height: 22px
+    }
+
+    .authInrInfWrp {
+        width: 70%
+    }
+
+    .authInrImg {
+        width: 20%
+    }
+
+    .authPostItmImg {
+        width: 220px
+    }
+
+    .authPostItmInf {
+        padding: 25px 25px 25px 240px
+    }
+
+    .authBlgTtle {
+        margin-bottom: 4px;
+        font-size: 22px
+    }
+
+    .subNwsApLinks {
+        width: 19%;
+        margin-left: 22%
+    }
+
+    .feaListMainWrp li a img {
+        height: 310px
+    }
+
+    .feaListMainWrp li a span {
+        font-size: 14px;
+        padding: 13px 25px
+    }
+
+    .popularGridWrap li a img {
+        height: 160px
+    }
+
+    .shpTtle {
+        font-size: 34px;
+        line-height: 37px;
+        margin-bottom: 2px
+    }
+
+    .shopProfilPicMainWrp {
+        margin-top: 0
+    }
+
+    .shpInfTimings span {
+        font-size: 13px
+    }
+
+    .shpDireShpNwBtn a i {
+        width: 18px;
+        height: 18px
+    }
+
+    .shopInfoActBtnWrp a {
+        padding: 3px;
+        font-size: 12px
+    }
+
+    .shpFeatList li span {
+        font-size: 13px;
+        margin-right: 15px
+    }
+
+    .shopBothCatMainCont .swiper-slide img {
+        height: 255px
+    }
+
+    .reviewMainCont li .secDesc,
+    .shopBothReviewMainCont .reviewMainCont {
+        width: 100%
+    }
+
+    .addToListWrap {
+        margin-top: 10px;
+        height: 250px
+    }
+
+    .addToListWrap li {
+        font-size: 14px
+    }
+
+    .addToListWrap li img {
+        width: 14px
+    }
+
+    .editProfDataWrap {
+        padding: 25px 30px 40px
+    }
+
+    .editFormMainWrp .frmSubBtn {
+        margin-right: 0
+    }
+
+    .editFormMainWrp {
+        padding: 15px 0 0
+    }
+
+    .notificMainWrap li .secDesc {
+        width: 80%
+    }
+
+    .editProfBlckWrp .popularGridWrap li a img {
+        height: 130px
+    }
+
+    .popularGridWrap li {
+        height: 232px;
+        overflow: hidden;
+    }
+
+    .featShpInfWrp {
+        padding: 14px 50px 14px 15px
+    }
+
+    .featShpActBtn .act_icn {
+        margin: 0
+    }
+
+    .editProfNavWrap li a {
+        font-size: 14px;
+        padding: 6px 1px
+    }
+
+    .featShpActBtn .act_icn i,
+    .edtProfOfferInf .act_icn i,
+    .reviewMainCont .act_icn i {
+        width: 20px;
+        height: 20px
+    }
+
+    .myLstLblTrig span {
+        font-size: 15px
+    }
+
+    .myLstLblTrig:after {
+        width: 16px;
+        height: 16px;
+        right: 0;
+        margin-top: -8px
+    }
+
+    .editProfOfferMainCont li {
+        width: 48%;
+        margin-right: 4%;
+        margin-bottom: 30px
+    }
+
+    .editProfOfferMainCont li:nth-child(2n+2) {
+        margin-right: 0
+    }
+
+    .edtPrfleImgWrp {
+        width: 160px
+    }
+
+    .smlTtle {
+        font-size: 15px;
+        padding-top: 0
+    }
+
+    .shareSocialIcn a {
+        margin-top: 8px;
+    }
+
+    .shareSocialIcn a i {
+        width: 30px;
+        height: 30px;
+    }
+
+    .siteMapLinks li a {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-width:768px) {
+    .shopInfWrap .secDesc {
+        display: none;
+    }
+
+    .shopInfoActBtnWrp a {
+        padding: 6px;
+    }
+
+    .hide768 {
+        display: none !important
+    }
+
+    .mainSideNavCont {
+        width: 300px
+    }
+
+    .sideSocialIcns a {
+        padding: 6px;
+        border-width: 1px;
+        margin: 0 5px
+    }
+
+    .switchBtn {
+        width: 30px;
+        height: 30px;
+        top: -12px
+    }
+
+    .switchBg {
+        width: 70px;
+        height: 6px
+    }
+
+    .inEshpLbl {
+        font-size: 16px
+    }
+
+    .hmeSldTtle {
+        font-size: 34px;
+        line-height: 40px
+    }
+
+    .hmeMainPrlxWrp {
+        position: absolute;
+        top: 35%
+    }
+
+    .sideNavTtleWrp {
+        padding: 20px 30px 25px 25px
+    }
+
+    .sideMenClose {
+        width: 26px;
+        height: 26px;
+        top: 23px
+    }
+
+    .regBrndCatagory li div i,
+    .sideNavMainWrp ul li a i {
+        width: 50px;
+        height: 50px
+    }
+
+    .main-fullwid-slider a {
+        overflow: hidden
+    }
+
+    .main-fullwid-slider img {
+        width: 110%;
+        margin-left: -5%
+    }
+
+    .main-fullwid-slider .swiper-button-next,
+    .main-fullwid-slider .swiper-button-prev {
+        width: 30px;
+        height: 30px
+    }
+
+    .secTtle {
+        font-size: 28px;
+        line-height: 32px
+    }
+
+    .mb2 {
+        margin-bottom: 10px
+    }
+
+    .mb3 {
+        margin-bottom: 15px
+    }
+
+    .swip-ctrlWrp .swiper-button-next,
+    .swip-ctrlWrp .swiper-button-prev {
+        width: 30px;
+        height: 30px
+    }
+
+    .popularGridWrap li,
+    .popularGridWrap li:nth-child(3n+3),
+    .popularGridWrap li:nth-child(3) {
+        width: 48%;
+        margin-right: 4%;
+        margin-top: 20px;
+        height: 241px;
+        overflow: hidden;
+    }
+
+    .popularGridWrap li:nth-child(2n+2) {
+        margin-right: 0;
+        height: 241px;
+        overflow: hidden;
+    }
+
+    .popularGridWrap li a img {
+        width: 100%;
+        display: block;
+        height: 170px
+    }
+
+    .collection-swiper-cont .swiper-slide a {
+        height: 160px
+    }
+
+    .popGridInf:before,
+    .popGridInf {
+        transform: none;
+        opacity: 1;
+        visibility: visible
+    }
+
+    .popGrdDesc {
+        display: none
+    }
+
+    .popGridInf {
+        padding: 30px 15px 10px
+    }
+
+    .popGrdTtle {
+        font-size: 15px
+    }
+
+    .seAlLink {
+        top: 7px;
+        font-size: 14px
+    }
+
+    .headMainCont {
+        padding: 15px 0
+    }
+
+    .hmeBlogFeatPost .secDesc,
+    .hmeBlgLstInf,
+    .hmeBlgLstImg,
+    .hmeBlgListWrp,
+    .hmeBlogFeatPost {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+        display: block
+    }
+
+    .hmeBlgListWrp {
+        margin-top: 30px
+    }
+
+    .hmeBlgListWrp li {
+        width: 30%;
+        float: left;
+        margin-right: 4%
+    }
+
+    .hmeBlgListWrp li:nth-child(3n+3) {
+        margin-right: 0
+    }
+
+    .hmeBlgLstTtle {
+        font-size: 15px;
+        margin-top: 10px
+    }
+
+    .hmeBlgListWrp .defBtn {
+        margin-top: 15px
+    }
+
+    .apMockupInf {
+        width: 44%
+    }
+
+    .apMockupInf .secDesc p {
+        font-size: 15px;
+        line-height: 21px
+    }
+
+    .appLnkWrp a img {
+        height: 36px
+    }
+
+    .visStoryWrap iframe {
+        width: 100%;
+        display: block;
+        height: 170px
+    }
+
+    .ftrLinks li {
+        margin: 0 4px
+    }
+
+    .ftrLinks a {
+        font-size: 14px
+    }
+
+    .respNavSubMenus,
+    .respSearchBar {
+        display: block
+    }
+
+    .sideSocialIcns a i {
+        width: 21px;
+        height: 21px
+    }
+
+    .regBrndCatagory li div span,
+    .sideNavMainWrp ul li a span {
+        font-size: 14px
+    }
+
+    .sideNavTtleWrp span {
+        font-size: 22px;
+        letter-spacing: 2px
+    }
+
+    .loginMainWrap {
+        width: 370px
+    }
+
+    .loginBtns a img {
+        width: 18px;
+        margin-right: 6px
+    }
+
+    .loginTtle {
+        font-size: 18px
+    }
+
+    .loginLogo {
+        margin: 0 auto 16px;
+        width: 60px
+    }
+
+    .bnrMainCont {
+        height: 350px
+    }
+
+    .ourStryCont .secDesc p,
+    .ourStryCont .secDesc ul {
+        margin-bottom: 15px
+    }
+
+    .ourStryCont .secDesc ul li,
+    .ourStryCont .secDesc p {
+        font-size: 13px;
+        line-height: 20px
+    }
+
+    .inrBrndRegTtle,
+    .stryBgTtl {
+        font-size: 22px
+    }
+
+    .inrBrndBtn {
+        font-size: 14px
+    }
+
+    .secTtleLine {
+        font-size: 18px;
+        line-height: 25px
+    }
+
+    .ssZepZopStepWrp li {
+        padding: 0 8px
+    }
+
+    .ssZepZopStepWrp li span {
+        font-size: 13px;
+        line-height: 18px
+    }
+
+    .teamDes {
+        margin-bottom: 8px;
+        font-size: 15px
+    }
+
+    .teamTtle {
+        font-size: 27px;
+        letter-spacing: 1px;
+        margin-bottom: 2px
+    }
+
+    .joinZForceFtrCont a {
+        font-size: 18px;
+        padding: 10px 20px;
+        margin: 35px 0 130px
+    }
+
+    .sidePads {
+        padding-left: 2%;
+        padding-right: 2%
+    }
+
+    .mgkGrp li img {
+        margin-bottom: 10px
+    }
+
+    .mgkGrp li span {
+        font-size: 16px
+    }
+
+    .blgPostMainCont ul li,
+    .secDescx2 p {
+        font-size: 15px;
+        line-height: 22px
+    }
+
+    .mgkFundInf {
+        padding: 0 20px
+    }
+
+    .mgkGrp {
+        margin-bottom: 30px
+    }
+
+    .foundMemInfWrp {
+        width: 70%;
+        padding: 0 5%
+    }
+
+    .fndMemTtle {
+        font-size: 24px
+    }
+
+    .mb8 {
+        margin-bottom: 60px
+    }
+
+    .mgkFundInf:after {
+        margin: 40px auto
+    }
+
+    .ttleInfSidebyWrp,
+    .ttleSideByWrp {
+        width: 100%;
+        display: block;
+        border: none;
+        text-align: center
+    }
+
+    .joinZTtle {
+        font-size: 24px;
+        line-height: 32px;
+        text-align: inherit;
+        margin-bottom: 10px
+    }
+
+    .joinZTtle br {
+        display: none
+    }
+
+    .joinZTtle strong {
+        display: block
+    }
+
+    .curOpninListWrap {
+        margin: 20px auto 0
+    }
+
+    .jobTtle {
+        font-size: 18px
+    }
+
+    .curOpninListWrap li a {
+        margin-top: 15px;
+        font-size: 12px;
+        padding: 7px 16px
+    }
+
+    .fancybox-inner .fancybox-content {
+        padding: 35px
+    }
+
+    .frmInpt2 {
+        font-size: 12px;
+        padding: 6px 12px
+    }
+
+    .regBrndCatagory li {
+        width: 22%;
+        margin: 0 1%
+    }
+
+    .regBrandTtleWrp .secTtle {
+        font-size: 22px;
+        line-height: 25px
+    }
+
+    .regBrndForm {
+        padding: 35px 60px;
+        margin-top: -50px
+    }
+
+    .regBrndFields label {
+        font-size: 14px;
+        margin-bottom: 4px
+    }
+
+    .regBrandTtleWrp {
+        bottom: 60px
+    }
+
+    .regBrndTtle {
+        font-size: 20px;
+        margin-bottom: 15px
+    }
+
+    .regBrndFields {
+        margin-top: 25px
+    }
+
+    .regBrndFields fieldset {
+        padding: 0 10px 20px
+    }
+
+    .regBrandTtleWrp .secDesc {
+        width: 100%
+    }
+
+    .pgeNtFndWrp img {
+        margin-bottom: -40px
+    }
+
+    .blgPostMainCont ul li {
+        background-position: 4px 7px;
+        background-size: auto 10px;
+        padding-left: 20px
+    }
+
+    .blgInrSidebarWrap,
+    .authInrBlogPostWrap,
+    .blgInrPostMainCont .blgPostMainCont {
+        width: 100%;
+        float: none
+    }
+
+    .blgInrSidebarWrap {
+        margin-top: 30px
+    }
+
+    .blgInrSidebarBlck {
+        display: inline-block;
+        vertical-align: top;
+        margin-right: 2%;
+        width: 32%;
+        margin-bottom: 0
+    }
+
+    .blgInrSidebarBlck:last-child {
+        margin-right: 0
+    }
+
+    .blgInrSidebarBlck .blgLstInfWrp {
+        padding: 20px
+    }
+
+    .blgPostMainCont>img {
+        margin-top: 20px;
+        height: 300px
+    }
+
+    .blgIntTtle {
+        font-size: 32px;
+        line-height: 36px;
+        width: 100%
+    }
+
+    .blgInrTtleFtrWrp.blgLstFtrWrp {
+        margin-top: 15px
+    }
+
+    .blgInrMainTtleWrp {
+        bottom: 12px
+    }
+
+    .blgPostMainCont>h1,
+    .blgPostMainCont>h2,
+    .blgPostMainCont>h3,
+    .blgPostMainCont>h4,
+    .blgPostMainCont>h5,
+    .blgPostMainCont>h6 {
+        margin-top: 25px
+    }
+
+    .authorPopupMainWrap .secDesc p {
+        font-size: 14px;
+        line-height: 23px
+    }
+
+    .authorPopupMainWrap .secTtle {
+        font-size: 30px;
+        line-height: 32px
+    }
+
+    .authorPopupMainWrap .secDesc {
+        margin-bottom: 15px
+    }
+
+    .authPopupInfWrap {
+        padding: 0 40px 30px
+    }
+
+    .authPopupImg {
+        width: 120px;
+        margin: -60px auto 10px
+    }
+
+    .secTtleSml {
+        font-size: 30px;
+        line-height: 34px
+    }
+
+    .authInrMainInfWrap {
+        padding: 110px 0 50px
+    }
+
+    .authFeatInfWrp .secDescx2 p,
+    .authInrInfWrp .secDesc p {
+        font-size: 14px;
+        line-height: 21px
+    }
+
+    .authorFeatPostWrap .sclHov img {
+        height: 260px
+    }
+
+    .authPostItem {
+        margin-top: 25px
+    }
+
+    .subNwsltrMainWrp {
+        width: 70%;
+        margin-left: 0
+    }
+
+    .subNwsApLinks {
+        width: 21%;
+        margin-left: 8%
+    }
+
+    .subNwsApLinks a {
+        margin: 16px 0
+    }
+
+    .subnwsInp {
+        line-height: 36px;
+        font-size: 13px
+    }
+
+    .subnwsSub {
+        line-height: 36px;
+        font-size: 13px
+    }
+
+    .subNwsltrMainWrp .secTtle {
+        margin-bottom: 15px
+    }
+
+    .hdrPlaceHolder {
+        height: 55px
+    }
+
+    .inrBredCrumbCont {
+        padding: 20px 0
+    }
+
+    .bredCrumbWrp li {
+        font-size: 13px
+    }
+
+    .bredCrumbWrp li:last-child a {
+        padding: 4px 8px
+    }
+
+    .feaListMainWrp li:nth-child(3n+3),
+    .feaListMainWrp li {
+        width: 48%;
+        margin-right: 4%
+    }
+
+    .feaListMainWrp li:nth-child(2n+2) {
+        margin-right: 0
+    }
+
+    .mt60 {
+        margin-top: 40px
+    }
+
+    .shopInfWrap {
+        width: 77%
+    }
+
+    .shopAdres {
+        margin-bottom: 20px;
+        font-size: 14px;
+        width: 80%
+    }
+
+    .shopInfoMainCont {
+        margin-top: -70px
+    }
+
+    .shopRatingMainWrp {
+        bottom: 15px
+    }
+
+    .shopRate span {
+        font-size: 13px;
+        margin-top: 3px
+    }
+
+    .shopRate strong {
+        width: 50px;
+        line-height: 30px;
+        font-size: 14px
+    }
+
+    .shopInfDireTimiWrap {
+        width: 70%;
+        margin-top: 20px;
+        text-align: left;
+        margin-left: 23%;
+        margin-bottom: 15px
+    }
+
+    .shpDireShpNwBtn {
+        margin-top: 10px
+    }
+
+    .shpDireShpNwBtn a {
+        margin-left: 0;
+        margin-right: 15px;
+        margin-top: 0;
+        float: left;
+        clear: none
+    }
+
+    .editProfDataWrap {
+        padding: 20px 20px 30px
+    }
+
+    .editProfNavWrap li {
+        margin-left: 14px
+    }
+
+    .edtFieldWrp {
+        width: 55%
+    }
+
+    .editBlgSlde {
+        width: 48%;
+        margin-right: 4%
+    }
+
+    .editBlgSlde:nth-child(3n+3),
+    .editBlgSlde {
+        width: 48%;
+        margin-right: 4%
+    }
+
+    .editBlgSlde:nth-child(2n+2) {
+        margin-right: 0
+    }
+
+    .profPicMainCont {
+        padding: 25px 36px
+    }
+
+    .notificMainWrap li {
+        padding: 13px 20px
+    }
+
+    .profPicMainCont img {
+        width: 120px
+    }
+
+    .profPicMainCont .secTtle {
+        font-size: 32px;
+        margin: 0
+    }
+
+    .shareSocialIcn {
+        position: static;
+        width: 90%;
+        margin: 0 auto 15px auto;
+    }
+
+    .shareSocialIcn a {
+        margin-right: 10px;
+        margin-bottom: 0;
+        display: inline-block;
+        vertical-align: middle;
+    }
+
+    .shareSocialIcn a i {
+        width: 28px;
+        height: 28px;
+    }
+
+    .siteMapLinks li {
+        width: 33.33%;
+    }
+
+    .curBtnBlck {
+        padding: 12px 60px;
+        font-size: 14px;
+    }
+
+    .portOfrTtle {
+        font-size: 16px;
+        margin-bottom: 3px;
+    }
+
+    .joinPortImg {
+        margin: 50px 0 40px 0;
+    }
+}
+
+@media screen and (max-width:640px) {
+    .collection-swiper-cont .swiper-slide a {
+        height: 130px
+    }
+
+    .popularGridWrap li a img {
+        height: 140px
+    }
+
+    .popularGridWrap li {
+        height: 208px;
+        overflow: hidden;
+
+    }
+
+    .popularGridWrap li,
+    .popularGridWrap li:nth-child(3n+3),
+    .popularGridWrap li:nth-child(3) {
+        width: 48%;
+        height: 208px;
+        overflow: hidden;
+    }
+
+    .popularGridWrap li:nth-child(2n+2) {
+        margin-right: 0;
+        height: 208px;
+        overflow: hidden;
+    }
+
+    .popGrdTtle {
+        font-size: 14px
+    }
+
+    .defBtn {
+        padding: 9px 38px 9px 14px
+    }
+
+    .defBtn:after {
+        right: 13px;
+        margin-top: -8px;
+        width: 16px;
+        height: 16px
+    }
+
+    .apMockupInf,
+    .apMockImg {
+        display: block;
+        width: 50%;
+        margin: 0 auto
+    }
+
+    .apMockupInf {
+        width: 80%;
+        margin-top: 20px
+    }
+
+    .appLnkWrp {
+        margin-top: 20px
+    }
+
+    .visStoryWrap li {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 30px
+    }
+
+    .visStoryWrap li:last-child {
+        margin-bottom: 0
+    }
+
+    .visStyDefWrp {
+        margin-top: 30px
+    }
+
+    .ftrLinks li {
+        margin: 1px 4px
+    }
+
+    .ftrLinks a {
+        font-size: 13px
+    }
+
+    .cpyRghtWrp p {
+        font-size: 13px
+    }
+
+    .ftMainCont {
+        padding: 50px 0 20px
+    }
+
+    .ftMainCont:before {
+        opacity: .5
+    }
+
+    .ftrSocial a {
+        margin: 0 5px 11px;
+        width: 26px
+    }
+
+    .scrlTpIcon {
+        right: 10px;
+        bottom: 10px;
+        width: 34px;
+        height: 34px
+    }
+
+    .cpyRghtWrp {
+        padding-top: 12px;
+    }
+
+    .bnrMainCont {
+        height: 320px
+    }
+
+    .ourStryCont .secPad {
+        padding-top: 50px;
+        padding-bottom: 50px
+    }
+
+    .ourStryCont .secDesc ul li {
+        margin-bottom: 3px;
+        margin-left: 10px
+    }
+
+    .inrBrndRegTtle,
+    .stryBgTtl {
+        font-size: 20px
+    }
+
+    .ourStryCont .secDesc h2,
+    .ourStryCont .secDesc h3,
+    .ourStryCont .secDesc h4 {
+        font-size: 16px
+    }
+
+    .ssZepZopStepWrp {
+        margin-top: -30px
+    }
+
+    .ssZepZopStepWrp li {
+        padding: 0 25px;
+        width: 50%;
+        margin-top: 30px
+    }
+
+    .ssZepZopStepWrp li img {
+        margin: 0 auto 6px
+    }
+
+    .inrBrndBtn {
+        font-size: 13px;
+        padding: 6px 16px
+    }
+
+    .ourTeamMainWrap li:nth-child(3n+3),
+    .ourTeamMainWrap li {
+        margin: 0 auto 15px;
+        width: 100%
+    }
+
+    .gotgZepLogoWrp {
+        width: 60%
+    }
+
+    .mgkGrp li span {
+        font-size: 15px
+    }
+
+    .mgkGrp {
+        margin-bottom: 20px
+    }
+
+    .fndMemTtle span {
+        padding-top: 0
+    }
+
+    .fndMemTtle {
+        font-size: 20px;
+        margin-bottom: 7px
+    }
+
+    .blgPostMainCont ul li,
+    .secDescx2 p {
+        font-size: 14px;
+        line-height: 21px
+    }
+
+    .joinZTtle {
+        font-size: 22px;
+        line-height: 28px
+    }
+
+    .jobReqDsc p {
+        font-size: 13px;
+        line-height: 14px
+    }
+
+    .jobTtle {
+        font-size: 16px
+    }
+
+    .centSub .frmSubBtn {
+        margin: 10px auto 0
+    }
+
+    .frmSubBtn {
+        font-size: 14px;
+        padding: 8px 23px
+    }
+
+    .aplyNwFrm .twoCol fieldset,
+    .aplyNwFrm .threCol fieldset {
+        width: 100%;
+        margin: 0 0 10px
+    }
+
+    .frmInpt2 {
+        font-size: 11px;
+        padding: 5px 9px
+    }
+
+    .fancybox-inner .fancybox-content {
+        padding: 30px
+    }
+
+    .aplyNwFrm fieldset small {
+        font-size: 10px;
+        display: block
+    }
+
+    .frmSubBtn {
+        font-size: 13px;
+        padding: 7px 19px
+    }
+
+    .centSub .frmSubBtn {
+        margin: 3px auto 0
+    }
+
+    textarea.frmInpt2 {
+        height: 70px
+    }
+
+    .regBrndTtle {
+        font-size: 18px;
+        margin-bottom: 11px
+    }
+
+    .regBrndCatagory li {
+        width: 48%;
+        margin: 0 .5% 25px
+    }
+
+    .regBrndCatagory li div i {
+        width: 70px;
+        height: 70px
+    }
+
+    .regBrndCatagory li div span {
+        margin-top: 5px
+    }
+
+    .regBrndFields fieldset {
+        width: 100%;
+        margin: 0;
+        padding: 0 0 15px
+    }
+
+    .regBrndFields {
+        margin-top: 15px
+    }
+
+    .frmInpt {
+        padding: 7px 14px;
+        font-size: 13px;
+        margin-bottom: 12px
+    }
+
+    .secTtle2 {
+        font-size: 24px;
+        margin-bottom: 3px
+    }
+
+    .blgPostMainCont ul li,
+    .secDesc p {
+        margin-bottom: 10px
+    }
+
+    .pgeNtFndWrp img {
+        margin-bottom: -20px
+    }
+
+    .blgLstTtle {
+        font-size: 16px;
+        line-height: 22px
+    }
+
+    .blgLstInfWrp {
+        padding: 20px
+    }
+
+    .contErrMsg>div {
+        font-size: 11px;
+        letter-spacing: .5px
+    }
+
+    .blgPostMainCont>h1 {
+        font-size: 28px
+    }
+
+    .blgPostMainCont>h2,
+    .blgPostMainCont>h3 {
+        font-size: 26px
+    }
+
+    .blgPostMainCont>h4 {
+        font-size: 24px
+    }
+
+    .blgPostMainCont>h5 {
+        font-size: 22px
+    }
+
+    .blgPostMainCont>h6 {
+        font-size: 19px
+    }
+
+    .blgIntTtle {
+        font-size: 26px;
+        line-height: 30px
+    }
+
+    .blgInrTtleFtrWrp .act_icn i {
+        width: 26px;
+        height: 26px
+    }
+
+    .blgLstActionBtns {
+        margin-top: 0
+    }
+
+    .blgPostMainCont>img {
+        height: 240px
+    }
+
+    .blgInrSidebarBlck {
+        margin-right: 0;
+        width: 100%;
+        margin-bottom: 30px
+    }
+
+    .blgInrSidebarBlck .blgLstAuthInfWrap {
+        float: left;
+        clear: none
+    }
+
+    .blgInrSidebarBlck .blgLstActionBtns {
+        float: right;
+        clear: none;
+        margin-top: 9px
+    }
+
+    .authorPopupMainWrap {
+        width: 90%
+    }
+
+    .authPopupInfWrap {
+        padding: 0 30px 25px
+    }
+
+    .authPopupImg {
+        width: 100px;
+        margin: -40px auto 10px;
+        border-width: 3px
+    }
+
+    .authorPopupMainWrap .secDesc p {
+        font-size: 13px;
+        line-height: 19px
+    }
+
+    .authInrImg {
+        vertical-align: top
+    }
+
+    .secTtleSml {
+        font-size: 26px;
+        line-height: 30px
+    }
+
+    .authFeatInfWrp .secDescx2 p,
+    .authInrInfWrp .secDesc p {
+        font-size: 13px;
+        line-height: 19px
+    }
+
+    .trndIcn {
+        height: 21px
+    }
+
+    .authFeatInfWrp {
+        padding: 20px 25px
+    }
+
+    .subNwsApLinks,
+    .subNwsltrMainWrp {
+        width: 100%;
+        display: block;
+        margin-left: 0
+    }
+
+    .subNwsApLinks {
+        text-align: center
+    }
+
+    .subNwsApLinks a {
+        display: inline-block;
+        width: 30%;
+        margin: 30px 10px 0
+    }
+
+    .bredCrumbWrp li:last-child a {
+        padding: 3px 6px
+    }
+
+    .bredCrumbWrp li {
+        font-size: 12px
+    }
+
+    .bredCrumbWrp li:after {
+        margin: 0 7px 0 11px
+    }
+
+    .feaListMainWrp li a span {
+        font-size: 13px;
+        padding: 11px 23px
+    }
+
+    .feaListMainWrp li a img {
+        height: 280px
+    }
+
+    .featShpActBtn .act_icn i {
+        width: 20px;
+        height: 20px
+    }
+
+    .featShpInfWrp {
+        padding: 12px 55px 12px 15px
+    }
+
+    .featShpActBtn .act_icn {
+        margin: 0
+    }
+
+    .mt60 {
+        margin-top: 35px
+    }
+
+    .shopInfWrap {
+        width: 100%;
+        display: block;
+        margin-left: 0
+    }
+
+    .shpTtle {
+        color: #000;
+        font-size: 28px;
+        line-height: 33px
+    }
+
+    .shopAdres {
+        color: #000;
+        margin-bottom: 10px;
+        font-size: 13px;
+        width: 100%
+    }
+
+    .icnVerified {
+        width: 18px;
+        margin-top: -3px
+    }
+
+    .shopInfDireTimiWrap {
+        margin-left: 0
+    }
+
+    .shopInfoMainCont {
+        margin-top: -90px
+    }
+
+    .shopProfilPicMainWrp {
+        width: 130px;
+        margin-bottom: 20px
+    }
+
+    .shpDireShpNwBtn a {
+        padding: 7px 10px 7px 13px;
+        font-size: 12px
+    }
+
+    .act_icn i {
+        width: 22px;
+        height: 22px
+    }
+
+    .shopInfoActBtnWrp li {
+        margin-right: 13px
+    }
+
+    .shopAdres {
+        margin-bottom: 6px;
+        font-size: 13px
+    }
+
+    .shpFeatList li i {
+        margin-right: 2px
+    }
+
+    .shpFeatList li span {
+        font-size: 12px;
+        margin-right: 15px
+    }
+
+    .shopBothCatMainCont .swiper-slide {
+        width: 33%
+    }
+
+    .shopBothCatMainCont .swiper-slide img {
+        height: 215px
+    }
+
+    .reviewAuthWrp img {
+        width: 42px
+    }
+
+    .reviewAuthWrp span {
+        font-size: 14px;
+        margin-left: 7px
+    }
+
+    .reviewStarRatings img {
+        max-height: 16px
+    }
+
+    .reviewStarWrap {
+        margin-top: 10px;
+        margin-bottom: 5px
+    }
+
+    .reviewMainCont li .secDesc {
+        margin-bottom: 0
+    }
+
+    .ratingPopupMainCont,
+    .addToListMainCont {
+        width: 90%
+    }
+
+    .adToInp {
+        font-size: 13px;
+        line-height: 28px
+    }
+
+    .adToSub {
+        height: 30px;
+        font-size: 13px
+    }
+
+    .profPicMainCont {
+        padding: 21px 30px
+    }
+
+    .profPicMainCont img {
+        width: 100px;
+        margin-right: 10px
+    }
+
+    .profPicMainCont .secTtle {
+        font-size: 28px
+    }
+
+    .editProfNavWrap li a {
+        font-size: 13px
+    }
+
+    .editProfNavWrap {
+        margin-top: 25px
+    }
+
+    .smlTtle {
+        font-size: 14px
+    }
+
+    .edtFieldWrp fieldset label {
+        font-size: 13px;
+        margin-bottom: 2px
+    }
+
+    .edtFieldWrp .edtInpt {
+        padding: 6px 10px;
+        font-size: 13px
+    }
+
+    .edtPrfleImgWrp {
+        width: 130px
+    }
+
+    .edtPrfleIcon {
+        width: 36px;
+        height: 36px
+    }
+
+    .notificMainWrap li img {
+        width: 20%;
+        margin-right: 3%
+    }
+
+    .notificMainWrap li .secDesc {
+        width: 75%
+    }
+
+    .notificMainWrap li {
+        padding: 10px 10px 10px 20px
+    }
+
+    .hmeMainPrlxCont {
+        max-height: 400px;
+    }
+
+    .inEshpSelect,
+    .inEShopSwitchWrap {
+        margin-top: 35px;
+    }
+
+    .main-fullwid-slider img {
+        width: 130%;
+        margin-left: -15%;
+    }
+
+    .portOfferListWrap li {
+        padding: 0;
+    }
+
+    .portOfrInf {
+        width: 80%;
+    }
+
+    .portOfrIcn {
+        width: 15%;
+    }
+
+    .portOfrTtle {
+        font-size: 14px;
+        margin-bottom: 1px;
+    }
+
+    .portOfferListWrap li {
+        margin-bottom: 30px;
+    }
+
+    .joinPortMainCont {
+        padding-bottom: 40px;
+    }
+
+    .curBtnBlck {
+        padding: 10px 40px;
+        font-size: 13px;
+    }
+}
+
+@media screen and (max-width:480px) {
+    .headLinksMainWrap>li>a {
+        font-size: 12px
+    }
+
+    .popularGridWrap li {
+        height: 228px;
+        overflow: hidden;
+
+    }
+
+    .popularGridWrap li:nth-child(2n+2) {
+
+        margin-right: 0;
+        height: 228px;
+        overflow: hidden;
+    }
+
+    .popularGridWrap li,
+    .popularGridWrap li:nth-child(3n+3),
+    .popularGridWrap li:nth-child(3) {
+        width: 48%;
+        height: 228px;
+        overflow: hidden;
+    }
+
+    .headOpnMenuIcn {
+        height: 14px
+    }
+
+    .headOpnMenuIcn span {
+        height: 1px
+    }
+
+    .logoBlck {
+        width: 100px
+    }
+
+    .headLinksMainWrap>li.hasSub>a:after {
+        width: 8px;
+        height: 8px;
+        margin-left: 4px
+    }
+
+    .ratingStarMainWrp .br-theme-css-stars .br-widget a {
+        height: 60px !important;
+        width: 34px !important;
+        font-size: 38px !important;
+        margin-top: -10px;
+        margin-left: -7px;
+    }
+
+    .headLinksMainWrap>li>a>span {
+        margin-top: -4px
+    }
+
+    .loginNameLimited {
+        max-width: 85px
+    }
+
+    .hsSubMenu ul li a {
+        font-size: 12px
+    }
+
+    .hsSubMenu {
+        right: -6px;
+        padding-top: 10px
+    }
+
+    .hsSubMenu:before {
+        top: 0;
+        right: 6px;
+        width: 10px;
+        height: 10px
+    }
+
+    .hsSubMenu ul {
+        padding: 6px 5px
+    }
+
+    .hmeSldTtle {
+        font-size: 28px;
+        line-height: 32px
+    }
+
+    .switchBg {
+        width: 65px;
+        height: 5px
+    }
+
+    .switchBtn {
+        width: 26px;
+        height: 26px;
+        top: -11px
+    }
+
+    .inEshpSwitch {
+        margin: 0 15px
+    }
+
+    .inEshpLbl {
+        font-size: 15px
+    }
+
+    .inEShopSwitchWrap {
+        margin-top: 30px
+    }
+
+    .inEshpSelect select {
+        padding: 7px 25px 7px 14px;
+        font-size: 11px;
+        background-size: 10px auto
+    }
+
+    .main-fullwid-slider .swiper-button-next,
+    .main-fullwid-slider .swiper-button-prev {
+        width: 22px;
+        height: 22px;
+        margin-top: -10px
+    }
+
+    .secPad {
+        padding-top: 50px;
+        padding-bottom: 50px
+    }
+
+    .secTtle {
+        font-size: 24px;
+        line-height: 26px
+    }
+
+    .collection-swiper-cont .swiper-slide a {
+        height: 160px
+    }
+
+    .swip-ctrlWrp .swiper-button-next,
+    .swip-ctrlWrp .swiper-button-prev {
+        width: 20px;
+        height: 20px
+    }
+
+    .popularGridWrap li a img {
+        height: 180px
+    }
+
+    .editrGridMainWrap li a img,
+    .collection-swiper-cont .swiper-slide a {
+        height: 160px
+    }
+
+    .editrGridMainWrap li,
+    .popularGridWrap li {
+        width: 100% !important;
+        margin: 0 0 15px !important
+    }
+
+    .editrGridMainWrap li:last-child,
+    .popularGridWrap li:last-child {
+        margin-bottom: 0 !important
+    }
+
+    .seAlLink {
+        top: 5px;
+        font-size: 12px
+    }
+
+    .home-catalogue-cont .swiper-slide img {
+        height: 380px
+    }
+
+    .popularGridWrap,
+    .swip-ctrlWrp {
+        width: 96%;
+        margin: 0 auto
+    }
+
+    .hmeBlgFeatImg img {
+        height: 200px
+    }
+
+    .hmeBlgListWrp li {
+        width: 48%;
+        display: none;
+        margin-right: 4%
+    }
+
+    .hmeBlgListWrp ul li:nth-child(1) {
+        display: block
+    }
+
+    .hmeBlgListWrp ul li:nth-child(2) {
+        display: block;
+        margin-right: 0
+    }
+
+    .hmeBlgLstInf .secDesc p {
+        font-size: 12px;
+        line-height: 16px
+    }
+
+    .hmeBlgLstTtle {
+        font-size: 14px;
+        margin-top: 8px
+    }
+
+    .defBtn {
+        padding: 8px 38px 8px 11px
+    }
+
+    .apMockImg {
+        width: 60%
+    }
+
+    .apMockupInf .secDesc p {
+        font-size: 14px;
+        line-height: 20px
+    }
+
+    .apMockupInf {
+        width: 100%
+    }
+
+    .ftrSocial a {
+        width: 22px
+    }
+
+    .ftMainCont {
+        padding: 45px 0 30px
+    }
+
+    .ftrLinks a {
+        display: block;
+        font-size: 12px
+    }
+
+    .cpyRghtWrp p {
+        font-size: 12px;
+        line-height: 16px
+    }
+
+    .scrlTpIcon {
+        background-size: 55% auto;
+        right: 8px;
+        bottom: 8px;
+        width: 32px;
+        height: 32px
+    }
+
+    .loginClose {
+        width: 26px;
+        height: 26px
+    }
+
+    .loginMainWrap {
+        padding: 30px;
+        width: 300px
+    }
+
+    .loginTtle {
+        font-size: 16px
+    }
+
+    .loginLogo {
+        width: 50px
+    }
+
+    .loginNote {
+        font-size: 13px
+    }
+
+    .bnrMainCont {
+        height: 280px
+    }
+
+    .ourStryBrn img {
+        width: 120%;
+        margin-left: -10%
+    }
+
+    .inrBrndRegTtle,
+    .stryBgTtl {
+        font-size: 18px
+    }
+
+    .ourStryCont .secDesc h2,
+    .ourStryCont .secDesc h3,
+    .ourStryCont .secDesc h4 {
+        font-size: 14px
+    }
+
+    .inrBrndRegiMainCont {
+        padding: 45px 0
+    }
+
+    .secTtleLine {
+        font-size: 16px;
+        line-height: 23px
+    }
+
+    .secTtleLine:after {
+        width: 70px;
+        height: 2px;
+        margin: 18px auto 20px
+    }
+
+    .teamTtle {
+        font-size: 25px
+    }
+
+    .teamDes {
+        font-size: 15px
+    }
+
+    .joinZForceFtrCont a {
+        font-size: 16px;
+        padding: 8px 16px;
+        margin: 0 0 100px
+    }
+
+    .mgkGrp li {
+        float: none;
+        display: block;
+        width: 60%;
+        margin: 0 auto 25px
+    }
+
+    .sidePads {
+        padding-left: 0;
+        padding-right: 0
+    }
+
+    .mgkFundInf {
+        padding: 0
+    }
+
+    .foundMemInfWrp,
+    .foundMemImg {
+        display: block;
+        width: 100%
+    }
+
+    .foundMemInfWrp {
+        padding: 20px 0 0
+    }
+
+    .dirRtl .foundMemInfWrp {
+        direction: ltr;
+        text-align: left
+    }
+
+    .joinZTtle {
+        font-size: 20px;
+        line-height: 26px
+    }
+
+    .ttleInfSidebyWrp,
+    .ttleSideByWrp {
+        padding: 0
+    }
+
+    .curOpninListWrap li:nth-child(3n+3),
+    .curOpninListWrap li {
+        width: 100%;
+        margin-right: 0
+    }
+
+    .curOpninListWrap {
+        margin: 0 auto
+    }
+
+    .curOpninListWrap li {
+        margin-top: 15px;
+        padding: 22px
+    }
+
+    .regBrandTtleWrp .secDesc {
+        display: none
+    }
+
+    .regBrandTtleWrp .secTtle {
+        font-size: 20px;
+        line-height: 22px
+    }
+
+    .regBrndForm {
+        padding: 25px 35px;
+        margin-top: -40px
+    }
+
+    .regBrndCatagory li div i {
+        width: 60px;
+        height: 60px
+    }
+
+    .regBrndCatagory li {
+        width: 47%;
+        margin: 0 .5% 15px
+    }
+
+    .regBrndFields label {
+        font-size: 13px;
+        margin-bottom: 3px
+    }
+
+    .regBrndInpt {
+        padding: 6px 11px;
+        font-size: 13px
+    }
+
+    .regBrandTtleWrp {
+        bottom: 50px
+    }
+
+    .aplyNwFrm .threCol fieldset,
+    .aplyNwFrm .twoCol fieldset,
+    .twoCol .frmInpt {
+        width: 100%;
+        float: none;
+        margin: 0 0 15px
+    }
+
+    .frmSubBtn,
+    .captchaWrap {
+        float: none
+    }
+
+    .frmSubBtn {
+        margin-top: 20px
+    }
+
+    textarea.frmInpt {
+        height: 70px
+    }
+
+    .frmInpt {
+        font-size: 12px
+    }
+
+    .secTtle2 {
+        font-size: 20px;
+        margin-bottom: 1px
+    }
+
+    .contTtle {
+        font-size: 16px;
+        margin-bottom: 4px
+    }
+
+    .contInfMainWrp {
+        padding-bottom: 25px
+    }
+
+    .mapBlck {
+        height: 370px
+    }
+
+    .pgeNtFndWrp {
+        padding-top: 30px;
+        width: 120%;
+        margin-left: -10%
+    }
+
+    .pgeNtFndWrp img {
+        margin-bottom: 0
+    }
+
+    .blgLstImg img {
+        height: 160px
+    }
+
+    .act_icn i {
+        width: 22px;
+        height: 22px
+    }
+
+    .contErrMsg>div {
+        padding: 9px 10px
+    }
+
+    .blgPostMainCont>h1 {
+        font-size: 26px
+    }
+
+    .blgPostMainCont>h2,
+    .blgPostMainCont>h3 {
+        font-size: 25px
+    }
+
+    .blgPostMainCont>h4 {
+        font-size: 23px
+    }
+
+    .blgPostMainCont>h5 {
+        font-size: 21px
+    }
+
+    .blgPostMainCont>h6 {
+        font-size: 18px
+    }
+
+    .blgLstAuthImg {
+        width: 30px;
+        height: 30px;
+    }
+
+    .blgLstAuthInf div {
+        font-size: 11px;
+        line-height: 14px
+    }
+
+    .blgIntTtle {
+        font-size: 22px;
+        line-height: 26px
+    }
+
+    .blgInrTtleFtrWrp .act_icn i {
+        width: 22px;
+        height: 22px
+    }
+
+    .blgInrTtleFtrWrp .act_icn {
+        padding: 4px;
+        margin: 0 1px
+    }
+
+    .blgPostMainCont>img {
+        height: 190px
+    }
+
+    .authInrMainInfWrap {
+        padding-bottom: 40px
+    }
+
+    .authInrImg {
+        width: 30%;
+        display: block;
+        margin: 0 auto 15px
+    }
+
+    .authInrInfWrp {
+        width: 100%;
+        display: block;
+        text-align: center
+    }
+
+    .secTtleSml {
+        font-size: 24px;
+        line-height: 28px
+    }
+
+    .trndIcn {
+        height: 19px
+    }
+
+    .authorFeatPostWrap .sclHov img {
+        height: 180px
+    }
+
+    .authPostItmImg {
+        width: 100%;
+        position: static;
+        height: 160px
+    }
+
+    .authFeatInfWrp,
+    .authPostItmInf {
+        width: 100%;
+        padding: 20px
+    }
+
+    .subnwsInp {
+        line-height: 32px;
+        font-size: 12px;
+        width: 65%
+    }
+
+    .subnwsSub {
+        width: 30%;
+        line-height: 34px;
+        font-size: 12px
+    }
+
+    .subNwsApLinks a {
+        width: 40%;
+        margin: 30px 5px 0
+    }
+
+    .authBlgTtle {
+        margin-bottom: 2px;
+        font-size: 20px
+    }
+
+    .feaListMainWrp li:nth-child(3n+3),
+    .feaListMainWrp li {
+        width: 90%;
+        margin: 0 5% 30px
+    }
+
+    .feaListMainWrp li a img {
+        height: 400px
+    }
+
+    .inrBredCrumbCont {
+        padding: 15px 0
+    }
+
+    .feaListMainWrp {
+        margin-top: 5px
+    }
+
+    .bredCrumbWrp li {
+        font-size: 11px
+    }
+
+    .popularGridWrap li a img {
+        height: 160px
+    }
+
+    .mt60 {
+        margin-top: 30px
+    }
+
+    .popularGridWrap {
+        width: 100%
+    }
+
+    .shpDireShpNwBtn a {
+        padding: 6px 7px 6px 11px;
+        font-size: 11px
+    }
+
+    .shpDireShpNwBtn a i {
+        width: 16px;
+        height: 16px
+    }
+
+    .shopInfDireTimiWrap {
+        width: 100%
+    }
+
+    .shpInfTimings span {
+        font-size: 11px
+    }
+
+    .shpTtle {
+        font-size: 24px
+    }
+
+    .shopRate strong {
+        width: 40px;
+        line-height: 26px;
+        font-size: 13px
+    }
+
+    .shopRate span {
+        font-size: 11px;
+        margin-top: 3px
+    }
+
+    .shopProfilPicMainWrp {
+        width: 120px;
+        margin-bottom: 10px
+    }
+
+    .shopInfoMainCont {
+        margin-top: -70px
+    }
+
+    .shopBothCatMainCont .swiper-slide {
+        width: 70%
+    }
+
+    .shopBothCatMainCont .swiper-slide img {
+        height: 280px
+    }
+
+    .shopBothCatMainCont .swiper-container {
+        overflow: visible
+    }
+
+    .reviewAuthWrp img {
+        width: 36px
+    }
+
+    .shopInfoActBtnWrp li span {
+        font-size: 11px
+    }
+
+    .ratingStarMainWrp {
+        margin-bottom: 10px
+    }
+
+    .ratingShpImg {
+        width: 110px
+    }
+
+    .addToListWrap li {
+        font-size: 12px;
+        padding: 7px 0
+    }
+
+    .addToListWrap li span {
+        margin-left: 25px
+    }
+
+    .adToSub,
+    .adToInp {
+        font-size: 12px
+    }
+
+    .edtFieldWrp,
+    .edtPrfleImgWrp {
+        width: 70%;
+        display: block;
+        float: none;
+        margin: 0 auto
+    }
+
+    .edtFieldWrp fieldset label {
+        text-align: center
+    }
+
+    .editProfBlckWrp .smlTtle {
+        text-align: center
+    }
+
+    .editFormMainWrp {
+        padding: 11px 0 0
+    }
+
+    .edtFieldWrp {
+        margin-top: 30px;
+        width: 90%
+    }
+
+    .editFormMainWrp .frmSubBtn {
+        display: block;
+        margin: 25px auto 0
+    }
+
+    .edtFieldWrp fieldset {
+        margin-bottom: 15px
+    }
+
+    .profPicMainCont .secTtle {
+        font-size: 26px
+    }
+
+    .profPicMainCont img {
+        width: 80px
+    }
+
+    .profPicMainCont {
+        padding: 20px
+    }
+
+    .notificMainWrap li {
+        padding: 15px 20px
+    }
+
+    .notificMainWrap li img {
+        width: 60px;
+        margin: 0 auto 5px;
+        display: block
+    }
+
+    .editProfDataWrap {
+        padding: 15px 0 20px
+    }
+
+    .notificMainWrap li .secDesc {
+        width: 100%;
+        text-align: center
+    }
+
+    .notificMainWrap .secDesc p {
+        font-size: 12px;
+        line-height: 17px
+    }
+
+    .reviewMainCont .act_icn {
+        margin-top: 10px
+    }
+
+    .myLstLblTrig span {
+        font-size: 14px;
+        padding-right: 10px
+    }
+
+    .myLstLblTrig:after {
+        width: 12px;
+        height: 12px;
+        margin-top: -6px
+    }
+
+    .editProfOfferMainCont li,
+    .editBlgSlde:nth-child(3n+3),
+    .editBlgSlde {
+        width: 100%;
+        margin-right: 0
+    }
+
+    .shareSocialIcn a i {
+        width: 24px;
+        height: 24px;
+    }
+
+    .siteMapLinks li {
+        width: 50%;
+        margin-bottom: 1px;
+    }
+
+    .siteMapLinks li a {
+        font-size: 14px;
+    }
+
+    .siteMapMainCont .secTtle2 {
+        margin-bottom: 5px;
+    }
+
+    .siteMapLinks {
+        padding-bottom: 15px;
+        margin-bottom: 20px;
+    }
+
+    .ftrAppLnksWrp a {
+        width: 100px;
+    }
+
+    .joinPortMainCont .stryBgTtl {
+        margin-bottom: 5px;
+    }
+
+    .joinPortImg {
+        margin: 30px 0 30px 0;
+    }
+
+    .joinPortImg img {
+        max-width: 80%;
+    }
+
+    .portOfferListWrap {
+        padding-top: 25px;
+    }
+
+    .portOfrTtle {
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+    .curBtnBlck {
+        padding: 8px 30px;
+        font-size: 12px;
+    }
+}

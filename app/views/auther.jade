@@ -1,107 +1,101 @@
 include common/head
 
-.wrapper
-  .mid-scn-main
-    section.auther-info-scn
-      .fix-wrap
-        .auther-user-pic
-          if authorBlogs[0].authorImage
-            img(src=global.config.variable.apiPath+'/#{authorBlogs[0].authorImage}', alt='')
-        .auther-user-cont
-          h3 #{authorBlogs[0].authorName}
-          p
-            | #{authorBlogs[0].autherInfo}
-    section.blog-post-scn.author-mid-scn
-      .fix-wrap
-        .blog-post-cont
-          .mostv-txt-img
-            h3
-              | Most Viewed 
-              img(src='/images/auther-drop-icon.png',style="width: 15px;", alt='')
-          .author-main-info
-            a(href='/blogs'+'/#{authorBlogs[0].URL}')
-              img(src=global.config.variable.apiPath+'/#{authorBlogs[0].blogPicture}', alt='')
-              h3 #{authorBlogs[0].title}
-              p
-                | #{authorBlogs[0].metaDescription}
-          ul.author-list-main
-            - for (var x = 1; x < authorBlogslength ; x++)
-              li
-                a(href='/blogs'+'/#{authorBlogs[x].URL}')
-                  .author-list-img
-                    img(src=global.config.variable.apiPath+'/#{authorBlogs[x].blogPicture}', alt='')
-                  .author-list-cont
-                    h3 #{authorBlogs[x].title}
-                    p
-                      | #{authorBlogs[x].metaDescription}
-        .blog-post-rcmnd
-          h4 Recommended
-          .blogslide-item
-            a(href='/blogs'+'/#{recommendedBlogs[0].URL}')
-              img(src=global.config.variable.apiPath+'/#{recommendedBlogs[0].blogPicture}', alt='')
-            .blogslide-cont
-              h3
-                a(href='/blogs'+'/#{recommendedBlogs[0].URL}') #{recommendedBlogs[0].title}
-              p
-                | #{recommendedBlogs[0].metaDescription}
-              .blog-user-share
-                .pull-left
-                  span.blog-usepic
-                    img(src=global.config.variable.apiPath+'/#{recommendedBlogs[0].authorImage}', alt='')
-                  .blog-name-date
-                    | #{recommendedBlogs[0].authorName}
-                    br
-                    | #{recommendedBlogs[0].time}
-          .blogslide-item
-            a(href='/blogs'+'/#{recommendedBlogs[1].URL}')
-              img(src=global.config.variable.apiPath+'/#{recommendedBlogs[1].blogPicture}', alt='')
-            .blogslide-cont
-              h3
-                a(href='/blogs'+'/#{recommendedBlogs[1].URL}') #{recommendedBlogs[1].title}
-              p
-                | #{recommendedBlogs[1].metaDescription}
-              .blog-user-share
-                .pull-left
-                  span.blog-usepic
-                    img(src=global.config.variable.apiPath+'/#{recommendedBlogs[1].authorImage}', alt='')
-                  .blog-name-date
-                    | #{recommendedBlogs[1].authorName}
-                    br
-                    |  #{recommendedBlogs[1].time}
-          .blogslide-item
-            a(href='/blogs'+'/#{recommendedBlogs[2].URL}')
-              img(src=global.config.variable.apiPath+'/#{recommendedBlogs[2].blogPicture}', alt='')
-            .blogslide-cont
-              h3
-                a(href='/blogs'+'/#{recommendedBlogs[2].URL}') #{recommendedBlogs[2].title}
-              p
-                | #{recommendedBlogs[2].metaDescription}
-              .blog-user-share
-                .pull-left
-                  span.blog-usepic
-                    img(src=global.config.variable.apiPath+'/#{recommendedBlogs[2].authorImage}', alt='')
-                  .blog-name-date
-                    | #{recommendedBlogs[2].authorName}
-                    br
-                    |  #{recommendedBlogs[2].time}
-    //- section.blog-newsletter
-    //-   .fix-wrap
-    //-     .blognewletter-prt
-    //-       form.form-newsletter
-    //-         label
-    //-           | Subscribe to the ZeepZoop
-    //-           br
-    //-           | Newsletter
-    //-         .newsletter-group
-    //-           input(name='', placeholder='Enter Your Email id', type='text')
-    //-           button.cmn-btn.subscribe-btn(type='submit') Subscribe
-    //-     .blog-app-prt
-    //-       .playstore
-    //-         a(href='https://itunes.apple.com/us/app/zeepzoop/id1332324465?ls=1&mt=8',target="_blank")
-    //-           img(src='/images/app-store-icon.png', alt='')
-    //-         a(href='https://play.google.com/store/apps/details?id=com.zeepzoop.user',target="_blank")
-    //-           img(src='/images/googleplay-icon.png', alt='')
-              
+.authInrMainInfWrap.bg-gry
+  .centerAlign
+    .authInrImg
+      if authorBlogs[0].authorImage
+        img(src=global.config.variable.apiPath+'/#{authorBlogs[0].authorImage}', alt='img')
+    .authInrInfWrp
+      .secTtleSml #{authorBlogs[0].authorName}
+      .secDesc
+        p
+          | #{authorBlogs[0].autherInfo}
+section.blgInrPostMainCont.secPad
+  .centerAlign
+    .authInrBlogPostWrap
+      h2.secTtleSml
+        | Most Viewed
+        img.trndIcn(src='/images/icon-trending.svg', alt='img')
+      .authorFeatPostWrap
+        a.sclHov(href='/blogs'+'/#{authorBlogs[0].URL}')
+          img(src=global.config.variable.apiPath+'/#{authorBlogs[0].blogPicture}', alt='img')
+        .authFeatInfWrp.bg-gry
+          a.authBlgTtle(href='/blogs'+'/#{authorBlogs[0].URL}') #{authorBlogs[0].title}
+          .secDescx2
+            p
+              | #{authorBlogs[0].metaDescription}
+      .authBlogPostList
+        - for (var x = 1; x < authorBlogslength ; x++)
+          .authPostItem
+            a.authPostItmImg.sclHov(href='/blogs'+'/#{authorBlogs[x].URL}')
+              img(src=global.config.variable.apiPath+'/#{authorBlogs[x].blogPicture}', alt='img')
+            .authPostItmInf
+              a.authBlgTtle(href='/blogs'+'/#{authorBlogs[x].URL}') #{authorBlogs[x].title}
+              .secDesc
+                p
+                  | #{authorBlogs[x].metaDescription}   
+    .blgInrSidebarWrap
+      .blgSideLble Recommended
+      .blgInrSidebarBlck
+        a.sclHov.blgLstImg(href='/blogs'+'/#{recommendedBlogs[0].URL}')
+          img(src=global.config.variable.apiPath+'/#{recommendedBlogs[0].blogPicture}', alt='img')
+        .blgLstInfWrp
+          a.blgLstTtle(href='/blogs'+'/#{recommendedBlogs[0].URL}') #{recommendedBlogs[0].title}
+          .secDesc
+            p
+              | #{recommendedBlogs[0].metaDescription}
+          .blgLstFtrWrp
+            .blgLstAuthInfWrap
+              img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{recommendedBlogs[0].authorImage}', alt='img')
+              .blgLstAuthInf
+                div #{recommendedBlogs[0].authorName}
+                div #{recommendedBlogs[0].time}
+      .blgInrSidebarBlck
+        a.sclHov.blgLstImg(href='/blogs'+'/#{recommendedBlogs[1].URL}')
+          img(src=global.config.variable.apiPath+'/#{recommendedBlogs[1].blogPicture}', alt='img')
+        .blgLstInfWrp
+          a.blgLstTtle(href='/blogs'+'/#{recommendedBlogs[1].URL}') #{recommendedBlogs[1].title}
+          .secDesc
+            p
+              | #{recommendedBlogs[1].metaDescription}
+          .blgLstFtrWrp
+            .blgLstAuthInfWrap
+              img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{recommendedBlogs[1].authorImage}', alt='img')
+              .blgLstAuthInf
+                div #{recommendedBlogs[1].authorName}
+                div #{recommendedBlogs[1].time}
+      .blgInrSidebarBlck
+        a.sclHov.blgLstImg(href='/blogs'+'/#{recommendedBlogs[2].URL}')
+          img(src=global.config.variable.apiPath+'/#{recommendedBlogs[2].blogPicture}', alt='img')
+        .blgLstInfWrp
+          a.blgLstTtle(href='/blogs'+'/#{recommendedBlogs[2].URL}') #{recommendedBlogs[2].title}
+          .secDesc
+            p
+              | #{recommendedBlogs[2].metaDescription}
+          .blgLstFtrWrp
+            .blgLstAuthInfWrap
+              img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{recommendedBlogs[2].authorImage}', alt='img')
+              .blgLstAuthInf
+                div #{recommendedBlogs[2].authorName}
+                div #{recommendedBlogs[2].time}
+//- .bg-gry.secPad
+//-   .centerAlign
+//-     .subNwsltrMainWrp
+//-       .secTtle
+//-         | Subscribe to the ZeepZoop 
+//-         br
+//-         | Newsletter
+//-       form.subNwsFrmWrp
+//-         input.subnwsInp(type='text', placeholder='Enter Your Email id')
+//-         input.subnwsSub(type='submit', value='Subscribe')
+//-     .subNwsApLinks
+//-       a(href='#')
+//-         img(src='/images/app-appstore.png', alt='img')
+//-       a(href='#')
+//-         img(src='/images/app-playstore.png', alt='img')
+
 include common/footer
 script.
-  document.body.classList.add("body-register");
+  $(document).ready(function() {
+    $('header').css("background-color","#b21a34")
+  })

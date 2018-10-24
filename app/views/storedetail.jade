@@ -1,174 +1,160 @@
 include common/head
 
-.wrapper
-  section.innerpage-hero
-    img.owl-itemshopbanner(src=global.config.variable.apiPath+'/#{store.storeBanner}', alt='')
-  .mid-scn-main
-    section.shopboth-info-scn
-      .fix-wrap
-        .shobothlogo
-          img(src=global.config.variable.apiPath+'/#{store.storeLogo}', alt='')
-        .shopboth-info-right
-          .shopname-rankvote
-            .shopname-add-prt
-              .shopname-txt #{store.storeName}
-              .shopaddress #{store.storeCity}
-            .shopname-vote-prt
-              .rank-votedtl
-                a.shoprank-number(href='#') #{store.avgRating}
-                span.votes-number-txt #{store.reviewCount} Votes
-          .shopinfo-direction
-            .shopinfo-prt
-              p
-                | #{store.storeDiscription}
-              //- .shopsocial-link
-              //-   a.sclphone-icon(href='tel:#{store.storePhone}')
-              //-     img(src='/images/phone-icon.png', alt='')
-              //-   a.scllink-icon(href='javascript:void(0)')
-              //-     img(src='/images/shopshare-icon.png', alt='')
-              //-   a.sclmenu-icon(href='#')
-              //-     img(src='/images/shopmenu-icon.png', alt='')
-              //-   a.sclrank-icon(href='#') 4.0
-              //-   a.sclshare-icon(href='#')
-              //-     img(src='/images/shopboth-share-icon.png', alt='')
-            .timedirection-prt
-              .hours-Open-closes
-                //- strong Hours: Open
-                //- |  . Closes 8PM 
-                //- i.hours-arrow
-              .direction-shownow-btn
-                if store.buisnessOffline==true
-                  a.bdr-btn.getdir-btn(href='https://www.google.com/maps/?q=#{store.address}', target="_blank")
-                    | GET direction
-                    i
-                if store.buisnessOnline==true
-                  //- a.bdr-btn.shopnow-btn(onClick="trackOutboundLink(this)")
-                  a.bdr-btn.shopnow-btn(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;",rel="nofollow", target="_blank")
-                    | Visit Website
-                    i
-        .goback-shop.clear
-          .breadcream
-            ul
-              li
-                a(href='/') Home
-              li.active #{store.storeName}
-    //- section.cash-shipping-scn
-    //-   .fix-wrap
-    //-     ul.cash-shipping-list
-    //-       li
-    //-         i.redcolor
-    //-         | Cash on Delivery
-    //-       li
-    //-         i.redcolor
-    //-         | Gift Wrap
-    //-       li
-    //-         i.redcolor
-    //-         | Customization Avaliable
-    //-       li
-    //-         i.successcolor
-    //-         | Free Shipping
-    //-       li
-    //-         i.successcolor
-    //-         | Credit/Debit Card accepted
+.bnrMainCont.bnrBgOlay
+  .bnrBg.sizCover(style='background-image: url('+global.config.variable.apiPath+'/#{store.storeBanner}'+')')
+  .shopRatingMainWrp
+    .centerAlign
+      a.shopRate(href='#rate-shop', data-fancybox='')
+        strong #{store.avgRating}
+        span #{store.reviewCount} Votes
+section.shopBothInfPgeMainCont
+  .centerAlign
+    .shopInfoMainCont
+      a.shopProfilPicMainWrp(data-fancybox='', href=global.config.variable.apiPath+'/#{store.storeLogo}')
+        img(src=global.config.variable.apiPath+'/#{store.storeLogo}', alt='img')
+      .shopInfWrap
+        h1.shpTtle.posRel
+          | #{store.storeName}
+          //- img.icnVerified(src='/images/icon-verified.svg', alt='img')
+        .shopAdres #{store.address}
+        .secDesc
+          p
+            | #{store.storeDiscription}
+        ul.shopInfoActBtnWrp
+          li
+            a.act_icn.icn_call(href='tel:#{store.storePhone}')
+              i
+            span Call
+          li
+            a.act_icn.icn_bokMark(href='javascript:void(0)')
+              i
+            span Bookmark
+          li
+            //- a.act_icn.icn_list(data-fancybox='', href='#addToList')
+            a.act_icn.icn_list(href='javascript:void(0)')
+              i
+            span Add to List
+          li
+            a.act_icn.icn_rate(data-fancybox='', href='#rate-shop')
+              i
+            span Rate
+          li
+            a.act_icn.icn_shre(href='javascript:void(0)')
+              i
+            span Share
+        #addToList.addToListMainCont
+          .secTtle2 Add to List
+          ul.addToListWrap
+            li
+              a(href='javascript:void(0)')
+                img(src='/images/icon-star.png', alt='img')
+                span Favorite
+            li
+              a(href='javascript:void(0)')
+                span New
+          .adtoListItemFrm
+            input.adToInp(type='text', placeholder='list name')
+            input.adToSub(type='button', value='Add')
+        #rate-shop.ratingPopupMainCont
+          .ratingShpImg
+            img(src=global.config.variable.apiPath+'/#{store.storeLogo}', alt='img')
+          .secTtle2 #{store.storeName}
+          .ratingStarMainWrp
+            select#example
+              option(value='1') 1
+              |   
+              option(value='2') 2
+              |   
+              option(value='3') 3
+              |   
+              option(value='4') 4
+              |   
+              option(value='5') 5
+          .ratingReviewFrm
+            textarea.regBrndInpt(id="ratedes")
+          .mt30.centSub
+            input.frmSubBtn.giverate(type='button', value='Submit')
+      .shopInfDireTimiWrap
+        .shpInfTimings
+          span
+            //- strong Hours: Open
+            //- |  . Closes 8PM
+        .shpDireShpNwBtn
+          if store.buisnessOffline==true          
+            a.act_icn.icn_pin(href='https://www.google.com/maps/?q=#{store.address}', target="_blank")
+              span Get Direction
+              i
+          if store.buisnessOnline==true
+            a.act_icn.icn_cart(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;",rel="nofollow", target="_blank")
+              span Visit Website
+              i
+    .shopBothBredCrumb.inrBredCrumbCont
+      ul.bredCrumbWrp
+        li
+          a(href='/') Home
+        li
+          a(href='javascript:void(0)') #{store.storeName}
+  //- .shopFeatCont.bg-gry
+  //-   .centerAlign
+  //-     ul.shpFeatList
+  //-       li
+  //-         i.redDot
+  //-         span Cash on Delivery 
+  //-       li
+  //-         i.redDot
+  //-         span Gift Wrap
+  //-       li
+  //-         i.redDot
+  //-         span Customization Avaliable
+  //-       li
+  //-         i.grenDot
+  //-         span Free Shipping
+  //-       li
+  //-         i.grenDot
+  //-         span Credit/Debit Card Accepted
+  .secPad.shopBothCatMainCont
     if storeCatalogs[0] !==undefined
-      section.before_opectiy_color.offers-scn.catelouge-scn(style='background-image:url('+global.config.variable.apiPath+'/#{storeCatalogs[0].catalogUrl}'+')')
-        .fix-wrap
-          h2 CATALOUGE
-        .offers-slider-main.storedetail_slider_height
-          .owl-carousel.catelougeSlider
-            - for (var x = 0; x < lengthstoreCatalogs; x++)
-              .item
-                .offers-item
-                  img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='#{store.storeName}')
-    section.shop-topoffer-scn
-      .fix-wrap
-        //- .owl-carousel.offername
-          - for (var x = 0; x < lengthstoreOffers; x++)
-            .item
-              .offer-off-scn
-                .offer-off-img
-                  img(src=global.config.variable.apiPath+'/#{storeOffers[x].offerPicture}', alt='')
-                .offer-offclaim-cont
-                  .offer-offclaimleft
-                    h3 #{storeOffers[x].offerName}
-                    p
-                      | #{storeOffers[x].offerDescription}
-                  .offer-off-share
-                    a(href='#')
-                      img(src='/images/shopshare-icon.png', alt='')
-                    a(href='#')
-                      img(src='/images/shopboth-share-icon.png', alt='')
-                  .offer50-shoppingclaim
-                    .offer50-shopping
-                      span.fiftyparcent-txt #{storeOffers[x].percentageDiscount}%
-                      span.off-more-txt
-                        | OFF ON SHOPPING OF MORE THAN INR 1000     
-                      .offer-dates
-                        | #{moment(storeOffers[x].startDate).format('Do MMMM')} to #{moment(storeOffers[x].endDate).format('Do MMMM')}
-                    // a.dft-btn.claimoffer-btn(href='#') CLAIM THIS OFFER         
-        .top-cst-review
-          h3 Top customer reviews
-          .top-cst-r-prt
-            ul
-              - for (var x = 0; x < reviewslength; x++)
-                li
-                  .review-username-pic
-                    span.review-pic
-                      if reviews[x].userId
-                        img(src=global.config.variable.apiPath+'/#{reviews[x].userId.userImage}', alt='')
-                      else
-                        span.review-pic
-                    if reviews[x].userId
-                      span.review-username-txt #{reviews[x].userId.name}                        
-                    else
-                      span.review-username-txt Zeepzoop User
+      img.shpBothCatBg(src=global.config.variable.apiPath+'/#{storeCatalogs[0].catalogUrl}', alt='img')
+    .centerAlign
+      h2.secTtle CATALOUGE
+      .swiper-container
+        .swiper-wrapper
+          - for (var x = 0; x < lengthstoreCatalogs; x++)
+            .swiper-slide.sclHov
+              a(href='javascript:void(0);')
+                img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='#{store.storeName}')          
+.secPad.shopBothReviewMainCont
+  .centerAlign
+    ul.reviewMainCont
+      - for (var x = 0; x < reviewslength; x++)
+        li
+          .reviewAuthWrp
+            if reviews[x].userId.userImage!=''
+              img(src=global.config.variable.apiPath+'/#{reviews[x].userId.userImage}', alt='img')
+            else
+              span.reviewpic
+            if reviews[x].userId
+              span #{reviews[x].userId.name}
+            else
+              span Zeepzoop User
+          .reviewStarWrap
+            .reviewStarRatings
+              select(class="staterate")
+                option(value='1') 1
+                option(value='2') 2
+                option(value='3') 3
+                option(value='4') 4
+                option(value='5') 5
+              script(type='text/javascript').
+                $('.staterate').barrating({theme:'css-stars',readonly: true,initialRating:'#{reviews[x].ratingScale}'})
+          .secDesc
+            p
+              | #{reviews[x].description}
+    .mt30
+      // a.defBtn(href='#') See All Reviews
 
-                  .shopreview-info
-                    .shopreview-nicepdt
-                      .write-star-main
-                        select(class="staterate")
-                          option(value='1') 1
-                          |   
-                          option(value='2') 2
-                          |   
-                          option(value='3') 3
-                          |   
-                          option(value='4') 4
-                          |   
-                          option(value='5') 5
-                        script(type='text/javascript').
-                          $('.staterate').barrating({theme:'css-stars',readonly: true,initialRating:'#{reviews[x].ratingScale}'})
-
-                    p
-                      | #{reviews[x].description}
-                  // .review-comment
-                  //   label Comment
-                  //   textarea(name='', cols='', rows='')
-                  //   button.send-btn(type='button') send             
-            //- a.seeall-reviews(href='#') See All Reviews
-          .write-review-prt
-            .write-r-title write Your review
-            .write-r-form
-              .write-star-main
-                select#example
-                  option(value='1') 1
-                  |   
-                  option(value='2') 2
-                  |   
-                  option(value='3') 3
-                  |   
-                  option(value='4') 4
-                  |   
-                  option(value='5') 5
-              form(action='#')
-                //- input(name='', placeholder='Give Your reviews Title', type='text')
-                textarea(name='', cols='', rows='',id="ratedes")
-                button.giverate.submit-btn(type='button') SUBMIT
 include common/footer
 script.
-  document.body.classList.add("body-shopboth");
-script.
-
   var trackOutboundLink = function(e) {
     var url='#{store.webAddress}'
     window
@@ -178,46 +164,16 @@ script.
     });
   }
   $(document).ready(function(e) {
-    $('.reviewlike').click(function(e) {
-      $(this).toggleClass('reviewlike-fill');
-    });
     var urate={}
     $('#example').barrating({
       theme: 'css-stars',
       initialRating: -1,
       onSelect: function(value, text, event) {
         if (typeof(event) !== 'undefined') {
-          urate.ratingScale=value;
+          urate.ratingScale=value;          
         } else {
-
+            console.log("rate is not given yet")
         }
-      }
-    });
-
-    $('.scllink-icon').click(function(e){
-     if(localStorage.getItem('UserTo')!==null&&localStorage.getItem('userD')!==null&&localStorage.getItem('userName')!==null){
-        var obj={};
-        obj.storeId = '#{store._id}';
-        obj.bookmark = true;
-        var token=localStorage.getItem('UserTo');
-        var request = $.ajax({
-          headers: {
-              'Authorization': "JWT "+ token,
-              'Content-Type': "application/json;charset=UTF-8"
-          },
-          type: "POST",
-          url: "https://api.zeepzoop.com/stores/bookmark",
-          data: JSON.stringify(urate),
-          dataType: "json"
-        });
-        request.done(function(response) {
-            window.location.reload();
-        }); 
-        request.fail(function(jqXHR, textStatus) {
-            alert("Request failed: " + textStatus);
-        });
-      }else{        
-          alert("You Have To Login First");
       }
     });
 
@@ -253,36 +209,31 @@ script.
         alert("You Have To Login First");
       }
     });
-  });
-  
-  $('.catelougeSlider').owlCarousel({
-    autoplay: true,
-    nav:true,
-    margin:30,
-    center: true,
-    loop: true,
-    nav: false,
-    responsive:{
-    0:{
-    items:1,
-    margin:2,
-    },
-    600:{
-    items:3,
-    margin:5,
-    },
-    1000:{
-    items:3,
-    },
-    1100:{
-    items:5,
-    }
-    }
-  });
-  $('.offername').owlCarousel({
-    autoplay: true,
-    nav:false,
-    items:1,
-    loop: true,
-    animateOut: 'fadeOut'
+  })
+  var newlyAddSwiper = new Swiper('.shopBothCatMainCont .swiper-container', {
+  loop: true,
+  slidesPerView: 5,
+  spaceBetween: 50,
+  slidesPerGroup: 1,
+  effect: 'coverflow',
+  slideToClickedSlide: true,
+  grabCursor: true,
+  centeredSlides: true,
+  slidesPerView: 'auto',
+  autoplay: {
+  delay: 4000,
+  disableOnInteraction: false,
+  },
+  coverflowEffect: {
+  rotate: 0,
+  stretch: 0,
+  depth: 70,
+  modifier: 3,
+  slideShadows: true,
+  },
+  breakpoints: {
+  600: {
+  spaceBetween: 20
+  }
+  }
   });

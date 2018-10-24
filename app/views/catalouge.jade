@@ -1,31 +1,27 @@
 include common/head
 
-.wrapper
-  .mid-scn-main
-    section.catalouges-scn
-      .fix-wrap
-        br
-        .breadcream
-          ul
-            li
-              a(href='/') Home
-            li.active Catalouge
-        .catalouges-pdt-main
-          - for(var x = 0; x < catelougelength ; x++)
-            if catelouge[x]
-              .catalouges-item
-                .catalouges-pic
-                  a(href='/brand/#{catelouge[x].storeURL}')
-                    img.catimagesize(src=global.config.variable.apiPath+'/#{catelouge[x].catalogUrl}', alt='')
-                // span.cate-listitile #{catelouge[x].catalogDescription}
-        a.load-more(id="loadcatalouge",style="cursor: pointer;") Load More
-    // section.catalouges-featured
-    //   .fix-wrap
-    //     h2 Featured shops
-    //     p
-    //       | Per ante nonummy metus platea ipsum porttitor neque justo mauris nec laoreet. Eu euismod tincidunt neque quam feugiat lacinia cras laoreet 
-    //     p
-    //       | Lacinia ac iaculis vulputate mattis imperdiet. Lobortis hendrerit. Magna arcu fermentum Duis feugiat. Leo eu purus nam ridiculus donec 
+.hdrPlaceHolder
+.inrBredCrumbCont
+  .centerAlign
+    ul.bredCrumbWrp
+      li
+        a(href='/') Home
+      li
+        a(href='javascript:void(0)') Catalouge
+.featListMainCont
+  .centerAlign
+    ul.feaListMainWrp
+      - for(var x = 0; x < catelougelength ; x++)
+        if catelouge[x]
+          li
+            a(href='/brand/#{catelouge[x].storeURL}')
+              img(src=global.config.variable.apiPath+'/#{catelouge[x].catalogUrl}', alt='img')
+              // span #{catelouge[x].catalogDescription}
+    .txtCent
+      a.defBtn.loadMore(id="loadcatalouge") Load More
+
 include common/footer
 script.
-  document.body.classList.add("body-register");
+  $(document).ready(function() {
+    $('header').css("background-color","#b21a34")
+  })

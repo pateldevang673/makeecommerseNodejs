@@ -1,37 +1,32 @@
 include common/head
 
-.wrapper      
-  section.innerpage-hero
-    img(src='/images/Clothing.jpg', alt='')
-  .mid-scn-main
-    section.bagsmore-scn
-      .fix-wrap
-        .breadcream
-          ul
-            li
-              a(href='/') Home
-            li.active #{category.category}
-        .bagsmore-list-main.fix_height_width_img_content
-          - for(var x=0;x<12;x++)
-            .bagsmore-item
-              img(src=global.config.variable.apiPath+'/#{categoryStore[x].storeBanner}', alt='')
-              .watermark-logo
-                img(src='/images/img-watermark-icon.png', alt='')
-                span #{categoryStore[x].avgRating}
-              .info-share-book
-                .bag-info-cont
-                  a.bag-title(style="display: -webkit-box; -webkit-line-clamp: 1; -webkit-box-orient: vertical; overflow: hidden;",
-                    href='/brand/#{categoryStore[x].URL}') #{categoryStore[x].storeName}
-                  p(style="display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden;") #{categoryStore[x].storeDiscription}
-                .bookmarkshare-link
-                  // a(href='#')
-                  //   img(src='/images/bookmark-icon.png', alt='')
-                  // a(href='#')
-                  //   img(src='/images/share-icon.png', alt='')
-        .view-all-btn
-        a.right_button.cmn-btn(id="loadmoreshop",name="Clothing", style="cursor: pointer;margin-left: 495px;") Load More        
+.bnrMainCont.bnrBgOlay
+  .bnrBg(data-stellar-background-ratio='1.3', style="background-image: url('/images/Clothing.jpg');")  
+.inrBredCrumbCont
+  .centerAlign
+    ul.bredCrumbWrp
+      li
+        a(href='/') Home
+      li
+        a(href='javascript:void(0)') #{category.category}
+section.secPad.pt0
+  .centerAlign
+    ul.featShopMainCont.popularGridWrap
+      - for(var x=0;x<categoryStorelength;x++)
+        li
+          if categoryStore[x]
+            a.sclHov(href='/brand/#{categoryStore[x].URL}')
+              img(src=global.config.variable.apiPath+'/#{categoryStore[x].storeBanner}', alt='img')
+            .featShpInfWrp
+              a.popGrdTtle(href='/brand/#{categoryStore[x].URL}') #{categoryStore[x].storeName}
+              .popGrdDesc #{categoryStore[x].storeDiscription}
+            // .featShpActBtn
+            //   a.act_icn.icn_bokMark(href='#')
+            //     i
+            //   a.act_icn.icn_sharePst(href='#')
+            //     i
+            .featShpRate #{categoryStore[x].avgRating}     
+    .txtCent.mt60
+      a.defBtn.loadMore(id="loadmoreshop",name="Clothing") Load More
+
 include common/footer
-script.
-  document.body.classList.add("body-innerpage");
-
-

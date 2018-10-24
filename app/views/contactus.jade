@@ -1,125 +1,134 @@
 include common/head
 
-.wrapper
-  .contact_page
-    .cpage_top_bottom_margin
-      .page_in_big_images.padding_bottom_45
-        img(src='/images/contectus-banner.jpg')
-      .cont
-        .contact_form
-          .contact_form_head
-            h3.main_red_heading get in touch
-          form
-            .left_part_form
-              input.contact_field(type='text', name='namw',id="nameIn", placeholder='Name')
-              input.contact_field(type='text', name='City',id="cityIn", placeholder='City')
-            .right_part_form
-              input.contact_field(type='email', name='email',id="emailIn", placeholder='Email')
-              input.contact_field(type='text', name='Phone',id="phoneIn", placeholder='Phone')
-            textarea.contact_field.textera_part(placeholder='Message',id="descIn")
-            .capcha_and_submit
-              .left_part_form.capch_code
-              .right_part_form.submit_butt_part
-                input.submit_butt(type='button', name='submit_butt',style="margin-left: -93px;", value='Submit')
-      .googlemap_part(id="map")
-      .last_part_contact
-        .contact_form_head
-          h3.main_red_heading contact us
-        address
-          b.color_black  Zeepzoop Incorporation LLP.
-          br
-          |  302, Saumya Square, Near Govardhan Party Plot, 
-          br
-          |  Thaltej, Ahmedabad, Gujarat 380015
-          br
-          |  +91 96248 51199, connect@zeepzoop.com
+.bnrMainCont.bnrBgOlay
+  .bnrBg(data-stellar-background-ratio='1.3', style="background-image: url('/images/banner-contact.jpg');")
+section.secPad
+  .centerAlign.sidePads
+    h1.secTtle2.txtCent GET IN TOUCH
+    form.formMainWrp
+      .contErrMsg
+        .sucMsg Form Submitted Sucessfully
+        .errMsg Error Occured please fill all fields
+      .twoCol
+        input.frmInpt(type='text',id="nameIn",placeholder='First Name')
+        input.frmInpt(type='text',id="emailIn",placeholder='Email')
+      .twoCol
+        input.frmInpt(type='text',id="cityIn", placeholder='City')
+        input.frmInpt(type='text', id="phoneIn",placeholder='Phone')
+      textarea.frmInpt(placeholder='Message',id="descIn")
+      .capMainWrap
+        .captchaWrap
+          //- .g-recaptcha(data-sitekey='6LemsWYUAAAAAJ3wAiesPie-pcbMlFMxGmCW94fl')
+        input.frmSubBtn.submit_butt(type='button', value='Submit')
+section.contMapMainCont
+  #map.mapBlck
+  .contInfMainWrp
+    .secTtle2 CONTACT US
+    h1.contTtle Zeepzoop Incorporation LLP.
+    .secDesc.secDescx2
+      p
+        | Govardhan Party Plot, 302, Saumya Square, Near, 
+        br
+        | Thaltej, Ahmedabad, Gujarat 380015
+      p
+        | +91 96248 51199, 
+        a(href="https://mail.google.com/mail/?view=cm&fs=1&to=connect@zeepzoop.com", target='_blank') connect@zeepzoop.com
+.scrlTpIcon
+
 include common/footer
+script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyBR05fBcMGqpvqAXgMd-KIHbeHiZnaQVlI&libraries=places')
 script.
-  document.body.classList.add("body-register");
-  function myMap() {
+  var google;
+  google.maps.event.addDomListener(window, 'load', init);
+  function init() {
+    "use strict";
     var mapOptions = {
-        center: new google.maps.LatLng(23.04864, 72.508605),
-        zoom: 20,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    }
-    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+    zoom: 12,
+    scrollwheel: false,
+    disableDefaultUI: true,
+    center: new google.maps.LatLng(23.002605, 72.496718),
+    styles: [{ "featureType": "administrative", "elementType": "geometry", "stylers": [{ "color": "#a7a7a7" }] }, { "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{ "visibility": "on" }, { "color": "#737373" }] }, { "featureType": "landscape", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "color": "#ededed" }] }, { "featureType": "landscape.man_made", "elementType": "labels", "stylers": [{ "hue": "#ff0000" }] }, { "featureType": "landscape.natural", "elementType": "labels.text.fill", "stylers": [{ "color": "#000000" }] }, { "featureType": "landscape.natural", "elementType": "labels.text.stroke", "stylers": [{ "color": "#ffffff" }, { "visibility": "on" }] }, { "featureType": "landscape.natural", "elementType": "labels.icon", "stylers": [{ "saturation": "7" }, { "visibility": "on" }, { "hue": "#ff0000" }, { "lightness": "0" }, { "gamma": "0.97" }, { "weight": "0.01" }] }, { "featureType": "poi", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "color": "#e0e0e0" }] }, { "featureType": "poi", "elementType": "labels", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "labels.text", "stylers": [{ "visibility": "off" }] }, { "featureType": "poi", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "labels.text.fill", "stylers": [{ "color": "#696969" }] }, { "featureType": "road", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "road.highway", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }] }, { "featureType": "road.highway", "elementType": "geometry.stroke", "stylers": [{ "visibility": "on" }, { "color": "#b3b3b3" }] }, { "featureType": "road.arterial", "elementType": "geometry.fill", "stylers": [{ "color": "#ffffff" }] }, { "featureType": "road.arterial", "elementType": "geometry.stroke", "stylers": [{ "color": "#d6d6d6" }] }, { "featureType": "road.local", "elementType": "geometry.fill", "stylers": [{ "visibility": "on" }, { "color": "#ffffff" }, { "weight": 1.8 }] }, { "featureType": "road.local", "elementType": "geometry.stroke", "stylers": [{ "color": "#d7d7d7" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "color": "#808080" }, { "visibility": "off" }] }, { "featureType": "water", "elementType": "geometry.fill", "stylers": [{ "color": "#d3d3d3" }] }, { "featureType": "water", "elementType": "labels.text", "stylers": [{ "color": "#000000" }] }]
+    };
+    var mapElement = document.getElementById('map');
+    var map = new google.maps.Map(mapElement, mapOptions);
+    var marker = new google.maps.Marker({
+    position: new google.maps.LatLng(23.04864, 72.508605),
+    map: map,
+    title: 'Zeepzoop Incorporation LLP.',
+    icon: '/images/mapPin.png'
+    });
   }
-script(src='https://maps.googleapis.com/maps/api/js?key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc&callback=myMap')
-script.
   $('.submit_butt').click(function(e){
-      var nameReg = /^[A-Za-z]+$/;
-      var numberReg =  /^[0-9]+$/;
-      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+    var nameReg = /^[A-Za-z]+$/;
+    var numberReg =  /^[0-9]+$/;
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
-      var names = $('#nameIn').val();
-      var city = $('#cityIn').val();
-      var email = $('#emailIn').val();
-      var telephone = $('#phoneIn').val();
-      var message = $('#descIn').val();
+    var names = $('#nameIn').val();
+    var city = $('#cityIn').val();
+    var email = $('#emailIn').val();
+    var telephone = $('#phoneIn').val();
+    var message = $('#descIn').val();
 
-      var inputVal = new Array(names, city, email, telephone, message);
+    var inputVal = new Array(names, city, email, telephone, message);
 
-      //- var inputMessage = new Array("name", "city", "email address", "telephone number", "message");
+    //- var inputMessage = new Array("name", "city", "email address", "telephone number", "message");
 
-      $('.error').hide();
+    $('.error').hide();
 
-      if(names== ""){
-          alert('Please enter your name');
-          return false;
-      }  else if(email == ""){
-          alert('Please enter your email');
-          return false;
-      } else if(!emailReg.test(email)){
-          alert(' Please enter a valid email address');
-          return false;
-      } else if(city == ""){
-          alert('Please enter your city');
-          return false;
-      }  else if(telephone == ""){
-          alert(' Please enter your phone');
-          return false;
-      } else if(!numberReg.test(telephone)){
-          alert(' Numbers only');
-          return false;
-      } else if(message== ""){
-          alert(' Please enter your message');
-          return false;
-      }  
-      if(telephone.length < 10){
-          alert(' Please enter valid phone');
-          return false;
-      }
+    if(names== ""){
+        alert('Please enter your name');
+        return false;
+    }  else if(email == ""){
+        alert('Please enter your email');
+        return false;
+    } else if(!emailReg.test(email)){
+        alert(' Please enter a valid email address');
+        return false;
+    } else if(city == ""){
+        alert('Please enter your city');
+        return false;
+    }  else if(telephone == ""){
+        alert(' Please enter your phone');
+        return false;
+    } else if(!numberReg.test(telephone)){
+        alert(' Numbers only');
+        return false;
+    } else if(message== ""){
+        alert(' Please enter your message');
+        return false;
+    }  
+    if(telephone.length < 10){
+        alert(' Please enter valid phone');
+        return false;
+    }
 
-      var obj={};
-      obj.name = names;
-      obj.email = city;
-      obj.city = email;
-      obj.message = message;
-      obj.phone = telephone;
-      obj.contactfor = "contact Registration";
-
-      var request = $.ajax({
-        headers: {
-            'Authorization': "maximumvsminimumsecurity",
-            'Content-Type': "application/json;charset=UTF-8"
-        },
-        type: "POST",
-        url: "https://api.zeepzoop.com/feedbacks/createcontact",
-        data: JSON.stringify(obj),
-        dataType: "json"
-      });
-      request.done(function(response) {
-          alert("Your detail's is submitted")
-      }); 
-      request.fail(function(jqXHR, textStatus) {
-          alert("Request failed: " + textStatus);
-      });
-      $("#nameIn").val('');
-      $("#cityIn").val('');
-      $("#emailIn").val('');
-      $("#phoneIn").val('');
-      $("#descIn").val('');
-      
-      
+    var obj={};
+    obj.name = names;
+    obj.email = email;
+    obj.city =  city;
+    obj.message = message;
+    obj.phone = telephone;
+    obj.contactfor = "contact Registration";
+    
+    var request = $.ajax({
+      headers: {
+          'Authorization': "maximumvsminimumsecurity",
+          'Content-Type': "application/json;charset=UTF-8"
+      },
+      type: "POST",
+      url: "https://api.zeepzoop.com/feedbacks/createcontact",
+      data: JSON.stringify(obj),
+      dataType: "json"
+    });
+    request.done(function(response) {
+        alert("Your detail's is submitted")
+    }); 
+    request.fail(function(jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
+    });
+    $("#nameIn").val('');
+    $("#cityIn").val('');
+    $("#emailIn").val('');
+    $("#phoneIn").val('');
+    $("#descIn").val('');
   })
-

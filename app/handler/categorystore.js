@@ -53,6 +53,9 @@ class CategoryHandler extends BaseAutoBindedClass {
         } else {
             var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=5a51e507ff645771bf57dc14';
         }
+        if (req.query.city) {
+            urls += "&location=" + req.query.city;
+        }
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'categoryStore'),
                 // this.requestAsync(req, URLStore + "/categories/" + req.params.id, 'category')
@@ -101,6 +104,9 @@ class CategoryHandler extends BaseAutoBindedClass {
             var urls = '/stores/search?trending=true&isActive=true&buisnessOnline=true&category=5a51e528ff645771bf57dc15';
         } else {
             var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=5a51e528ff645771bf57dc15';
+        }
+        if (req.query.city) {
+            urls += "&location=" + req.query.city;
         }
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'categoryStore'),
@@ -151,6 +157,9 @@ class CategoryHandler extends BaseAutoBindedClass {
         } else {
             var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=5a51e544ff645771bf57dc16';
         }
+        if (req.query.city) {
+            urls += "&location=" + req.query.city;
+        }
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'categoryStore'),
                 // this.requestAsync(req, URLStore + "/categories/" + req.params.id, 'category')
@@ -199,6 +208,9 @@ class CategoryHandler extends BaseAutoBindedClass {
             var urls = '/stores/search?trending=true&isActive=true&buisnessOnline=true&category=5a51e626ff645771bf57dc1a';
         } else {
             var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=5a51e626ff645771bf57dc1a';
+        }
+        if (req.query.city) {
+            urls += "&location=" + req.query.city;
         }
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'categoryStore'),

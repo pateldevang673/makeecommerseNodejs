@@ -205,6 +205,78 @@ class CollectionHandler extends BaseAutoBindedClass {
                         domain: 'zeepzoop.com'
                     }
                 }
+                if (seourl == "casually-classy") {
+                    var seoData = {
+                        title: 'Casual Classy Dresses, Shoes & Accessories – Casual Style Fashion India',
+                        description: 'Casual Classy is Your Style? Buy most amazing Designer Casual Dresses, Shoes, Shirts, Tops, and other Accessories for Men and Women. Your ultimate place to find Designer Labels for Casual Style Fashion in India.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seourl == "designer-saree") {
+                    var seoData = {
+                        title: 'Top Designer Labels to Buy Designer Sarees in India -  Handpicked Sarees',
+                        description: 'Look for Top Designer Labels to Buy Designer Sarees in India including Designer Patch Work Sarees, Embroidery Saree, Hand Painted Saree, Traditional Indian Handloom Sarees etc. Handpicked Sarees from best designer labels in India.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seourl == "wedding-special") {
+                    var seoData = {
+                        title: 'Top Wedding Dress Designers In India to Buy Bridal & Groom Wear Online',
+                        description: 'Approaching Wedding and Looking for a Designer Wedding Dress for your Big Day? Here we handpicked Top Wedding Dress Designers In India to Buy Bridal & Groom Wear Online.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seourl == "festive-vibes") {
+                    var seoData = {
+                        title: 'Designer Ethnic Wear | Latest Festive & Occasion Wear Collection',
+                        description: 'Looking for Designer Ethnic Wear for upcoming Festive season? Find latest festive wear and Occasion Wear Collection for Men and Women from India’s Best Designer Labels.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seourl == "mens-choice") {
+                    var seoData = {
+                        title: 'Designer Menswear Collection in India | Wedding Collection for Groom',
+                        description: 'Exclusive Menswear Collection from India’s Best Designer Labels. Look for Designer Casual Wear, Mens Ethnic Wear like Sherwani, Bandhgala and Suit for Wedding and Festive Season.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
+                if (seourl == "minimal-homes") {
+                    var seoData = {
+                        title: 'Designer Home Décor | Minimalist Home Décor Products Online',
+                        description: 'Build your Dream home with Quirky Designer Home Décor Items. Best Home Décor Brands in India for Minimalist Home Décor Products online.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                }
                 if (seoData == undefined) {
                     var seoData = {
                         title: 'Zeepzoop Collection',

@@ -1,398 +1,289 @@
 include common/head
 
-.wrapper
-  section.innerpage-hero
-    img(src='images/blog-hero-img.jpg')
-  |   
-  .mid-scn-main
-    section.trendding-scn
-      .fix-wrap
-        h2 TRENDING
-        |         
-        .owl-carousel.trenddingSlider
+.bnrMainCont.bnrBgOlay
+  .bnrBg(data-stellar-background-ratio='1.3', style="background-image: url('/images/banner-blog.jpg');")
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle TRENDING
+    //- a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
           - for(var x=0;x<trendingBlogslength;x++)
-            .item
-              .blogslide-item
-                a(href='/blogs'+'/#{trendingBlogs[x].URL}')
-                  img(src=global.config.variable.apiPath+'/#{trendingBlogs[x].blogPicture}', alt='')
-                |               
-                .blogslide-cont
-                  h3
-                    a(href='/blogs'+'/#{trendingBlogs[x].URL}') #{trendingBlogs[x].title}
-                  |                 
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{trendingBlogs[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{trendingBlogs[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{trendingBlogs[x].URL}') #{trendingBlogs[x].title}
+                .secDesc
                   p
                     | #{trendingBlogs[x].metaDescription}
-                  |                 
-                  .blog-user-share
-                    .pull-left
-                      span.blog-usepic
-                        img(src=global.config.variable.apiPath+'/#{trendingBlogs[x].authorImage}', alt='',style="height: 52px;")
-                      |                     
-                      .blog-name-date
-                        | #{trendingBlogs[x].authorName}
-                        br
-                        |                       #{trendingBlogs[x].time}
-                    |                   
-            |           
-    section.lightgrey-bg.newlyadded-scn
-      .fix-wrap
-        h2 NEWLY ADDED
-        |         
-        .owl-carousel.newlyAddedSlider
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{trendingBlogs[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{trendingBlogs[x].authorName}
+                      div #{trendingBlogs[x].time}
+                  .blgLstActionBtns
+                    a.act_icn.icn_bokMark(href='#')
+                      i
+                    a.act_icn.icn_likeThmb(href='#')
+                      i
+                    a.act_icn.icn_sharePst(href='#')
+                      i          
+      .swiper-button-prev
+      .swiper-button-next
+section.secPad.bg-gry.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Newly added
+    // a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
           - for(var x=0;x<newBlogslength;x++)
-            .item
-              .blogslide-item
-                a(href='/blogs'+'/#{newBlogs[x].URL}')
-                  img(src=global.config.variable.apiPath+'/#{newBlogs[x].blogPicture}', alt='')
-                |               
-                .blogslide-cont
-                  h3
-                    a(href='/blogs'+'/#{newBlogs[x].URL}') #{newBlogs[x].title}
-                  |                 
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{newBlogs[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{newBlogs[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{newBlogs[x].URL}') #{newBlogs[x].title}
+                .secDesc
                   p
                     | #{newBlogs[x].metaDescription}
-                  |                 
-                  .blog-user-share
-                    .pull-left
-                      span.blog-usepic
-                        img(src=global.config.variable.apiPath+'/#{newBlogs[x].authorImage}', alt='',style="height: 52px;")
-                      |                     
-                      .blog-name-date
-                        | #{newBlogs[x].authorName}
-                        br
-                        |                       #{newBlogs[x].time}
-                    |                   
-            |       
-    section.trendding-scn
-      .fix-wrap
-        h2 BRAND STORIES
-        |         
-        .owl-carousel.BrandStorysSlider
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{newBlogs[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{newBlogs[x].authorName}
+                      div #{newBlogs[x].time}
+                  .blgLstActionBtns
+                    a.act_icn.icn_bokMark(href='#')
+                      i
+                    a.act_icn.icn_likeThmb(href='#')
+                      i
+                    a.act_icn.icn_sharePst(href='#')
+                      i          
+      .swiper-button-prev
+      .swiper-button-next
+section.secPad.bg-gry.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Brand Stories
+    //- a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
           - for(var x=0;x<brandStorieslength;x++)
-            .item
-              .blogslide-item
-                a(href='/blogs'+'/#{brandStories[x].URL}')
-                  img(src=global.config.variable.apiPath+'/#{brandStories[x].blogPicture}', alt='')
-                |               
-                .blogslide-cont
-                  h3
-                    a(href='/blogs'+'/#{brandStories[x].URL}') #{brandStories[x].title}
-                  |                 
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{brandStories[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{brandStories[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{brandStories[x].URL}') #{brandStories[x].title}
+                .secDesc
                   p
                     | #{brandStories[x].metaDescription}
-                  |                 
-                  .blog-user-share
-                    .pull-left
-                      span.blog-usepic
-                        img(src=global.config.variable.apiPath+'/#{brandStories[x].authorImage}', alt='',style="height: 52px;")
-                      |                     
-                      .blog-name-date
-                        | #{brandStories[x].authorName}
-                        br
-                        |                       #{brandStories[x].time}
-                    |                   
-            |           
-    section.lightgrey-bg.fashionhacks-scn
-      .fix-wrap
-        h2 FASHION
-        |         
-        .owl-carousel.fashionhacksSlider
-            - for(var x=0;x<fashionlength;x++)
-              .item
-                .blogslide-item
-                  a(href='/blogs'+'/#{fashion[x].URL}')
-                    img(src=global.config.variable.apiPath+'/#{fashion[x].blogPicture}', alt='')
-                  |               
-                  .blogslide-cont
-                    h3
-                      a(href='/blogs'+'/#{fashion[x].URL}') #{fashion[x].title}
-                    |                 
-                    p
-                      | #{fashion[x].metaDescription}
-                    |                 
-                    .blog-user-share
-                      .pull-left
-                        span.blog-usepic
-                          img(src=global.config.variable.apiPath+'/#{fashion[x].authorImage}', alt='',style="height: 52px;")
-                        |                     
-                        .blog-name-date
-                          | #{fashion[x].authorName}
-                          br
-                          |                       #{fashion[x].time}
-                      |                   
-    |     
-    section.aroundworld-scn
-      .fix-wrap
-        h2 AROUND THE WORLD
-        |         
-        .owl-carousel.aroundworldSlider
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{brandStories[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{brandStories[x].authorName}
+                      div #{brandStories[x].time}
+                  .blgLstActionBtns
+                    a.act_icn.icn_bokMark(href='#')
+                      i
+                    a.act_icn.icn_likeThmb(href='#')
+                      i
+                    a.act_icn.icn_sharePst(href='#')
+                      i
+      .swiper-button-prev
+      .swiper-button-next
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Fashion
+    // a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
+          - for(var x=0;x<fashionlength;x++)
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{fashion[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{fashion[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{fashion[x].URL}') #{fashion[x].title}
+                .secDesc
+                  p
+                    | #{fashion[x].metaDescription}
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{fashion[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{fashion[x].authorName}
+                      div #{fashion[x].time}
+                  .blgLstActionBtns
+                    a.act_icn.icn_bokMark(href='#')
+                      i
+                    a.act_icn.icn_likeThmb(href='#')
+                      i
+                    a.act_icn.icn_sharePst(href='#')
+                      i
+      .swiper-button-prev
+      .swiper-button-next
+section.secPad.bg-gry.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Around The World
+    //- a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
           - for(var x=0;x<AroundTheWorldlength;x++)
-            .item
-              .blogslide-item
-                a(href='/blogs'+'/#{AroundTheWorld[x].URL}')
-                  img(src=global.config.variable.apiPath+'/#{AroundTheWorld[x].blogPicture}', alt='')
-                |               
-                .blogslide-cont
-                  h3
-                    a(href='/blogs'+'/#{AroundTheWorld[x].URL}') #{AroundTheWorld[x].title}
-                  |                 
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{AroundTheWorld[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{AroundTheWorld[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{AroundTheWorld[x].URL}') #{AroundTheWorld[x].title}
+                .secDesc
                   p
                     | #{AroundTheWorld[x].metaDescription}
-                  |                 
-                  .blog-user-share
-                    .pull-left
-                      span.blog-usepic
-                        img(src=global.config.variable.apiPath+'/#{AroundTheWorld[x].authorImage}', alt='',style="height: 52px;")
-                      |                     
-                      .blog-name-date
-                        | #{AroundTheWorld[x].authorName}
-                        br
-                        |                       #{AroundTheWorld[x].time}
-                    |                   
-            |           
-    section.lightgrey-bg.aroundworld-scn
-      .fix-wrap
-        h2 HOME DECOR
-        |         
-        .owl-carousel.homedecorSlider
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{AroundTheWorld[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{AroundTheWorld[x].authorName}
+                      div #{AroundTheWorld[x].time}
+                  .blgLstActionBtns
+                    a.act_icn.icn_bokMark(href='#')
+                      i
+                    a.act_icn.icn_likeThmb(href='#')
+                      i
+                    a.act_icn.icn_sharePst(href='#')
+                      i          
+      .swiper-button-prev
+      .swiper-button-next
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Home Decor
+    // a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
           - for(var x=0;x<HomeDecorlength;x++)
-            .item
-              .blogslide-item
-                a(href='/blogs'+'/#{HomeDecor[x].URL}')
-                  img(src=global.config.variable.apiPath+'/#{HomeDecor[x].blogPicture}', alt='')
-                |               
-                .blogslide-cont
-                  h3
-                    a(href='/blogs'+'/#{HomeDecor[x].URL}') #{HomeDecor[x].title}
-                  |                 
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{HomeDecor[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{HomeDecor[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{HomeDecor[x].URL}') #{HomeDecor[x].title}
+                .secDesc
                   p
                     | #{HomeDecor[x].metaDescription}
-                  |                 
-                  .blog-user-share
-                    .pull-left
-                      span.blog-usepic
-                        img(src=global.config.variable.apiPath+'/#{HomeDecor[x].authorImage}', alt='',style="height: 52px;")
-                      |                     
-                      .blog-name-date
-                        | #{HomeDecor[x].authorName}
-                        br
-                        |                       #{HomeDecor[x].time}
-                    |                   
-            |           
-         
-    |     
-    section.weddingbells-scn
-      .fix-wrap
-        h2 WEDDING
-        |         
-        .owl-carousel.weddingbellsSlider
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{HomeDecor[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{HomeDecor[x].authorName}
+                      div #{HomeDecor[x].time}
+                  .blgLstActionBtns
+                    a.act_icn.icn_bokMark(href='#')
+                      i
+                    a.act_icn.icn_likeThmb(href='#')
+                      i
+                    a.act_icn.icn_sharePst(href='#')
+                      i
+      .swiper-button-prev
+      .swiper-button-next
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Wedding
+    //- a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
           - for(var x=0;x<WeddingBellslength;x++)
-            .item
-              .blogslide-item
-                a(href='/blogs'+'/#{WeddingBells[x].URL}')
-                  img(src=global.config.variable.apiPath+'/#{WeddingBells[x].blogPicture}', alt='')
-                |               
-                .blogslide-cont
-                  h3
-                    a(href='/blogs'+'/#{WeddingBells[x].URL}') #{WeddingBells[x].title}
-                  |                 
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{WeddingBells[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{WeddingBells[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{WeddingBells[x].URL}') #{WeddingBells[x].title}
+                .secDesc
                   p
                     | #{WeddingBells[x].metaDescription}
-                  |                 
-                  .blog-user-share
-                    .pull-left
-                      span.blog-usepic
-                        img(src=global.config.variable.apiPath+'/#{WeddingBells[x].authorImage}', alt='',style="height: 52px;")
-                      |                     
-                      .blog-name-date
-                        | #{WeddingBells[x].authorName}
-                        br
-                        |                       #{WeddingBells[x].time}
-                    |                   
-    |     
-    section.lightgrey-bg.culture-heritage-scn
-      .fix-wrap
-        h2 CULTURE &amp; HERITAGE
-        |         
-        .owl-carousel.cultureheritageSlider
-           - for(var x=0;x<CultureHeritagelength;x++)
-            .item
-              .blogslide-item
-                a(href='/blogs'+'/#{CultureHeritage[x].URL}')
-                  img(src=global.config.variable.apiPath+'/#{CultureHeritage[x].blogPicture}', alt='')
-                |               
-                .blogslide-cont
-                  h3
-                    a(href='/blogs'+'/#{CultureHeritage[x].URL}') #{CultureHeritage[x].title}
-                  |                 
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{WeddingBells[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{WeddingBells[x].authorName}
+                      div #{WeddingBells[x].time}
+                  .blgLstActionBtns
+                    a.act_icn.icn_bokMark(href='#')
+                      i
+                    a.act_icn.icn_likeThmb(href='#')
+                      i
+                    a.act_icn.icn_sharePst(href='#')
+                      i
+      .swiper-button-prev
+      .swiper-button-next
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Culture &amp; Heritage
+    // a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
+          - for(var x=0;x<CultureHeritagelength;x++)
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{CultureHeritage[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{CultureHeritage[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{CultureHeritage[x].URL}') #{CultureHeritage[x].title}
+                .secDesc
                   p
                     | #{CultureHeritage[x].metaDescription}
-                  |                 
-                  .blog-user-share
-                    .pull-left
-                      span.blog-usepic
-                        img(src=global.config.variable.apiPath+'/#{CultureHeritage[x].authorImage}', alt='',style="height: 52px;")
-                      |                     
-                      .blog-name-date
-                        | #{CultureHeritage[x].authorName}
-                        br
-                        |                       #{CultureHeritage[x].time}
-                    |                   
-            |           
-  |   
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{CultureHeritage[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{CultureHeritage[x].authorName}
+                      div #{CultureHeritage[x].time}
+                  .blgLstActionBtns
+                    a.act_icn.icn_bokMark(href='#')
+                      i
+                    a.act_icn.icn_likeThmb(href='#')
+                      i
+                    a.act_icn.icn_sharePst(href='#')
+                      i
+      .swiper-button-prev
+      .swiper-button-next
+
 include common/footer
+
 script.
-  document.body.classList.add("body-blog");
-|  
-script.
-  $(document).ready(function(){
-  $('.shops-slt').click(function(e) {
-  $(this).toggleClass('shopsSlt-current')
-  });
-  $('.trenddingSlider').owlCarousel({
-  loop:true,
-  margin:15,
-  responsiveClass:true,
-  dots: false,
-  nav:true,
-  responsive:{
-  0:{
-  items:1,
-  },
-  600:{
-  items:2,
-  },
-  1000:{
-  items:3,
-  }
-  }
-  })
-  $('.newlyAddedSlider').owlCarousel({
-  loop:true,
-  margin:15,
-  responsiveClass:true,
-  nav:true,
-  dots: false,
-  responsive:{
-  0:{
-  items:1,
-  },
-  600:{
-  items:2,
-  },
-  1000:{
-  items:3,
-  }
-  }
-  })
-  $('.BrandStorysSlider').owlCarousel({
-  loop:true,
-  margin:15,
-  responsiveClass:true,
-  nav:true,
-  dots: false,
-  responsive:{
-  0:{
-  items:1,
-  },
-  600:{
-  items:2,
-  },
-  1000:{
-  items:3,
-  }
-  }
-  })
-  $('.fashionhacksSlider').owlCarousel({
-  loop:true,
-  margin:15,
-  nav:true,
-  responsiveClass:true,
-  dots: false,
-  responsive:{
-  0:{
-  items:1,
-  },
-  600:{
-  items:2,
-  },
-  1000:{
-  items:3,
-  }
-  }
-  })
-  $('.aroundworldSlider').owlCarousel({
-  loop:true,
-  margin:15,
-  nav:true,
-  responsiveClass:true,
-  dots: false,
-  responsive:{
-  0:{
-  items:1,
-  },
-  600:{
-  items:2,
-  },
-  1000:{
-  items:3,
-  }
-  }
-  })
-  $('.homedecorSlider').owlCarousel({
-  loop:true,
-  margin:15,
-  nav:true,
-  responsiveClass:true,
-  dots: false,
-  responsive:{
-  0:{
-  items:1,
-  },
-  600:{
-  items:2,
-  },
-  1000:{
-  items:3,
-  }
-  }
-  })
-  $('.weddingbellsSlider').owlCarousel({
-  loop:true,
-  margin:15,
-  nav:true,
-  responsiveClass:true,
-  dots: false,
-  nav:true,
-  responsive:{
-  0:{
-  items:1,
-  },
-  600:{
-  items:2,
-  },
-  1000:{
-  items:3,
-  }
-  }
-  })
-  $('.cultureheritageSlider').owlCarousel({
-  loop:true,
-  margin:15,
-  nav:true,
-  responsiveClass:true,
-  dots: false,
-  nav:true,
-  responsive:{
-  0:{
-  items:1,
-  },
-  600:{
-  items:2,
-  },
-  1000:{
-  items:3,
-  }
-  }
-  })
-  });
+    $('.blogCarouselWrap').each(function() {
+    var $swipCont = $(this),
+    $swipNxt = $swipCont.parent().children('.swiper-button-next'),
+    $swipPrv = $swipCont.parent().children('.swiper-button-prev');
+    //alert($swipCont);
+    var swip = new Swiper($swipCont, {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    navigation: {
+    nextEl: $swipNxt,
+    prevEl: $swipPrv
+    },
+    breakpoints: {
+    600: {
+    slidesPerView: 1,
+    spaceBetween: 0
+    },
+    768: {
+    slidesPerView: 2,
+    spaceBetween: 10
+    },
+    1000: {
+    slidesPerView: 2,
+    spaceBetween: 15
+    },
+    1250: {
+    spaceBetween: 30
+    }
+    }
+    });
+    })

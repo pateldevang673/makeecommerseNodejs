@@ -1,101 +1,205 @@
 include common/head
 
-.wrapper
-  .contact_page
-    .cpage_top_bottom_margin
-      .page_in_big_images.padding_bottom_45
-        img(src='/images/registeryourbrand.jpg')
-      .cont
-        .contact_form
-          .contact_form_head
-          form
-            .left_part_form
-              input.contact_field(type='text', name='namw',id="nameIn", placeholder='Name')
-              input.contact_field(type='text', name='City',id="searchTextField", placeholder='City')
-            .right_part_form
-              input.contact_field(type='email', name='email',id="emailIn", placeholder='Email')
-              input.contact_field(type='text', name='Phone',id="phoneIn", placeholder='Phone')
-            .capcha_and_submit
-              .left_part_form.capch_code
-              .right_part_form.submit_butt_part
-                input.submit_butt(type='button',style="margin: -91px;margin-bottom: 5px;", name='submit_butt', value='Submit')
+.bnrMainCont.bnrBgOlay
+  .bnrBg(data-stellar-background-ratio='1.3', style="background-image: url('/images/banner-register-brand.jpg');")
+  .regBrandTtleWrp
+    .centerAlign
+      h1.secTtle Register Your Brand on ZeepZoop and Attract More Visitors & Sales
+      .secDesc
+        p
+          | 12 Cities, 20,000+ Visitors Monthly and No Registration Cost, Yes It's Free. Fill in Details and We Will Help You to Get Your Brand Register on ZeepZoop!
+.regBrandMainCont
+  .centerAlign
+    form.regBrndForm
+      .regBrndTtle Select Catagory
+      .regBrndSelCat
+        ul.regBrndCatagory
+          li
+            input.regBrndCatagorySelect(type='radio', name='catagory', checked='')
+            div
+              i.clthIcon
+              span Clothing
+          li
+            input.regBrndCatagorySelect(type='radio', name='catagory')
+            div
+              i.jwlIcon
+              span Jewellery
+          li
+            input.regBrndCatagorySelect(type='radio', name='catagory')
+            div
+              i.accsIcon
+              span Accessories
+          li
+            input.regBrndCatagorySelect(type='radio', name='catagory')
+            div
+              i.decoIcon
+              span Home Decor
+      .regBrndFields
+        fieldset
+          label City
+          input.regBrndInpt(type='text',id="searchTextField", name='city')
+        fieldset
+          label Name
+          input.regBrndInpt(type='text',id="nameIn",placeholder="Enter your name", name='name')
+        fieldset
+          label Email
+          input.regBrndInpt(type='text',id="emailIn",placeholder="Enter email", name='email')
+        fieldset
+          label Phone No.
+          input.regBrndInpt(type='text',id="phoneIn",placeholder="Enter phone", name='phone')
+      .capMainWrap.centSub
+        input.frmSubBtn(type='button', value='Submit')
+    .joinPortMainCont
+      .stryBgTtl Why you should join Portfolio?
+      .secDescx2
+        p
+          | With an audience of the most affluent and fashion-inclined, Portfolio is set to be the go-to destination for Vogue readers and industry professionals, to search for designers and discover fresh talent.
+      .joinPortImg
+        img(src='/images/mockup.png', alt='img')
+      .stryBgTtl The Portfolio offers
+      ul.portOfferListWrap
+        li
+          .portOfrIcn
+            img(src='/images/design-directory.svg', alt='img')
+          .portOfrInf
+            .portOfrTtle Design Directory
+            .secDesc
+              p
+                | It lets you showcase your product range while enabling prospective clients to find you easily.
+        li
+          .portOfrIcn
+            img(src='/images/content_creation.svg', alt='img')
+          .portOfrInf
+            .portOfrTtle Content Creation
+            .secDesc
+              p
+                | You can put up compelling content, which will have a long shelf life and will be read and referred to by your audience at whim.
+        li
+          .portOfrIcn
+            img(src='/images/amplified_reach.svg', alt='img')
+          .portOfrInf
+            .portOfrTtle Amplified reach
+            .secDesc
+              p
+                | You can put up compelling content, which will have a long shelf life and will be read and referred to by your audience at whim.
+        li
+          .portOfrIcn
+            img(src='/images/beyond-metros.svg', alt='img')
+          .portOfrInf
+            .portOfrTtle Beyond Metros
+            .secDesc
+              p You will be able to showcase your work to people living in Tier-2 cities.
+      .curBtnBlck Curious
+    .secPad.regBrandSlideWrp
+      .secTtle2.txtCent SOME OF OUR FEATURED PORTFOLIOS
+      .swip-ctrlWrp
+        .swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              iframe(src='https://www.youtube.com/embed/xR2e0HlHhF0?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+            .swiper-slide
+              iframe(src='https://www.youtube.com/embed/d3TSjE8nJXk?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+            .swiper-slide
+              iframe(src='https://www.youtube.com/embed/2hdjWA_Dzv0?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+        .swiper-button-prev
+        .swiper-button-next
+.scrlTpIcon
 include common/footer
 script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc&libraries=places')
-script.
-  document.body.classList.add("body-register");
 script.
   function initialize() {
     var input = document.getElementById('searchTextField');
     new google.maps.places.Autocomplete(input);
   }
   google.maps.event.addDomListener(window, 'load', initialize);
-  $('.submit_butt').click(function(e){
-      var nameReg = /^[A-Za-z]+$/;
-      var numberReg =  /^[0-9]+$/;
-      var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+  var colSwiper = new Swiper('.regBrandSlideWrp .swiper-container', {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 40,
+    slidesPerGroup: 1,
+    navigation: {
+    nextEl: '.regBrandSlideWrp .swiper-button-next',
+    prevEl: '.regBrandSlideWrp .swiper-button-prev',
+    },
+    breakpoints: {
+    480: {
+    slidesPerView: 1,
+    spaceBetween: 0
+    },
+    768: {
+    slidesPerView: 2,
+    spaceBetween: 20
+    },
+    1000: {
+    spaceBetween: 20
+    },
+    1250: {
+    spaceBetween: 30
+    }
+    }
+  });
+  $('.frmSubBtn').click(function(e){
+    var nameReg = /^[A-Za-z]+$/;
+    var numberReg =  /^[0-9]+$/;
+    var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
 
-      var names = $('#nameIn').val();
-      var city = $('#searchTextField').val();
-      var email = $('#emailIn').val();
-      var telephone = $('#phoneIn').val();
+    var names = $('#nameIn').val();
+    var city = $('#searchTextField').val();
+    var email = $('#emailIn').val();
+    var telephone = $('#phoneIn').val();
 
-      var inputVal = new Array(names, city, email, telephone);
+    var inputVal = new Array(names, city, email, telephone);
 
-      //- var inputMessage = new Array("name", "city", "email address", "telephone number", "message");
+    if(names== ""){
+        alert('Please enter your name');
+        return false;
+    }  else if(email == ""){
+        alert('Please enter your email');
+        return false;
+    } else if(!emailReg.test(email)){
+        alert(' Please enter a valid email address');
+        return false;
+    } else if(city == ""){
+        alert('Please enter your city');
+        return false;
+    }  else if(telephone == ""){
+        alert(' Please enter your phone');
+        return false;
+    }     
+    if(telephone.length < 10){
+        alert(' Please enter valid phone');
+        return false;
+    }
+    if(!numberReg.test(telephone)){
+        alert('Please enter Numbers only in phone');
+        return false;
+    } 
+    var obj={};
+    obj.name = names;
+    obj.email = city;
+    obj.city = email;
+    obj.phone = telephone;
+    obj.contactfor = "Store Registration";
 
-      $('.error').hide();
-
-      if(names== ""){
-          alert('Please enter your name');
-          return false;
-      }  else if(email == ""){
-          alert('Please enter your email');
-          return false;
-      } else if(!emailReg.test(email)){
-          alert(' Please enter a valid email address');
-          return false;
-      } else if(city == ""){
-          alert('Please enter your city');
-          return false;
-      }  else if(telephone == ""){
-          alert(' Please enter your phone');
-          return false;
-      }     
-      if(telephone.length < 10){
-          alert(' Please enter valid phone');
-          return false;
-      }
-      if(!numberReg.test(telephone)){
-          alert('Please enter Numbers only in phone');
-          return false;
-      } 
-      var obj={};
-      obj.name = names;
-      obj.email = city;
-      obj.city = email;
-      obj.phone = telephone;
-      obj.contactfor = "Store Registration";
-
-      var request = $.ajax({
-        headers: {
-            'Authorization': "maximumvsminimumsecurity",
-            'Content-Type': "application/json;charset=UTF-8"
-        },
-        type: "POST",
-        url: "https://api.zeepzoop.com/feedbacks/createcontact",
-        data: JSON.stringify(obj),
-        dataType: "json"
-      });
-      request.done(function(response) {
-          alert("Your detail's is submitted")
-      }); 
-      request.fail(function(jqXHR, textStatus) {
-          alert("Request failed: " + textStatus);
-      });
-      $("#nameIn").val('');
-      $("#searchTextField").val('');
-      $("#emailIn").val('');
-      $("#phoneIn").val('');
-      $("#descIn").val(''); 
+    var request = $.ajax({
+      headers: {
+          'Authorization': "maximumvsminimumsecurity",
+          'Content-Type': "application/json;charset=UTF-8"
+      },
+      type: "POST",
+      url: "https://api.zeepzoop.com/feedbacks/createcontact",
+      data: JSON.stringify(obj),
+      dataType: "json"
+    });
+    request.done(function(response) {
+        alert("Your detail's is submitted")
+    }); 
+    request.fail(function(jqXHR, textStatus) {
+        alert("Request failed: " + textStatus);
+    });
+    $("#nameIn").val('');
+    $("#searchTextField").val('');
+    $("#emailIn").val('');
+    $("#phoneIn").val('');
+    $("#descIn").val(''); 
   })
-
