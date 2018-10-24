@@ -71,8 +71,6 @@ class HomeHandler extends BaseAutoBindedClass {
         } else {
             var cityName = "Ahmedabad";
         }
-        console.log("URLStore----------------")
-        console.log(URLStore)
 
         var mainObj = {};
         Promise.all([
@@ -218,9 +216,6 @@ class HomeHandler extends BaseAutoBindedClass {
         })
     }
 
-    // business(req, res) {
-    //     res.render('business', { seo: false, title: 'ZeepZoop Business', page: 'business' })
-    // }
 
     partners(req, res) {
         var seoData = {
