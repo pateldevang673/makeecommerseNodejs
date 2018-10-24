@@ -1578,7 +1578,7 @@
     .blgInrSidebarWrap,
     .authInrBlogPostWrap,
     .blgInrPostMainCont .blgPostMainCont {
-        width: 100%;
+        width: 96%;
         float: none
     }
 
