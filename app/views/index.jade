@@ -78,7 +78,7 @@ section.secPad.popular-grid-cont.bg-gry.online
     a.seAlLink.newsebtn(name="/fshop?buisnessOnline=true",id="Populer",style="cursor: pointer;") See All
     ul.popularGridWrap
       - for (var x = 0; x < onlineStoresLength ; x++)
-        li
+        li(style="height: auto;")
           a(href='/brand/#{onlineStores[x].URL}')
             img(srcset=global.config.variable.apiPath+'/#{onlineStores[x].storeBanner} 1x', alt='img')
             .popGridInf
