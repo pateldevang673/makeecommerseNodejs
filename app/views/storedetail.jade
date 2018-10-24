@@ -16,7 +16,10 @@ section.shopBothInfPgeMainCont
         h1.shpTtle.posRel
           | #{store.storeName}
           //- img.icnVerified(src='/images/icon-verified.svg', alt='img')
-        .shopAdres #{store.address}
+        if store.address!="<null>" 
+          .shopAdres #{store.address}
+        else
+          .shopAdres #{store.storeCity}
         .secDesc
           p
             | #{store.storeDiscription}
