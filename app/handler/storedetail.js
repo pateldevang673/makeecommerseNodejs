@@ -117,7 +117,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                             domain: 'zeepzoop.com'
                         }
                     }
-
+                    console.log("req.connection---------")
+                    console.log(req.connection.encrypted)
                     res.render('storedetail', {
                         seo: true,
                         seoData: seoData,
