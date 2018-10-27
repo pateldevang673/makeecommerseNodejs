@@ -42,6 +42,7 @@ class CategoryHandler extends BaseAutoBindedClass {
         }, {});
     }
 
+
     getClothingstore(req, res) {
 
         var mainObj = {};
@@ -55,6 +56,12 @@ class CategoryHandler extends BaseAutoBindedClass {
         }
         if (req.query.city) {
             urls += "&location=" + req.query.city;
+        }
+
+        if (req.headers['x-forwarded-proto']) {
+            var urlofpage = 'https://' + req.get('host') + req.originalUrl
+        } else {
+            var urlofpage = 'http://' + req.get('host') + req.originalUrl
         }
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'categoryStore'),
@@ -77,7 +84,7 @@ class CategoryHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Clothing, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                    url: urlofpage,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }
@@ -108,6 +115,11 @@ class CategoryHandler extends BaseAutoBindedClass {
         if (req.query.city) {
             urls += "&location=" + req.query.city;
         }
+        if (req.headers['x-forwarded-proto']) {
+            var urlofpage = 'https://' + req.get('host') + req.originalUrl
+        } else {
+            var urlofpage = 'http://' + req.get('host') + req.originalUrl
+        }
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'categoryStore'),
                 // this.requestAsync(req, URLStore + "/categories/" + req.params.id, 'category')
@@ -129,7 +141,7 @@ class CategoryHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Jewellery, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                    url: urlofpage,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }
@@ -160,6 +172,11 @@ class CategoryHandler extends BaseAutoBindedClass {
         if (req.query.city) {
             urls += "&location=" + req.query.city;
         }
+        if (req.headers['x-forwarded-proto']) {
+            var urlofpage = 'https://' + req.get('host') + req.originalUrl
+        } else {
+            var urlofpage = 'http://' + req.get('host') + req.originalUrl
+        }
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'categoryStore'),
                 // this.requestAsync(req, URLStore + "/categories/" + req.params.id, 'category')
@@ -181,7 +198,7 @@ class CategoryHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Accessories, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                    url: urlofpage,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }
@@ -212,6 +229,11 @@ class CategoryHandler extends BaseAutoBindedClass {
         if (req.query.city) {
             urls += "&location=" + req.query.city;
         }
+        if (req.headers['x-forwarded-proto']) {
+            var urlofpage = 'https://' + req.get('host') + req.originalUrl
+        } else {
+            var urlofpage = 'http://' + req.get('host') + req.originalUrl
+        }
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'categoryStore'),
                 // this.requestAsync(req, URLStore + "/categories/" + req.params.id, 'category')
@@ -233,7 +255,7 @@ class CategoryHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Accessories, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                    url: urlofpage,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }

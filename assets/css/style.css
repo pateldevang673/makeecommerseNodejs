@@ -2633,21 +2633,32 @@ textarea.frmInpt {
     margin-bottom: 0;
 }
 
-.blgPostMainCont>img {
+/*.blgPostMainCont>img {
     width: 100%;
     margin-top: 30px;
     object-fit: cover;
     object-position: 50% 50%;
     height: 450px;
+}*/
+
+.blgPostMainCont img {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    width: 450px;
+    object-fit: cover;
+    object-position: 50% 50%;
+    height: 100%;
 }
 
+/*
 .blgPostMainCont>p>img {
     width: 100%;
     margin-top: 30px;
     object-fit: cover;
     object-position: 50% 50%;
     height: 450px;
-}
+}*/
 
 .blgPostMainCont ul,
 .blgPostMainCont p {

@@ -13,7 +13,6 @@ var _ = require('lodash');
 const URLStore = global.config.variable.apiPath;
 var urlArray = [];
 
-
 class SdetailHandler extends BaseAutoBindedClass {
     constructor() {
         super();
@@ -76,7 +75,6 @@ class SdetailHandler extends BaseAutoBindedClass {
                         resolve(body)
                     });
                 }).then((storedata) => {
-
                     var storedatas = JSON.parse(storedata)['data'];
                     if (storedatas.storeCatalogs) {
                         var catkeyword = _.map(storedatas.categoriesIds, 'category');
@@ -92,7 +90,11 @@ class SdetailHandler extends BaseAutoBindedClass {
                     if (catkeyword == undefined || cat == undefined) {
                         cat = 'Clothing Home-Decor Accessories Jewellery';
                     }
-
+                    if (req.headers['x-forwarded-proto']) {
+                        var urlofpage = 'https://' + req.get('host') + req.originalUrl
+                    } else {
+                        var urlofpage = 'http://' + req.get('host') + req.originalUrl
+                    }
                     var seoData = '';
                     if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
                         seoData = {
@@ -101,7 +103,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                             keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
-                            url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: urlofpage,
                             site: 'Zeepzoop',
                             domain: 'zeepzoop.com'
                         }
@@ -112,13 +115,13 @@ class SdetailHandler extends BaseAutoBindedClass {
                             keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
-                            url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: urlofpage,
                             site: 'Zeepzoop',
                             domain: 'zeepzoop.com'
                         }
                     }
-                    console.log("req.connection---------")
-                    console.log(req.connection.encrypted)
+
                     res.render('storedetail', {
                         seo: true,
                         seoData: seoData,

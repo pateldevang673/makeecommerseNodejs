@@ -47,6 +47,12 @@ class SearchHandler extends BaseAutoBindedClass {
             url += '&search=' + req.query.searchFor;
         }
 
+        if (req.headers['x-forwarded-proto']) {
+            var urlofpage = 'https://' + req.get('host') + req.originalUrl
+        } else {
+            var urlofpage = 'http://' + req.get('host') + req.originalUrl
+        }
+
         var mainObj = {};
         Promise.all([
                 this.requestAsync(req, URLStore + url, 'searchResult'),
@@ -66,7 +72,8 @@ class SearchHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                    // url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                    url: urlofpage,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }

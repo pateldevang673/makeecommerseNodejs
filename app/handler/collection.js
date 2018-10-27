@@ -119,6 +119,11 @@ class CollectionHandler extends BaseAutoBindedClass {
         if (req.params.url == "5b98f660c745cd5c18b700ee") {
             res.redirect(301, '/collection/minimal-homes-ahmedabad')
         }
+        if (req.headers['x-forwarded-proto']) {
+            var urlofpage = 'https://' + req.get('host') + req.originalUrl
+        } else {
+            var urlofpage = 'http://' + req.get('host') + req.originalUrl
+        }
         Promise.all([
                 this.requestAsync(req, URLStore + '/collections/search?collectionURL=' + req.params.url, 'collectionStore'),
             ])
@@ -139,7 +144,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -151,7 +156,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -163,7 +168,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -175,7 +180,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -188,7 +193,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -200,7 +205,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -212,7 +217,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -224,7 +229,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -236,7 +241,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -248,7 +253,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -260,7 +265,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -272,7 +277,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
@@ -284,7 +289,7 @@ class CollectionHandler extends BaseAutoBindedClass {
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                         type: 'website',
-                        url: req.protocol + '://' + req.get('host') + req.originalUrl,
+                        url: urlofpage,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
