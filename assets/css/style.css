@@ -2639,19 +2639,8 @@ textarea.frmInpt {
     object-fit: cover;
     object-position: 50% 50%;
     height: 450px;
-}*/
-
-.blgPostMainCont img {
-    display: block;
-    margin-right: auto;
-    margin-left: auto;
-    width: 450px;
-    object-fit: cover;
-    object-position: 50% 50%;
-    height: 100%;
 }
 
-/*
 .blgPostMainCont>p>img {
     width: 100%;
     margin-top: 30px;
@@ -2659,6 +2648,23 @@ textarea.frmInpt {
     object-position: 50% 50%;
     height: 450px;
 }*/
+
+.blgPostMainCont img {
+    margin: auto;
+    width: 450px;
+    object-fit: cover;
+    height: 100%;
+    display: block;
+}
+
+
+.blgPostMainCont>p>img {
+    margin: auto;
+    width: 450px;
+    object-fit: cover;
+    height: 100%;
+    display: block;
+}
 
 .blgPostMainCont ul,
 .blgPostMainCont p {
