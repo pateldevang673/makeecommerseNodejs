@@ -2657,14 +2657,13 @@ textarea.frmInpt {
     display: block;
 }
 
-
-.blgPostMainCont>p>img {
+/*.blgPostMainCont>p>img {
     margin: auto;
     width: 450px;
     object-fit: cover;
     height: 100%;
     display: block;
-}
+}*/
 
 .blgPostMainCont ul,
 .blgPostMainCont p {
