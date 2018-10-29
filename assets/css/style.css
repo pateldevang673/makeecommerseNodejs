@@ -2633,10 +2633,10 @@ textarea.frmInpt {
     margin-bottom: 0;
 }
 
-/*.blgPostMainCont>img {
+.blgPostMainCont>img {
     width: 100%;
     margin-top: 30px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: 50% 50%;
     height: 450px;
 }
@@ -2644,26 +2644,10 @@ textarea.frmInpt {
 .blgPostMainCont>p>img {
     width: 100%;
     margin-top: 30px;
-    object-fit: cover;
+    object-fit: contain;
     object-position: 50% 50%;
     height: 450px;
-}*/
-
-.blgPostMainCont img {
-    margin: auto;
-    width: 450px;
-    object-fit: cover;
-    height: 100%;
-    display: block;
 }
-
-/*.blgPostMainCont>p>img {
-    margin: auto;
-    width: 450px;
-    object-fit: cover;
-    height: 100%;
-    display: block;
-}*/
 
 .blgPostMainCont ul,
 .blgPostMainCont p {
