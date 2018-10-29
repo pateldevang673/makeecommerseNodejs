@@ -60,7 +60,7 @@ class SdetailHandler extends BaseAutoBindedClass {
                 resolve(body)
             });
         }).then((results) => {
-            var store = JSON.parse(results)['data'][0];
+            var store = JSON.parse(results)['data'][0];            
             if (store !== undefined) {
                 var catBlogs = {
                     url: URLStore + '/stores/' + store._id,
@@ -139,7 +139,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     })
                 });
             } else {
-                res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
+                res.redirect(301, '/')
+                // res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
             }
         })
     }

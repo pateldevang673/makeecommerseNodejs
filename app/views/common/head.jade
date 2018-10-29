@@ -149,10 +149,27 @@ html(lang='en')
                   //-   a(href='join-z-force.html') Join Z-Force
         .headCol
           a.logoBlck(href='/')
-            img(src='/images/logo.svg')
+            img(src='/images/logo.svg',alt='img')
         .headCol.txtRght
           .headSrchBtnWrp.hide768
             span.headSrchBtnIcn
+          //- ul.headLinksMainWrap
+          //-   li.hide1000
+          //-     a(href='/register_your_brand')
+          //-       span Register your Brand
+          //-   li
+          //-     a.loginTrig.bflog(href='#')
+          //-       span Login
+          //-     li.hasSub.aflog(style="display:none")
+          //-       a(href='javascript:void(0);')
+          //-         span.loginNameLimited Hello, 
+          //-           span.uname
+          //-       .hsSubMenu
+          //-         ul
+          //-           //- li
+          //-           //-   a.usrpro My Profile
+          //-           li
+          //-             a(href='/',id="logout") Logout
           ul.headLinksMainWrap
             li.hide1000
               a(href='/register_your_brand')
@@ -160,16 +177,16 @@ html(lang='en')
             li
               a.loginTrig.bflog(href='#')
                 span Login
-              li.hasSub.aflog(style="display:none")
-                a(href='javascript:void(0);')
-                  span.loginNameLimited Hello, 
-                    span.uname
-                .hsSubMenu
-                  ul
-                    //- li
-                    //-   a.usrpro My Profile
-                    li
-                      a(href='/',id="logout") Logout
+            li.hasSub.aflog(style="display:none")
+              a(href='javascript:void(0);')
+                span.loginNameLimited Hello,
+                  span.uname
+              .hsSubMenu
+                ul
+                  //- li
+                  //-   a.usrpro My Profile
+                  li
+                    a(href='#') Logout
       .headSearchOlay
         .centerAlign
           i.bigSrchIcn
