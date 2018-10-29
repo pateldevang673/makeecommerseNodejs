@@ -4,8 +4,6 @@ html(lang='en')
     meta(http-equiv='Content-Type', content='text/html; charset=utf-8')
     meta(name='viewport', content='width=device-width')
     meta(property='og:locale', content='en_US')
-    //- meta(charset='utf-8')
-
     if seo==true
       title #{seoData.title}
       <meta name="google-site-verification" content="rD5rxrkDCG1kJkDXi-n3cUDlJzu3qO0hmVuSfBsz7GE" />
@@ -13,7 +11,6 @@ html(lang='en')
       <meta name="google-signin-client_id" content="236831263233-2nn50m12rks8l1dt9ucnove3f55bibqq.apps.googleusercontent.com">
       meta(name='description', content='#{seoData.description}')
       meta(name='keywords', content='#{seoData.keywords}')
-
       meta(property='og:title', content='#{seoData.title}')
       meta(property='og:description', content='#{seoData.description}')
       meta(property='og:type', content='#{seoData.type}')
@@ -21,7 +18,6 @@ html(lang='en')
       meta(property='og:site_name', content='#{seoData.site}')
       meta(property='og:image', content='#{seoData.image}')
       meta(property='fb:pages', content='266063187234418')
-      
       meta(name='twitter:card', content='summary')
       link(rel='canonical', href='#{seoData.url}')
       meta(name='twitter:description', content='#{seoData.description}')
@@ -57,7 +53,6 @@ html(lang='en')
             'hitCallback': function() { document.location = url; }
         });
       }
-
   body(class=page)
     .loginMainCont
       .logOlay
@@ -216,25 +211,12 @@ html(lang='en')
               } else {
                   var online = false;
               }
-              //- var cityName = $('select[name="cities"]').val();
-              //- if (cityName && cityName !== "Select City") {
-              //-     return false;
-              //-     if (online == true) {
-              //-         window.location.href = "/search?searchFor=" + value +
-              //-             "&location=" + cityName + "&buisnessOnline=true";
-              //-     } else {
-              //-         window.location.href = "/search?searchFor=" + value +
-              //-             "&location=" + cityName + "&buisnessOffline=true";
-              //-     }
-              //-     $(".searchval").val('')
-              //- } else {
               if (online == true) {
                   window.location.href = "/search?searchFor=" + value + "&buisnessOnline=true";
               } else {
                   window.location.href = "/search?searchFor=" + value + "&buisnessOffline=true";
               }
               $(".searchval").val('')
-              //- }
             } else {
                 alert("Please Enter Value of Search Box")
             }
@@ -264,7 +246,6 @@ html(lang='en')
           $('#signinpopup, #authorPopup').hide();
           $('body').removeClass('zeeppopup-body');
         });
-       
         $.ajaxSetup({ cache: true });
         $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
           FB.init({
@@ -300,7 +281,6 @@ html(lang='en')
                 data: JSON.stringify(obj),
                 dataType: "json"
               });
-
               request.done(function(response) {
                   localStorage.setItem('UserTo', response.data.token)
                   localStorage.setItem('userD', response.data._id)
@@ -330,7 +310,6 @@ html(lang='en')
                   data: JSON.stringify(obj),
                   dataType: "json"
                 });
-
                 request.done(function(response) {
                     localStorage.setItem('UserTo', response.data.token)
                     localStorage.setItem('userD', response.data._id)
@@ -344,7 +323,6 @@ html(lang='en')
             });
           }
         }
-
         function onSignIn(googleUser) {
           var profile = googleUser.getBasicProfile();
           var obj={
@@ -364,7 +342,6 @@ html(lang='en')
             data: JSON.stringify(obj),
             dataType: "json"
           });
-
           request.done(function(response) {
               localStorage.setItem('UserTo', response.data.token)
               localStorage.setItem('userD', response.data._id)
@@ -374,8 +351,7 @@ html(lang='en')
           request.fail(function(jqXHR, textStatus) {
              alert("Request failed: " + textStatus);
           });
-        }   
-
+        }
         function loginhs() {
           if(localStorage.getItem('UserTo')!==null&&localStorage.getItem('userD')!==null&&localStorage.getItem('userName')!==null){
               $('.bflog').css("display", "none");
@@ -386,5 +362,4 @@ html(lang='en')
           }
         }
         loginhs();
-
       });
