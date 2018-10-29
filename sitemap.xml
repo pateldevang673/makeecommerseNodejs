@@ -117,6 +117,16 @@
         <priority>0.85</priority>
     </url>
     <url>
+        <loc>https://www.zeepzoop.com/brand/Falguni-Shane-Peacock</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Pinnacle-Shruti-Sancheti</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
         <loc>https://www.zeepzoop.com/brand/White-Noise</loc>
         <changefreq>daily</changefreq>
         <priority>0.85</priority>
