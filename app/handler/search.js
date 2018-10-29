@@ -46,13 +46,6 @@ class SearchHandler extends BaseAutoBindedClass {
         if (req.query.searchFor) {
             url += '&search=' + req.query.searchFor;
         }
-
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
-
         var mainObj = {};
         Promise.all([
                 this.requestAsync(req, URLStore + url, 'searchResult'),
@@ -73,7 +66,7 @@ class SearchHandler extends BaseAutoBindedClass {
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
                     // url: req.protocol + '://' + req.get('host') + req.originalUrl,
-                    url: urlofpage,
+                    url: 'https://' + req.get('host') + req.originalUrl,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }

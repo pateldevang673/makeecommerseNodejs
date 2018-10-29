@@ -56,12 +56,6 @@ class CatalougeHandler extends BaseAutoBindedClass {
             var cityName = req.query.city;
             urls += '&location=' + cityName;
         }
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
-
         Promise.all([
                 this.requestAsync(req, URLStore + urls, 'catalougsStore'),
             ])
@@ -80,7 +74,7 @@ class CatalougeHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: urlofpage,
+                    url: 'https://' + req.get('host') + req.originalUrl,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }

@@ -71,11 +71,6 @@ class HomeHandler extends BaseAutoBindedClass {
         } else {
             var cityName = "Ahmedabad";
         }
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
         var mainObj = {};
         Promise.all([
                 this.requestAsync(req, URLStore + '/collections/search?buisnessOffline=true&location=' + cityName, 'offlineCollections'),
@@ -117,7 +112,7 @@ class HomeHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: urlofpage,
+                    url: 'https://' + req.get('host') + req.originalUrl,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }
@@ -165,18 +160,13 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     story(req, res) {
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
         var seoData = {
             title: 'ZeepZoop Story - Online shopping Guide for Men and Women',
             description: 'One of a Kind, India’s Funded Startup offering Brand Listing for Fashion & Lifestyle Designers and Online Shopping Guide for Men and Women. Read ZeepZoop Story..',
             keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
             image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
             type: 'website',
-            url: urlofpage,
+            url: 'https://' + req.get('host') + req.originalUrl,
             site: 'Zeepzoop',
             domain: 'zeepzoop.com'
         }
@@ -189,18 +179,13 @@ class HomeHandler extends BaseAutoBindedClass {
 
 
     registerbrand(req, res) {
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
         var seoData = {
             title: 'Register Your Brand On ZeepZoop',
             description: 'Are you a Fashion or a Lifestyle Designer? Register Your Designer Label on ZeepZoop for Your Clothing, Jewellery, Accessories and Home Décor Collection.',
             keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
             image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
             type: 'website',
-            url: urlofpage,
+            url: 'https://' + req.get('host') + req.originalUrl,
             site: 'Zeepzoop',
             domain: 'zeepzoop.com'
         }
@@ -213,18 +198,13 @@ class HomeHandler extends BaseAutoBindedClass {
 
 
     contactus(req, res) {
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
         var seoData = {
             title: 'Contact ZeepZoop - Online shopping Guide with Designer Labels and Brands in India',
             description: 'Contact us on 9624851199 for Your Questions and Queries related to Fashion Designers, Registering Your Brand and Shopping.',
             keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
             image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
             type: 'website',
-            url: urlofpage,
+            url: 'https://' + req.get('host') + req.originalUrl,
             site: 'Zeepzoop',
             domain: 'zeepzoop.com'
         }
@@ -237,18 +217,13 @@ class HomeHandler extends BaseAutoBindedClass {
 
 
     partners(req, res) {
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
         var seoData = {
             title: 'ZeepZoop Meet the Founders, Partners & CEO of ZeepZoop',
             description: 'Meet guardians of ZeepZoop – The Founders, Partners & CEO of ZeepZoop, India’s First Ever Shopping Guide & Brand Discovery Platform for Designer Brands & Labels',
             keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
             image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
             type: 'website',
-            url: urlofpage,
+            url: 'https://' + req.get('host') + req.originalUrl,
             site: 'Zeepzoop',
             domain: 'zeepzoop.com'
         }
@@ -256,18 +231,13 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     team(req, res) {
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
         var seoData = {
             title: 'ZeepZoop Team – India’s First Shopping Guide & Brand Discovery Platform',
             description: 'Meet ZeepZoop Force – India’s First Ever Shopping Guide & Brand Discovery Platform available in the form of Website and Mobile App.',
             keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
             image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
             type: 'website',
-            url: urlofpage,
+            url: 'https://' + req.get('host') + req.originalUrl,
             site: 'Zeepzoop',
             domain: 'zeepzoop.com'
         }
@@ -280,18 +250,13 @@ class HomeHandler extends BaseAutoBindedClass {
 
 
     ceo(req, res) {
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
         var seoData = {
             title: 'Meet The CEO of ZeepZoop – Bhavya Modi',
             description: 'Know the Story of Bhavya Modi (CEO) Who Founded ZeepZoop – India’s First Ever Shopping Guide & Brand Discovery Platform for Designer Brands & Labels.',
             keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
             image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
             type: 'website',
-            url: urlofpage,
+            url: 'https://' + req.get('host') + req.originalUrl,
             site: 'Zeepzoop',
             domain: 'zeepzoop.com'
         }
@@ -303,11 +268,6 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     userProfile(req, res) {
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
         var mainObj = {};
         var getuser = {
             // url: URLStore + '/users/getToken/' + req.params.id,

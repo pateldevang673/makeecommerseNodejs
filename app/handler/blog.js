@@ -46,11 +46,7 @@ class BlogHandler extends BaseAutoBindedClass {
 
         var mainObj = {};
 
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
+
         Promise.all([
                 this.requestAsync(req, URLStore + '/blogs/search?authorURL=' + req.params.authorURL + '&trending=true&sort=true', 'authorBlogs'),
                 this.requestAsync(req, URLStore + '/blogs/search?trending=true&sort=true', 'recommendedBlogs'),
@@ -70,7 +66,7 @@ class BlogHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: urlofpage,
+                    url: 'https://' + req.get('host') + req.originalUrl,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }
@@ -87,11 +83,7 @@ class BlogHandler extends BaseAutoBindedClass {
     }
 
     getBlogs(req, res) {
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
+
         var mainObj = {};
         Promise.all([
                 this.requestAsync(req, URLStore + '/blogs/search?sort=true', 'trendingBlogs'),
@@ -118,7 +110,7 @@ class BlogHandler extends BaseAutoBindedClass {
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
-                    url: urlofpage,
+                    url: 'https://' + req.get('host') + req.originalUrl,
                     site: 'Zeepzoop',
                     domain: 'zeepzoop.com'
                 }
@@ -149,11 +141,7 @@ class BlogHandler extends BaseAutoBindedClass {
 
 
     getSingleBlog(req, res) {
-        if (req.headers['x-forwarded-proto']) {
-            var urlofpage = 'https://' + req.get('host') + req.originalUrl
-        } else {
-            var urlofpage = 'http://' + req.get('host') + req.originalUrl
-        }
+
         var q = url.parse(URLStore + '/blogs/search?URL=' + req.params.url, true);
         var optionsBlog = {
             url: URLStore + '/blogs/search?URL=' + req.params.url,
@@ -190,7 +178,7 @@ class BlogHandler extends BaseAutoBindedClass {
                         keywords: blog.metaKeyword,
                         image: global.config.variable.apiPath + '/' + blog.blogPicture,
                         type: 'article',
-                        url: urlofpage,
+                        url: 'https://' + req.get('host') + req.originalUrl,
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }

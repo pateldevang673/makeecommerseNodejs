@@ -60,7 +60,7 @@ class SdetailHandler extends BaseAutoBindedClass {
                 resolve(body)
             });
         }).then((results) => {
-            var store = JSON.parse(results)['data'][0];            
+            var store = JSON.parse(results)['data'][0];
             if (store !== undefined) {
                 var catBlogs = {
                     url: URLStore + '/stores/' + store._id,
@@ -90,11 +90,6 @@ class SdetailHandler extends BaseAutoBindedClass {
                     if (catkeyword == undefined || cat == undefined) {
                         cat = 'Clothing Home-Decor Accessories Jewellery';
                     }
-                    if (req.headers['x-forwarded-proto']) {
-                        var urlofpage = 'https://' + req.get('host') + req.originalUrl
-                    } else {
-                        var urlofpage = 'http://' + req.get('host') + req.originalUrl
-                    }
                     var seoData = '';
                     if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
                         seoData = {
@@ -104,7 +99,7 @@ class SdetailHandler extends BaseAutoBindedClass {
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
                             // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: urlofpage,
+                            url: 'https://' + req.get('host') + req.originalUrl,
                             site: 'Zeepzoop',
                             domain: 'zeepzoop.com'
                         }
@@ -116,7 +111,7 @@ class SdetailHandler extends BaseAutoBindedClass {
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
                             // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: urlofpage,
+                            url: 'https://' + req.get('host') + req.originalUrl,
                             site: 'Zeepzoop',
                             domain: 'zeepzoop.com'
                         }
