@@ -603,6 +603,8 @@ textarea.frmInpt2{height:70px}
 @media screen and (max-width:480px){.headLinksMainWrap>li>a{font-size:12px}
 .popularGridWrap li{height:228px;overflow:hidden;}
 .blgPostMainCont img{margin:auto;width:350px;object-fit:cover;height:100%;display:block;}
+.blgPostMainCont>img {width: 100%;}
+.blgPostMainCont>p>img { width: 100%; }
 .popularGridWrap li:nth-child(2n+2){margin-right:0;height:228px;overflow:hidden;}
 .popularGridWrap li,
 .popularGridWrap li:nth-child(3n+3),
