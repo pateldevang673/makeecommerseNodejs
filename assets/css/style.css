@@ -2634,19 +2634,21 @@ textarea.frmInpt {
 }
 
 .blgPostMainCont>img {
-    width: 100%;
-    margin-top: 30px;
+    width: 60%;
+    margin: auto;
+    display: block;
     object-fit: contain;
     object-position: 50% 50%;
-    height: 450px;
+    height: auto;
 }
 
 .blgPostMainCont>p>img {
-    width: 100%;
-    margin-top: 30px;
+    width: 60%;
+    margin: auto;
+    display: block;
     object-fit: contain;
     object-position: 50% 50%;
-    height: 450px;
+    height: auto;
 }
 
 .blgPostMainCont ul,
