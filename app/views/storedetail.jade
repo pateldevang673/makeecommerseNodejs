@@ -13,8 +13,8 @@ section.shopBothInfPgeMainCont
       a.shopProfilPicMainWrp(data-fancybox='', href=global.config.variable.apiPath+'/#{store.storeLogo}')
         img(src=global.config.variable.apiPath+'/#{store.storeLogo}', alt='img')
       .shopInfWrap
-        if store.buisnessOnline==true
-          h1.shpTtle.posRel(style="margin-bottom: 15px;")
+        if store.buisnessOnline==true && store.buisnessBoth == false || store.address=="<null>" && store.address==undefined
+          h1.shpTtle.posRel.macho
             | #{store.storeName}
             //- img.icnVerified(src='/images/icon-verified.svg', alt='img')
         else

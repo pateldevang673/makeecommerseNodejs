@@ -78,6 +78,11 @@ input[type="button"] {
     padding-bottom: 80px;
 }
 
+.macho {
+    margin-top: 32px;
+    padding-bottom: 10px;
+}
+
 .pt0 {
     padding-top: 0 !important;
 }
