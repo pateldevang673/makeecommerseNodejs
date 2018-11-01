@@ -32,9 +32,47 @@ section.secPad
           | ZeepZoop Got Funding in April 2018 and since then it is growing bigger and better. 
           br
           | Now we too believe... all those who wander are not lost! Some people just work their asses off and they turn their dreams into reality. ZeepZoop It Is!
-
+    //- .secPad.regBrandSlideWrp
+    //-   .secTtle2.txtCent SOME OF OUR FEATURED PORTFOLIOS
+    //-   .swip-ctrlWrp
+    //-     .swiper-container
+    //-       .swiper-wrapper
+    //-         .swiper-slide
+    //-           iframe(src='https://www.youtube.com/embed/xR2e0HlHhF0?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+    //-         .swiper-slide
+    //-           iframe(src='https://www.youtube.com/embed/d3TSjE8nJXk?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+    //-         .swiper-slide
+    //-           iframe(src='https://www.youtube.com/embed/2hdjWA_Dzv0?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
+    //-     .swiper-button-prev
+    //-     .swiper-button-next
 include common/footer
 script.
   $(document).ready(function() {
     $('header').css("background-color","#b21a34")
   })
+  var colSwiper = new Swiper('.regBrandSlideWrp .swiper-container', {
+      slidesPerView: 3,
+      loop: true,
+      spaceBetween: 40,
+      slidesPerGroup: 1,
+      navigation: {
+      nextEl: '.regBrandSlideWrp .swiper-button-next',
+      prevEl: '.regBrandSlideWrp .swiper-button-prev',
+      },
+      breakpoints: {
+      480: {
+      slidesPerView: 1,
+      spaceBetween: 0
+      },
+      768: {
+      slidesPerView: 2,
+      spaceBetween: 20
+      },
+      1000: {
+      spaceBetween: 20
+      },
+      1250: {
+      spaceBetween: 30
+      }
+      }
+    });

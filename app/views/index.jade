@@ -236,7 +236,7 @@ section.secPad
 include common/footer
 script.
   $(document).ready(function() {
-      setTimeout(function(){ 
+      setTimeout(function(){
         if (localStorage.getItem('storetype') && localStorage.getItem('storetype') == "online") {
             container.classList.remove("switchOff");
             container.classList += " switchOn";

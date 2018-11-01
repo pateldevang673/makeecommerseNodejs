@@ -916,11 +916,11 @@
         <changefreq>daily</changefreq>
         <priority>0.69</priority>
     </url>
-    <url>
+    <!-- <url>
         <loc>https://www.zeepzoop.com/brand/Vastra-Designers-By-Palak-&-Samta</loc>
         <changefreq>daily</changefreq>
         <priority>0.69</priority>
-    </url>
+    </url> -->
     <url>
         <loc>https://www.zeepzoop.com/brand/Charu-Jewels</loc>
         <changefreq>daily</changefreq>

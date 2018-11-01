@@ -68,39 +68,50 @@ script.
     var email = $('#emailIn').val();
     var telephone = $('#phoneIn').val();
     var message = $('#descIn').val();
-
     var inputVal = new Array(names, city, email, telephone, message);
 
     //- var inputMessage = new Array("name", "city", "email address", "telephone number", "message");
 
-    $('.error').hide();
-
     if(names== ""){
         alert('Please enter your name');
         return false;
-    }  else if(email == ""){
+    }
+    
+    if(email == ""){
         alert('Please enter your email');
         return false;
-    } else if(!emailReg.test(email)){
+    }
+    
+    if(!emailReg.test(email)){
         alert(' Please enter a valid email address');
         return false;
-    } else if(city == ""){
+    }
+    
+    if(city == ""){
         alert('Please enter your city');
         return false;
-    }  else if(telephone == ""){
+    }
+    
+    if(telephone == ""){
         alert(' Please enter your phone');
         return false;
-    } else if(!numberReg.test(telephone)){
-        alert(' Numbers only');
-        return false;
-    } else if(message== ""){
-        alert(' Please enter your message');
-        return false;
-    }  
-    if(telephone.length < 10){
-        alert(' Please enter valid phone');
+    }
+    
+    if(!numberReg.test(telephone)){
+        alert(' please enter valid phone number');
         return false;
     }
+    
+    if(telephone.length < 10){
+        alert(' Please enter a 10-degit phone number');
+        return false;
+    }
+
+    if(message== ""){
+        alert(' Please enter a message');
+        return false;
+    }
+    
 
     var obj={};
     obj.name = names;
@@ -122,7 +133,7 @@ script.
     });
     request.done(function(response) {
         alert("Your detail's is submitted")
-    }); 
+    });
     request.fail(function(jqXHR, textStatus) {
         alert("Request failed: " + textStatus);
     });
