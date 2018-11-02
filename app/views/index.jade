@@ -236,6 +236,7 @@ section.secPad
 include common/footer
 script.
   $(document).ready(function() {
+      var container = document.querySelector("body");
       setTimeout(function(){
         if (localStorage.getItem('storetype') && localStorage.getItem('storetype') == "online") {
             container.classList.remove("switchOff");
@@ -249,7 +250,6 @@ script.
             $('.online').hide()
         }
       }, 500);
-    var container = document.querySelector("body");
     function onOffSwitch() {
       if (container.classList.contains("switchOn")) {
         container.classList.remove("switchOn");
