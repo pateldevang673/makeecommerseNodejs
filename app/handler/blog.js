@@ -45,8 +45,15 @@ class BlogHandler extends BaseAutoBindedClass {
     getAuthorBlogs(req, res) {
 
         var mainObj = {};
-
-
+        if (req.params.authorURL == "Citrine") {
+            res.redirect(301, '/brand/Citrine')
+        }
+        if (req.params.authorURL == "Vrisa") {
+            res.redirect(301, '/brand/Vrisa')
+        }
+        if (req.params.authorURL == "Matsya") {
+            res.redirect(301, '/brand/Matsya')
+        }
         Promise.all([
                 this.requestAsync(req, URLStore + '/blogs/search?authorURL=' + req.params.authorURL + '&trending=true&sort=true', 'authorBlogs'),
                 this.requestAsync(req, URLStore + '/blogs/search?trending=true&sort=true', 'recommendedBlogs'),

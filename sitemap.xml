@@ -2232,6 +2232,21 @@
         <priority>0.56</priority>
     </url>
     <url>
+        <loc>https://www.zeepzoop.com/brand/Matsya</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.56</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Vrisa</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.56</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Citrine</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.56</priority>
+    </url>
+    <url>
         <loc>https://www.zeepzoop.com/brand/Abu-Jani-Sandeep-Khosla</loc>
         <changefreq>daily</changefreq>
         <priority>0.56</priority>
