@@ -60,25 +60,29 @@ class BlogHandler extends BaseAutoBindedClass {
                 });
             })
             .then((results) => {
-                var seoData = {
-                    title: 'Zeepzoop Blogs',
-                    description: 'Read blogs related to Art, Craft, culture, festivals, different cities, fashion, Home décor and much more. It guides you about what to buy from different cities.',
-                    keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
-                    image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
-                    type: 'website',
-                    url: 'https://' + req.get('host') + req.originalUrl,
-                    site: 'Zeepzoop',
-                    domain: 'zeepzoop.com'
+                if (results['authorBlogs'].length > 0) {
+                    var seoData = {
+                        title: 'Zeepzoop Blogs',
+                        description: 'Read blogs related to Art, Craft, culture, festivals, different cities, fashion, Home décor and much more. It guides you about what to buy from different cities.',
+                        keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                        image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                        type: 'website',
+                        url: 'https://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
+                    res.render('auther', {
+                        seo: true,
+                        seoData: seoData,
+                        page: 'auther-page',
+                        authorBlogs: results['authorBlogs'],
+                        authorBlogslength: results['authorBlogs'].length,
+                        recommendedBlogs: results['recommendedBlogs'],
+                        titleURL: urlArray
+                    })
+                } else {
+                    res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
                 }
-                res.render('auther', {
-                    seo: true,
-                    seoData: seoData,
-                    page: 'auther-page',
-                    authorBlogs: results['authorBlogs'],
-                    authorBlogslength: results['authorBlogs'].length,
-                    recommendedBlogs: results['recommendedBlogs'],
-                    titleURL: urlArray
-                })
             })
     }
 
