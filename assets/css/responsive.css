@@ -106,7 +106,7 @@
 .blgLstInfWrp{padding:20px}
 .edtProOferBnr{font-size:14px;padding:6px 18px;margin-bottom:7px}
 .edtProfOfferInf{padding:12px 13px 45px}
-.profPicMainCont img{width:130px;margin-right:20px}
+.profPicMainCont img{width:130px;margin-right:20px;object-fit: cover;height: 130px;}
 .profPicMainCont .secTtle{font-size:34px}
 .profPicMainCont{padding:25px 50px}
 .editFormMainWrp{padding:30px 0 0}
@@ -433,7 +433,7 @@
 .editBlgSlde:nth-child(2n+2){margin-right:0}
 .profPicMainCont{padding:25px 36px}
 .notificMainWrap li{padding:13px 20px}
-.profPicMainCont img{width:120px}
+.profPicMainCont img{width:120px;object-fit: cover;height: 120px;}
 .profPicMainCont .secTtle{font-size:32px;margin:0}
 .shareSocialIcn{position:static;width:90%;margin:0 auto 15px auto;}
 .shareSocialIcn a{margin-right:10px;margin-bottom:0;display:inline-block;vertical-align:middle;}
@@ -500,6 +500,7 @@
 .fancybox-inner .fancybox-content{padding:30px}
 .aplyNwFrm fieldset small{font-size:10px;display:block}
 .frmSubBtn{font-size:13px;padding:7px 19px}
+.usrSubBtn{font-size: 13px;padding: 7px 19px;height: 35px;width: 110px;margin: auto;}
 .centSub .frmSubBtn{margin:3px auto 0}
 textarea.frmInpt2{height:70px}
 .regBrndTtle{font-size:18px;margin-bottom:11px}
@@ -576,9 +577,9 @@ textarea.frmInpt2{height:70px}
 .addToListMainCont{width:90%}
 .adToInp{font-size:13px;line-height:28px}
 .adToSub{height:30px;font-size:13px}
-.profPicMainCont{padding:21px 30px}
-.profPicMainCont img{width:100px;margin-right:10px}
-.profPicMainCont .secTtle{font-size:28px}
+.profPicMainCont{padding:21px 30px;display: grid;}
+.profPicMainCont img{width:100px;margin-right:10px;object-fit: cover;height: 100px;margin: auto;}
+.profPicMainCont .secTtle{font-size:28px;margin: auto;}
 .editProfNavWrap li a{font-size:13px}
 .editProfNavWrap{margin-top:25px}
 .smlTtle{font-size:14px}
@@ -781,7 +782,7 @@ textarea.frmInpt{height:70px}
 .editFormMainWrp .frmSubBtn{display:block;margin:25px auto 0}
 .edtFieldWrp fieldset{margin-bottom:15px}
 .profPicMainCont .secTtle{font-size:26px}
-.profPicMainCont img{width:80px}
+.profPicMainCont img{width:80px;object-fit: cover;height: 80px;}
 .profPicMainCont{padding:20px}
 .notificMainWrap li{padding:15px 20px}
 .notificMainWrap li img{width:60px;margin:0 auto 5px;display:block}

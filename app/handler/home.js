@@ -270,8 +270,8 @@ class HomeHandler extends BaseAutoBindedClass {
     userProfile(req, res) {
         var mainObj = {};
         var getuser = {
-            // url: URLStore + '/users/getToken/' + req.params.id,
-            url: URLStore + '/users/getToken/5b94b7b04e811e15775c102c',
+            url: URLStore + '/users/getToken/' + req.params.id,
+            // url: URLStore + '/users/getToken/5b94b7b04e811e15775c102c',
             method: 'GET',
             headers: {
                 'Authorization': "maximumvsminimumsecurity",

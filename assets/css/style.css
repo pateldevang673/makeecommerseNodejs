@@ -3243,6 +3243,8 @@ textarea.frmInpt {
 .profPicMainCont img {
     width: 150px;
     border-radius: 500px;
+    object-fit: cover;
+    height: 150px;
     margin-right: 30px;
     display: inline-block;
     vertical-align: middle;
