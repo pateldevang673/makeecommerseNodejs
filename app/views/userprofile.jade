@@ -6,8 +6,10 @@ meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
 .secPad
   .centerAlign
     .bg-gry.profPicMainCont
-      img(src=global.config.variable.apiPath+'/#{userdata.userImage}', alt='img')
-      //- img(src="/images/profile-pic.jpg", alt='img')
+      if userdata.userImage
+        img(src=global.config.variable.apiPath+'/#{userdata.userImage}', alt='img')
+      else
+        img(src="/images/user_profile.png", alt='img')
       .secTtle #{userdata.name}
       input.frmSubBtn.usrSubBtn(type='button', value='Follow',style="margin-top: 55px;",onclick="window.open('https://play.google.com/store/apps/details?id=com.zeepzoop.user')")
     ul.editProfNavWrap
