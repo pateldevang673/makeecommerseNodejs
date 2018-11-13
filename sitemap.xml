@@ -117,6 +117,26 @@
         <priority>0.85</priority>
     </url>
     <url>
+        <loc>https://www.zeepzoop.com/brand/Shaarav-Couture</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Dhara-Shah-Studio</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Tussah-by-Siddhi</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Purvi-Doshi</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
         <loc>https://www.zeepzoop.com/brand/Samant-Chauhan</loc>
         <changefreq>daily</changefreq>
         <priority>0.85</priority>
