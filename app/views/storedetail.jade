@@ -23,8 +23,9 @@ section.shopBothInfPgeMainCont
         if store.address!="<null>"
           .shopAdres #{store.address}
         .secDesc
-          p
+          p(style="text-align: justify;",id="strdesc")
             | #{store.storeDiscription}
+          span(id="readmore",style="cursor: pointer;color: #b21a34;") Readmore
         ul.shopInfoActBtnWrp
           li
             a.act_icn.icn_call(href='tel:#{store.storePhone}')
@@ -182,6 +183,14 @@ script.
       }
     });
 
+    var txt= $('#strdesc').text();
+    if(txt.length > 155)
+    $('#strdesc').text(txt.substring(0,150) + '.....');
+
+    $('#readmore').click(function(e){
+      $('#strdesc').text(txt.substring(0,txt.length));
+      $(this).hide();
+    });
     $('.giverate').click(function(e){
       if(localStorage.getItem('UserTo')!==null&&localStorage.getItem('userD')!==null&&localStorage.getItem('userName')!==null){
         if($('#ratedes').val()!==''||$('#ratedes').val()!==null){

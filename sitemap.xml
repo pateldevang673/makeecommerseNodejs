@@ -117,6 +117,41 @@
         <priority>0.85</priority>
     </url>
     <url>
+        <loc>https://www.zeepzoop.com/brand/Manyavar</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Deepkala</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/SKO</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Azotiique</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Scarters</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Tyaani</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Zevar-by-Geeta</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
         <loc>https://www.zeepzoop.com/brand/Shaarav-Couture</loc>
         <changefreq>daily</changefreq>
         <priority>0.85</priority>
@@ -1803,6 +1838,16 @@
     </url>
     <url>
         <loc>https://www.zeepzoop.com/brand/Melorra</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/ORRA</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Aagman-Sarees</loc>
         <changefreq>daily</changefreq>
         <priority>0.69</priority>
     </url>
