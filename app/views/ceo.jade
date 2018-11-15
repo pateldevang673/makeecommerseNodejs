@@ -32,19 +32,28 @@ section.secPad
           | ZeepZoop Got Funding in April 2018 and since then it is growing bigger and better. 
         p
           | Now we too believe... all those who wander are not lost! Some people just work their asses off and they turn their dreams into reality. ZeepZoop It Is!
-    //- .secPad.regBrandSlideWrp
-    //-   .secTtle2.txtCent SOME OF OUR FEATURED PORTFOLIOS
-    //-   .swip-ctrlWrp
-    //-     .swiper-container
-    //-       .swiper-wrapper
-    //-         .swiper-slide
-    //-           iframe(src='https://www.youtube.com/embed/xR2e0HlHhF0?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
-    //-         .swiper-slide
-    //-           iframe(src='https://www.youtube.com/embed/d3TSjE8nJXk?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
-    //-         .swiper-slide
-    //-           iframe(src='https://www.youtube.com/embed/2hdjWA_Dzv0?rel=0', frameborder='0', allow='autoplay; encrypted-media', allowfullscreen='')
-    //-     .swiper-button-prev
-    //-     .swiper-button-next
+    .secPad.regBrandSlideWrp
+      .secTtle2.txtCent Ceo's Diary
+      .swip-ctrlWrp
+        .swiper-container
+          .swiper-wrapper
+            - for(var x=0;x<CeoBloglength;x++)
+              .swiper-slide
+                a.sclHov.blgLstImg(href='/blogs'+'/#{CeoBlog[x].URL}')
+                  img(src=global.config.variable.apiPath+'/#{CeoBlog[x].blogPicture}', alt='img')
+                .blgLstInfWrp
+                  a.blgLstTtle(href='/blogs'+'/#{CeoBlog[x].URL}') #{CeoBlog[x].title}
+                  .secDesc
+                    p
+                      | #{CeoBlog[x].metaDescription}
+                  .blgLstFtrWrp
+                    .blgLstAuthInfWrap
+                      img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{CeoBlog[x].authorImage}', alt='img')
+                      .blgLstAuthInf
+                        div #{CeoBlog[x].authorName}
+                        div #{CeoBlog[x].time}
+        .swiper-button-prev
+        .swiper-button-next
 include common/footer
 script.
   $(document).ready(function() {

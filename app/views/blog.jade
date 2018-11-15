@@ -250,6 +250,36 @@ section.secPad.blgListMainCont
                   //-     i
       .swiper-button-prev
       .swiper-button-next
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Ceo's Diary
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
+          - for(var x=0;x<CeoBloglength;x++)
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{CeoBlog[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{CeoBlog[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{CeoBlog[x].URL}') #{CeoBlog[x].title}
+                .secDesc
+                  p
+                    | #{CeoBlog[x].metaDescription}
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{CeoBlog[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{CeoBlog[x].authorName}
+                      div #{CeoBlog[x].time}
+                  //- .blgLstActionBtns
+                  //-   a.act_icn.icn_bokMark(href='#')
+                  //-     i
+                  //-   a.act_icn.icn_likeThmb(href='#')
+                  //-     i
+                  //-   a.act_icn.icn_sharePst(href='#')
+                  //-     i
+      .swiper-button-prev
+      .swiper-button-next
 
 include common/footer
 

@@ -250,21 +250,37 @@ class HomeHandler extends BaseAutoBindedClass {
 
 
     ceo(req, res) {
-        var seoData = {
-            title: 'Meet The CEO of ZeepZoop – Bhavya Modi',
-            description: 'Know the Story of Bhavya Modi (CEO) Who Founded ZeepZoop – India’s First Ever Shopping Guide & Brand Discovery Platform for Designer Brands & Labels.',
-            keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
-            image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
-            type: 'website',
-            url: 'https://' + req.get('host') + req.originalUrl,
-            site: 'Zeepzoop',
-            domain: 'zeepzoop.com'
-        }
-        res.render('ceo', {
-            seo: true,
-            seoData: seoData,
-            page: 'ceo'
-        })
+        var mainObj = {};
+        Promise.all([
+                this.requestAsync(req, URLStore + "/blogs/search?&category=Ceo's+Diary", "CeoBlog"),
+            ])
+            .then(function(allData) {
+                return new Promise(function(resolve, reject) {
+                    for (let i = 0; i < allData.length; i++) {
+                        mainObj[allData[i][0]] = allData[i][1]
+                    }
+                    resolve(mainObj);
+                });
+            })
+            .then((results) => {
+                var seoData = {
+                    title: 'Meet The CEO of ZeepZoop – Bhavya Modi',
+                    description: 'Know the Story of Bhavya Modi (CEO) Who Founded ZeepZoop – India’s First Ever Shopping Guide & Brand Discovery Platform for Designer Brands & Labels.',
+                    keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                    image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                    type: 'website',
+                    url: 'https://' + req.get('host') + req.originalUrl,
+                    site: 'Zeepzoop',
+                    domain: 'zeepzoop.com'
+                }
+                res.render('ceo', {
+                    seo: true,
+                    seoData: seoData,
+                    CeoBlog: results['CeoBlog'],
+                    CeoBloglength: results['CeoBlog'].length,
+                    page: 'ceo'
+                });
+            });
     }
 
     userProfile(req, res) {

@@ -105,6 +105,7 @@ class BlogHandler extends BaseAutoBindedClass {
                 this.requestAsync(req, URLStore + '/blogs/search?&category=Wedding+Bells', 'WeddingBells'),
                 this.requestAsync(req, URLStore + '/blogs/search?&category=Home+Decor', 'HomeDecor'),
                 this.requestAsync(req, URLStore + '/blogs/search?&category=Culture+and+Heritage', 'CultureHeritage'),
+                this.requestAsync(req, URLStore + "/blogs/search?&category=Ceo's+Diary", "CeoBlog"),
             ])
             .then(function(allData) {
                 return new Promise(function(resolve, reject) {
@@ -145,6 +146,8 @@ class BlogHandler extends BaseAutoBindedClass {
                     HomeDecorlength: results['HomeDecor'].length,
                     CultureHeritage: results['CultureHeritage'],
                     CultureHeritagelength: results['CultureHeritage'].length,
+                    CeoBlog: results['CeoBlog'],
+                    CeoBloglength: results['CeoBlog'].length,
                     titleURL: urlArray
                 })
             })
