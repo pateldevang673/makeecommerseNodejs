@@ -50,20 +50,21 @@ section.blgInrPostMainCont.secPad
                 .blgLstAuthInf
                   div #{catBlog[x].authorName}
                   div #{catBlog[x].time}
-      .blgInrSidebarBlck.pined
-        a.sclHov.blgLstImg(href="/blogs"+"/#{catBlog[1].URL}")
-            img(src=global.config.variable.apiPath+'/'+'#{catBlog[1].blogPicture}', alt='img')
-          .blgLstInfWrp
-            a.blgLstTtle(href="/blogs"+"/#{catBlog[1].URL}") #{catBlog[1].title}
-            .secDesc
-              p
-                | #{catBlog[1].metaDescription}
-            .blgLstFtrWrp
-              .blgLstAuthInfWrap
-                img.blgLstAuthImg(src=global.config.variable.apiPath+'/'+'#{catBlog[1].authorImage}', alt='img')
-                .blgLstAuthInf
-                  div #{catBlog[1].authorName}
-                  div #{catBlog[1].time}
+      if catBlog.length>0
+        .blgInrSidebarBlck.pined
+          a.sclHov.blgLstImg(href="/blogs"+"/#{catBlog[1].URL}")
+              img(src=global.config.variable.apiPath+'/'+'#{catBlog[1].blogPicture}', alt='img')
+            .blgLstInfWrp
+              a.blgLstTtle(href="/blogs"+"/#{catBlog[1].URL}") #{catBlog[1].title}
+              .secDesc
+                p
+                  | #{catBlog[1].metaDescription}
+              .blgLstFtrWrp
+                .blgLstAuthInfWrap
+                  img.blgLstAuthImg(src=global.config.variable.apiPath+'/'+'#{catBlog[1].authorImage}', alt='img')
+                  .blgLstAuthInf
+                    div #{catBlog[1].authorName}
+                    div #{catBlog[1].time}
 
 include common/footer
 script(src='/js/Sticky-kit.v1.1.3.js')
