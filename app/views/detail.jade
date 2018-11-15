@@ -50,7 +50,7 @@ section.blgInrPostMainCont.secPad
                 .blgLstAuthInf
                   div #{catBlog[x].authorName}
                   div #{catBlog[x].time}
-      if catBlog.length>0
+      if catBlog[1]
         .blgInrSidebarBlck.pined
           a.sclHov.blgLstImg(href="/blogs"+"/#{catBlog[1].URL}")
               img(src=global.config.variable.apiPath+'/'+'#{catBlog[1].blogPicture}', alt='img')
