@@ -181,7 +181,7 @@ input[type="button"] {
     font-size: 14px;
     line-height: 22px;
     color: #696969;
-    margin-bottom: 20px;
+    /*margin-bottom: 20px;*/
 }
 
 .secDesc p a {
