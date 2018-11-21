@@ -144,6 +144,18 @@ input[type="button"] {
     margin-bottom: 10px;
 }
 
+.sect {
+    text-transform: initial;
+}
+
+.curs {
+    cursor: pointer;
+}
+
+.msbt {
+    float: initial;
+}
+
 .secTtle a {
     color: inherit;
 }

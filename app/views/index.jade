@@ -63,7 +63,7 @@ section#collection-swiper.secPad.collection-swiper-cont.online
 section.secPad.popular-grid-cont.bg-gry.offline
   .centerAlign.posRel
     h1.secTtle.mb2 Popular
-    a.seAlLink.newsebtn(name="/fshop?buisnessOffline=true",id="Popular",style="cursor: pointer;") See All
+    a.seAlLink.newsebtn.curs(name="/fshop?buisnessOffline=true",id="Popular") See All
     ul.popularGridWrap
       - for (var x = 0; x < storesLength ; x++)
         li(style="height: auto;")
@@ -75,7 +75,7 @@ section.secPad.popular-grid-cont.bg-gry.offline
 section.secPad.popular-grid-cont.bg-gry.online
   .centerAlign.posRel
     h1.secTtle.mb2 Popular
-    a.seAlLink.newsebtn(name="/fshop?buisnessOnline=true",id="Populer",style="cursor: pointer;") See All
+    a.seAlLink.newsebtn.curs(name="/fshop?buisnessOnline=true",id="Populer") See All
     ul.popularGridWrap
       - for (var x = 0; x < onlineStoresLength ; x++)
         li(style="height: auto;")
@@ -115,7 +115,7 @@ section#sponsored-swiper.secPad.collection-swiper-cont.online
 section#home-catalogue-swiper.secPad.home-catalogue-cont.bg-gry.offline
   .centerAlign.posRel
     h1.secTtle.mb2 CATALOUGES
-    a.seAlLink.catlgurl(name='/catalouge?buisnessOffline=true',style="cursor: pointer;") See All
+    a.seAlLink.catlgurl.curs(name='/catalouge?buisnessOffline=true') See All
     .swip-ctrlWrp
       .swiper-container
         .swiper-wrapper
@@ -129,7 +129,7 @@ section#home-catalogue-swiper.secPad.home-catalogue-cont.bg-gry.offline
 section#home-catalogue-swiper.secPad.home-catalogue-cont.bg-gry.online
   .centerAlign.posRel
     h1.secTtle.mb2 CATALOUGES
-    a.seAlLink.catlgurl(name='/catalouge?buisnessOnline=true',style="cursor: pointer;") See All
+    a.seAlLink.catlgurl.curs(name='/catalouge?buisnessOnline=true') See All
     .swip-ctrlWrp
       .swiper-container
         .swiper-wrapper
@@ -210,7 +210,7 @@ section.appMockupMainCont.secPad.bg-gry.txtCent
       img(srcset='/images/app-mockup.png 1x', alt='Zeep Zoop Application')
       // src='/images/app-mockup.png',
     .apMockupInf
-      h1.secTtle GET THE ZEEPZOOP APP
+      h1.secTtle.sect GET THE ZeepZoop APP
       .secDesc
         p
           | Browse designer collection from Country's 

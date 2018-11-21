@@ -58,12 +58,15 @@ html(lang='en')
       .logOlay
       .loginMainWrap
         .loginClose
-        img.loginLogo(src='/images/logo-sml.svg', alt='Logo')
-        .loginTtle Sign in to get the best out of zeepzoop
+        img.loginLogo(src='/images/logo-sml.png', alt='Logo')
+        .loginTtle Sign in to get the best out of ZeepZoop
         .loginBtns
+          //- input.frmInpt(type='text',id="nameIn",placeholder='First Name')
+          //- input.frmInpt(type='text',id="emailIn",placeholder='Email')
+          //- input.frmSubBtn.msbt.submit_butt(type='button', value='Submit')
           a(id="FBlogin")
             img(src='/images/icon-facebook.svg', alt='img')
-            span Sign in with Facebook
+            span Submit
           .g-signin2(data-onsuccess="onSignIn")
         .loginNote
           | By continuing you agree to
@@ -77,19 +80,19 @@ html(lang='en')
         input.respSrchInp.myInput(type='text', placeholder='Type here to search...')
       nav.sideNavMainWrp
         ul
-          li.categoryicon(style="cursor: pointer;")
+          li.categoryicon.curs
             a(name="Clothing",id="5a51e507ff645771bf57dc14")
               i.clthIcon
               span Clothing
-          li.categoryicon(style="cursor: pointer;")
+          li.categoryicon.curs
             a(name="Jewellery",id="5a51e528ff645771bf57dc15")
               i.jwlIcon
               span Jewellery
-          li.categoryicon(style="cursor: pointer;")
+          li.categoryicon.curs
             a(name="Accessories",id="5a51e544ff645771bf57dc16")
               i.accsIcon
               span Accessories
-          li.categoryicon(style="cursor: pointer;")
+          li.categoryicon.curs
             a(name="Home-Decor",id="5a51e626ff645771bf57dc1a")
               i.decoIcon
               span Home Decor
@@ -378,4 +381,27 @@ html(lang='en')
           }
         }
         loginhs();
+       !function(f, b, e, v, n, t, s) {
+          if (f.fbq) return;
+          n = f.fbq = function() {
+              n.callMethod ?
+                  n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+          };
+          if (!f._fbq) f._fbq = n;
+          n.push = n;
+          n.loaded = !0;
+          n.version = '2.0';
+          n.queue = [];
+          t = b.createElement(e);
+          t.async = !0;
+          t.src = v;
+          s = b.getElementsByTagName(e)[0];
+          s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '2198070697115930');
+        fbq('track', 'PageView');
       });
+    noscript
+      img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=2198070697115930&ev=PageView&noscript=1')
+
