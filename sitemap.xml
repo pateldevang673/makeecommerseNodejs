@@ -872,6 +872,21 @@
         <priority>0.85</priority>
     </url>
     <url>
+        <loc>https://www.zeepzoop.com/blogs/introducing-zeepzoop-influencer-program-today</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/top-10-multi-designer-stores-in-mumbai-you-must-check</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/introducing-around-me-feature-on-zeepzoop-find-nearest-shopping-destinations</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
         <loc>https://www.zeepzoop.com/blogs/gharchola-saree-from-gujarat-not-just-an-ordinary-saree</loc>
         <changefreq>daily</changefreq>
         <priority>0.85</priority>
@@ -963,6 +978,61 @@
     </url>
     <url>
         <loc>https://www.zeepzoop.com/brand/Aprere</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/The-Shoe-Tales</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Blinkk</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Kora</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/DPR-Jewellery</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Manubhai-Zaveri</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Steel-All-Male</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/A-B-Jewels</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Anjalee-Jewellers</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Zinzuwadia-Jewellers</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Alite-Ornatto</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.69</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Tanisi-Designer-Jewellery</loc>
         <changefreq>daily</changefreq>
         <priority>0.69</priority>
     </url>
