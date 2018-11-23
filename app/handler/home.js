@@ -315,9 +315,20 @@ class HomeHandler extends BaseAutoBindedClass {
                     });
                 })
                 .then((results) => {
+                    var uimage = 'https://api.zeepzoop.com/' + datausr.userImage
+                    var seoData = {
+                        title: 'ZeepZoop User' + datausr.name,
+                        description: 'ZeepZoop User' + datausr.name,
+                        keywords: 'User',
+                        image: uimage,
+                        type: 'website',
+                        url: 'https://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
                     res.render('userprofile', {
-                        seo: false,
-                        title: 'ZeepZoop User',
+                        seo: true,
+                        seoData: seoData,
                         page: 'userprofile',
                         userdata: datausr,
                         Userbookmark: results['Userbookmark'],
