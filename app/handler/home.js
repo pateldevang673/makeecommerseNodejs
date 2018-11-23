@@ -317,8 +317,8 @@ class HomeHandler extends BaseAutoBindedClass {
                 .then((results) => {
                     var uimage = 'https://api.zeepzoop.com/' + datausr.userImage
                     var seoData = {
-                        title: 'ZeepZoop User' + datausr.name,
-                        description: 'ZeepZoop User' + datausr.name,
+                        title: 'ZeepZoop User ' + datausr.name,
+                        description: 'ZeepZoop User ' + datausr.name,
                         keywords: 'User',
                         image: uimage,
                         type: 'website',
