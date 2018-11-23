@@ -7,6 +7,7 @@ let blogController = new BlogController();
 
 router.get('/:url', blogController.getSingleBlog);
 router.get('/', blogController.getBlogs);
+router.get('/author/:authorURL', blogController.getAuthorBlogs);
 router.get('/auther/:authorURL', blogController.getAuthorBlogs);
 
 

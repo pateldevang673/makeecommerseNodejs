@@ -98,7 +98,8 @@
 .feaListMainWrp li{width:31.3%;margin-right:3%;margin-bottom:30px}
 .featShpRate{right:10px;top:15px;width:40px;line-height:24px;font-size:12px}
 .shpDireShpNwBtn{margin-top:20px}
-.shpDireShpNwBtn a{display:block;float:right;clear:both;margin-top:20px}
+.shpDireShpNwBtn a{display:block;float:right;margin-top:20px}
+/*clear:both*/
 .ratingShpImg{width:130px}
 .ratingStarMainWrp img{height:20px}
 .mt30{margin-top:20px}

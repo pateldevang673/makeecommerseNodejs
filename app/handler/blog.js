@@ -43,8 +43,10 @@ class BlogHandler extends BaseAutoBindedClass {
     }
 
     getAuthorBlogs(req, res) {
-
         var mainObj = {};
+        if (req.route.path == "/auther/:authorURL") {
+            res.redirect(301, '/blogs/author/' + req.params.authorURL)
+        }
         if (req.params.authorURL == "Citrine") {
             res.redirect(301, '/brand/Citrine')
         }

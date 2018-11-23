@@ -4,7 +4,7 @@ include common/head
   .bnrBg.sizCover(style='background-image: url('+global.config.variable.apiPath+'/#{store.storeBanner}'+')')
   .shopRatingMainWrp
     .centerAlign
-      a.shopRate(href='#rate-shop', data-fancybox='')
+      a.shopRate(href='javascript:void(0)', data-fancybox='')
         strong #{store.avgRating}
         span #{store.reviewCount} Votes
 section.shopBothInfPgeMainCont
@@ -25,12 +25,19 @@ section.shopBothInfPgeMainCont
         .secDesc
           p(style="text-align: justify;",id="strdesc")
             | #{store.storeDiscription}
-          span(id="readmore",style="cursor:pointer;color:#b21a34;font-size:13px;") Readmore
-        ul.shopInfoActBtnWrp
+          if store.storeDiscription.length>155
+            span(id="readmore",style="cursor:pointer;color:#b21a34;font-size:13px;") Readmore
+        ul.tempbutton
           li
-            a.act_icn.icn_call(href='tel:#{store.storePhone}')
-              i
-            span Call
+            .shpDireShpNwBtn
+              if store.buisnessOffline==true          
+                a.act_icn.icn_pin(href='https://www.google.com/maps/?q=#{store.address}', target="_blank")
+                  span Get Direction
+                  i
+              if store.buisnessOnline==true
+                a.act_icn.icn_cart(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;",rel="nofollow", target="_blank")
+                  span Visit Website
+                  i
           //- li
           //-   a.act_icn.icn_bokMark(href='javascript:void(0)')
           //-     i
@@ -44,10 +51,10 @@ section.shopBothInfPgeMainCont
           //-   a.act_icn.icn_rate(data-fancybox='', href='#rate-shop')
           //-     i
           //-   span Rate
-          li
-            a.act_icn.icn_shre(href='javascript:void(0)')
-              i
-            span Share
+          //- li
+          //-   a.act_icn.icn_shre(href='javascript:void(0)')
+          //-     i
+          //-   span Share
         #addToList.addToListMainCont
           .secTtle2 Add to List
           ul.addToListWrap
@@ -85,15 +92,15 @@ section.shopBothInfPgeMainCont
           span
             //- strong Hours: Open
             //- |  . Closes 8PM
-        .shpDireShpNwBtn
-          if store.buisnessOffline==true          
-            a.act_icn.icn_pin(href='https://www.google.com/maps/?q=#{store.address}', target="_blank")
-              span Get Direction
-              i
-          if store.buisnessOnline==true
-            a.act_icn.icn_cart(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;",rel="nofollow", target="_blank")
-              span Visit Website
-              i
+        //- .shpDireShpNwBtn
+        //-   if store.buisnessOffline==true          
+        //-     a.act_icn.icn_pin(href='https://www.google.com/maps/?q=#{store.address}', target="_blank")
+        //-       span Get Direction
+        //-       i
+        //-   if store.buisnessOnline==true
+        //-     a.act_icn.icn_cart(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;",rel="nofollow", target="_blank")
+        //-       span Visit Website
+        //-       i
     .shopBothBredCrumb.inrBredCrumbCont
       ul.bredCrumbWrp
         li
@@ -160,6 +167,7 @@ section.shopBothInfPgeMainCont
       // a.defBtn(href='#') See All Reviews
 
 include common/footer
+script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bb3426196915581')
 script.
   var trackOutboundLink = function(e) {
     var url='#{store.webAddress}'

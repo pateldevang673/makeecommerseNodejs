@@ -49,20 +49,20 @@ app.get('/robots.txt', function(req, res) {
 
 app.use('/', routes);
 
-app.get('/our_story', function(req, res) {
-    res.redirect(301, '/zeepzoop_story');
+app.get('/zeepzoop_story', function(req, res) {
+    res.redirect(301, '/zeepzoop-story');
 });
 
-app.get('/team', function(req, res) {
-    res.redirect(301, '/zeepzoop_team');
+app.get('/zeepzoop_team', function(req, res) {
+    res.redirect(301, '/zeepzoop-team');
 });
 
-app.get('/ceo', function(req, res) {
-    res.redirect(301, '/bhavyamodi_founderceo');
+app.get('/bhavyamodi_founderceo', function(req, res) {
+    res.redirect(301, '/bhavyamodi-founderceo');
 });
 
-app.get('/brand_reg', function(req, res) {
-    res.redirect(301, '/register_your_brand');
+app.get('/register_your_brand', function(req, res) {
+    res.redirect(301, '/register-your-brand');
 });
 
 app.get('/business', function(req, res) {

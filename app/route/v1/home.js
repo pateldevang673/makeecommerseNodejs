@@ -7,14 +7,18 @@ let homeController = new HomeController();
 
 router.get('/', homeController.getSingleHome);
 router.get('/reset/', homeController.resetPassword);
-// router.get('/business/', homeController.business);
-router.get('/zeepzoop_team', homeController.team);
 router.get('/partners', homeController.partners);
 router.get('/profile/:id', homeController.userProfile);
-router.get('/zeepzoop_story', homeController.story);
 router.get('/contactus', homeController.contactus);
-router.get('/register_your_brand', homeController.registerbrand);
-router.get('/bhavyamodi_founderceo', homeController.ceo);
-// router.get('/:cityName', homeController.getSingleHome);
+
+// router.get('/zeepzoop_story', homeController.story);
+// router.get('/register_your_brand', homeController.registerbrand);
+// router.get('/bhavyamodi_founderceo', homeController.ceo);
+// router.get('/zeepzoop_team', homeController.team);
+
+router.get('/zeepzoop-story', homeController.story);
+router.get('/register-your-brand', homeController.registerbrand);
+router.get('/bhavyamodi-founderceo', homeController.ceo);
+router.get('/zeepzoop-team', homeController.team);
 
 module.exports = router;

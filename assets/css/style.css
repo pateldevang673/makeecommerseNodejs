@@ -3746,6 +3746,12 @@ textarea.frmInpt {
     margin-top: 12px;
 }
 
+.tempbutton {
+    border-top: 1px solid #ccc;
+    padding-top: 15px;
+    margin-top: 12px;
+}
+
 .shopInfoActBtnWrp li {
     display: inline-block;
     vertical-align: top;
@@ -3796,7 +3802,7 @@ textarea.frmInpt {
 
 .shpDireShpNwBtn {
     display: inline-block;
-    margin-top: 80px
+    margin-top: 20px
 }
 
 .shpDireShpNwBtn a {

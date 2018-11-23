@@ -47,6 +47,112 @@ class SdetailHandler extends BaseAutoBindedClass {
 
     getSingleStore(req, res) {
 
+        if (req.params.url == "CINNAMON") {
+            res.redirect(301, '/brand/Cinnamon');
+        }
+        if (req.params.url == "ANQI") {
+            res.redirect(301, '/brand/Anqi');
+        }
+        if (req.params.url == "RITUJAINSINGH") {
+            res.redirect(301, '/brand/Ritu-jain-singh');
+        }
+        if (req.params.url == "FOURSEVEN") {
+            res.redirect(301, '/brand/Fourseven');
+        }
+        if (req.params.url == "ANAVILA") {
+            res.redirect(301, '/brand/Anavila');
+        }
+        if (req.params.url == "HANGAR") {
+            res.redirect(301, '/brand/Hangar');
+        }
+        if (req.params.url == "ZAHRAS") {
+            res.redirect(301, '/brand/Zahras');
+        }
+        if (req.params.url == "NEEDLEDUST") {
+            res.redirect(301, '/brand/Needledust');
+        }
+        if (req.params.url == "ADYA") {
+            res.redirect(301, '/brand/Adya');
+        }
+        if (req.params.url == "BIAS") {
+            res.redirect(301, '/brand/Bias');
+        }
+        if (req.params.url == "IMAGES") {
+            res.redirect(301, '/brand/Images');
+        }
+        if (req.params.url == "DHORA") {
+            res.redirect(301, '/brand/Dhora');
+        }
+        if (req.params.url == "RANJNA") {
+            res.redirect(301, '/brand/Ranjna');
+        }
+        if (req.params.url == "SKO") {
+            res.redirect(301, '/brand/Sko');
+        }
+        if (req.params.url == "IZA") {
+            res.redirect(301, '/brand/Iza');
+        }
+        if (req.params.url == "PILGRIM") {
+            res.redirect(301, '/brand/Pilgrim');
+        }
+        if (req.params.url == "ALMIRAH") {
+            res.redirect(301, '/brand/Almirah');
+        }
+        if (req.params.url == "RASA") {
+            res.redirect(301, '/brand/Rasa');
+        }
+        if (req.params.url == "ISHARYA") {
+            res.redirect(301, '/brand/Isharya');
+        }
+        if (req.params.url == "OUTHOUSE") {
+            res.redirect(301, '/brand/Outhouse');
+        }
+        if (req.params.url == "KNYA") {
+            res.redirect(301, '/brand/Knya');
+        }
+        if (req.params.url == "SVA") {
+            res.redirect(301, '/brand/Sva');
+        }
+        if (req.params.url == "FATIZ") {
+            res.redirect(301, '/brand/Fatiz');
+        }
+        if (req.params.url == "SHILPI") {
+            res.redirect(301, '/brand/Shilpi');
+        }
+        if (req.params.url == "GUAPA") {
+            res.redirect(301, '/brand/Guapa');
+        }
+        if (req.params.url == "REHANE") {
+            res.redirect(301, '/brand/Rehane');
+        }
+        if (req.params.url == "THREE") {
+            res.redirect(301, '/brand/Three');
+        }
+        if (req.params.url == "TIFARA") {
+            res.redirect(301, '/brand/Tifara');
+        }
+        if (req.params.url == "ORRA") {
+            res.redirect(301, '/brand/Orra');
+        }
+        if (req.params.url == "INTISH") {
+            res.redirect(301, '/brand/Intish');
+        }
+        if (req.params.url == "STUDIO-149") {
+            res.redirect(301, '/brand/Studio-149');
+        }
+        if (req.params.url == "STUDIO-9696") {
+            res.redirect(301, '/brand/Studio-9696');
+        }
+        if (req.params.url == "DHORA") {
+            res.redirect(301, '/brand/Dhora');
+        }
+        if (req.params.url == "Kalki-by-K.") {
+            res.redirect(301, '/brand/Kalki-by-k');
+        }
+        if (req.params.url == "BODICE") {
+            res.redirect(301, '/brand/Bodice');
+        }
+
         var optionsBlog = {
             url: URLStore + '/stores/search?URL=' + req.params.url,
             method: 'GET',
