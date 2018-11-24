@@ -157,6 +157,16 @@
         <priority>0.85</priority>
     </url>
     <url>
+        <loc>https://www.zeepzoop.com/brand/Ratios</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/brand/Kzari-by-Karishma-Hingorani</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
         <loc>https://www.zeepzoop.com/brand/Armuse</loc>
         <changefreq>daily</changefreq>
         <priority>0.85</priority>

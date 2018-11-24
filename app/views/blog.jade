@@ -2,37 +2,6 @@ include common/head
 
 .bnrMainCont.bnrBgOlay
   .bnrBg(style="background-image: url('/images/banner-blog.jpg');")
-section.secPad.blgListMainCont
-  .centerAlign.posRel
-    h1.secTtle TRENDING
-    //- a.seAlLink(href='#') See All
-    .swip-ctrlWrp
-      .swiper-container.blogCarouselWrap
-        .swiper-wrapper
-          - for(var x=0;x<trendingBlogslength;x++)
-            .swiper-slide
-              a.sclHov.blgLstImg(href='/blogs'+'/#{trendingBlogs[x].URL}')
-                img(src=global.config.variable.apiPath+'/#{trendingBlogs[x].blogPicture}', alt='img')
-              .blgLstInfWrp
-                a.blgLstTtle(href='/blogs'+'/#{trendingBlogs[x].URL}') #{trendingBlogs[x].title}
-                .secDesc
-                  p
-                    | #{trendingBlogs[x].metaDescription}
-                .blgLstFtrWrp
-                  .blgLstAuthInfWrap
-                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{trendingBlogs[x].authorImage}', alt='img')
-                    .blgLstAuthInf
-                      div #{trendingBlogs[x].authorName}
-                      div #{trendingBlogs[x].time}
-                  // .blgLstActionBtns
-                  //   a.act_icn.icn_bokMark(href='#')
-                  //     i
-                  //   a.act_icn.icn_likeThmb(href='#')
-                  //     i
-                  //   a.act_icn.icn_sharePst(href='#')
-                  //     i          
-      .swiper-button-prev
-      .swiper-button-next
 section.secPad.bg-gry.blgListMainCont
   .centerAlign.posRel
     h1.secTtle Newly added
@@ -62,6 +31,37 @@ section.secPad.bg-gry.blgListMainCont
                   //-     i
                   //-   a.act_icn.icn_sharePst(href='#')
                   //-     i          
+      .swiper-button-prev
+      .swiper-button-next
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle TRENDING
+    //- a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
+          - for(var x=0;x<trendingBlogslength;x++)
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/blogs'+'/#{trendingBlogs[x].URL}')
+                img(src=global.config.variable.apiPath+'/#{trendingBlogs[x].blogPicture}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/blogs'+'/#{trendingBlogs[x].URL}') #{trendingBlogs[x].title}
+                .secDesc
+                  p
+                    | #{trendingBlogs[x].metaDescription}
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{trendingBlogs[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{trendingBlogs[x].authorName}
+                      div #{trendingBlogs[x].time}
+                  // .blgLstActionBtns
+                  //   a.act_icn.icn_bokMark(href='#')
+                  //     i
+                  //   a.act_icn.icn_likeThmb(href='#')
+                  //     i
+                  //   a.act_icn.icn_sharePst(href='#')
+                  //     i          
       .swiper-button-prev
       .swiper-button-next
 section.secPad.bg-gry.blgListMainCont
