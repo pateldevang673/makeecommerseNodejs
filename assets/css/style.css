@@ -3693,7 +3693,8 @@ textarea.frmInpt {
 .shopProfilPicMainWrp {
     display: inline-block;
     vertical-align: top;
-    width: 21%;
+    width: 230px;
+    height: 230px;
     border: 3px solid #fff;
     border-radius: 100%;
     overflow: hidden;
@@ -3703,6 +3704,7 @@ textarea.frmInpt {
 .shopProfilPicMainWrp img {
     width: 100%;
     display: block;
+  object-fit:cover;
 }
 
 .shopInfWrap {

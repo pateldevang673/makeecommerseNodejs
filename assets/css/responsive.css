@@ -233,7 +233,7 @@
 .feaListMainWrp li a span{font-size:14px;padding:13px 25px}
 .popularGridWrap li a img{height:160px}
 .shpTtle{font-size:34px;line-height:37px;margin-bottom:2px}
-.shopProfilPicMainWrp{margin-top:0}
+.shopProfilPicMainWrp{margin-top:0;}
 .shpInfTimings span{font-size:13px}
 .shpDireShpNwBtn a i{width:18px;height:18px}
 .shopInfoActBtnWrp a{padding:3px;font-size:12px}
@@ -420,6 +420,7 @@
 .shopAdres{margin-bottom:20px;font-size:14px;width:80%}
 .shopInfoMainCont{margin-top:-70px}
 .shopRatingMainWrp{bottom:15px}
+.shopProfilPicMainWrp{width: 120px;height: 120px;}
 .shopRate span{font-size:13px;margin-top:3px}
 .shopRate strong{width:50px;line-height:30px;font-size:14px}
 .shopInfDireTimiWrap{width:70%;margin-top:20px;text-align:left;margin-left:23%;margin-bottom:15px}
@@ -560,7 +561,7 @@ textarea.frmInpt2{height:70px}
 .icnVerified{width:18px;margin-top:-3px}
 .shopInfDireTimiWrap{margin-left:0}
 .shopInfoMainCont{margin-top:-90px}
-.shopProfilPicMainWrp{width:130px;margin-bottom:20px}
+.shopProfilPicMainWrp{width:130px; height: 130px; margin-bottom:20px}
 .shpDireShpNwBtn a{padding:7px 10px 7px 13px;font-size:12px}
 .act_icn i{width:22px;height:22px}
 .shopInfoActBtnWrp li{margin-right:40px}
@@ -761,7 +762,7 @@ textarea.frmInpt{height:70px}
 .shpTtle{font-size:24px}
 .shopRate strong{width:40px;line-height:26px;font-size:13px}
 .shopRate span{font-size:11px;margin-top:3px}
-.shopProfilPicMainWrp{width:120px;margin-bottom:10px}
+.shopProfilPicMainWrp{width:120px; height: 120px; margin-bottom:10px}
 .shopInfoMainCont{margin-top:-70px}
 .shopBothCatMainCont .swiper-slide{width:70%}
 .shopBothCatMainCont .swiper-slide img{height:280px}
