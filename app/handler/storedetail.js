@@ -152,6 +152,66 @@ class SdetailHandler extends BaseAutoBindedClass {
         if (req.params.url == "BODICE") {
             res.redirect(301, '/brand/Bodice');
         }
+        if (req.params.url == "Asopalav") {
+            res.redirect(301, '/brand/asopalav');
+        }
+        if (req.params.url == "Scarters") {
+            res.redirect(301, '/brand/scarters');
+        }
+        if (req.params.url == "Sko") {
+            res.redirect(301, '/brand/sko');
+        }
+        if (req.params.url == "Nakhrewaali") {
+            res.redirect(301, '/brand/nakhrewaali');
+        }
+        if (req.params.url == "The-Linen-Way") {
+            res.redirect(301, '/brand/the-linen-way');
+        }
+        if (req.params.url == "Hyperbole-Accessories") {
+            res.redirect(301, '/brand/hyperbole-accessories');
+        }
+        if (req.params.url == "Fancy-Pastels") {
+            res.redirect(301, '/brand/fancy-pastels');
+        }
+        if (req.params.url == "Mati-India") {
+            res.redirect(301, '/brand/mati-india');
+        }
+        if (req.params.url == "Studio-Scarlet") {
+            res.redirect(301, '/brand/studio-scarlet');
+        }
+        if (req.params.url == "Mesmora") {
+            res.redirect(301, '/brand/mesmora');
+        }
+        if (req.params.url == "Madison") {
+            res.redirect(301, '/brand/madison');
+        }
+        if (req.params.url == "Mahitha-Prasad") {
+            res.redirect(301, '/brand/mahitha-prasad');
+        }
+        if (req.params.url == "Arsheen-Sabherwal") {
+            res.redirect(301, '/brand/arsheen-sabherwal');
+        }
+        if (req.params.url == "Vedangi-Agarwal-Couture") {
+            res.redirect(301, '/brand/vedangi-agarwal-couture');
+        }
+        if (req.params.url == "Design-Temple") {
+            res.redirect(301, '/brand/design-temple');
+        }
+        if (req.params.url == "Satya-Paul") {
+            res.redirect(301, '/brand/satya-paul');
+        }
+        if (req.params.url == "R-Clothing-by-Reepal-Rao") {
+            res.redirect(301, '/brand/r-clothing-by-reepal-rao');
+        }
+        if (req.params.url == "Aamod") {
+            res.redirect(301, '/brand/aamod');
+        }
+        if (req.params.url == "Jharonka") {
+            res.redirect(301, '/brand/jharonka');
+        }
+        if (req.params.url == "Praan:t-A-label-by-Monika-Chordia") {
+            res.redirect(301, '/brand/praan:t-a-label-by-monika-chordia');
+        }
 
         var optionsBlog = {
             url: URLStore + '/stores/search?URL=' + req.params.url,
@@ -197,30 +257,42 @@ class SdetailHandler extends BaseAutoBindedClass {
                         cat = 'Clothing Home-Decor Accessories Jewellery';
                     }
                     var seoData = '';
-                    if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
-                        seoData = {
-                            title: storedatas.storeName + " For " + cat + " in " + storedatas.storeCity + ", " + storedatas.storeState + " | Zeepzoop",
-                            description: "Check Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", " + storedatas.storeState + ".Visit Zeepzoop for " + storedatas.storeName + " address, contact number, reviews & catalogue",
-                            keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
-                    } else if (storedatas.buisnessOnline) {
-                        seoData = {
-                            title: storedatas.storeName + " For " + cat + " Shop Online | Zeepzoop",
-                            description: "Check Designer " + cat + " By " + storedatas.storeName + " .Visit " + storedatas.storeName + " Website from ZeepZoop for Online Shopping.",
-                            keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                    // if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
+                    //     seoData = {
+                    //         title: "Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", India",
+                    //         // title: storedatas.storeName + " For " + cat + " in " + storedatas.storeCity + ", " + storedatas.storeState + " | Zeepzoop",
+                    //         description: "Check Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", " + storedatas.storeState + ".Visit Zeepzoop for " + storedatas.storeName + " address, contact number, reviews & catalogue",
+                    //         keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
+                    //         image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                    //         type: 'store',
+                    //         // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                    //         url: 'https://' + req.get('host') + req.originalUrl,
+                    //         site: 'Zeepzoop',
+                    //         domain: 'zeepzoop.com'
+                    //     }
+                    // } else if (storedatas.buisnessOnline) {
+                    //     seoData = {
+                    //         title: storedatas.storeName + " For " + cat + " Shop Online | Zeepzoop",
+                    //         description: "Check Designer " + cat + " By " + storedatas.storeName + " .Visit " + storedatas.storeName + " Website from ZeepZoop for Online Shopping.",
+                    //         keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
+                    //         image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                    //         type: 'store',
+                    //         // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                    //         url: 'https://' + req.get('host') + req.originalUrl,
+                    //         site: 'Zeepzoop',
+                    //         domain: 'zeepzoop.com'
+                    //     }
+                    // }
+                    var seoData = {
+                        title: "Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", India",
+                        description: "Check out " + storedatas.storeName + " designer " + cat + " collection on ZeepZoop. Visit ZeepZoop for " + storedatas.storeName + " catalogue, address and contact number.",
+                        keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
+                        image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                        type: 'store',
+                        // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                        url: 'https://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
                     }
 
                     res.render('storedetail', {
@@ -240,8 +312,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     })
                 });
             } else {
-                res.redirect(301, '/')
-                // res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
+                // res.redirect(301, '/')
+                res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
             }
         })
     }

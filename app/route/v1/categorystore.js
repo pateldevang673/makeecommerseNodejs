@@ -13,9 +13,4 @@ router.get('/Accessories', categoryController.getAccessoriesstore);
 router.get('/Home-Decor', categoryController.getHomedecorstore);
 
 
-// "https://www.zeepzoop.com/category/Clothing/5a51e507ff645771bf57dc14?buisnessOffline=true"
-// "https://www.zeepzoop.com/category/Clothing/"
-
-
-
 module.exports = router;
