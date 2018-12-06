@@ -1757,6 +1757,10 @@ class SdetailHandler extends BaseAutoBindedClass {
             });
         }).then((results) => {
             var store = JSON.parse(results)['data'][0];
+            console.log("store---------------------------")
+            console.log(store)
+            console.log("URLStore + '/stores/search?URL=' + req.params.url-----------------")
+            console.log(URLStore + '/stores/search?URL=' + req.params.url)
             if (store !== undefined) {
                 var catBlogs = {
                     url: URLStore + '/stores/' + store._id,
