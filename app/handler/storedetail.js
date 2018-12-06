@@ -1772,6 +1772,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     });
                 }).then((storedata) => {
                     var storedatas = JSON.parse(storedata)['data'];
+                    console.log("Store Detail Page");
+                    console.log(storedatas.URL);
                     if (storedatas.storeCatalogs) {
                         var catkeyword = _.map(storedatas.categoriesIds, 'category');
                     }
@@ -1824,7 +1826,7 @@ class SdetailHandler extends BaseAutoBindedClass {
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
-                    console.log("Store Detail Page");
+
 
                     res.render('storedetail', {
                         seo: true,
