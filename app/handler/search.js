@@ -32,7 +32,7 @@ class SearchHandler extends BaseAutoBindedClass {
     }
 
     getSearch(req, res) {
-
+        console.log("store search Page");
         var url = "/stores/search?"
         if (req.query.buisnessOnline) {
             url += 'buisnessOnline=' + req.query.buisnessOnline;

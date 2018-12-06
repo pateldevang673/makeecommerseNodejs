@@ -39,7 +39,7 @@ class FshopController extends BaseAutoBindedClass {
     // }
 
     getShops(req, res) {
-
+        console.log("All Store Page");
         var urls = "/stores/search?isActive=true"
         if (req.query.buisnessOffline) {
             urls += '&buisnessOffline=true';

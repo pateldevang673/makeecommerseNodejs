@@ -44,7 +44,7 @@ class CategoryHandler extends BaseAutoBindedClass {
 
 
     getClothingstore(req, res) {
-
+        console.log("Clothing Category Page");
         var mainObj = {};
         if (req.query.buisnessOffline) {
             // var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;
@@ -98,7 +98,7 @@ class CategoryHandler extends BaseAutoBindedClass {
     }
 
     getJewellerystore(req, res) {
-
+        console.log("jewellery Category Page");
         var mainObj = {};
         if (req.query.buisnessOffline) {
             // var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;
@@ -151,7 +151,7 @@ class CategoryHandler extends BaseAutoBindedClass {
     }
 
     getAccessoriesstore(req, res) {
-
+        console.log("Accessories Category Page");
         var mainObj = {};
         if (req.query.buisnessOffline) {
             // var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;
@@ -204,7 +204,7 @@ class CategoryHandler extends BaseAutoBindedClass {
     }
 
     getHomedecorstore(req, res) {
-
+        console.log("Home Decore Category Page");
         var mainObj = {};
         if (req.query.buisnessOffline) {
             // var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;

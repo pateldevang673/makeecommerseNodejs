@@ -62,7 +62,7 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     getSingleHome(req, res) {
-
+        console.log("Home Page");
         if (localStorage.getItem('cityName') != null) {
             localStorage.setItem('cityName', 'Ahmedabad')
         }
@@ -160,6 +160,7 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     story(req, res) {
+        console.log("Zeepzoop Story Page");
         var seoData = {
             title: 'ZeepZoop Story - Online shopping Guide for Men and Women',
             description: 'One of a Kind, India’s Funded Startup offering Brand Listing for Fashion & Lifestyle Designers and Online Shopping Guide for Men and Women. Read ZeepZoop Story..',
@@ -179,6 +180,7 @@ class HomeHandler extends BaseAutoBindedClass {
 
 
     registerbrand(req, res) {
+        console.log("Zeepzoop Registerbrand Page");
         var seoData = {
             title: 'Register Your Brand On ZeepZoop',
             description: 'Are you a Fashion or a Lifestyle Designer? Register Your Designer Label on ZeepZoop for Your Clothing, Jewellery, Accessories and Home Décor Collection.',
@@ -198,6 +200,7 @@ class HomeHandler extends BaseAutoBindedClass {
 
 
     contactus(req, res) {
+        console.log("contact us Page");
         var seoData = {
             title: 'Contact ZeepZoop - Online shopping Guide with Designer Labels and Brands in India',
             description: 'Contact us on 9624851199 for Your Questions and Queries related to Fashion Designers, Registering Your Brand and Shopping.',
@@ -217,6 +220,7 @@ class HomeHandler extends BaseAutoBindedClass {
 
 
     partners(req, res) {
+        console.log("Partners Page");
         var seoData = {
             title: 'ZeepZoop Meet the Founders, Partners & CEO of ZeepZoop',
             description: 'Meet guardians of ZeepZoop – The Founders, Partners & CEO of ZeepZoop, India’s First Ever Shopping Guide & Brand Discovery Platform for Designer Brands & Labels',
@@ -231,6 +235,7 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     team(req, res) {
+        console.log("team Page");
         var seoData = {
             title: 'ZeepZoop Team – India’s First Shopping Guide & Brand Discovery Platform',
             description: 'Meet ZeepZoop Force – India’s First Ever Shopping Guide & Brand Discovery Platform available in the form of Website and Mobile App.',
@@ -250,6 +255,7 @@ class HomeHandler extends BaseAutoBindedClass {
 
 
     ceo(req, res) {
+        console.log("CEO Page");
         var mainObj = {};
         Promise.all([
                 this.requestAsync(req, URLStore + "/blogs/search?&category=Ceo's+Diary", "CeoBlog"),
@@ -284,6 +290,7 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     userProfile(req, res) {
+        console.log("user Profile Page");
         var mainObj = {};
         var getuser = {
             url: URLStore + '/users/getToken/' + req.params.id,
@@ -342,12 +349,6 @@ class HomeHandler extends BaseAutoBindedClass {
                     })
                 })
         })
-
-
-
-
-
-
     }
 }
 

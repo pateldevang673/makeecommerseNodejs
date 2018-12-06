@@ -82,6 +82,7 @@ class CollectionHandler extends BaseAutoBindedClass {
 
 
     getBlogs(req, res) {
+        console.log("Collection Page");
         var mainObj = {};
         if (req.params.url == "5b97a34bad670834810a2c73") {
             res.redirect(301, '/collection/wedding-special')
