@@ -52,7 +52,48 @@ html(lang='en')
             'transport': 'beacon',
             'hitCallback': function() { document.location = url; }
         });
-      }
+      };
+      {
+        "@context" +":"+ 'http://schema.org',
+        "@type" +":"+ "Shopping Guide",
+        "name" +":"+ "Zeepzoop Incorporation LLP",
+        "image" +":"+ "https://scontent.fbom19-2.fna.fbcdn.net/v/t1.0-1/p200x200/20953984_266175320556538_5392192289285258086_n.jpg?_nc_cat=110&_nc_ht=scontent.fbom19-2.fna&oh=10ddbca3dafc1931582ca9a80b796751&oe=5C736640",
+        "@id" +":"+ "",
+        "url" +":"+ "https://www.zeepzoop.com/",
+        "telephone" +":"+ "096248 51199",
+        "address" +":"+ {
+          "@type": "PostalAddress",
+          "streetAddress": "302, Saumya Square, Nr. Govardhan party plot, Thaltej",
+          "addressLocality": "Ahmedabad",
+          "postalCode": "380059",
+          "addressCountry": "IN"
+        },
+        "priceRange" +":"+ "INR",
+        "geo" +":"+ {
+          "@type": "GeoCoordinates",
+          "latitude": 23.04864,
+          "longitude": 72.50860499999999
+        },
+        "openingHoursSpecification" +":"+ {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+          ],
+          "opens": "10:00",
+          "closes": "19:00"
+        },
+        "sameAs" +":"+ [
+          "https://www.facebook.com/zeepzoopofficial/",
+          "https://www.instagram.com/zeepzoopofficial/",
+          "https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/",
+          "https://in.pinterest.com/zeepzoopofficial/"
+        ]
+      };
   body(class=page)
     .loginMainCont
       .logOlay
@@ -195,48 +236,6 @@ html(lang='en')
           i.bigSrchIcn
           input.srchInpBx.myInput(type='text', placeholder='Type here to search...')
           .headSrchClse
-    script.
-      {
-        "@context" +":"+ 'http://schema.org',
-        "@type" +":"+ "Shopping",
-        "name" +":"+ "Zeepzoop Incorporation LLP",
-        "image" +":"+ "https://scontent.fbom19-2.fna.fbcdn.net/v/t1.0-1/p200x200/20953984_266175320556538_5392192289285258086_n.jpg?_nc_cat=110&_nc_ht=scontent.fbom19-2.fna&oh=10ddbca3dafc1931582ca9a80b796751&oe=5C736640",
-        "@id" +":"+ "",
-        "url" +":"+ "https://www.zeepzoop.com/",
-        "telephone" +":"+ "096248 51199",
-        "address" +":"+ {
-          "@type": "PostalAddress",
-          "streetAddress": "302, Saumya Square, Nr. Govardhan party plot, Thaltej",
-          "addressLocality": "Ahmedabad",
-          "postalCode": "380059",
-          "addressCountry": "IN"
-        },
-        "priceRange" +":"+ "INR",
-        "geo" +":"+ {
-          "@type": "GeoCoordinates",
-          "latitude": 23.04864,
-          "longitude": 72.50860499999999
-        },
-        "openingHoursSpecification" +":"+ {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": [
-            "Monday",
-            "Tuesday",
-            "Wednesday",
-            "Thursday",
-            "Friday",
-            "Saturday"
-          ],
-          "opens": "10:00",
-          "closes": "19:00"
-        },
-        "sameAs" +":"+ [
-          "https://www.facebook.com/zeepzoopofficial/",
-          "https://www.instagram.com/zeepzoopofficial/",
-          "https://www.youtube.com/channel/UCQajBUKn91xbZ22StHqeOzg/",
-          "https://in.pinterest.com/zeepzoopofficial/"
-        ]
-      };
     script.
       $(document).ready(function(){
         function GetParameterValues(param) {

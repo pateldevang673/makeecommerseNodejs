@@ -1316,11 +1316,11 @@
         <changefreq>daily</changefreq>
         <priority>0.69</priority>
     </url>
-    <url>
+    <!-- <url>
         <loc>https://www.zeepzoop.com/brand/pooja-sethi-pret-&-couture</loc>
         <changefreq>daily</changefreq>
         <priority>0.69</priority>
-    </url>
+    </url> -->
     <url>
         <loc>https://www.zeepzoop.com/brand/the-lohasmith</loc>
         <changefreq>daily</changefreq>
