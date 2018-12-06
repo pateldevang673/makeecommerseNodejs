@@ -1751,16 +1751,12 @@ class SdetailHandler extends BaseAutoBindedClass {
                 'Content-Type': "application/json"
             }
         };
-        console.log("URLStore + '/stores/search?URL=' + req.params.url-----------------")
-        console.log(URLStore + '/stores/search?URL=' + req.params.url)
         return new Promise(function(resolve, reject) {
             request(optionsBlog, function(error, response, body) {
                 resolve(body)
             });
         }).then((results) => {
             var store = JSON.parse(results)['data'][0];
-            console.log("store---------------------------")
-            console.log(store)
             if (store !== undefined) {
                 var catBlogs = {
                     url: URLStore + '/stores/' + store._id,
@@ -1776,8 +1772,6 @@ class SdetailHandler extends BaseAutoBindedClass {
                     });
                 }).then((storedata) => {
                     var storedatas = JSON.parse(storedata)['data'];
-                    console.log("Store Detail Page");
-                    console.log(storedatas.URL);
                     if (storedatas.storeCatalogs) {
                         var catkeyword = _.map(storedatas.categoriesIds, 'category');
                     }
@@ -1830,7 +1824,6 @@ class SdetailHandler extends BaseAutoBindedClass {
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
-
 
                     res.render('storedetail', {
                         seo: true,
