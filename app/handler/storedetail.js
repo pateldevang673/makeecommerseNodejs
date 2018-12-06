@@ -1751,6 +1751,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                 'Content-Type': "application/json"
             }
         };
+        console.log("URLStore + '/stores/search?URL=' + req.params.url-----------------")
+        console.log(URLStore + '/stores/search?URL=' + req.params.url)
         return new Promise(function(resolve, reject) {
             request(optionsBlog, function(error, response, body) {
                 resolve(body)
@@ -1759,8 +1761,6 @@ class SdetailHandler extends BaseAutoBindedClass {
             var store = JSON.parse(results)['data'][0];
             console.log("store---------------------------")
             console.log(store)
-            console.log("URLStore + '/stores/search?URL=' + req.params.url-----------------")
-            console.log(URLStore + '/stores/search?URL=' + req.params.url)
             if (store !== undefined) {
                 var catBlogs = {
                     url: URLStore + '/stores/' + store._id,
