@@ -30,12 +30,12 @@ section.shopBothInfPgeMainCont
         ul.tempbutton
           li
             .shpDireShpNwBtn
-              if store.buisnessOffline==true          
+              if store.buisnessOffline==true        
                 a.act_icn.icn_pin(href='https://www.google.com/maps/?q=#{store.address}', target="_blank")
                   span Get Direction
                   i
               if store.buisnessOnline==true
-                a.act_icn.icn_cart(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;",rel="nofollow", target="_blank")
+                a.act_icn.icn_cart(href="#{store.webAddress}", onclick="trackOutboundLink(#{store.webAddress}); return false;", target="_blank")
                   span Visit Website
                   i
           //- li
