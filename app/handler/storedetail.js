@@ -1709,7 +1709,7 @@ class SdetailHandler extends BaseAutoBindedClass {
         if (req.params.url == "Steel-All-Male") {
             res.redirect(301, "/brand/steel-all-male");
         }
-        if (req.params.url == "a-b-jewels") {
+        if (req.params.url == "A-B-Jewels") {
             res.redirect(301, "/brand/a-b-jewels");
         }
         if (req.params.url == "Manubhai-Zaveri") {
