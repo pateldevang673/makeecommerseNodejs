@@ -1816,16 +1816,31 @@ class SdetailHandler extends BaseAutoBindedClass {
                     //         domain: 'zeepzoop.com'
                     //     }
                     // }
-                    var seoData = {
-                        title: "Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", India",
-                        description: "Check out " + storedatas.storeName + " designer " + cat + " collection on ZeepZoop. Visit ZeepZoop for " + storedatas.storeName + " catalogue, address and contact number.",
-                        keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
-                        image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                        type: 'store',
-                        // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                        url: 'https://' + req.get('host') + req.originalUrl,
-                        site: 'Zeepzoop',
-                        domain: 'zeepzoop.com'
+
+                    if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
+                        var seoData = {
+                            title: "Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", India",
+                            description: "Check out " + storedatas.storeName + " designer " + cat + " collection on ZeepZoop. Visit ZeepZoop for " + storedatas.storeName + " catalogue, address and contact number.",
+                            keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    } else if (storedatas.buisnessOnline) {
+                        var seoData = {
+                            title: "Designer " + cat + " in " + storedatas.storeName + " Shop Online | Zeepzoop",
+                            description: "Check out " + storedatas.storeName + " designer " + cat + " collection on ZeepZoop. Visit ZeepZoop for " + storedatas.storeName + " catalogue, address and contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
                     }
 
                     res.render('storedetail', {
