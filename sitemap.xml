@@ -137,6 +137,11 @@
         <priority>0.85</priority>
     </url>
     <url>
+        <loc>https://www.zeepzoop.com/brand/jardosh-the-urban-stitch</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
         <loc>https://www.zeepzoop.com/brand/idli-by-thierry-journo</loc>
         <changefreq>daily</changefreq>
         <priority>0.85</priority>
@@ -858,6 +863,31 @@
     </url>
     <url>
         <loc>https://www.zeepzoop.com/brand/pratap-sons</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/top-8-famous-fashion-designers-of-mumbai</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/top-4-digital-marketing-ideas-to-skyrocket-online-store-sales</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/top-4-fashion-tips-and-style-guide-for-indian-women</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/6-bridal-kamarband-designs-you-will-love</loc>
+        <changefreq>daily</changefreq>
+        <priority>0.85</priority>
+    </url>
+    <url>
+        <loc>https://www.zeepzoop.com/blogs/house-of-anita-dongre-empowering-women-through-microfinance</loc>
         <changefreq>daily</changefreq>
         <priority>0.85</priority>
     </url>
