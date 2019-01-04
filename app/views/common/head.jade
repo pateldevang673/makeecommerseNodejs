@@ -103,13 +103,15 @@ html(lang='en')
         img.loginLogo(src='/images/logo-sml.png', alt='Logo')
         .loginTtle Sign in to get the best out of ZeepZoop
         .loginBtns
-          //- input.frmInpt(type='text',id="nameIn",placeholder='First Name')
-          //- input.frmInpt(type='text',id="emailIn",placeholder='Email')
-          //- input.frmSubBtn.msbt.submit_butt(type='button', value='Submit')
-          a(id="FBlogin")
-            img(src='/images/icon-facebook.svg', alt='img')
-            span Sign in with Facebook
-          .g-signin2(data-onsuccess="onSignIn")
+          span.errr(style="font-size: 13px;color: red;display: none;") Enter Your Phone
+          input.frmInpt(type='text',id="phone",placeholder='Phone Number')
+          input.frmInpt(type='text',id="otp",placeholder='OTP',style="display: none;")
+          input.frmSubBtn.msbt.submit_phn(type='button', value='Submit')
+          input.frmSubBtn.msbt.submit_otp(type='button', value='Submit',style="display: none;")
+          //- a(id="FBlogin")
+          //-   img(src='/images/icon-facebook.svg', alt='img')
+          //-   span Sign in with Facebook
+          //- .g-signin2(data-onsuccess="onSignIn")
         .loginNote
           | By continuing you agree to
           br
@@ -248,9 +250,75 @@ html(lang='en')
               }
           }
         }
+
+        $(".submit_phn").on('click',function(e){
+          if($("#phone").val() && ($("#phone").val()).length == 10){
+            $('#otp').css("display", "block");
+            $('.submit_otp').css("display", "block");
+            $('.submit_phn').css("display", "none");
+            var obj={
+               "phone": $("#phone").val()
+            }
+            var request = $.ajax({
+              headers: {
+                  'Authorization': "maximumvsminimumsecurity",
+                  'Content-Type': "application/json;charset=UTF-8"
+              },
+              type: "POST",
+              url: "https://api.zeepzoop.com/users/verifymobile",
+              data: JSON.stringify(obj),
+              dataType: "json"
+            });
+            
+            request.done(function(response) {
+                localStorage.setItem('otp', response.data.otp)
+                localStorage.setItem('phone', response.data.phone)
+                localStorage.setItem('uid', response.data._id)
+            });
+
+            request.fail(function(jqXHR, textStatus) {
+                alert("Request failed: For Mobile Verification" + textStatus);
+            });
+          }else{
+            $('.errr').css("display", "block");
+          }
+        });
+
+        $(".submit_otp").on('click',function(e){
+          if($("#otp").val()==localStorage.getItem('otp')){
+            var obj={
+              "phone":localStorage.getItem('phone'),
+              "userId":localStorage.getItem('uid'),
+              "otp":localStorage.getItem('otp')
+            }
+            var request = $.ajax({
+              headers: {
+                  'Authorization': "maximumvsminimumsecurity",
+                  'Content-Type': "application/json;charset=UTF-8"
+              },
+              type: "POST",
+              url: "https://api.zeepzoop.com/users/verifyotpmobile",
+              data: JSON.stringify(obj),
+              dataType: "json"
+            });
+            
+            request.done(function(response) {
+              localStorage.setItem('UserTo', response.data.token)
+              localStorage.setItem('userD', response.data.user._id)
+              localStorage.setItem('userName', response.data.user.name)
+              window.location.reload();
+            });
+
+            request.fail(function(jqXHR, textStatus) {
+                alert("Request failed: For Mobile Verification" + textStatus);
+            });
+          }else{
+              alert("Invalid OTP");
+          }
+        });
         $(".categoryicon a").on('click',function(e){
           var cityName = GetParameterValues('city')
-          var urls="/category/" + $(this).attr('name');      
+          var urls="/category/" + $(this).attr('name');     
           var id =$(this).attr('id');
           var categoryName =$(this).attr('name');
           if ($('body').hasClass('switchOn')) {
@@ -412,8 +480,10 @@ html(lang='en')
           request.fail(function(jqXHR, textStatus) {
              alert("Request failed: " + textStatus);
           });
-        }
+        } 
         function loginhs() {
+          $('#otp').css("display", "none");
+          $('.submit_otp').css("display", "none");
           if(localStorage.getItem('UserTo')!==null&&localStorage.getItem('userD')!==null&&localStorage.getItem('userName')!==null){
               $('.bflog').css("display", "none");
               $('.uname').append(localStorage.getItem('userName'));
