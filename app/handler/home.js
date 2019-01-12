@@ -88,7 +88,7 @@ class HomeHandler extends BaseAutoBindedClass {
                 this.requestAsync(req, URLStore + '/blogs/search?startBlogs=0&endBlogs=5', 'trendingBlogs'),
                 this.requestAsync(req, URLStore + '/cities', 'cities'),
                 // this.requestAsync(req, URLStore + '/story/?startStories=0&endStories=3', 'stories'),
-                this.requestAsync(req, URLStore + '/story/?startStories=0&endStories=5', 'stories'),
+                // this.requestAsync(req, URLStore + '/story/?startStories=0&endStories=5', 'stories'),
                 this.requestVideo(req, "https://www.googleapis.com/youtube/v3/search?order=videocount&part=snippet&channelId=UCQajBUKn91xbZ22StHqeOzg&maxResults=4&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc", 'videos')
                 // 'date type of orders'. Allowed values: [date, rating, relevance, title, videocount, viewcount]
             ])
@@ -149,8 +149,8 @@ class HomeHandler extends BaseAutoBindedClass {
                     offlineeditorlength: results['offlineeditorstore'].length,
                     categories: results['categories'],
                     lengthCategories: results['categories'].length,
-                    stories: results['stories'],
-                    lengthStories: results['stories'].length,
+                    // stories: results['stories'],
+                    // lengthStories: results['stories'].length,
                     sponsoredOnline: results['sponsoredOnline'],
                     sponsoredOffline: results['sponsoredOffline'],
                     host: req.get('host')
