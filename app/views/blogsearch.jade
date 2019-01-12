@@ -1,5 +1,7 @@
 include common/head
 
+meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
+
 .bnrMainCont.bnrBgOlay
   .bnrBg(style="background-image: url('/images/banner-featshop.jpg');")
   .hmeMainPrlxWrp
@@ -20,12 +22,12 @@ section.secPad.pt0
     ul.featShopMainCont.popularGridWrap
       - for (var x = 0; x < stores.length; x++)
         li
-          a.sclHov(href='/brand/#{stores[x].URL}')
-            img(src=global.config.variable.apiPath+'/#{stores[x].storeBanner}', alt='img')
+          a.sclHov(href='/blogs/#{stores[x].URL}')
+            img(src=global.config.variable.apiPath+'/#{stores[x].blogPicture}', alt='img')
           .featShpInfWrp
-            a.popGrdTtle(href='/brand/#{stores[x].URL}') #{stores[x].storeName}
-            .popGrdDesc #{stores[x].storeDiscription}
-          .featShpRate #{stores[x].avgRating}   
+            a.popGrdTtle(href='/blogs/#{stores[x].URL}') #{stores[x].title}
+            .popGrdDesc #{stores[x].metaDescription}
+          .featShpRate #{stores[x].saveCount}
     .txtCent.mt60
       if lengthStores <= 0
         a.loadMore Oops! We Could not Find What You Are Searching For! Please Try Other Terms

@@ -9,6 +9,7 @@ html(lang='en')
       <meta name="google-site-verification" content="rD5rxrkDCG1kJkDXi-n3cUDlJzu3qO0hmVuSfBsz7GE" />
       <meta name="p:domain_verify" content="91902f4712e6104ccddc22456d17e290"/>
       <meta name="google-signin-client_id" content="236831263233-2nn50m12rks8l1dt9ucnove3f55bibqq.apps.googleusercontent.com">
+      <meta name="msvalidate.01" content="29493BED6A7DEE699CEA4890068B5077" />
       meta(name='description', content='#{seoData.description}')
       meta(name='keywords', content='#{seoData.keywords}')
       meta(property='og:title', content='#{seoData.title}')
@@ -226,7 +227,7 @@ html(lang='en')
                 span Login
             li.hasSub.aflog(style="display:none")
               a(href='javascript:void(0);')
-                span.loginNameLimited Hello,
+                span.loginNameLimited.loginFix
                   span.uname
               .hsSubMenu
                 ul
@@ -375,121 +376,15 @@ html(lang='en')
           $('#signinpopup, #authorPopup').hide();
           $('body').removeClass('zeeppopup-body');
         });
-        $.ajaxSetup({ cache: true });
-        $.getScript('https://connect.facebook.net/en_US/sdk.js', function(){
-          FB.init({
-            appId: '2209143222700416',
-            version: 'v3.1' 
-          });
-        });
-        $('#FBlogin').click(function(e) {
-          FB.getLoginStatus(function(response) {
-            statusChangeCallback(response);
-          });
-        });
-        function statusChangeCallback(response) {
-          if (response.status === 'connected') {
-            FB.api('/me', { locale: 'tr_TR', fields: 'name, email,birthday, hometown,education,gender,website,work' },
-            function(response) {
-              var obj={
-                  "name": response.name,
-                  "fbToken": response.id,
-                  "isUser": true,
-                  "provider":"Facebook"
-              }
-              if(response.email){
-                obj.email=response.email
-              }
-             var request = $.ajax({
-                headers: {
-                    'Authorization': "maximumvsminimumsecurity",
-                    'Content-Type': "application/json;charset=UTF-8"
-                },
-                type: "POST",
-                url: "https://api.zeepzoop.com/users/webusers",
-                data: JSON.stringify(obj),
-                dataType: "json"
-              });
-              request.done(function(response) {
-                  localStorage.setItem('UserTo', response.data.token)
-                  localStorage.setItem('userD', response.data._id)
-                  localStorage.setItem('userName', response.data.name)
-                  window.location.reload();
-              });
-            });
-          } else {
-            FB.login(function(response) {
-              FB.api('/me', { locale: 'tr_TR', fields: 'name, email,birthday, hometown,education,gender,website,work' },function(response) {
-                var obj={
-                    "name": response.name,
-                    "fbToken": response.id,
-                    "isUser": true,
-                    "provider":"Facebook"
-                }
-                if(response.email){
-                  obj.email=response.email
-                }
-                var request = $.ajax({
-                  headers: {
-                      'Authorization': "maximumvsminimumsecurity",
-                      'Content-Type': "application/json;charset=UTF-8"
-                  },
-                  type: "POST",
-                  url: "https://api.zeepzoop.com/users/webusers",
-                  data: JSON.stringify(obj),
-                  dataType: "json"
-                });
-                request.done(function(response) {
-                    localStorage.setItem('UserTo', response.data.token)
-                    localStorage.setItem('userD', response.data._id)
-                    localStorage.setItem('userName', response.data.name)
-                    window.location.reload();
-                });
-                request.fail(function(jqXHR, textStatus) {
-                    alert("Request failed: " + textStatus);
-                });
-              });
-            });
-          }
-        }
-        function onSignIn(googleUser) {
-          var profile = googleUser.getBasicProfile();
-          var obj={
-              "name": profile.getName(),
-              "fbToken": profile.getId(),
-              "provider":"Google",
-              "email":profile.getEmail(),
-              "isUser": true
-          }
-          var request = $.ajax({
-            headers: {
-                'Authorization': "maximumvsminimumsecurity",
-                'Content-Type': "application/json;charset=UTF-8"
-            },
-            type: "POST",
-            url: "https://api.zeepzoop.com/users/webusers",
-            data: JSON.stringify(obj),
-            dataType: "json"
-          });
-          request.done(function(response) {
-              localStorage.setItem('UserTo', response.data.token)
-              localStorage.setItem('userD', response.data._id)
-              localStorage.setItem('userName', response.data.name)
-              window.location.reload();
-          });
-          request.fail(function(jqXHR, textStatus) {
-             alert("Request failed: " + textStatus);
-          });
-        } 
         function loginhs() {
           $('#otp').css("display", "none");
           $('.submit_otp').css("display", "none");
           if(localStorage.getItem('UserTo')!==null&&localStorage.getItem('userD')!==null&&localStorage.getItem('userName')!==null){
               $('.bflog').css("display", "none");
               $('.uname').append(localStorage.getItem('userName'));
-              $('.aflog').css("display", "block");
+              $('.aflog').css("display", "");
           }else{
-              $('.bflog').css("display", "block");
+              $('.bflog').css("display", "");
           }
         }
         loginhs();

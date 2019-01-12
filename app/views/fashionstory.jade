@@ -1,0 +1,80 @@
+include common/head
+
+.bnrMainCont.bnrBgOlay
+  .bnrBg(style="background-image: url('/images/banner-blog.jpg');")
+section.secPad.bg-gry.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Fashion Stories
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
+          - for(var x=0;x<FashionStorylength;x++)
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/fashionstory'+'/#{FashionStory[x]._id}')
+                img(src=global.config.variable.apiPath+'/#{FashionStory[x].bannerImage}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/fashionstory'+'/#{FashionStory[x]._id}') #{FashionStory[x].title}
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{FashionStory[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{FashionStory[x].userId.name}
+                      div #{FashionStory[x].time}
+      .swiper-button-prev
+      .swiper-button-next
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Decore Stories
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
+          - for(var x=0;x<DecoreStorylength;x++)
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/fashionstory'+'/#{DecoreStory[x]._id}')
+                img(src=global.config.variable.apiPath+'/#{DecoreStory[x].bannerImage}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle(href='/fashionstory'+'/#{DecoreStory[x]._id}') #{DecoreStory[x].title}
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{DecoreStory[x].authorImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{DecoreStory[x].userId.name}
+                      div #{DecoreStory[x].time}
+      .swiper-button-prev
+      .swiper-button-next
+
+include common/footer
+
+script.
+    $('.blogCarouselWrap').each(function() {
+    var $swipCont = $(this),
+    $swipNxt = $swipCont.parent().children('.swiper-button-next'),
+    $swipPrv = $swipCont.parent().children('.swiper-button-prev');
+    var swip = new Swiper($swipCont, {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    navigation: {
+    nextEl: $swipNxt,
+    prevEl: $swipPrv
+    },
+    breakpoints: {
+    600: {
+    slidesPerView: 1,
+    spaceBetween: 0
+    },
+    768: {
+    slidesPerView: 2,
+    spaceBetween: 10
+    },
+    1000: {
+    slidesPerView: 2,
+    spaceBetween: 15
+    },
+    1250: {
+    spaceBetween: 30
+    }
+    }
+    });
+    })

@@ -74,8 +74,8 @@ input[type="button"] {
 }
 
 .secPad {
-    padding-top: 80px;
-    padding-bottom: 80px;
+    padding-top: 50px;
+    padding-bottom: 50px;
 }
 
 .macho {
@@ -208,6 +208,19 @@ input[type="button"] {
     z-index: 1;
     overflow: hidden;
     transition: background-color ease 0.5s, border-color ease 0.5s, color ease 0.5s;
+}
+.viewPro {
+    font-size: 14px;
+    color: #fff;
+    background-color: #b21a34;
+    display: inline-block;
+    padding: 10px 20px;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .defBtn:after {
@@ -716,13 +729,20 @@ input[type="button"] {
 }
 
 .hmeSldTtle {
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 48px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 38px;
     color: #fff;
-    line-height: 60px;
-    font-weight: 700;
-    letter-spacing: 6px;
+    font-weight: normal;
+    letter-spacing: 2px;
+    line-height: 40px;
+    margin-bottom: 30px;
 }
+.hmeSldTtle span {
+    font-size: 48%;
+    color: #fff;
+    letter-spacing: 1px;
+    font-family: inherit;
+    }
 
 .inEShopSwitchWrap {
     display: block;
@@ -1249,7 +1269,10 @@ input[type="button"] {
     display: table;
     width: 100%;
 }
-
+.popularGridWrapUser{
+     display: table;
+    width: 100%;
+}
 .popularGridWrap li {
     width: 30%;
     margin-right: 5%;
@@ -1260,13 +1283,32 @@ input[type="button"] {
     background-color: #f4f4f4;
 }
 
+.popularGridWrapUser li {
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 40px;
+    float: left;
+    height: 155px;
+    overflow: hidden;
+}
+
 .popularGridWrap li:nth-child(1),
 .popularGridWrap li:nth-child(2),
 .popularGridWrap li:nth-child(3) {
     margin-top: 0;
 }
 
+.popularGridWrapUser li:nth-child(1),
+.popularGridWrapUser li:nth-child(2),
+.popularGridWrapUser li:nth-child(3) {
+    margin-top: 0;
+}
+
 .popularGridWrap li:nth-child(3n+3) {
+    margin-right: 0;
+}
+
+.popularGridWrapUser li:nth-child(3n+3) {
     margin-right: 0;
 }
 
@@ -1276,6 +1318,10 @@ input[type="button"] {
     display: block;
     box-shadow: 0 0 35px 0 rgba(0, 0, 0, 0.2);
     transition: all ease 0.3s;
+}
+
+.popularGridWrapUser>li>a {
+   color: inherit;
 }
 
 .popularGridWrap>li>a:hover {
@@ -1289,7 +1335,14 @@ input[type="button"] {
     object-position: 50% 50%;
     height: 200px;
 }
-
+.popularGridWrapUser li a img {
+  
+    display: block;
+    object-fit: cover;
+    object-position: 50% 50%;
+ 
+    
+}
 .popGridInf:before {
     content: '';
     width: 100%;
@@ -1692,14 +1745,12 @@ a:hover .popGridInf {
 .bnrBgVid,
 .bnrBgVidMainWrap,
 .bnrBg {
-    position: absolute;
-    ;
+    position: absolute;;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     background: 50% 50% #f4f4f4 no-repeat fixed;
-    -webkit-background-size: 100% auto;
     background-size: 100% auto;
 }
 
@@ -2995,8 +3046,46 @@ textarea.frmInpt {
     font-size: 16px;
     line-height: 22px;
 }
+.usernamelist
+{
+    font-size:20px;
+   color: inherit;
+   overflow:hidden;
+   padding-left: 10px;
+  white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   margin-top: 4%;
 
+}
+.userlist 
+{
+    padding:14px;
+    align-items: center;
+}
+.UserListFollw{
+    color:#9197a3;
+    font-size: 12px;
+    font-weight: 300;
+}
+
+.userlist img
+{ 
+    border-radius: 150px;
+    border-style: solid;
+    border-width: 2px;
+    border-color: #fff;
+    width: 65px;
+    height: 65px;
+    vertical-align: middle;
+    float: left;
+}
 .featShopMainCont {
+    display: block;
+    overflow: hidden;
+}
+
+.featShopMainContUser {
     display: block;
     overflow: hidden;
 }
@@ -3005,7 +3094,10 @@ textarea.frmInpt {
     position: relative;
     border: 1px solid #e1e1e1;
 }
-
+.featShopMainContUser li {
+    position: relative;
+    border: 1px solid #e1e1e1;
+}
 .featShpRate {
     position: absolute;
     ;
@@ -3272,7 +3364,7 @@ textarea.frmInpt {
 }
 
 .editProfNavWrap {
-    margin-top: 45px;
+    margin-top: 150px;
     border-bottom: 1px solid #ccc;
     display: table;
     width: 100%;
@@ -3548,7 +3640,7 @@ textarea.frmInpt {
     padding-right: 15px;
 }
 
-.mylistMainWrap .featShopMainCont {
+.mylistMainWrap .featShopMainCont .featShopMainContUser {
     margin-bottom: 25px;
 }
 
@@ -4199,3 +4291,97 @@ textarea.frmInpt2 {
 .regBrandSlideWrp .swip-ctrlWrp {
     margin-top: 30px;
 }
+.hmeMainPrlxWrp{
+    top: 33%;
+}
+.hmeAdvnceSrchWrap{
+    display: table;
+    margin: 0 auto 40px auto;
+    padding:30px 50px;
+    background-color: rgba(0,0,0,0.5);
+}
+.hmeAdvnceHdrWrp{
+    display: table;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.hmeAdvnceLnkWrp{
+    float: left;
+}
+.hmeAdvnceLnkWrp li{
+    float: left;
+    margin-right: 3px;
+}
+.hmeAdvnceLnkWrp li input[type="checkbox"],
+.hmeAdvnceLnkWrp li input[type="radio"]{
+    position: absolute;
+    visibility: hidden;
+}
+.hmeAdvnceLnkWrp li label{
+    font-size: 14px;
+    padding: 3px 23px;
+    border-radius: 100px;
+    color: #fff;
+    cursor: pointer;
+    display: block;
+    transition: all ease 0.5s;
+}
+.hmeAdvnceLnkWrp li input[type="checkbox"]:checked + label,
+.hmeAdvnceLnkWrp li input[type="radio"]:checked + label{
+    background-color: #b21a34
+}
+.ctyGuideLnk{
+    float: right;
+    font-size: 15px;
+    color: #949494;
+    text-decoration: underline;
+    margin-top: 2px;
+}
+.ctyGuideLnk:hover{
+    color: #fff;
+}
+.hmeSrchWrp{
+    width: 100%;
+}
+.hmeSrchCtrl{
+    display: inline-block;
+    vertical-align: middle;
+    height: 36px;
+    padding: 0 18px;
+    font-size: 15px;
+    line-height: 36px;
+    border-radius: 3px;
+    border:none;
+}
+select.hmeSrchCtrl{
+    -webkit-appearance:none;
+    -moz-appearance:none;
+    -ms-appearance:none;
+    -o-appearance:none;
+    appearance:none;
+    max-width: 160px;
+    padding-right: 50px;
+    background: url(../images/icon-arrow-down.svg) 90% 50% no-repeat #fff;
+    background-size: 13px auto;
+}
+.hmeSrchInpMain{
+    width: 420px !important;
+    margin: 0 10px;
+}
+.hmeSrchSub.hmeSrchCtrl{
+    background:url('../images/icon-search-whte.svg') 10px 50% no-repeat #b21a34;
+    background-size: auto 50%;
+    cursor: pointer;
+    color: #fff;
+    padding-left: 40px;
+    transition: all ease 0.5s;
+}
+.hmeSrchSub:hover{background-color:#da193a;}
+.hmeSrchSub:active{background-color:#b12b42;}
+.aboutShop{text-align: justify; font-size: 14px; line-height: 26px;font-weight: 400;}
+.aboutShop h3{font-size: 20px; text-transform: uppercase;}
+.aboutShop p{padding-top: 15px;}    
+.loginFix{
+    width: 100px;
+}
+.hmstry{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}

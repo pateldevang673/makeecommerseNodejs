@@ -1,0 +1,62 @@
+include common/head
+
+meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
+
+.bnrMainCont.bnrBgOlay
+  .bnrBg(style='background-image: url('+global.config.variable.apiPath+'/#{blog.bannerImage}'+');')
+  .blgInrMainTtleWrp
+    .centerAlign
+      h1.blgIntTtle #{blog.title}
+      .blgLstFtrWrp.blgInrTtleFtrWrp
+        a.blgLstAuthInfWrap(href='#author-hetal-shah', data-fancybox='')
+          if blog.userId
+            img.blgLstAuthImg(src=global.config.variable.apiPath+'/'+'#{blog.userId.userImage}', alt='img')
+          .blgLstAuthInf
+            if blog.userId
+              div #{blog.userId.name}
+            div #{time}
+        #author-hetal-shah.authorPopupMainWrap
+          img(src='/images/auther-popup-img.png', alt='img')
+          .authPopupInfWrap
+            .authPopupImg
+              if blog.userId
+                img(src=global.config.variable.apiPath+'/'+'#{blog.userId.userImage}', alt='img')
+            if blog.userId
+              .secTtle #{blog.userId.name}
+            if blog.userId
+              a.defBtn(href='/profile/'+ '#{blog.userId._id}') Read More
+section.blgInrPostMainCont.secPad
+  .centerAlign
+    .blgPostMainCont.secDesc.secDescx2
+      if subtitle
+        - for(var x=0;x<subtitle.length;x++)
+          br
+          .secDesc
+            h2
+              | #{subtitle[x].title}
+          .secDesc
+            p
+              | #{subtitle[x].description}
+          br
+          p
+            if subtitle[x].image[0]
+              img(src=global.config.variable.apiPath+'/'+'#{subtitle[x].image[0]}', alt='img')
+          p
+            if subtitle[x].image[1]
+              img(src=global.config.variable.apiPath+'/'+'#{subtitle[x].image[1]}', alt='img')
+          p
+            if subtitle[x].image[2]
+              img(src=global.config.variable.apiPath+'/'+'#{subtitle[x].image[2]}', alt='img')
+
+include common/footer
+script(src='/js/Sticky-kit.v1.1.3.js')
+script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bb3426196915581')
+script.
+  $(window).load(function(e) {
+  if (winWid > 768) {  
+  $(".pined").stick_in_parent({
+  offset_top: 80,
+  parent: '.blgInrPostMainCont'
+  });
+  }
+  });

@@ -1,0 +1,33 @@
+include common/head
+
+meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
+  
+.bnrMainCont.bnrBgOlay
+  .bnrBg.sizCover(data-stellar-background-ratio='1.3', style="background-image: url('/images/banner-featshop.jpg');")
+.inrBredCrumbCont
+  .centerAlign
+    ul.bredCrumbWrp
+      li
+        a(href='/') Home
+      li
+        a(href='javascript:void(0)') #{searchfor}
+section.secPad.pt0
+  .centerAlign
+    ul.featShopMainContUser.popularGridWrapUser
+      - for (var x = 0; x < stores.length; x++)
+        li
+          a(href='/profile/#{stores[x]._id}')
+            .userlist
+              if stores[x].userImage
+                img(src=global.config.variable.apiPath+'/#{stores[x].userImage}', alt='img')
+              else
+                img(src='/images/user_profile.png', alt='img')
+              .usernamelist
+                | #{stores[x].name}
+                .UserListFollw #{stores[x].followers} Followers
+          .txtCent
+            a.viewPro(href='/profile/#{stores[x]._id}') View Profile
+    // .txtCent.mt60
+      // a.defBtn.loadMore(href='#') Load More
+
+include common/footer

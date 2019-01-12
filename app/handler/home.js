@@ -4,6 +4,7 @@ const BaseAutoBindedClass = require(APP_BASE_PACKAGE_PATH + 'base-autobind');
 var request = require('request');
 var Promise = require('promise');
 const URLStore = global.config.variable.apiPath;
+
 var LocalStorage = require('node-localstorage').LocalStorage,
     localStorage = new LocalStorage('./scratch');
 
@@ -72,6 +73,7 @@ class HomeHandler extends BaseAutoBindedClass {
             var cityName = "Ahmedabad";
         }
         var mainObj = {};
+        console.log(URLStore + '/story/?startStories=0&endStories=5')
         Promise.all([
                 this.requestAsync(req, URLStore + '/collections/search?buisnessOffline=true&location=' + cityName, 'offlineCollections'),
                 this.requestAsync(req, URLStore + '/collections/search?buisnessOnline=true', 'onlineCollections'),
@@ -87,6 +89,8 @@ class HomeHandler extends BaseAutoBindedClass {
                 this.requestAsync(req, URLStore + '/stores/search?buisnessOffline=true&startStores=12&endStores=16&location=' + cityName, 'sponsoredOffline'),
                 this.requestAsync(req, URLStore + '/blogs/search?startBlogs=0&endBlogs=5', 'trendingBlogs'),
                 this.requestAsync(req, URLStore + '/cities', 'cities'),
+                // this.requestAsync(req, URLStore + '/story/?startStories=0&endStories=3', 'stories'),
+                this.requestAsync(req, URLStore + '/story/?startStories=0&endStories=5', 'stories'),
                 this.requestVideo(req, "https://www.googleapis.com/youtube/v3/search?order=videocount&part=snippet&channelId=UCQajBUKn91xbZ22StHqeOzg&maxResults=4&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc", 'videos')
                 // 'date type of orders'. Allowed values: [date, rating, relevance, title, videocount, viewcount]
             ])
@@ -105,7 +109,7 @@ class HomeHandler extends BaseAutoBindedClass {
                 });
             })
             .then((results) => {
-
+                console.log(results['stories'])
                 var seoData = {
                     title: 'ZeepZoop - Shopping Guide App and Brand Discovery Platform',
                     description: "India's First Shopping Guide and Brand Discovery website with 600+ Designer Labels listed to Get Designer Clothes, Jewellery, Accessories and Home Decor.",
@@ -148,6 +152,8 @@ class HomeHandler extends BaseAutoBindedClass {
                     offlineeditorlength: results['offlineeditorstore'].length,
                     categories: results['categories'],
                     lengthCategories: results['categories'].length,
+                    stories: results['stories'],
+                    lengthStories: results['stories'].length,
                     sponsoredOnline: results['sponsoredOnline'],
                     sponsoredOffline: results['sponsoredOffline'],
                     host: req.get('host')

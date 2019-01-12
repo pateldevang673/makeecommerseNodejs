@@ -1,6 +1,6 @@
 include common/head
 
-section.hmeMainPrlxCont.fulHei
+//- section.hmeMainPrlxCont.fulHei
   .centerAlign
     .hmeMainPrlxWrp
       h1.hmeSldTtle
@@ -20,6 +20,49 @@ section.hmeMainPrlxCont.fulHei
           - for (var x=0;x<citiesLength;x++) {
             option #{cities[x].cityName}
           - }
+      svg(xmlns='http://www.w3.org/2000/svg', version='1.1', width='800')
+        defs
+          filter#gooey
+            fegaussianblur(in='SourceGraphic', stdDeviation='3', result='blur')
+            fecolormatrix(in='blur', mode='matrix', values='1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 19 -9', result='goo')
+section.hmeMainPrlxCont.fulHei
+  .centerAlign
+    .hmeMainPrlxWrp
+      h1.hmeSldTtle
+        | The Ultimate Place to Discover 
+        br
+        span Most Amazing Clothing, Jewellery, Accessories & Home Decor Brands
+      .hmeAdvnceSrchWrap
+        .hmeAdvnceHdrWrp
+          ul.hmeAdvnceLnkWrp
+            li
+              input#srch_store(type='radio', name='srchTab', checked='', value='store')
+              label(for='srch_store') Stores
+            li
+              input#srch_web(type='radio', name='srchTab', value='website')
+              label(for='srch_web') Websites
+            li
+              input#srch_blog(type='radio', name='srchTab', value='blog')
+              label(for='srch_blog') Blogs
+            li
+              input#srch_inf(type='radio', name='srchTab', value='inf')
+              label(for='srch_inf') Influencers
+          //- a.ctyGuideLnk(href='#') Our City Guides
+        .hmeSrchWrp
+          select.hmeSrchCtrl(name='cities')
+            option Select City
+            - for (var x=0;x<citiesLength;x++) {
+              option #{cities[x].cityName}
+            - }
+          input.hmeSrchCtrl.hmeSrchInpMain(type='text', name='searchome')
+          button.hmeSrchCtrl.hmeSrchSub Yippie
+      .inEShopSwitchWrap
+        .inEshpLbl In-Shops
+        .inEshpSwitch
+          #switchContainer.switchContainer
+            .switchBg
+            .switchBtn
+        .inEshpLbl E-Shops
       svg(xmlns='http://www.w3.org/2000/svg', version='1.1', width='800')
         defs
           filter#gooey
@@ -112,6 +155,27 @@ section#sponsored-swiper.secPad.collection-swiper-cont.online
                   .popGrdTtle #{sponsoredOnline[x].storeName}
       .swiper-button-prev
       .swiper-button-next
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Fashion Story
+    a.seAlLink(href='#') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
+          - for (var x = 0; x < lengthStories ; x++)
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/story/#{stories[x]._id}')
+                img(src=srcset=global.config.variable.apiPath+'/#{stories[x].bannerImage}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle.hmstry(href='/story/#{stories[x]._id}') #{stories[x].title}
+                .blgLstFtrWrp
+                  .blgLstAuthInfWrap
+                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{stories[x].userId.userImage}', alt='img')
+                    .blgLstAuthInf
+                      div #{stories[x].userId.name}
+                      div #{stories[x].time}
+      .swiper-button-prev
+      .swiper-button-next
 section#home-catalogue-swiper.secPad.home-catalogue-cont.bg-gry.offline
   .centerAlign.posRel
     h2.secTtle.mb2 CATALOUGES
@@ -172,7 +236,7 @@ section#newlyadd-swiper.secPad.collection-swiper-cont.bg-gry.offline
       .swiper-container
         .swiper-wrapper
           - for (var x = 0; x < newStoresOfflineLength; x++)
-            .swiper-slide.sclHov
+            .swiper-slide.sclHov 
               a(href='/brand/#{newStoresOffline[x].URL}')
                 img(srcset=global.config.variable.apiPath+'/#{newStoresOffline[x].storeBanner} 1x', alt='img')
                 .popGridInf
@@ -236,20 +300,78 @@ section.secPad
 include common/footer
 script.
   $(document).ready(function() {
-      var container = document.querySelector("body");
-      setTimeout(function(){
-        if (localStorage.getItem('storetype') && localStorage.getItem('storetype') == "online") {
-            container.classList.remove("switchOff");
-            container.classList += " switchOn";
-            $('.online').show()
-            $('.offline').hide()
+    var container = document.querySelector("body");
+    setTimeout(function(){
+      if (localStorage.getItem('storetype') && localStorage.getItem('storetype') == "online") {
+          container.classList.remove("switchOff");
+          container.classList += " switchOn";
+          $('.online').show()
+          $('.offline').hide()
+      } else {
+          container.classList.remove("switchOn");
+          container.classList += " switchOff";
+          $('.offline').show()
+          $('.online').hide()
+      }
+    }, 500);
+    $('.hmeSrchInpMain').keyup(function(event) {
+      event.preventDefault();
+      var radioValue = $("input[name='srchTab']:checked").val();
+      var value=$(this).val();
+      if (event.keyCode === 13) {
+        if (value !== undefined && value !== null && value !== '') {
+          if(radioValue=='store' || radioValue=='website'){
+            if ($('body').hasClass('switchOn')) {
+                var online = true;
+            } else {
+                var online = false;
+            }
+            if (online == true) {
+                window.location.href = "/search?searchFor=" + value + "&buisnessOnline=true";
+            } else {
+                window.location.href = "/search?searchFor=" + value + "&buisnessOffline=true";
+            }
+          }
+          if(radioValue=='blog'){
+            window.location.href = "/blogsearch?searchFor=" + value;
+          }
+          if(radioValue=='inf'){
+            window.location.href = "/users?searchFor=" + value;
+          }
+          $(".hmeSrchInpMain").val('');
         } else {
-            container.classList.remove("switchOn");
-            container.classList += " switchOff";
-            $('.offline').show()
-            $('.online').hide()
+            alert("Please Enter Value of Search Box")
         }
-      }, 500);
+      }
+    });
+    $('.hmeSrchSub').click(function(event) {
+      event.preventDefault();
+      var radioValue = $("input[name='srchTab']:checked").val();
+      var value= $("input[name='searchome']").val();
+        if (value !== undefined && value !== null && value !== '') {
+          if(radioValue=='store' || radioValue=='website'){
+            if ($('body').hasClass('switchOn')) {
+                var online = true;
+            } else {
+                var online = false;
+            }
+            if (online == true) {
+              window.location.href = "/search?searchFor=" + value + "&buisnessOnline=true";
+            } else {
+              window.location.href = "/search?searchFor=" + value + "&buisnessOffline=true";
+            }
+          }
+          if(radioValue=='blog'){
+            window.location.href = "/blogsearch?searchFor=" + value;
+          }
+          if(radioValue=='inf'){
+            window.location.href = "/users?searchFor=" + value;
+          }
+          $(".hmeSrchInpMain").val('')
+        } else {
+            alert("Please Enter Value of Search Box")
+        }
+    });
     function onOffSwitch() {
       if (container.classList.contains("switchOn")) {
         container.classList.remove("switchOn");
@@ -377,4 +499,36 @@ script.
       }
       }
     });
+    $('.blogCarouselWrap').each(function() {
+    var $swipCont = $(this),
+    $swipNxt = $swipCont.parent().children('.swiper-button-next'),
+    $swipPrv = $swipCont.parent().children('.swiper-button-prev');
+    var swip = new Swiper($swipCont, {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerGroup: 1,
+    navigation: {
+    nextEl: $swipNxt,
+    prevEl: $swipPrv
+    },
+    breakpoints: {
+    600: {
+    slidesPerView: 1,
+    spaceBetween: 0
+    },
+    768: {
+    slidesPerView: 2,
+    spaceBetween: 10
+    },
+    1000: {
+    slidesPerView: 2,
+    spaceBetween: 15
+    },
+    1250: {
+    spaceBetween: 30
+    }
+    }
+    });
+    })
   })
