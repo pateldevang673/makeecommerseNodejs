@@ -63,7 +63,6 @@ class HomeHandler extends BaseAutoBindedClass {
     }
 
     getSingleHome(req, res) {
-        console.log("Home Page");
         if (localStorage.getItem('cityName') != null) {
             localStorage.setItem('cityName', 'Ahmedabad')
         }
@@ -73,7 +72,6 @@ class HomeHandler extends BaseAutoBindedClass {
             var cityName = "Ahmedabad";
         }
         var mainObj = {};
-        console.log(URLStore + '/story/?startStories=0&endStories=5')
         Promise.all([
                 this.requestAsync(req, URLStore + '/collections/search?buisnessOffline=true&location=' + cityName, 'offlineCollections'),
                 this.requestAsync(req, URLStore + '/collections/search?buisnessOnline=true', 'onlineCollections'),
@@ -109,7 +107,6 @@ class HomeHandler extends BaseAutoBindedClass {
                 });
             })
             .then((results) => {
-                console.log(results['stories'])
                 var seoData = {
                     title: 'ZeepZoop - Shopping Guide App and Brand Discovery Platform',
                     description: "India's First Shopping Guide and Brand Discovery website with 600+ Designer Labels listed to Get Designer Clothes, Jewellery, Accessories and Home Decor.",
