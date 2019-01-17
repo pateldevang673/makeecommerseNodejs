@@ -4385,3 +4385,9 @@ select.hmeSrchCtrl{
     width: 100px;
 }
 .hmstry{white-space: nowrap;overflow: hidden;text-overflow: ellipsis;}
+.hmcntnt{
+    text-align: justify;
+    margin-top: 2%;
+    color: #707070;
+    
+}

@@ -4,7 +4,7 @@ include common/head
   .bnrBg.sizCover(style='background-image: url('+global.config.variable.apiPath+'/#{store.storeBanner}'+')')
   .shopRatingMainWrp
     .centerAlign
-      a.shopRate(href='javascript:void(0)', data-fancybox='')
+      a.shopRate(href='javascript:void(0);', data-fancybox='')
         strong #{store.avgRating}
         span #{store.reviewCount} Votes
 section.shopBothInfPgeMainCont
@@ -135,7 +135,18 @@ section.shopBothInfPgeMainCont
           - for (var x = 0; x < lengthstoreCatalogs; x++)
             .swiper-slide.sclHov
               a(href='javascript:void(0);')
-                img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='#{store.storeName}')          
+                img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='#{store.storeName}')    
+//- section
+//-   .secPad.aboutShop
+//-     .centerAlign
+//-       h3 Travelers home
+//-       p
+//-         | Travelers Home is the brainchild of Ruchira Asnani. A space stylist from NIFT Gandhinagar, she has extensively researched the spatial design and likes all her creations and collections to perfection. Travelers home as the names suggest, is a one-stop shop that accentuates a travelers expression to life through art. If you are are globetrotter or are simply fancied by the lands beyond the ocean then this store is the place for you. The store is dedicated to bring global lifestyle and decor in to one place. With their carefully selected products you can create an abode that gives out a global experience to our customers.
+//-       p
+//-         | Their offline store work to stimulate all senses by creating pleasing palettes gives solace to the discerning eye and mesmerizing aromas engulf you once you step into their space almost acts therapeutic to the body.
+//-       p
+//-         | If you would like to get tailored made gifts for weddings, corporate gifting or festive gestures, they have a myriad range of products. They take pride in housing certain limited editions with the intention of indulging our clients. In times of indecisiveness, the display cleverly suggests products that should be used together to enhance the look. Ruchira’s personal explorations and appreciation of space make this venture close to her heart, and add a special touch, which is evident in her work.
+      
 .secPad.shopBothReviewMainCont
   .centerAlign
     ul.reviewMainCont
