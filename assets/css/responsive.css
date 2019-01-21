@@ -115,12 +115,53 @@
 .hmeMainPrlxCont{background-attachment:scroll;}
 .siteMapLinks li a{font-size:16px;}
 .regBrandMainCont{display:block;}
+
+/*user profile*/
+.profilepic img
+{ 	
+    width: 135px;
+	height: 135px;
 }
+
+.userstatus{
+	display: inline-block;
+}
+
+.username
+{
+    font-size: 25px;	
+	margin-left: 35px;
+
+}
+.handle
+{
+font-size: 18px;}
+
+.userbio
+{
+margin-top: 5%;
+font-size: 14px;
+ width: 280px;
+}
+.bgwt {
+    padding: 25px 50px;
+    margin-top: 100px;    
+}
+.redbggrd {
+        height: 210px;
+}
+
+
+
+
 @media screen and (max-width:1000px){.hide1000{display:none !important}
 .headOpnMenuIcn{width:26px;height:19px}
 .hmeSldTtle{font-size:40px;line-height:46px}
 .macho {margin-top: 12px; padding-bottom: 13px;}
 .logoBlck{width:130px}
+.hmeSldTtle {font-size: 32px;line-height: 30px;}
+.hmeAdvnceSrchWrap {margin: 0 auto 30px auto;}
+.hmeAdvnceHdrWrp {margin-bottom: 15px;}
 .headSearchOlay .srchInpBx{padding:15px 15px 15px 45px;font-size:16px}
 .headSearchOlay .bigSrchIcn{width:20px;height:20px}
 .headSrchClse{width:20px;height:20px}
@@ -265,7 +306,42 @@
 .shareSocialIcn a{margin-top:8px;}
 .shareSocialIcn a i{width:30px;height:30px;}
 .siteMapLinks li a{font-size:15px;}
+
+/*user profile*/
+.profilepic img
+{ 	
+    width: 165px;
+	height: 165px;
+	vertical-align: middle;
 }
+
+.userstatus{
+
+	float: none;
+	margin-top: 15px;
+	
+}
+
+.username
+{
+    font-size: 25px;	
+	margin-left: 35px;
+
+}
+.handle
+{
+font-size: 18px;}
+
+.userbio
+{
+margin-top: 5%;
+font-size: 14px;
+}
+
+.editProfNavWrap {
+    margin-top: 180px;
+}
+
 @media screen and (max-width:768px){.shopInfWrap .secDesc{display:none;}
 .shopInfoActBtnWrp a{padding:6px;}
 .hide768{display:none !important}
@@ -274,8 +350,17 @@
 .switchBtn{width:30px;height:30px;top:-12px}
 .switchBg{width:70px;height:6px}
 .inEshpLbl{font-size:16px}
+.hmeSldTtle {font-size: 30px;line-height: 38px;letter-spacing: 1px;}
+.hmeSrchCtrl {height: 28px;padding: 0 9px;font-size: 12px;line-height: 28px;}
 .hmeSldTtle{font-size:34px;line-height:40px}
 .hmeMainPrlxWrp{position:absolute;top:35%}
+.hmeSldTtle span { line-height: 1.5; display: block;}
+select.hmeSrchCtrl { padding-right: 30px; background-size: 10px auto;}
+.hmeSrchSub.hmeSrchCtrl { padding-left: 33px;}
+.hmeSrchInpMain { width: 260px;}
+.hmeAdvnceLnkWrp li label { font-size: 12px; padding: 2px 12px;}
+.ctyGuideLnk {font-size: 12px;}
+.hmeAdvnceSrchWrap {padding: 22px 30px;}
 .sideNavTtleWrp{padding:20px 30px 25px 25px}
 .sideMenClose{width:26px;height:26px;top:23px}
 .regBrndCatagory li div i,
@@ -444,8 +529,67 @@
 .curBtnBlck{padding:12px 60px;font-size:14px;}
 .portOfrTtle{font-size:16px;margin-bottom:3px;}
 .joinPortImg{margin:50px 0 40px 0;}
+
+/*user profile*/
+.bgwt {
+    padding: 15px 40px;
+    margin-top: 50px;
 }
+.profilepic 
+{   display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width:100px;
+  padding-bottom: 10px;
+}
+.profilepic img
+{ 	
+    width: 100px;
+	height: 100px;
+}
+
+.userstatus{
+
+	float: none;
+	width:100%;
+	margin-top: 15px;
+	
+}
+
+.username
+{
+    font-size: 25px;	
+	margin-left: 35px;
+	display: block;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+
+}
+.handle
+{
+font-size: 18px;}
+
+.userbio
+{margin-top: 10px;
+	width: 100%;
+	padding: 0;
+}
+
+.editProfNavWrap {
+    margin-top: 255px;
+}
+.redbggrd {
+    height: 150px;
+    }
+
 @media screen and (max-width:640px){.collection-swiper-cont .swiper-slide a{height:130px}
+.hmeSldTtle {font-size: 24px;line-height: 33px;letter-spacing: 1px;margin-bottom: 15px;}
+.hmeAdvnceSrchWrap {padding: 20px 25px; margin-bottom: 20px;}
+.hmeSrchInpMain {width: 220px;margin: 0 6px;}
+.hmeSrchCtrl {height: 26px; padding: 0 7px;font-size: 11px;line-height: 26px;}
+.hmeSrchSub.hmeSrchCtrl {text-indent: 1000px;overflow: hidden;width: 28px;padding: 0;background-position: center center;}
+.hmeAdvnceLnkWrp li label {font-size: 11px;padding: 3px 7px;}
 .popularGridWrap li a img{height:140px}
 .popularGridWrap li{height:208px;overflow:hidden;}
 .popularGridWrap li,
@@ -603,8 +747,60 @@ textarea.frmInpt2{height:70px}
 .portOfferListWrap li{margin-bottom:30px;}
 .joinPortMainCont{padding-bottom:40px;}
 .curBtnBlck{padding:10px 40px;font-size:13px;}
+
+/*user profile*/
+
+.userstatus{
+	float: none;
+	width:100%;
+	margin-top: 15px;
+	font-size: 14px;	
+}
+
+
+.userstatus h4 {
+	
+	font-size: 18px;	
+}
+.Numfollow li {
+  width: 78px;
+}
+
+.username
+{
+    font-size: 25px;	
+	margin-left: 35px;
+	display: block;
+	width: 100%;
+	margin: auto;
+	text-align: center;
+
+}
+.handle
+{
+font-size: 18px;}
+
+.userbio
+{margin-top: 10px;
+	width: 100%;
+	padding: 0;
+}
+.userWeb
+{
+	font-size: 15px;
+}
+.editProfNavWrap {
+    margin-top: 270px;
+}
+
 }
 @media screen and (max-width:480px){.headLinksMainWrap>li>a{font-size:12px}
+.hmeMainPrlxWrp {top: 30%;}
+.hmeSldTtle {font-size: 18px;}
+.hmeAdvnceSrchWrap {padding: 20px;margin-bottom: 15px;}
+.ctyGuideLnk {display: none;}
+select.hmeSrchCtrl {padding-right: 20px;background-size: 8px auto;}
+.hmeSrchInpMain {width: 130px;margin: 0 6px;}
 .popularGridWrap li{height:228px;overflow:hidden;}
 .blgPostMainCont img{margin:auto;width:350px;object-fit:cover;height:100%;display:block;}
 .blgPostMainCont>img {width: 100%;}
@@ -624,7 +820,6 @@ textarea.frmInpt2{height:70px}
 .hsSubMenu{right:-6px;padding-top:10px}
 .hsSubMenu:before{top:0;right:6px;width:10px;height:10px}
 .hsSubMenu ul{padding:6px 5px}
-.hmeSldTtle{font-size:28px;line-height:32px}
 .switchBg{width:65px;height:5px}
 .switchBtn{width:26px;height:26px;top:-11px}
 .inEshpSwitch{margin:0 15px}
@@ -752,7 +947,7 @@ textarea.frmInpt{height:70px}
 .inrBredCrumbCont{padding:15px 0}
 .feaListMainWrp{margin-top:5px}
 .bredCrumbWrp li{font-size:11px}
-.popularGridWrap li a img{height:160px}
+.popularGridWrap li a img{height:155px}
 .mt60{margin-top:30px}
 .popularGridWrap{width:100%}
 .shpDireShpNwBtn a{padding:6px 7px 6px 11px;font-size:11px}
@@ -809,4 +1004,8 @@ textarea.frmInpt{height:70px}
 .portOfferListWrap{padding-top:25px;}
 .portOfrTtle{font-size:13px;margin-bottom:0;}
 .curBtnBlck{padding:8px 30px;font-size:12px;}
+
+.editProfNavWrap {
+    margin-top: 290px;
+}
 }
