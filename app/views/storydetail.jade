@@ -50,6 +50,31 @@ section.blgInrPostMainCont.secPad
           p
             if subtitle[x].image[3]
               img(src=global.config.variable.apiPath+'/'+'#{subtitle[x].image[3]}', alt='img')
+    .blgInrSidebarWrap
+      .blgSideLble Recommended
+      - for(var x=2;x<catBlogLength;x++)
+        .blgInrSidebarBlck
+          a.sclHov.blgLstImg(href="/story"+"/#{catBlog[x]._id}")
+            img(src=global.config.variable.apiPath+'/'+'#{catBlog[x].bannerImage}', alt='img')
+          .blgLstInfWrp
+            a.blgLstTtle(href="/story"+"/#{catBlog[x]._id}") #{catBlog[x].title}
+            .blgLstFtrWrp
+              .blgLstAuthInfWrap
+                img.blgLstAuthImg(src=global.config.variable.apiPath+'/'+'#{catBlog[x].userId.userImage}', alt='img')
+                .blgLstAuthInf
+                  div #{catBlog[x].userId.name}
+                  div #{catBlog[x].time}
+        .blgInrSidebarBlck.pined
+          a.sclHov.blgLstImg(href="/story"+"/#{catBlog[1]._id}")
+              img(src=global.config.variable.apiPath+'/'+'#{catBlog[1].bannerImage}', alt='img')
+            .blgLstInfWrp
+              a.blgLstTtle(href="/story"+"/#{catBlog[1]._id}") #{catBlog[1].title}
+              .blgLstFtrWrp
+                .blgLstAuthInfWrap
+                  img.blgLstAuthImg(src=global.config.variable.apiPath+'/'+'#{catBlog[1].userId.userImage}', alt='img')
+                  .blgLstAuthInf
+                    div #{catBlog[1].userId.name}
+                    div #{catBlog[1].time}
 
 include common/footer
 script(src='/js/Sticky-kit.v1.1.3.js')

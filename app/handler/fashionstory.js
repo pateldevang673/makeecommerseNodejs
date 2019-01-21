@@ -47,31 +47,48 @@ class FashionStoryHandler extends BaseAutoBindedClass {
             });
         }).then((results) => {
             var blog = JSON.parse(results)['data'];
-            if (blog) {
-                var seoData = {
-                    title: blog.title,
-                    description: "Zeepzoop",
-                    keywords: "ZeepZoop Stories For" + blog.category,
-                    image: global.config.variable.apiPath + '/' + blog.bannerImage,
-                    type: 'story',
-                    url: 'https://' + req.get('host') + req.originalUrl,
-                    site: 'Zeepzoop',
-                    domain: 'zeepzoop.com'
+            var catBlogs = {
+                url: URLStore + '/story/?category=' + blog.category,
+                method: 'GET',
+                headers: {
+                    'Authorization': "maximumvsminimumsecurity",
+                    'Content-Type': "application/json"
                 }
+            };
+            return new Promise(function(resolve, reject) {
+                request(catBlogs, function(error, response, body) {
+                    resolve(body)
+                });
+            }).then((catBlogsdata) => {
+                var catBlog = JSON.parse(catBlogsdata)['data'];
+                if (blog) {
+                    var seoData = {
+                        title: blog.title,
+                        description: "Zeepzoop",
+                        keywords: "ZeepZoop Stories For" + blog.category,
+                        image: global.config.variable.apiPath + '/' + blog.bannerImage,
+                        type: 'story',
+                        url: 'https://' + req.get('host') + req.originalUrl,
+                        site: 'Zeepzoop',
+                        domain: 'zeepzoop.com'
+                    }
 
-                res.render('storydetail', {
-                    seo: true,
-                    seoData: seoData,
-                    page: 'storydetail-page',
-                    titleurl: req.params.url,
-                    blog: blog,
-                    time: moment(blog.dateCreated).format("Do MMM YYYY"),
-                    subtitle: blog.subTitle,
-                    shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl
-                })
-            } else {
-                res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
-            }
+                    res.render('storydetail', {
+                        seo: true,
+                        seoData: seoData,
+                        page: 'storydetail-page',
+                        titleurl: req.params.url,
+                        catBlog: catBlog,
+                        catBlogLength: catBlog.length > 6 ? 6 : catBlog.length,
+                        blog: blog,
+                        time: moment(blog.dateCreated).format("Do MMM YYYY"),
+                        subtitle: blog.subTitle,
+                        shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl
+                    })
+                } else {
+                    res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
+                }
+            })
         })
     }
 
