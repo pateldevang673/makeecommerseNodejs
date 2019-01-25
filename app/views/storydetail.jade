@@ -38,17 +38,17 @@ section.blgInrPostMainCont.secPad
             p
               | #{subtitle[x].description}
           br
-          p
-            if subtitle[x].image[0]
+          if subtitle[x].image[0]
+            p
               img(src=global.config.variable.apiPath+'/'+'#{subtitle[x].image[0]}', alt='img')
-          p
-            if subtitle[x].image[1]
+          if subtitle[x].image[1]
+            p
               img(src=global.config.variable.apiPath+'/'+'#{subtitle[x].image[1]}', alt='img')
-          p
-            if subtitle[x].image[2]
+          if subtitle[x].image[2]
+            p
               img(src=global.config.variable.apiPath+'/'+'#{subtitle[x].image[2]}', alt='img')
-          p
-            if subtitle[x].image[3]
+          if subtitle[x].image[3]
+            p
               img(src=global.config.variable.apiPath+'/'+'#{subtitle[x].image[3]}', alt='img')
     .blgInrSidebarWrap
       .blgSideLble Recommended
