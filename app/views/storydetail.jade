@@ -64,6 +64,7 @@ section.blgInrPostMainCont.secPad
                 .blgLstAuthInf
                   div #{catBlog[x].userId.name}
                   div #{catBlog[x].time}
+      if catBlog[1]
         .blgInrSidebarBlck.pined
           a.sclHov.blgLstImg(href="/story"+"/#{catBlog[1]._id}")
               img(src=global.config.variable.apiPath+'/'+'#{catBlog[1].bannerImage}', alt='img')
