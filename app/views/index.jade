@@ -170,7 +170,10 @@ section.secPad.blgListMainCont
                 a.blgLstTtle.hmstry(href='/story/#{stories[x]._id}') #{stories[x].title}
                 .blgLstFtrWrp
                   .blgLstAuthInfWrap
-                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{stories[x].userId.userImage}', alt='img')
+                    if stories[x].userId && stories[x].userId.userImage
+                      img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{stories[x].userId.userImage}', alt='img')
+                    else
+                      img.blgLstAuthImg(src="/images/user_profile.png", alt='img')
                     .blgLstAuthInf
                       div #{stories[x].userId.name}
                       div #{stories[x].time}
