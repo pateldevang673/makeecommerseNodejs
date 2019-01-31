@@ -10,13 +10,16 @@ section.secPad.bg-gry.blgListMainCont
         .swiper-wrapper
           - for(var x=0;x<FashionStorylength;x++)
             .swiper-slide
-              a.sclHov.blgLstImg(href='/fashionstory'+'/#{FashionStory[x]._id}')
+              a.sclHov.blgLstImg(href='/story'+'/#{FashionStory[x]._id}')
                 img(src=global.config.variable.apiPath+'/#{FashionStory[x].bannerImage}', alt='img')
               .blgLstInfWrp
-                a.blgLstTtle(href='/fashionstory'+'/#{FashionStory[x]._id}') #{FashionStory[x].title}
+                a.blgLstTtle.hmstry(href='/story'+'/#{FashionStory[x]._id}') #{FashionStory[x].title}
                 .blgLstFtrWrp
                   .blgLstAuthInfWrap
-                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{FashionStory[x].authorImage}', alt='img')
+                    if FashionStory[x].userId && FashionStory[x].userId.userImage
+                      img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{FashionStory[x].userId.userImage}', alt='img')
+                    else
+                      img.blgLstAuthImg(src="/images/user_profile.png", alt='img')
                     .blgLstAuthInf
                       div #{FashionStory[x].userId.name}
                       div #{FashionStory[x].time}
@@ -30,13 +33,16 @@ section.secPad.blgListMainCont
         .swiper-wrapper
           - for(var x=0;x<DecoreStorylength;x++)
             .swiper-slide
-              a.sclHov.blgLstImg(href='/fashionstory'+'/#{DecoreStory[x]._id}')
+              a.sclHov.blgLstImg(href='/story'+'/#{DecoreStory[x]._id}')
                 img(src=global.config.variable.apiPath+'/#{DecoreStory[x].bannerImage}', alt='img')
               .blgLstInfWrp
-                a.blgLstTtle(href='/fashionstory'+'/#{DecoreStory[x]._id}') #{DecoreStory[x].title}
+                a.blgLstTtle.hmstry(href='/story'+'/#{DecoreStory[x]._id}') #{DecoreStory[x].title}
                 .blgLstFtrWrp
                   .blgLstAuthInfWrap
-                    img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{DecoreStory[x].authorImage}', alt='img')
+                    if DecoreStory[x].userId && DecoreStory[x].userId.userImage
+                      img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{DecoreStory[x].userId.userImage}', alt='img')
+                    else
+                      img.blgLstAuthImg(src="/images/user_profile.png", alt='img')
                     .blgLstAuthInf
                       div #{DecoreStory[x].userId.name}
                       div #{DecoreStory[x].time}

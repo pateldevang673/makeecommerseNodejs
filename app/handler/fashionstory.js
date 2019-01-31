@@ -98,7 +98,7 @@ class FashionStoryHandler extends BaseAutoBindedClass {
         Promise.all([
                 // this.requestAsync(req, URLStore + '/blogs/search?sort=true', 'trendingBlogs'),
                 // this.requestAsync(req, URLStore + '/blogs/search', 'newBlogs'),
-                this.requestAsync(req, URLStore + '/story/?category=Decore+Story', 'DecoreStory'),
+                this.requestAsync(req, URLStore + '/story/?category=Decor+Story', 'DecoreStory'),
                 this.requestAsync(req, URLStore + '/story/?category=Fashion+Story', 'FashionStory'),
                 // this.requestAsync(req, URLStore + '/blogs/search?&category=Around+The+World', 'AroundTheWorld'),
                 // this.requestAsync(req, URLStore + '/blogs/search?&category=Fashion', 'fashion'),
