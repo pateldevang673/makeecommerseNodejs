@@ -33,6 +33,7 @@ html(lang='en')
     link(rel='icon', type='image/png', href='/images/favicon.png')    
     link(href='https://fonts.googleapis.com/css?family=Open+Sans:400,600,700i%7COpen+Sans+Condensed:300,700', rel='stylesheet')    
     link(href='/css/style.css', rel='stylesheet')
+    link(href='/css/styletemp.css', rel='stylesheet')
     link(href='/css/responsive.css', rel='stylesheet')
     link(href='/css/jquery.lib.style.min.css', rel='stylesheet')
     link(href='https://cdnjs.cloudflare.com/ajax/libs/jquery-bar-rating/1.2.2/themes/css-stars.css', rel='stylesheet')
@@ -363,10 +364,10 @@ html(lang='en')
         });
         $('#logout').click(function(e) {
           localStorage.clear();
-          FB.logout();
-          var auth2 = gapi.auth2.getAuthInstance();
-          auth2.signOut().then(function () {
-          });
+          //- FB.logout();
+          //- var auth2 = gapi.auth2.getAuthInstance();
+          //- auth2.signOut().then(function () {
+          //- });
         });
         $('.loginsinup').click(function(e) {
           $('#signinpopup').show();

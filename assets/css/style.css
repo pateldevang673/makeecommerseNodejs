@@ -4381,6 +4381,11 @@ select.hmeSrchCtrl{
 .aboutShop{text-align: justify; font-size: 14px; line-height: 26px;font-weight: 400;}
 .aboutShop h3{font-size: 20px; text-transform: uppercase;}
 .aboutShop p{padding-top: 15px;}    
+.aboutShop ul li
+{
+    list-style-type: disc;
+    margin-left: 2%;
+}
 .loginFix{
     width: 100px;
 }
@@ -4389,6 +4394,5 @@ select.hmeSrchCtrl{
     text-align: justify;
     margin-top: 2%;
     color: #707070;
-    margin-bottom: 2%;
-    
+    margin-bottom: 2%;   
 }

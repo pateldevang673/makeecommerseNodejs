@@ -314,7 +314,8 @@ class HomeHandler extends BaseAutoBindedClass {
                     this.reqAsynctoken(req, URLStore + '/stores/bookmarkbyuser', datausr.token, 'Userbookmark'),
                     this.reqAsynctoken(req, URLStore + '/reviews/user/' + datausr._id, datausr.token, 'Userreview'),
                     this.reqAsynctoken(req, URLStore + '/mylists/user/' + datausr._id, datausr.token, 'UserMylist'),
-                    this.reqAsynctoken(req, URLStore + '/blogs/savebyuser/' + datausr._id, datausr.token, 'UserBlogs')
+                    this.reqAsynctoken(req, URLStore + '/blogs/savebyuser/' + datausr._id, datausr.token, 'UserBlogs'),
+                    this.reqAsynctoken(req, URLStore + '/users/' + datausr._id, datausr.token, 'UserInfo')
                 ])
                 .then(function(allData) {
                     return new Promise(function(resolve, reject) {
@@ -340,7 +341,7 @@ class HomeHandler extends BaseAutoBindedClass {
                         seo: true,
                         seoData: seoData,
                         page: 'userprofile',
-                        userdata: datausr,
+                        userdata: results['UserInfo'],
                         Userbookmark: results['Userbookmark'],
                         Usrbookmarklength: results['Userbookmark'].length,
                         Userreview: results['Userreview'],
