@@ -18,7 +18,7 @@ meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
           p.userbio
             | #{userdata.user.bio}
           div.userWeb
-            a(href='#') #{userdata.user.link}
+            a(href='http://#{userdata.user.link}', target="_blank") #{userdata.user.link}
         .userstatus
           ul.Numfollow
             li

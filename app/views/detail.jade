@@ -66,15 +66,71 @@ section.blgInrPostMainCont.secPad
                     div #{catBlog[1].authorName}
                     div #{catBlog[1].time}
 
+section.blog-newsletter
+  .centerAlign
+    .blognewletter-prt
+      form.form-newsletter
+        label
+          | Subscribe to the ZeepZoop
+          br
+          | Newsletter
+        .newsletter-group
+          input(name='',id="subeml", placeholder='Enter Your Email id', type='text')
+          button.cmn-btn.subscribe-btn(type='button',id="subscribe") Subscribe
+          a.blgthanksub(href='#thankpopup', id="mdlfncy", data-fancybox='')
+
+#thankpopup.thankPopupMainWrap
+  .thankpopuptext
+    .secTtle Thank You
+    .secDesc
+      p your submission has been received
+
 include common/footer
+
 script(src='/js/Sticky-kit.v1.1.3.js')
 script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bb3426196915581')
 script.
   $(window).load(function(e) {
-  if (winWid > 768) {  
+  if (winWid > 768) {
   $(".pined").stick_in_parent({
   offset_top: 80,
   parent: '.blgInrPostMainCont'
   });
   }
   });
+script.
+  $(document).ready(function(e) {
+    $("#mdlfncy").on("click", function() {});
+    $('#subscribe').click(function(e){
+        var emlsbsc=$('#subeml').val();
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+      if(emlsbsc !=='' && emlsbsc !==null && emailReg.test(emlsbsc)){
+        var obj={
+          email:emlsbsc
+        }
+        var request = $.ajax({
+          headers: {
+              'Authorization': "maximumvsminimumsecurity",
+              'Content-Type': "application/json;charset=UTF-8"
+          },
+          type: "POST",
+          url: "https://api.zeepzoop.com/users/subscribe",
+          //- url: "http://localhost:3000/users/subscribe",
+          data: JSON.stringify(obj),
+          dataType: "json"
+        });
+
+        request.done(function(response) {
+          console.log("saddam Husasin Subcriber is subscribe your news latter");
+          $("#mdlfncy").trigger("click");
+          $("#subeml").val('');
+        });
+        request.fail(function(jqXHR, textStatus) {
+            alert("Request failed: " + textStatus);
+            $("#subeml").val('');
+        });
+      }else{
+        alert("Please Enter Email");
+      }
+    });
+  })

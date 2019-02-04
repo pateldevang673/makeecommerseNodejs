@@ -168,8 +168,8 @@ section.secPad.blgListMainCont
                 img(src=srcset=global.config.variable.apiPath+'/#{stories[x].bannerImage}', alt='img')
               .blgLstInfWrp
                 a.blgLstTtle.hmstry(href='/story/#{stories[x]._id}') #{stories[x].title}
-                .blgLstFtrWrp
-                  .blgLstAuthInfWrap
+                a.blgLstFtrWrp(href='/story/#{stories[x]._id}')
+                  blgLstAuthInfWrap
                     if stories[x].userId && stories[x].userId.userImage
                       img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{stories[x].userId.userImage}', alt='img')
                     else
