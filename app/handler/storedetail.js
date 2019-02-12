@@ -1884,6 +1884,132 @@ class SdetailHandler extends BaseAutoBindedClass {
                             domain: 'zeepzoop.com'
                         }
                     }
+                    if (req.params.url == "studio-scarlet") {
+                        var seoData = {
+                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
+                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "studio-scarlet",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "satya-paul") {
+                        var seoData = {
+                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
+                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "satya-paul",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "aamod") {
+                        var seoData = {
+                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
+                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "aamod",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "bandhej") {
+                        var seoData = {
+                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
+                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "bandhej",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "elan-the-fashion-store") {
+                        var seoData = {
+                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
+                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "elan-the-fashion-store",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "pahenava-by-purvi") {
+                        var seoData = {
+                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
+                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "pahenava-by-purvi",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "be-womaniya") {
+                        var seoData = {
+                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
+                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "be-womaniya",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "options") {
+                        var seoData = {
+                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
+                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "options",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "siddhesh-chauhan") {
+                        var seoData = {
+                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
+                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "siddhesh-chauhan",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
 
                     res.render('storedetail', {
                         seo: true,
