@@ -47,21 +47,21 @@ class FashionStoryHandler extends BaseAutoBindedClass {
             });
         }).then((results) => {
             var blog = JSON.parse(results)['data'];
-            var catBlogs = {
-                url: URLStore + '/story/?category=' + blog.category,
-                method: 'GET',
-                headers: {
-                    'Authorization': "maximumvsminimumsecurity",
-                    'Content-Type': "application/json"
-                }
-            };
-            return new Promise(function(resolve, reject) {
-                request(catBlogs, function(error, response, body) {
-                    resolve(body)
-                });
-            }).then((catBlogsdata) => {
-                var catBlog = JSON.parse(catBlogsdata)['data'];
-                if (blog) {
+            if (blog) {
+                var catBlogs = {
+                    url: URLStore + '/story/?category=' + blog.category,
+                    method: 'GET',
+                    headers: {
+                        'Authorization': "maximumvsminimumsecurity",
+                        'Content-Type': "application/json"
+                    }
+                };
+                return new Promise(function(resolve, reject) {
+                    request(catBlogs, function(error, response, body) {
+                        resolve(body)
+                    });
+                }).then((catBlogsdata) => {
+                    var catBlog = JSON.parse(catBlogsdata)['data'];
                     var seoData = {
                         title: blog.title,
                         description: "Zeepzoop",
@@ -85,10 +85,11 @@ class FashionStoryHandler extends BaseAutoBindedClass {
                         subtitle: blog.subTitle,
                         shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl
                     })
-                } else {
-                    res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
-                }
-            })
+                })
+            } else {
+                res.redirect(301, '/')
+                // res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
+            }
         })
     }
 
