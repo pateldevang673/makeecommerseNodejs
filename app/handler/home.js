@@ -311,7 +311,7 @@ class HomeHandler extends BaseAutoBindedClass {
         }).then((results) => {
             var datausr = JSON.parse(results)['data'];
             Promise.all([
-                    this.reqAsynctoken(req, URLStore + '/stores/bookmarkbyuser', datausr.token, 'Userbookmark'),
+                    this.reqAsynctoken(req, URLStore + '/stores/bookmarkbyuser/' + datausr._id, datausr.token, 'Userbookmark'),
                     this.reqAsynctoken(req, URLStore + '/reviews/user/' + datausr._id, datausr.token, 'Userreview'),
                     this.reqAsynctoken(req, URLStore + '/mylists/user/' + datausr._id, datausr.token, 'UserMylist'),
                     this.reqAsynctoken(req, URLStore + '/blogs/savebyuser/' + datausr._id, datausr.token, 'UserBlogs'),
