@@ -179,6 +179,30 @@ section.secPad.blgListMainCont
                       div #{stories[x].time}
       .swiper-button-prev
       .swiper-button-next
+section.secPad.blgListMainCont
+  .centerAlign.posRel
+    h1.secTtle Shanaya's Story
+    a.seAlLink(href='/story') See All
+    .swip-ctrlWrp
+      .swiper-container.blogCarouselWrap
+        .swiper-wrapper
+          - for (var x = 0; x < lengthShanayStories ; x++)
+            .swiper-slide
+              a.sclHov.blgLstImg(href='/story/#{Shanaystories[x]._id}')
+                img(src=srcset=global.config.variable.apiPath+'/#{Shanaystories[x].bannerImage}', alt='img')
+              .blgLstInfWrp
+                a.blgLstTtle.hmstry(href='/story/#{Shanaystories[x]._id}') #{Shanaystories[x].title}
+                a.blgLstFtrWrp(href='/story/#{Shanaystories[x]._id}')
+                  blgLstAuthInfWrap
+                    if Shanaystories[x].userId && Shanaystories[x].userId.userImage
+                      img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{Shanaystories[x].userId.userImage}', alt='img')
+                    else
+                      img.blgLstAuthImg(src="/images/user_profile.png", alt='img')
+                    .blgLstAuthInf
+                      div #{Shanaystories[x].userId.name}
+                      div #{Shanaystories[x].time}
+      .swiper-button-prev
+      .swiper-button-next
 section#home-catalogue-swiper.secPad.home-catalogue-cont.bg-gry.offline
   .centerAlign.posRel
     h2.secTtle.mb2 CATALOUGES

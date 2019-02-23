@@ -89,6 +89,7 @@ class HomeHandler extends BaseAutoBindedClass {
                 this.requestAsync(req, URLStore + '/cities', 'cities'),
                 // this.requestAsync(req, URLStore + '/story/?startStories=0&endStories=3', 'stories'),
                 this.requestAsync(req, URLStore + '/story/?startStories=0&endStories=5', 'stories'),
+                this.requestAsync(req, URLStore + '/story/shanayastory/5bdd8097d0b5265f807aac43?startStores=0&endStores=5', 'Shanayastories'),
                 this.requestVideo(req, "https://www.googleapis.com/youtube/v3/search?order=videocount&part=snippet&channelId=UCQajBUKn91xbZ22StHqeOzg&maxResults=4&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc", 'videos')
                 // 'date type of orders'. Allowed values: [date, rating, relevance, title, videocount, viewcount]
             ])
@@ -151,6 +152,8 @@ class HomeHandler extends BaseAutoBindedClass {
                     lengthCategories: results['categories'].length,
                     stories: results['stories'],
                     lengthStories: results['stories'].length,
+                    Shanaystories: results['Shanayastories'],
+                    lengthShanayStories: results['Shanayastories'].length,
                     sponsoredOnline: results['sponsoredOnline'],
                     sponsoredOffline: results['sponsoredOffline'],
                     host: req.get('host')
@@ -326,6 +329,8 @@ class HomeHandler extends BaseAutoBindedClass {
                     });
                 })
                 .then((results) => {
+                    console.log("results['Userbookmark']")
+                    console.log(results['Userbookmark'])
                     var uimage = 'https://api.zeepzoop.com/' + datausr.userImage
                     var seoData = {
                         title: datausr.name,
