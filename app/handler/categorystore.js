@@ -255,43 +255,6 @@ class CategoryHandler extends BaseAutoBindedClass {
                 })
             })
     }
-
-    // getcategegorystore(req, res) {
-    //     var mainObj = {};
-    //     Promise.all([
-    //             this.requestAsync(req, URLStore + '/collections/' + req.params.id, 'collectionStore'),
-    //         ])
-    //         .then(function(allData) {
-    //             return new Promise(function(resolve, reject) {
-    //                 for (let i = 0; i < allData.length; i++) {
-    //                     mainObj[allData[i][0]] = allData[i][1].storeId
-    //                 }
-    //                 resolve(mainObj);
-    //             });
-    //         })
-    //         .then((results) => {
-    //             var seoData = {
-    //                 title: 'Zeepzoop Collection',
-    //                 description: 'Read Collection related to Art, Craft, culture, festivals, different cities, fashion, Home décor and much more. It guides you about what to buy from different cities.',
-    //                 keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
-    //                 image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
-    //                 type: 'website',
-    //                 url: req.protocol + '://' + req.get('host') + req.originalUrl,
-    //                 site: 'Zeepzoop',
-    //                 domain: 'zeepzoop.com'
-    //             }
-
-    //             res.render('categorystore', {
-    //                 seo: true,
-    //                 seoData: seoData,
-    //                 page: 'categorystore-page',
-    //                 collectionOnStore: results['collectionStore'],
-    //                 collectionOnStorelength: results['collectionStore'].length,
-    //                 titleURL: urlArray
-    //             })
-    //         })
-    // }
-
 }
 
 module.exports = CategoryHandler;

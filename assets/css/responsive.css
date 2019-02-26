@@ -99,7 +99,6 @@
 .featShpRate{right:10px;top:15px;width:40px;line-height:24px;font-size:12px}
 .shpDireShpNwBtn{margin-top:20px}
 .shpDireShpNwBtn a{display:block;float:right;margin-top:20px}
-/*clear:both*/
 .ratingShpImg{width:130px}
 .ratingStarMainWrp img{height:20px}
 .mt30{margin-top:20px}
@@ -107,7 +106,7 @@
 .blgLstInfWrp{padding:20px}
 .edtProOferBnr{font-size:14px;padding:6px 18px;margin-bottom:7px}
 .edtProfOfferInf{padding:12px 13px 45px}
-.profPicMainCont img{width:130px;margin-right:20px;object-fit: cover;height: 130px;}
+.profPicMainCont img{width:130px;margin-right:20px;object-fit:cover;height:130px;}
 .profPicMainCont .secTtle{font-size:34px}
 .profPicMainCont{padding:25px 50px}
 .editFormMainWrp{padding:30px 0 0}
@@ -115,53 +114,21 @@
 .hmeMainPrlxCont{background-attachment:scroll;}
 .siteMapLinks li a{font-size:16px;}
 .regBrandMainCont{display:block;}
-
-/*user profile*/
-.profilepic img
-{ 	
-    width: 135px;
-	height: 135px;
-}
-
-.userstatus{
-	display: inline-block;
-}
-
-.username
-{
-    font-size: 25px;	
-	margin-left: 35px;
-
-}
-.handle
-{
-font-size: 18px;}
-
-.userbio
-{
-margin-top: 5%;
-font-size: 14px;
- width: 280px;
-}
-.bgwt {
-    padding: 25px 50px;
-    margin-top: 100px;    
-}
-.redbggrd {
-        height: 210px;
-}
-
-
-
-
+.profilepic img{width:135px;height:135px;}
+.userstatus{display:inline-block;}
+.username{font-size:25px;margin-left:35px;}
+.handle{font-size:18px;}
+.userbio{margin-top:5%;font-size:14px;width:280px;}
+.bgwt{padding:25px 50px;margin-top:100px;}
+.redbggrd{height:210px;}
 @media screen and (max-width:1000px){.hide1000{display:none !important}
 .headOpnMenuIcn{width:26px;height:19px}
 .hmeSldTtle{font-size:40px;line-height:46px}
-.macho {margin-top: 12px; padding-bottom: 13px;}
+.macho{margin-top:12px;padding-bottom:13px;}
 .logoBlck{width:130px}
-.hmeSldTtle {font-size: 32px;line-height: 30px;}
-.hmeAdvnceSrchWrap {margin: 0 auto 30px auto;}
-.hmeAdvnceHdrWrp {margin-bottom: 15px;}
+.hmeSldTtle{font-size:32px;line-height:30px;}
+.hmeAdvnceSrchWrap{margin:0 auto 30px auto;}
+.hmeAdvnceHdrWrp{margin-bottom:15px;}
 .headSearchOlay .srchInpBx{padding:15px 15px 15px 45px;font-size:16px}
 .headSearchOlay .bigSrchIcn{width:20px;height:20px}
 .headSrchClse{width:20px;height:20px}
@@ -306,42 +273,12 @@ font-size: 14px;
 .shareSocialIcn a{margin-top:8px;}
 .shareSocialIcn a i{width:30px;height:30px;}
 .siteMapLinks li a{font-size:15px;}
-
-/*user profile*/
-.profilepic img
-{ 	
-    width: 165px;
-	height: 165px;
-	vertical-align: middle;
-}
-
-.userstatus{
-
-	float: none;
-	margin-top: 15px;
-	
-}
-
-.username
-{
-    font-size: 25px;	
-	margin-left: 35px;
-
-}
-.handle
-{
-font-size: 18px;}
-
-.userbio
-{
-margin-top: 5%;
-font-size: 14px;
-}
-
-.editProfNavWrap {
-    margin-top: 180px;
-}
-
+.profilepic img{width:165px;height:165px;vertical-align:middle;}
+.userstatus{float:none;margin-top:15px;}
+.username{font-size:25px;margin-left:35px;}
+.handle{font-size:18px;}
+.userbio{margin-top:5%;font-size:14px;}
+.editProfNavWrap{margin-top:180px;}
 @media screen and (max-width:768px){.shopInfWrap .secDesc{display:none;}
 .shopInfoActBtnWrp a{padding:6px;}
 .hide768{display:none !important}
@@ -350,17 +287,17 @@ font-size: 14px;
 .switchBtn{width:30px;height:30px;top:-12px}
 .switchBg{width:70px;height:6px}
 .inEshpLbl{font-size:16px}
-.hmeSldTtle {font-size: 30px;line-height: 38px;letter-spacing: 1px;}
-.hmeSrchCtrl {height: 28px;padding: 0 9px;font-size: 12px;line-height: 28px;}
+.hmeSldTtle{font-size:30px;line-height:38px;letter-spacing:1px;}
+.hmeSrchCtrl{height:28px;padding:0 9px;font-size:12px;line-height:28px;}
 .hmeSldTtle{font-size:34px;line-height:40px}
 .hmeMainPrlxWrp{position:absolute;top:35%}
-.hmeSldTtle span { line-height: 1.5; display: block;}
-select.hmeSrchCtrl { padding-right: 30px; background-size: 10px auto;}
-.hmeSrchSub.hmeSrchCtrl { padding-left: 33px;}
-.hmeSrchInpMain { width: 260px;}
-.hmeAdvnceLnkWrp li label { font-size: 12px; padding: 2px 12px;}
-.ctyGuideLnk {font-size: 12px;}
-.hmeAdvnceSrchWrap {padding: 22px 30px;}
+.hmeSldTtle span{line-height:1.5;display:block;}
+select.hmeSrchCtrl{padding-right:30px;background-size:10px auto;}
+.hmeSrchSub.hmeSrchCtrl{padding-left:33px;}
+.hmeSrchInpMain{width:260px;}
+.hmeAdvnceLnkWrp li label{font-size:12px;padding:2px 12px;}
+.ctyGuideLnk{font-size:12px;}
+.hmeAdvnceSrchWrap{padding:22px 30px;}
 .sideNavTtleWrp{padding:20px 30px 25px 25px}
 .sideMenClose{width:26px;height:26px;top:23px}
 .regBrndCatagory li div i,
@@ -505,7 +442,7 @@ select.hmeSrchCtrl { padding-right: 30px; background-size: 10px auto;}
 .shopAdres{margin-bottom:20px;font-size:14px;width:80%}
 .shopInfoMainCont{margin-top:-70px}
 .shopRatingMainWrp{bottom:15px}
-.shopProfilPicMainWrp{width: 120px;height: 120px;}
+.shopProfilPicMainWrp{width:120px;height:120px;}
 .shopRate span{font-size:13px;margin-top:3px}
 .shopRate strong{width:50px;line-height:30px;font-size:14px}
 .shopInfDireTimiWrap{width:70%;margin-top:20px;text-align:left;margin-left:23%;margin-bottom:15px}
@@ -520,7 +457,7 @@ select.hmeSrchCtrl { padding-right: 30px; background-size: 10px auto;}
 .editBlgSlde:nth-child(2n+2){margin-right:0}
 .profPicMainCont{padding:25px 36px}
 .notificMainWrap li{padding:13px 20px}
-.profPicMainCont img{width:120px;object-fit: cover;height: 120px;}
+.profPicMainCont img{width:120px;object-fit:cover;height:120px;}
 .profPicMainCont .secTtle{font-size:32px;margin:0}
 .shareSocialIcn{position:static;width:90%;margin:0 auto 15px auto;}
 .shareSocialIcn a{margin-right:10px;margin-bottom:0;display:inline-block;vertical-align:middle;}
@@ -529,67 +466,22 @@ select.hmeSrchCtrl { padding-right: 30px; background-size: 10px auto;}
 .curBtnBlck{padding:12px 60px;font-size:14px;}
 .portOfrTtle{font-size:16px;margin-bottom:3px;}
 .joinPortImg{margin:50px 0 40px 0;}
-
-/*user profile*/
-.bgwt {
-    padding: 15px 40px;
-    margin-top: 50px;
-}
-.profilepic 
-{   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width:100px;
-  padding-bottom: 10px;
-}
-.profilepic img
-{ 	
-    width: 100px;
-	height: 100px;
-}
-
-.userstatus{
-
-	float: none;
-	width:100%;
-	margin-top: 15px;
-	
-}
-
-.username
-{
-    font-size: 25px;	
-	margin-left: 35px;
-	display: block;
-	width: 100%;
-	margin: auto;
-	text-align: center;
-
-}
-.handle
-{
-font-size: 18px;}
-
-.userbio
-{margin-top: 10px;
-	width: 100%;
-	padding: 0;
-}
-
-.editProfNavWrap {
-    margin-top: 255px;
-}
-.redbggrd {
-    height: 150px;
-    }
-
+.bgwt{padding:15px 40px;margin-top:50px;}
+.profilepic{display:block;margin-left:auto;margin-right:auto;width:100px;padding-bottom:10px;}
+.profilepic img{width:100px;height:100px;}
+.userstatus{float:none;width:100%;margin-top:15px;}
+.username{font-size:25px;margin-left:35px;display:block;width:100%;margin:auto;text-align:center;}
+.handle{font-size:18px;}
+.userbio{margin-top:10px;width:100%;padding:0;}
+.editProfNavWrap{margin-top:255px;}
+.redbggrd{height:150px;}
 @media screen and (max-width:640px){.collection-swiper-cont .swiper-slide a{height:130px}
-.hmeSldTtle {font-size: 24px;line-height: 33px;letter-spacing: 1px;margin-bottom: 15px;}
-.hmeAdvnceSrchWrap {padding: 20px 25px; margin-bottom: 20px;}
-.hmeSrchInpMain {width: 220px;margin: 0 6px;}
-.hmeSrchCtrl {height: 26px; padding: 0 7px;font-size: 11px;line-height: 26px;}
-.hmeSrchSub.hmeSrchCtrl {text-indent: 1000px;overflow: hidden;width: 28px;padding: 0;background-position: center center;}
-.hmeAdvnceLnkWrp li label {font-size: 11px;padding: 3px 7px;}
+.hmeSldTtle{font-size:24px;line-height:33px;letter-spacing:1px;margin-bottom:15px;}
+.hmeAdvnceSrchWrap{padding:20px 25px;margin-bottom:20px;}
+.hmeSrchInpMain{width:220px;margin:0 6px;}
+.hmeSrchCtrl{height:26px;padding:0 7px;font-size:11px;line-height:26px;}
+.hmeSrchSub.hmeSrchCtrl{text-indent:1000px;overflow:hidden;width:28px;padding:0;background-position:center center;}
+.hmeAdvnceLnkWrp li label{font-size:11px;padding:3px 7px;}
 .popularGridWrap li a img{height:140px}
 .popularGridWrap li{height:208px;overflow:hidden;}
 .popularGridWrap li,
@@ -646,7 +538,7 @@ font-size: 18px;}
 .fancybox-inner .fancybox-content{padding:30px}
 .aplyNwFrm fieldset small{font-size:10px;display:block}
 .frmSubBtn{font-size:13px;padding:7px 19px}
-.usrSubBtn{font-size: 13px;padding: 7px 19px;height: 35px;width: 110px;margin: auto;}
+.usrSubBtn{font-size:13px;padding:7px 19px;height:35px;width:110px;margin:auto;}
 .centSub .frmSubBtn{margin:3px auto 0}
 textarea.frmInpt2{height:70px}
 .regBrndTtle{font-size:18px;margin-bottom:11px}
@@ -705,11 +597,11 @@ textarea.frmInpt2{height:70px}
 .icnVerified{width:18px;margin-top:-3px}
 .shopInfDireTimiWrap{margin-left:0}
 .shopInfoMainCont{margin-top:-90px}
-.shopProfilPicMainWrp{width:130px; height: 130px; margin-bottom:20px}
+.shopProfilPicMainWrp{width:130px;height:130px;margin-bottom:20px}
 .shpDireShpNwBtn a{padding:7px 10px 7px 13px;font-size:12px}
 .act_icn i{width:22px;height:22px}
 .shopInfoActBtnWrp li{margin-right:40px}
-.shopAdres{margin-bottom:6px;font-size:13px;white-space: normal;}
+.shopAdres{margin-bottom:6px;font-size:13px;white-space:normal;}
 .shpFeatList li i{margin-right:2px}
 .shpFeatList li span{font-size:12px;margin-right:15px}
 .shopBothCatMainCont .swiper-slide{width:33%}
@@ -723,9 +615,9 @@ textarea.frmInpt2{height:70px}
 .addToListMainCont{width:90%}
 .adToInp{font-size:13px;line-height:28px}
 .adToSub{height:30px;font-size:13px}
-.profPicMainCont{padding:21px 30px;display: grid;}
-.profPicMainCont img{width:100px;margin-right:10px;object-fit: cover;height: 100px;margin: auto;}
-.profPicMainCont .secTtle{font-size:28px;margin: auto;}
+.profPicMainCont{padding:21px 30px;display:grid;}
+.profPicMainCont img{width:100px;margin-right:10px;object-fit:cover;height:100px;margin:auto;}
+.profPicMainCont .secTtle{font-size:28px;margin:auto;}
 .editProfNavWrap li a{font-size:13px}
 .editProfNavWrap{margin-top:25px}
 .smlTtle{font-size:14px}
@@ -747,69 +639,29 @@ textarea.frmInpt2{height:70px}
 .portOfferListWrap li{margin-bottom:30px;}
 .joinPortMainCont{padding-bottom:40px;}
 .curBtnBlck{padding:10px 40px;font-size:13px;}
-
-/*user profile*/
-
-.userstatus{
-	float: none;
-	width:100%;
-	margin-top: 15px;
-	font-size: 14px;	
-}
-
-
-.userstatus h4 {
-	
-	font-size: 18px;	
-}
-.Numfollow li {
-  width: 78px;
-}
-
-.username
-{
-    font-size: 25px;	
-	margin-left: 35px;
-	display: block;
-	width: 100%;
-	margin: auto;
-	text-align: center;
-
-}
-.handle
-{
-font-size: 18px;}
-
-.userbio
-{margin-top: 10px;
-	width: 100%;
-	padding: 0;
-}
-.userWeb
-{
-	font-size: 15px;
-}
-.editProfNavWrap {
-    margin-top: 270px;
-}
-.form-newsletter label
-{
-	font-family: 'Oswald', sans-serif; color:#000; font-size:35px; font-weight:500; line-height:40px; margin-bottom:28px; display:block;}
-.newsletter-group input{ width:300px; float:left; color:#878787; padding:10px 10px; border-radius:0px; border:#d9d9d9 2px solid;}
-.subscribe-btn{ min-width:100px; text-transform:none; margin-left:5px; cursor:pointer; line-height:42px; height:42px; float:left; background:#c42848; color:#fff; font-size:16px; border:none; font-weight:normal;}
-
+.userstatus{float:none;width:100%;margin-top:15px;font-size:14px;}
+.userstatus h4{font-size:18px;}
+.Numfollow li{width:78px;}
+.username{font-size:25px;margin-left:35px;display:block;width:100%;margin:auto;text-align:center;}
+.handle{font-size:18px;}
+.userbio{margin-top:10px;width:100%;padding:0;}
+.userWeb{font-size:15px;}
+.editProfNavWrap{margin-top:270px;}
+.form-newsletter label{font-family:'Oswald', sans-serif;color:#000;font-size:35px;font-weight:500;line-height:40px;margin-bottom:28px;display:block;}
+.newsletter-group input{width:300px;float:left;color:#878787;padding:10px 10px;border-radius:0px;border:#d9d9d9 2px solid;}
+.subscribe-btn{min-width:100px;text-transform:none;margin-left:5px;cursor:pointer;line-height:42px;height:42px;float:left;background:#c42848;color:#fff;font-size:16px;border:none;font-weight:normal;}
 }
 @media screen and (max-width:480px){.headLinksMainWrap>li>a{font-size:12px}
-.hmeMainPrlxWrp {top: 30%;}
-.hmeSldTtle {font-size: 18px;}
-.hmeAdvnceSrchWrap {padding: 20px;margin-bottom: 15px;}
-.ctyGuideLnk {display: none;}
-select.hmeSrchCtrl {padding-right: 20px;background-size: 8px auto;}
-.hmeSrchInpMain {width: 130px;margin: 0 6px;}
+.hmeMainPrlxWrp{top:30%;}
+.hmeSldTtle{font-size:18px;}
+.hmeAdvnceSrchWrap{padding:20px;margin-bottom:15px;}
+.ctyGuideLnk{display:none;}
+select.hmeSrchCtrl{padding-right:20px;background-size:8px auto;}
+.hmeSrchInpMain{width:130px;margin:0 6px;}
 .popularGridWrap li{height:228px;overflow:hidden;}
 .blgPostMainCont img{margin:auto;width:350px;object-fit:cover;height:100%;display:block;}
-.blgPostMainCont>img {width: 100%;}
-.blgPostMainCont>p>img { width: 100%; }
+.blgPostMainCont>img{width:100%;}
+.blgPostMainCont>p>img{width:100%;}
 .popularGridWrap li:nth-child(2n+2){margin-right:0;height:228px;overflow:hidden;}
 .popularGridWrap li,
 .popularGridWrap li:nth-child(3n+3),
@@ -962,7 +814,7 @@ textarea.frmInpt{height:70px}
 .shpTtle{font-size:24px}
 .shopRate strong{width:40px;line-height:26px;font-size:13px}
 .shopRate span{font-size:11px;margin-top:3px}
-.shopProfilPicMainWrp{width:120px; height: 120px; margin-bottom:10px}
+.shopProfilPicMainWrp{width:120px;height:120px;margin-bottom:10px}
 .shopInfoMainCont{margin-top:-70px}
 .shopBothCatMainCont .swiper-slide{width:70%}
 .shopBothCatMainCont .swiper-slide img{height:280px}
@@ -984,7 +836,7 @@ textarea.frmInpt{height:70px}
 .editFormMainWrp .frmSubBtn{display:block;margin:25px auto 0}
 .edtFieldWrp fieldset{margin-bottom:15px}
 .profPicMainCont .secTtle{font-size:26px}
-.profPicMainCont img{width:80px;object-fit: cover;height: 80px;}
+.profPicMainCont img{width:80px;object-fit:cover;height:80px;}
 .profPicMainCont{padding:20px}
 .notificMainWrap li{padding:15px 20px}
 .notificMainWrap li img{width:60px;margin:0 auto 5px;display:block}
@@ -1009,16 +861,10 @@ textarea.frmInpt{height:70px}
 .portOfferListWrap{padding-top:25px;}
 .portOfrTtle{font-size:13px;margin-bottom:0;}
 .curBtnBlck{padding:8px 30px;font-size:12px;}
-
-.editProfNavWrap {
-    margin-top: 290px;
-}
-
-.form-newsletter label
-{	font-family: 'Oswald', sans-serif; color:#000; font-size:30px; font-weight:400; line-height:35px; margin-bottom:28px; display:block;}
-.newsletter-group input{ width:300px; float:left; color:#878787; padding:8px 10px; border-radius:0px; border:#d9d9d9 2px solid;margin-bottom: 10px;}
-.cmn-btn{ float: none;}
-.subscribe-btn{ min-width:100px; text-transform:none; margin:auto; cursor:pointer; line-height:35px; height:35px;background:#c42848;
-	color:#fff; font-size:14px; border:none; font-weight:normal; display: block;}
+.editProfNavWrap{margin-top:290px;}
+.form-newsletter label{font-family:'Oswald', sans-serif;color:#000;font-size:30px;font-weight:400;line-height:35px;margin-bottom:28px;display:block;}
+.newsletter-group input{width:300px;float:left;color:#878787;padding:8px 10px;border-radius:0px;border:#d9d9d9 2px solid;margin-bottom:10px;}
+.cmn-btn{float:none;}
+.subscribe-btn{min-width:100px;text-transform:none;margin:auto;cursor:pointer;line-height:35px;height:35px;background:#c42848;color:#fff;font-size:14px;border:none;font-weight:normal;display:block;}
 }
 }

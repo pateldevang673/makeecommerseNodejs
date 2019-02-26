@@ -28,15 +28,6 @@ class FshopController extends BaseAutoBindedClass {
             });
         });
     }
-    // objectify(array) {
-    //     return array.reduce(function(p, c) {
-    //         console.log("objectify")
-    //         console.log(p)
-    //         console.log(c)
-    //         p[c['fieldname']] = c;
-    //         return p;
-    //     }, {});
-    // }
 
     getShops(req, res) {
         console.log("All Store Page");
@@ -87,44 +78,6 @@ class FshopController extends BaseAutoBindedClass {
 
             })
     }
-
-
-    // getSingleBlog(req, res) {
-    //     var q = url.parse(URLStore + '/blogs/search?URL=' + req.params.url, true);
-    //     var optionsBlog = {
-    //         url: URLStore + '/blogs/search?URL=' + req.params.url,
-    //         method: 'GET',
-    //         headers: {
-    //             'Authorization': "maximumvsminimumsecurity",
-    //             'Content-Type': "application/json"
-    //         }
-    //     };
-    //     return new Promise(function(resolve, reject) {
-    //         request(optionsBlog, function(error, response, body) {
-    //             resolve(body)
-    //         });
-    //     }).then((results) => {
-    //         var blog = JSON.parse(results)['data'][0];
-
-    //         if (blog) {
-    //             var seoData = {
-    //                 title: blog.title,
-    //                 description: blog.metaDescription,
-    //                 keywords: blog.metaKeyword,
-    //                 image: global.config.variable.apiPath + '/' + blog.blogPicture,
-    //                 type: 'article',
-    //                 url: req.protocol + '://' + req.get('host') + req.originalUrl,
-    //                 site: 'Zeepzoop',
-    //                 domain: 'zeepzoop.com'
-    //             }
-
-    //             res.render('fshop', { seo: true, seoData: seoData, page: 'fshop-page', titleurl: req.params.url, blog: blog, shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl })
-    //         } else {
-    //             res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
-    //         }
-
-    //     })
-    // }
 }
 
 module.exports = FshopController;

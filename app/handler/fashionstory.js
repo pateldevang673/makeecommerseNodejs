@@ -97,15 +97,8 @@ class FashionStoryHandler extends BaseAutoBindedClass {
         console.log("All Story Page");
         var mainObj = {};
         Promise.all([
-                // this.requestAsync(req, URLStore + '/blogs/search?sort=true', 'trendingBlogs'),
-                // this.requestAsync(req, URLStore + '/blogs/search', 'newBlogs'),
                 this.requestAsync(req, URLStore + '/story/?category=Decor+Story', 'DecoreStory'),
                 this.requestAsync(req, URLStore + '/story/?category=Fashion+Story', 'FashionStory'),
-                // this.requestAsync(req, URLStore + '/blogs/search?&category=Around+The+World', 'AroundTheWorld'),
-                // this.requestAsync(req, URLStore + '/blogs/search?&category=Fashion', 'fashion'),
-                // this.requestAsync(req, URLStore + '/blogs/search?&category=Culture+and+Heritage', 'CultureHeritage'),
-                // this.requestAsync(req, URLStore + '/blogs/search?&category=Wedding+Bells', 'WeddingBells'),
-                // this.requestAsync(req, URLStore + "/blogs/search?&category=Ceo's+Diary", "CeoBlog"),
             ])
             .then(function(allData) {
                 return new Promise(function(resolve, reject) {
