@@ -34,9 +34,6 @@ class BlogHandler extends BaseAutoBindedClass {
 
     objectify(array) {
         return array.reduce(function(p, c) {
-            console.log("objectify")
-            console.log(p)
-            console.log(c)
             p[c['fieldname']] = c;
             return p;
         }, {});
@@ -46,15 +43,6 @@ class BlogHandler extends BaseAutoBindedClass {
         var mainObj = {};
         if (req.route.path == "/auther/:authorURL") {
             res.redirect(301, '/blogs/author/' + req.params.authorURL)
-        }
-        if (req.params.authorURL == "Citrine") {
-            res.redirect(301, '/brand/Citrine')
-        }
-        if (req.params.authorURL == "Vrisa") {
-            res.redirect(301, '/brand/Vrisa')
-        }
-        if (req.params.authorURL == "Matsya") {
-            res.redirect(301, '/brand/Matsya')
         }
         console.log("Author Page");
         Promise.all([
