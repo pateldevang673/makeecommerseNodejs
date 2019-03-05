@@ -131,6 +131,43 @@ class FashionStoryHandler extends BaseAutoBindedClass {
                 })
             })
     }
+
+    SStory(req, res) {
+        console.log("Shanaya Story Page");
+        var mainObj = {};
+        Promise.all([
+                this.requestAsync(req, URLStore + '/story/shanayastory/5bdd8097d0b5265f807aac43', 'ShanayaStory'),
+                // this.requestAsync(req, URLStore + '/story/?category=Fashion+Story', 'FashionStory'),
+            ])
+            .then(function(allData) {
+                return new Promise(function(resolve, reject) {
+                    for (let i = 0; i < allData.length; i++) {
+                        mainObj[allData[i][0]] = allData[i][1]
+                    }
+                    resolve(mainObj);
+                });
+            })
+            .then((results) => {
+                var seoData = {
+                    title: 'The Official ZeepZoop Blog',
+                    description: 'This is the official blog of ZeepZoop. Read about most trending and latest Fashion & Brand Stories. Read Blogs from Around the World, Wedding, Home Décor, Culture & Heritage.',
+                    keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
+                    image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
+                    type: 'website',
+                    url: 'https://' + req.get('host') + req.originalUrl,
+                    site: 'Zeepzoop',
+                    domain: 'zeepzoop.com'
+                }
+                res.render('shanayastory', {
+                    seo: true,
+                    seoData: seoData,
+                    page: 'shanayastory-page',
+                    ShanayaStory: results['ShanayaStory'],
+                    ShanayaStorylength: results['ShanayaStory'].length,
+                    titleURL: urlArray
+                })
+            })
+    }
 }
 
 module.exports = FashionStoryHandler;

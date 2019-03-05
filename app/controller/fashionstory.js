@@ -14,6 +14,10 @@ class FashionStoryController extends BaseController {
         this._fashionstoryHandler.getSearch(req, res);
     }
 
+    SStory(req, res, next) {
+        this._fashionstoryHandler.SStory(req, res);
+    }
+
     getSingleBlog(req, res, next) {
         this._fashionstoryHandler.getSingleBlog(req, res);
     }

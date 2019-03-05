@@ -1,0 +1,55 @@
+include common/head
+
+meta(name='ROBOTS', content='NOINDEX, NOFOLLOW')
+
+.bnrMainCont.bnrBgOlay
+  .bnrBg(style="background-image: url('/images/banner-featshop.jpg');")
+.inrBredCrumbCont
+  .centerAlign
+    ul.bredCrumbWrp
+      li
+        a(href='/') Home
+      li
+        a(href='javascript:void(0)',id="breadcr") Shanaya's Story
+section.secPad.pt0
+  .centerAlign
+    ul.featShopMainCont.popularGridWrap
+     - for (var x = 0; x < ShanayaStorylength; x++)
+        li
+          a.sclHov(href='/story/#{ShanayaStory[x]._id}')
+            img(src=global.config.variable.apiPath+'/#{ShanayaStory[x].bannerImage}', alt='img')
+          .featShpInfWrp
+            a.popGrdTtle(href='/story/#{ShanayaStory[x]._id}') #{ShanayaStory[x].title}
+            // .popGrdDesc #{ShanayaStory[x].storeDiscription}
+            // .featShpActBtn
+            //   a.act_icn.icn_bokMark(href='#')
+            //     i
+            //   a.act_icn.icn_sharePst(href='#')
+            //     i
+          // .featShpRate #{ShanayaStory[x].avgRating}
+    // .txtCent.mt60
+    //   a.defBtn.loadMore(id="loadmoreshop") Load More
+
+include common/footer
+script.
+  $(document).ready(function() {
+    // window.addEventListener('scroll', throttle(populate, 1000));
+    // var scrolled = false;
+    // function throttle(fn, wait) {
+    //     var time = Date.now();        
+    //     return function() {
+    //         if(!scrolled){
+    //             scrolled = true;
+    //           if ((time + wait - Date.now()) < 0) {
+    //               fn();
+    //               time = Date.now();
+    //           }
+    //             scrolled = false;
+    //         };
+    //     }
+    // }
+    // function callback() {
+    //   $("#loadmoreshop").trigger("click");
+    // }
+    $("#breadcr").append(localStorage.getItem('bread'));
+  });

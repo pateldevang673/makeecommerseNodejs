@@ -7,5 +7,6 @@ let fashionstoryController = new FashionStoryController();
 
 router.get('/', fashionstoryController.getSearch);
 router.get('/:id', fashionstoryController.getSingleBlog);
+router.get('/by/shanaya', fashionstoryController.SStory);
 
 module.exports = router;
