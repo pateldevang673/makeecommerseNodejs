@@ -25,29 +25,30 @@ section.secPad.bg-gry.blgListMainCont
                       div #{FashionStory[x].time}
       .swiper-button-prev
       .swiper-button-next
-section.secPad.blgListMainCont
-  .centerAlign.posRel
-    h1.secTtle Decor Stories
-    .swip-ctrlWrp
-      .swiper-container.blogCarouselWrap
-        .swiper-wrapper
-          - for(var x=0;x<DecoreStorylength;x++)
-            .swiper-slide
-              a.sclHov.blgLstImg(href='/story'+'/#{DecoreStory[x]._id}')
-                img(src=global.config.variable.apiPath+'/#{DecoreStory[x].bannerImage}', alt='img')
-              .blgLstInfWrp
-                a.blgLstTtle.hmstry(href='/story'+'/#{DecoreStory[x]._id}') #{DecoreStory[x].title}
-                .blgLstFtrWrp
-                  .blgLstAuthInfWrap
-                    if DecoreStory[x].userId && DecoreStory[x].userId.userImage
-                      img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{DecoreStory[x].userId.userImage}', alt='img')
-                    else
-                      img.blgLstAuthImg(src="/images/user_profile.png", alt='img')
-                    .blgLstAuthInf
-                      div #{DecoreStory[x].userId.name}
-                      div #{DecoreStory[x].time}
-      .swiper-button-prev
-      .swiper-button-next
+if DecoreStorylength > 0      
+  section.secPad.blgListMainCont
+    .centerAlign.posRel
+      h1.secTtle Decor Stories
+      .swip-ctrlWrp
+        .swiper-container.blogCarouselWrap
+          .swiper-wrapper
+            - for(var x=0;x<DecoreStorylength;x++)
+              .swiper-slide
+                a.sclHov.blgLstImg(href='/story'+'/#{DecoreStory[x]._id}')
+                  img(src=global.config.variable.apiPath+'/#{DecoreStory[x].bannerImage}', alt='img')
+                .blgLstInfWrp
+                  a.blgLstTtle.hmstry(href='/story'+'/#{DecoreStory[x]._id}') #{DecoreStory[x].title}
+                  .blgLstFtrWrp
+                    .blgLstAuthInfWrap
+                      if DecoreStory[x].userId && DecoreStory[x].userId.userImage
+                        img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{DecoreStory[x].userId.userImage}', alt='img')
+                      else
+                        img.blgLstAuthImg(src="/images/user_profile.png", alt='img')
+                      .blgLstAuthInf
+                        div #{DecoreStory[x].userId.name}
+                        div #{DecoreStory[x].time}
+        .swiper-button-prev
+        .swiper-button-next
 
 include common/footer
 
