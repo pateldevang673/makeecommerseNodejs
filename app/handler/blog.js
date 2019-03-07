@@ -147,6 +147,7 @@ class BlogHandler extends BaseAutoBindedClass {
 
     getSingleBlog(req, res) {
         console.log("Single Blog Page");
+        console.log(req.params.url)
         var q = url.parse(URLStore + '/blogs/search?URL=' + req.params.url, true);
         var optionsBlog = {
             url: URLStore + '/blogs/search?URL=' + req.params.url,
