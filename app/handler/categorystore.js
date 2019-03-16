@@ -75,8 +75,8 @@ class CategoryHandler extends BaseAutoBindedClass {
             .then((results) => {
 
                 var seoData = {
-                    title: 'Top Men and Women Designer Brands and Clothing Labels',
-                    description: 'Explore most iconic designer clothing brands collection with Catalogues for Men and Women. Buy online or offline from designer boutiques and portals..',
+                    title: 'Top Clothing Brands, Fashion Designers for Men and Women',
+                    description: 'Ultimate fashion shopping guide to luxury clothing brands for men and women. Search Ahmedabad, Mumbai, Bangalore, Delhi, Kolkata Designer Store.',
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Clothing, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
@@ -128,8 +128,8 @@ class CategoryHandler extends BaseAutoBindedClass {
             .then((results) => {
 
                 var seoData = {
-                    title: 'Best Handcrafted Designer Jewellery Brands Collection',
-                    description: "Jewellery complete's person outfit. Explore top famous designer jewellery brands from fashion jewellery to luxury handcrafted ethnic jewellery.",
+                    title: 'Contemporary Designer Jewellery, Gold Jewellery Online Shopping',
+                    description: "An ultimate jewellery buying guide for traditional jewellery, bridal jewellery and ethnic jewellery from famous jewellery designer in your town.",
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Jewellery, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
@@ -181,8 +181,8 @@ class CategoryHandler extends BaseAutoBindedClass {
             .then((results) => {
 
                 var seoData = {
-                    title: 'Designer Fashion Accessories Shopping for Men & Women',
-                    description: "Explore India's best designer accessories collection and catalogues for Men and Women at ZeepZoop.com. Shop from Designer boutiques and portals.",
+                    title: 'Fashion Accessories Online | Modern Home Accessories',
+                    description: "Designer Fashion Accessories guide for men and women from famous accessories brands. ZeepZoop is a one-stop holistic place for all designer accessories.",
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Accessories, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
@@ -234,8 +234,8 @@ class CategoryHandler extends BaseAutoBindedClass {
             .then((results) => {
 
                 var seoData = {
-                    title: 'Guide to Best Home Decor Designer Product and Accessories',
-                    description: "Explore luxury Home Decor Product from Country's top home decor designer catalogues that match your style. Shop Home Décor Products from designer boutiques.",
+                    title: 'Home Decor Stores and Home Interior Design Ideas',
+                    description: "ZeepZoop guide you to shop for the best home decorating product and accessories from country's top home decor designer.",
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Accessories, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',

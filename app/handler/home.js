@@ -103,8 +103,8 @@ class HomeHandler extends BaseAutoBindedClass {
             })
             .then((results) => {
                 var seoData = {
-                    title: 'ZeepZoop - Shopping Guide App and Brand Discovery Platform',
-                    description: "India's First Shopping Guide and Brand Discovery website with 600+ Designer Labels listed to Get Designer Clothes, Jewellery, Accessories and Home Decor.",
+                    title: 'Online Shopping Guide and Fashion Influencer App - ZeepZoop',
+                    description: "India's First Online Shopping Guide and Brand Discovery Website with 600+ Designer Labels listed to buy Designer Cloths, Jewellery, Accessories & Home Decor.",
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
