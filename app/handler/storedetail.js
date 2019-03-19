@@ -1886,8 +1886,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     }
                     if (req.params.url == "studio-scarlet") {
                         var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            title: "Studio Scarlet | Designer Boutique in Ahmedabad",
+                            description: "Studio Scarlet Studio based in Ahmedabad. Visit ZeepZoop for Studio Scarlet's catalogues, reviews & contact number.",
                             keywords: storedatas.storeName + " for " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
@@ -1900,8 +1900,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     }
                     if (req.params.url == "satya-paul") {
                         var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            title: "Satya Paul | Designer Boutique in Ahmedabad",
+                            description: "Satya Paul introduced the idea of tailored for individual sarees. Visit ZeepZoop for Satya Paul's indo Scarves, Kurtas, Tunics, Cufflinks and Bridal Sarees catalogues, reviews & contact number.",
                             keywords: storedatas.storeName + " for " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
@@ -1914,8 +1914,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     }
                     if (req.params.url == "aamod") {
                         var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            title: "Aamod | Designer Boutique in Ahmedabad",
+                            description: "aāmod, a venture from Twinkle Vachheta offers an exceptional collection of designer cloths and accessories. Visit ZeepZoop for Aamod's catalogues, reviews & contact number.",
                             keywords: storedatas.storeName + " for " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
@@ -1928,8 +1928,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     }
                     if (req.params.url == "bandhej") {
                         var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            title: "Bandhej | Designer Boutique in Ahmedabad",
+                            description: "Bandhej came into existence by the efforts and vision of Archana Shah an NID alum. Visit ZeepZoop for Bandhej's catalogues, reviews & contact number.",
                             keywords: storedatas.storeName + " for " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
@@ -1942,8 +1942,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     }
                     if (req.params.url == "elan-the-fashion-store") {
                         var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            title: "Elan The Fashion Store | Designer Boutique in Ahmedabad ",
+                            description: "Elan – the fashion store is curated by Roopal Shodhan. Visit ZeepZoop for Elan The Fashion Store's Lehengas, Necklaces, Bracelets, Dresses and kurti catalogues, reviews & contact number.",
                             keywords: storedatas.storeName + " for " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
@@ -1956,8 +1956,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     }
                     if (req.params.url == "pahenava-by-purvi") {
                         var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            title: "Pahenava by Purvi | Designer Boutique in Ahmedabad",
+                            description: "Pahenava by Purvi based in Ahmedabad. Visit ZeepZoop for Pahenava by Purvi's indo ethnic wear, traditional wear, chaniya choli ,gowns catalogues, reviews & contact number.",
                             keywords: storedatas.storeName + " for " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
@@ -1970,8 +1970,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     }
                     if (req.params.url == "be-womaniya") {
                         var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            title: "Be Womaniya | Designer Boutique in Ahmedabad",
+                            description: "Be Womaniya based in Ahmedabad. Visit ZeepZoop for be Womaniya's Purses, Clutches, Tote Bags, Shoulder Bags and Wristlets catalogues, reviews & contact number.",
                             keywords: storedatas.storeName + " for " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
@@ -1984,8 +1984,8 @@ class SdetailHandler extends BaseAutoBindedClass {
                     }
                     if (req.params.url == "options") {
                         var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            title: "Options | Designer Boutique in Ahmedabad",
+                            description: "Options based in Ahmedabad. Visit ZeepZoop for Options's accessories, furniture, lights, artifacts and soft furnishing catalogues, reviews & contact number.",
                             keywords: storedatas.storeName + " for " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
@@ -1998,12 +1998,96 @@ class SdetailHandler extends BaseAutoBindedClass {
                     }
                     if (req.params.url == "siddhesh-chauhan") {
                         var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            title: "Sidhesh Chauhan | Designer Boutique in Ahmedabad",
+                            description: "Sidhesh Chauhan Store based in Ahmedabad by Sidhesh Chauhan. Visit ZeepZoop for Sidhesh Chauhan's jodhpuris, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
                             keywords: storedatas.storeName + " for " + cat,
                             image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
                             type: 'store',
                             seodesc: "siddhesh-chauhan",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "seasons") {
+                        var seoData = {
+                            title: "Seasons | Designer Boutique in Ahmedabad",
+                            description: "Seasons based in Ahmedabad. Visit ZeepZoop for Seasons's sarees, dupattas, stoles and readymades catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "seasons",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "foram's-fashion-story") {
+                        var seoData = {
+                            title: "Foram's Fashion Story | Designer Boutique in Ahmedabad",
+                            description: "Foram's Fashion Story based in Ahmedabad. Visit ZeepZoop for Foram's Fashion Story's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "foram's-fashion-story",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "studio-virtues") {
+                        var seoData = {
+                            title: "Studio Virtues | Designer Boutique in Ahmedabad",
+                            description: "Studio Virtues based in Ahmedabad. Visit ZeepZoop for Studio Virtues's anarkalis, umraos, madhubanis, waistcoats and kurti catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "studio-virtues",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "aurus-jewels") {
+                        var seoData = {
+                            title: "Aurus Jewels | Designer Boutique in Ahmedabad",
+                            description: "Aurus Jewels based in Ahmedabad by Puja Shah. Visit ZeepZoop for Aurus Jewels necklaces, earrings, chokers catalogues, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "aurus-jewels",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "mortantra") {
+                        var seoData = {
+                            title: "Mortantra | designer jewellery shop in Ahmedabad",
+                            description: "Mortantra based in Ahmedabad. Visit ZeepZoop for Mortantra's bridal jewellery, traditional jewellery, kundan jewellery, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "mortantra",
+                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                            url: 'https://' + req.get('host') + req.originalUrl,
+                            site: 'Zeepzoop',
+                            domain: 'zeepzoop.com'
+                        }
+                    }
+                    if (req.params.url == "eshyl") {
+                        var seoData = {
+                            title: "Eshyl | designer silver jewellery shop in Ahmedabad",
+                            description: "A Silver Jewellery Company started by Daivik Kansaral. Visit ZeepZoop for Eshyl's bridal jewellery, traditional jewellery, kundan jewellery, reviews & contact number.",
+                            keywords: storedatas.storeName + " for " + cat,
+                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                            type: 'store',
+                            seodesc: "eshyl",
                             // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
                             url: 'https://' + req.get('host') + req.originalUrl,
                             site: 'Zeepzoop',
