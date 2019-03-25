@@ -1744,355 +1744,139 @@ class SdetailHandler extends BaseAutoBindedClass {
                         }
                     }
                     if (req.params.url == "darshi-shah-bhavin-trivedi") {
-                        var seoData = {
-                            title: "Darshi Shah Bhavin Trivedi | Wedding Outfits for Men and Women",
-                            description: "Label Darshi Shah Bhavin Trivedi, Ahmedabad, also known as DSBT. Visit ZeepZoop for DSBT traditional, indo-westren and wedding wear collections, reviews, address and contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "darshi-shah-bhavin-trivedi",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
-                        // storedatas.seodesc="Darshi Shah and Bhavin Trivedi are one of the finest and most sought-after designers of the country. In 2010 the now famous designer duo came together to bring about their Fashion Label DSBT. One can get factory made, luxury attires, as well as tailor-made pieces since Prêt-à-Porter and Haute Couture, are both done at DSBT. They are loved for their Haute Couture because they dish out customization in all the designs, irrespective of the body types.They in real sense hold the flambeaux of the rich Indian heritage by creating royal pieces of Indian textile and fashion. Not only they master the ethnic and cultural fashion in contemporary ways but also bring out the best of both worlds by their Indo-Western collection. Their traditional collection bring to the spotlight the richness of Indian roots and their Indo-Western pieces are fine pieces of balance between the Oriental and the Occidental, stimulating the senses in the right, quirky way.Their clientele is not boxed up in anyway with regards to socio-economic status, gender or age. Their collection is eclectic and garments with a tinge of abstraction always makes sense. Be it bridal-wear, trousseau, or just semi-formal occasion-wear, their silhouettes are glamorous. You can find these outfit types at DSBT:Salwar kameez Suits Sarees Lehengas Shararas Chaniya choli Anarkalis  DSBT’s design components are subtle and yet thematically sensible enough to impart class and individuality to the wearer. They can be found at 12-A, Sudarshan Bungalows, Near Mansi Towers, Vastrapur, Ahmedabad, Gujarat."
+                        seoData.seodesc = "darshi-shah-bhavin-trivedi";
                     }
                     if (req.params.url == "traveler's-home") {
-                        var seoData = {
-                            title: "Travelers Home Ahmedabad | Home Decor Stores in Ahmedabad",
-                            description: "Travelers Home is a one-stop shop for home decor from France, Switzerland, Netherland, Italy, Indonesia. Visit ZeepZoop for Traveler's Home review, address & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "traveler's-home",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "traveler's-home";
                     }
                     if (req.params.url == "tvak-designer-store") {
-                        var seoData = {
-                            title: "Tvak Designer Store | Multi Designer Store in Ahmedabad",
-                            description: "Tvak Designer Store is a multi-designer store by Deviba Wala & Sukhi Singh. Visit ZeepZoop for Tvak Designer Store ethnic, western & Indo-western wear catalogue, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "tvak-designer-store",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "tvak-designer-store";
                     }
                     if (req.params.url == "kasheesh.k") {
-                        var seoData = {
-                            title: "Kasheesh.K | KK Atelier | Fashion Designer in Ahmedabad",
-                            description: "Kasheesh K, an Indian fashion designer in Ahmedabad. Visit ZeepZoop for Kasheesh.K's wedding trousseau for bride & groom & corporate attire catalogue, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "kasheesh.k",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "kasheesh.k";
                     }
                     if (req.params.url == "purva-couture") {
-                        var seoData = {
-                            title: "Purva Couture | Bridal Couture in Ahmedabad",
-                            description: "Purva Couture is a Bridal boutique in Ahmedabad, perfect for all the wedding ceremonies. Visit ZeepZoop for Purva Couture's traditional & contemporary outfits catalogue, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "purva-couture",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "purva-couture";
                     }
                     if (req.params.url == "intelligent-idiots") {
-                        var seoData = {
-                            title: "Intelligent Idiots | Home Decor | Gift Store in Ahmedabad",
-                            description: "Intelligent Idiots a unique products store that you will find nowhere in Ahmedabad. Visit ZeepZoop for Intelligent Idiots for designer home decor. accessories catalogue, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "intelligent-idiots",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "intelligent-idiots";
                     }
                     if (req.params.url == "zinzuwadia-jewellers") {
-                        var seoData = {
-                            title: "Zinzuwadia Jewellers | Jewellery Designers in Ahmedabad",
-                            description: "Zinzuwadia Jewellers is a renowned jewellery retail brand of Ahmedabad, India. Visit ZeepZoop for Zinzuwadia Jewellers wedding, party, festival jewellery catalogue, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "zinzuwadia-jewellers",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "zinzuwadia-jewellers";
                     }
                     if (req.params.url == "the-shoe-tales") {
-                        var seoData = {
-                            title: "The Shoe Tales | Designer Wedding Shoes Ahmedabad",
-                            description: "The Shoe Tales, known for ethnic footwear, designer juttis, Wedges and Kolhapuri Chappals. Visit ZeepZoop for The Shoe Tales catalogue, address and contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "the-shoe-tales",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "the-shoe-tales";
                     }
                     if (req.params.url == "sivi") {
-                        var seoData = {
-                            title: "Sivi - The Bespoke Boutique | Designer Boutiques in Ahmedabad",
-                            description: "Sivi - The Bespoke Boutique provides a wide range of products including Suits, Kurtis, and Bandhanies. Visit ZeepZoop for Sivi   catalogue, reviews, address and contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "sivi",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "sivi";
                     }
                     if (req.params.url == "aryan's-designer-studio") {
-                        var seoData = {
-                            title: "Aryans Designer Store | Designer Boutique in Ahmedabad",
-                            description: "Aryans Designer Studio based in Ahmedabad by Sujata Agrawal. Visit ZeepZoop for Aryans Designer Studio's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "aryan's-designer-studio",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "aryan's-designer-studio";
                     }
                     if (req.params.url == "studio-scarlet") {
-                        var seoData = {
-                            title: "Studio Scarlet | Designer Boutique in Ahmedabad",
-                            description: "Studio Scarlet Studio based in Ahmedabad. Visit ZeepZoop for Studio Scarlet's catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "studio-scarlet",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "studio-scarlet";
                     }
                     if (req.params.url == "satya-paul") {
-                        var seoData = {
-                            title: "Satya Paul | Designer Boutique in Ahmedabad",
-                            description: "Satya Paul introduced the idea of tailored for individual sarees. Visit ZeepZoop for Satya Paul's indo Scarves, Kurtas, Tunics, Cufflinks and Bridal Sarees catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "satya-paul",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "satya-paul";
                     }
                     if (req.params.url == "aamod") {
-                        var seoData = {
-                            title: "Aamod | Designer Boutique in Ahmedabad",
-                            description: "aāmod, a venture from Twinkle Vachheta offers an exceptional collection of designer cloths and accessories. Visit ZeepZoop for Aamod's catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "aamod",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "aamod";
                     }
                     if (req.params.url == "bandhej") {
-                        var seoData = {
-                            title: "Bandhej | Designer Boutique in Ahmedabad",
-                            description: "Bandhej came into existence by the efforts and vision of Archana Shah an NID alum. Visit ZeepZoop for Bandhej's catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "bandhej",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "bandhej";
                     }
                     if (req.params.url == "elan-the-fashion-store") {
-                        var seoData = {
-                            title: "Elan The Fashion Store | Designer Boutique in Ahmedabad ",
-                            description: "Elan – the fashion store is curated by Roopal Shodhan. Visit ZeepZoop for Elan The Fashion Store's Lehengas, Necklaces, Bracelets, Dresses and kurti catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "elan-the-fashion-store",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "elan-the-fashion-store";
                     }
                     if (req.params.url == "pahenava-by-purvi") {
-                        var seoData = {
-                            title: "Pahenava by Purvi | Designer Boutique in Ahmedabad",
-                            description: "Pahenava by Purvi based in Ahmedabad. Visit ZeepZoop for Pahenava by Purvi's indo ethnic wear, traditional wear, chaniya choli ,gowns catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "pahenava-by-purvi",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "pahenava-by-purvi";
                     }
                     if (req.params.url == "be-womaniya") {
-                        var seoData = {
-                            title: "Be Womaniya | Designer Boutique in Ahmedabad",
-                            description: "Be Womaniya based in Ahmedabad. Visit ZeepZoop for be Womaniya's Purses, Clutches, Tote Bags, Shoulder Bags and Wristlets catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "be-womaniya",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "be-womaniya";
                     }
                     if (req.params.url == "options") {
-                        var seoData = {
-                            title: "Options | Designer Boutique in Ahmedabad",
-                            description: "Options based in Ahmedabad. Visit ZeepZoop for Options's accessories, furniture, lights, artifacts and soft furnishing catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "options",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "options";
                     }
                     if (req.params.url == "siddhesh-chauhan") {
-                        var seoData = {
-                            title: "Sidhesh Chauhan | Designer Boutique in Ahmedabad",
-                            description: "Sidhesh Chauhan Store based in Ahmedabad by Sidhesh Chauhan. Visit ZeepZoop for Sidhesh Chauhan's jodhpuris, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "siddhesh-chauhan",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "siddhesh-chauhan";
                     }
                     if (req.params.url == "seasons") {
-                        var seoData = {
-                            title: "Seasons | Designer Boutique in Ahmedabad",
-                            description: "Seasons based in Ahmedabad. Visit ZeepZoop for Seasons's sarees, dupattas, stoles and readymades catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "seasons",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "seasons";
                     }
                     if (req.params.url == "foram's-fashion-story") {
-                        var seoData = {
-                            title: "Foram's Fashion Story | Designer Boutique in Ahmedabad",
-                            description: "Foram's Fashion Story based in Ahmedabad. Visit ZeepZoop for Foram's Fashion Story's indo western, gowns, bridal, dresses and kurti catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "foram's-fashion-story",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = "foram's-fashion-story";
                     }
                     if (req.params.url == "studio-virtues") {
-                        var seoData = {
-                            title: "Studio Virtues | Designer Boutique in Ahmedabad",
-                            description: "Studio Virtues based in Ahmedabad. Visit ZeepZoop for Studio Virtues's anarkalis, umraos, madhubanis, waistcoats and kurti catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "studio-virtues",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = 'studio-virtues';
                     }
                     if (req.params.url == "aurus-jewels") {
-                        var seoData = {
-                            title: "Aurus Jewels | Designer Boutique in Ahmedabad",
-                            description: "Aurus Jewels based in Ahmedabad by Puja Shah. Visit ZeepZoop for Aurus Jewels necklaces, earrings, chokers catalogues, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "aurus-jewels",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = 'aurus-jewels';
                     }
                     if (req.params.url == "mortantra") {
-                        var seoData = {
-                            title: "Mortantra | designer jewellery shop in Ahmedabad",
-                            description: "Mortantra based in Ahmedabad. Visit ZeepZoop for Mortantra's bridal jewellery, traditional jewellery, kundan jewellery, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "mortantra",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = 'mortantra';
                     }
                     if (req.params.url == "eshyl") {
-                        var seoData = {
-                            title: "Eshyl | designer silver jewellery shop in Ahmedabad",
-                            description: "A Silver Jewellery Company started by Daivik Kansaral. Visit ZeepZoop for Eshyl's bridal jewellery, traditional jewellery, kundan jewellery, reviews & contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            seodesc: "eshyl",
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
-                        }
+                        seoData.seodesc = 'eshyl';
+                    }
+                    if (req.params.url == "moh-studio") {
+                        seoData.seodesc = 'moh-studio';
+                    }
+                    if (req.params.url == "monsoon-the-designer-store") {
+                        seoData.seodesc = 'monsoon-the-designer-store';
+                    }
+                    if (req.params.url == "atulya-jewellery") {
+                        seoData.seodesc = 'atulya-jewellery';
+                    }
+                    if (req.params.url == "aesthetics") {
+                        seoData.seodesc = 'aesthetics';
+                    }
+                    if (req.params.url == "disha-vadgama") {
+                        seoData.seodesc = 'disha-vadgama';
+                    }
+                    if (req.params.url == "msafiri") {
+                        seoData.seodesc = 'msafiri';
+                    }
+                    if (req.params.url == "ekaya") {
+                        seoData.seodesc = 'ekaya';
+                    }
+                    if (req.params.url == "the-panache-raack") {
+                        seoData.seodesc = 'the-panache-raack';
+                    }
+                    if (req.params.url == "the-wardrobe-theorem") {
+                        seoData.seodesc = 'the-wardrobe-theorem';
+                    }
+                    if (req.params.url == "story-of-india") {
+                        seoData.seodesc = 'story-of-india';
+                    }
+                    if (req.params.url == "deval-the-multidesigner-store") {
+                        seoData.seodesc = 'deval-the-multidesigner-store';
+                    }
+                    if (req.params.url == "ratios") {
+                        seoData.seodesc = 'ratios';
+                    }
+                    if (req.params.url == "kzari-by-karishma-hingorani") {
+                        seoData.seodesc = 'kzari-by-karishma-hingorani';
+                    }
+                    if (req.params.url == "anokhi") {
+                        seoData.seodesc = 'anokhi';
+                    }
+                    if (req.params.url == "kathputli") {
+                        seoData.seodesc = 'kathputli';
+                    }
+                    if (req.params.url == "shyamal-and-bhumika") {
+                        seoData.seodesc = 'shyamal-and-bhumika';
+                    }
+                    if (req.params.url == "vraj:bhoomi") {
+                        seoData.seodesc = 'vraj:bhoomi';
+                    }
+                    if (req.params.url == "tussah-by-siddhi") {
+                        seoData.seodesc = 'tussah-by-siddhi';
+                    }
+                    if (req.params.url == "shaarav-couture") {
+                        seoData.seodesc = 'shaarav-couture';
+                    }
+                    if (req.params.url == "orra") {
+                        seoData.seodesc = 'orra';
                     }
 
                     res.render('storedetail', {
