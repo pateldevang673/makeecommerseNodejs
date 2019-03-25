@@ -36,20 +36,21 @@ section.blgInrPostMainCont.secPad
     .blgInrSidebarWrap
       .blgSideLble Recommended
       - for(var x=2;x<catBlogLength;x++)
-        .blgInrSidebarBlck
-          a.sclHov.blgLstImg(href="/blogs"+"/#{catBlog[x].URL}")
-            img(src=global.config.variable.apiPath+'/'+'#{catBlog[x].blogPicture}', alt='img')
-          .blgLstInfWrp
-            a.blgLstTtle(href="/blogs"+"/#{catBlog[x].URL}") #{catBlog[x].title}
-            .secDesc
-              p
-                | #{catBlog[x].metaDescription}
-            .blgLstFtrWrp
-              .blgLstAuthInfWrap
-                img.blgLstAuthImg(src=global.config.variable.apiPath+'/'+'#{catBlog[x].authorImage}', alt='img')
-                .blgLstAuthInf
-                  div #{catBlog[x].authorName}
-                  div #{catBlog[x].time}
+         if catBlog[x].URL!=seoData.seodesc
+          .blgInrSidebarBlck
+            a.sclHov.blgLstImg(href="/blogs"+"/#{catBlog[x].URL}")
+              img(src=global.config.variable.apiPath+'/'+'#{catBlog[x].blogPicture}', alt='img')
+            .blgLstInfWrp
+              a.blgLstTtle(href="/blogs"+"/#{catBlog[x].URL}") #{catBlog[x].title}
+              .secDesc
+                p
+                  | #{catBlog[x].metaDescription}
+              .blgLstFtrWrp
+                .blgLstAuthInfWrap
+                  img.blgLstAuthImg(src=global.config.variable.apiPath+'/'+'#{catBlog[x].authorImage}', alt='img')
+                  .blgLstAuthInf
+                    div #{catBlog[x].authorName}
+                    div #{catBlog[x].time}
       if catBlog[1]
         .blgInrSidebarBlck.pined
           a.sclHov.blgLstImg(href="/blogs"+"/#{catBlog[1].URL}")

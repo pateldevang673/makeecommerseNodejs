@@ -182,6 +182,7 @@ class BlogHandler extends BaseAutoBindedClass {
                         title: blog.title,
                         description: blog.metaDescription,
                         keywords: blog.metaKeyword,
+                        seodesc: req.params.url,
                         image: global.config.variable.apiPath + '/' + blog.blogPicture,
                         type: 'article',
                         url: 'https://' + req.get('host') + req.originalUrl,
