@@ -39,14 +39,14 @@ include common/head
           label City
           input.regBrndInpt(type='text',id="searchTextField", name='city')
         fieldset
-          label Name
-          input.regBrndInpt(type='text',id="nameIn",placeholder="Enter your name", name='name')
+          label Brand Name
+          input.regBrndInpt(type='text',id="nameIn",placeholder="E.g Zeepzoop", name='name')
         fieldset
           label Email
-          input.regBrndInpt(type='text',id="emailIn",placeholder="Enter email", name='email')
+          input.regBrndInpt(type='text',id="emailIn",placeholder="E.g me@gmail.com", name='email')
         fieldset
           label Phone No.
-          input.regBrndInpt(type='text',id="phoneIn",placeholder="Enter phone", name='phone')
+          input.regBrndInpt(type='text',id="phoneIn",placeholder="E.g 1234567890", name='phone')
       .capMainWrap.centSub
         input.frmSubBtn(type='button', value='Submit')
     .joinPortMainCont
@@ -109,6 +109,7 @@ script(src='https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyB6kIwhuE2h
 script.
   function initialize() {
     var input = document.getElementById('searchTextField');
+    document.getElementById("searchTextField").setAttribute("placeholder", "E.g Mumbai");
     new google.maps.places.Autocomplete(input);
   }
   google.maps.event.addDomListener(window, 'load', initialize);
