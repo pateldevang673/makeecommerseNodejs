@@ -1,0 +1,22 @@
+link(href='/css/style.css', rel='stylesheet')
+link(href='/css/styletemp.css', rel='stylesheet')
+link(href='/css/responsive.css', rel='stylesheet')
+link(href='/css/jquery.lib.style.min.css', rel='stylesheet')
+
+.centerAlign
+  .thankmain
+    .main-text-block
+      h2.titlethnk THANK YOU 
+      .thankdis
+        p Thanks to those who have entrusted us with their
+    .capMainWrap.centSub
+      a.frmSubBtn(id="bcklnk",style='width:30%;') Back
+
+script.
+  var link=localStorage.getItem("thankyou");
+  if(link){
+  document.getElementById("bcklnk").setAttribute("href", link);
+  }else{
+  document.getElementById("bcklnk").setAttribute("href", '/');
+  }
+

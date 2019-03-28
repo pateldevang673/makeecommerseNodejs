@@ -823,3 +823,5 @@ select.hmeSrchCtrl{-webkit-appearance:none;-moz-appearance:none;-ms-appearance:n
 .subscribe-btn{min-width:100px;text-transform:none;margin-left:5px;cursor:pointer;line-height:50px;height:50px;float:left;background:#c42848;color:#fff;font-size:16px;border:none;font-weight:normal;}
 .subscribe-btn:hover{background:#b82241}
 .userWeb{font-size:18px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:350px;}
+.thankmain{text-align: center;margin: 20%;}
+.titlethnk{font-size: 60px;}

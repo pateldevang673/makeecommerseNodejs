@@ -122,9 +122,10 @@ script.
         });
 
         request.done(function(response) {
-          console.log("saddam Husasin Subcriber is subscribe your news latter");
+          localStorage.setItem("thankyou",window.location.href)
           $("#mdlfncy").trigger("click");
           $("#subeml").val('');
+          window.location.href ='/thank-you'
         });
         request.fail(function(jqXHR, textStatus) {
             alert("Request failed: " + textStatus);

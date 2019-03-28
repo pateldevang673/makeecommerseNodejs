@@ -51,6 +51,10 @@ class HomeController extends BaseController {
         this._homeHandler.registerbrand(req, res);
     }
 
+    thankyou(req, res, next) {
+        this._homeHandler.thankyou(req, res);
+    }
+
 }
 
 module.exports = HomeController;

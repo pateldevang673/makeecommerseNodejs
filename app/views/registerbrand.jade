@@ -193,7 +193,9 @@ script.
       dataType: "json"
     });
     request.done(function(response) {
-        alert("Your detail's is submitted")
+    localStorage.setItem("thankyou",'/register-your-brand')
+        window.location.href ='/thank-you'
+        //- alert("Your detail's is submitted")
     }); 
     request.fail(function(jqXHR, textStatus) {
         alert("Request failed: " + textStatus);

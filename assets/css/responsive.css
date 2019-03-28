@@ -868,3 +868,6 @@ textarea.frmInpt{height:70px}
 .subscribe-btn{min-width:100px;text-transform:none;margin:auto;cursor:pointer;line-height:35px;height:35px;background:#c42848;color:#fff;font-size:14px;border:none;font-weight:normal;display:block;}
 }
 }
+.thankmain{text-align: center;margin:0%;margin-top:40%;}
+.titlethnk{font-size:40px; padding-bottom: 10px;}
+.thankdis{padding-bottom: 30px;}

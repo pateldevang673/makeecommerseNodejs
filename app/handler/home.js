@@ -234,6 +234,11 @@ class HomeHandler extends BaseAutoBindedClass {
         res.render('partners', { seo: false, title: 'ZeepZoop Partners', page: 'partners' })
     }
 
+    thankyou(req, res) {
+        console.log("Thank You Page");
+        res.render('thankyou', { seo: false, title: 'ZeepZoop – India’s First Shopping Guide & Brand Discovery Platform', page: 'thankyou' })
+    }
+
     team(req, res) {
         console.log("team Page");
         var seoData = {

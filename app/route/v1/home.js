@@ -20,5 +20,6 @@ router.get('/zeepzoop-story', homeController.story);
 router.get('/register-your-brand', homeController.registerbrand);
 router.get('/bhavyamodi-founderceo', homeController.ceo);
 router.get('/zeepzoop-team', homeController.team);
+router.get('/thank-you', homeController.thankyou);
 
 module.exports = router;
