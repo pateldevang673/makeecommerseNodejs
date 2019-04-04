@@ -89,7 +89,7 @@ class HomeHandler extends BaseAutoBindedClass {
                 this.requestAsync(req, URLStore + '/cities', 'cities'),
                 this.requestAsync(req, URLStore + '/story/?startStories=0&endStories=5', 'stories'),
                 this.requestAsync(req, URLStore + '/story/shanayastory/5bdd8097d0b5265f807aac43?startStores=0&endStores=5', 'Shanayastories'),
-                this.requestVideo(req, "https://www.googleapis.com/youtube/v3/search?order=videocount&part=snippet&channelId=UCQajBUKn91xbZ22StHqeOzg&maxResults=4&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc", 'videos')
+                // this.requestVideo(req, "https://www.googleapis.com/youtube/v3/search?order=videocount&part=snippet&channelId=UCQajBUKn91xbZ22StHqeOzg&maxResults=4&key=AIzaSyB6kIwhuE2hJl6LCbSKw7Kas8qa82BcKjc", 'videos')
                 // 'date type of orders'. Allowed values: [date, rating, relevance, title, videocount, viewcount]
             ])
             .then(function(allData) {
@@ -138,8 +138,8 @@ class HomeHandler extends BaseAutoBindedClass {
                     lengthOffersOnline: results['offersOnline'].length > 10 ? 10 : results['offersOnline'].length,
                     offersOffline: results['offersOffline'],
                     lengthoffersOffline: results['offersOffline'].length > 10 ? 10 : results['offersOffline'].length,
-                    videos: results['videos'] ? results['videos'] : [],
-                    lengthVideos: results['videos'] ? results['videos'].length : 0,
+                    // videos: results['videos'] ? results['videos'] : [],
+                    // lengthVideos: results['videos'] ? results['videos'].length : 0,
                     offlineeditor: results['offlineeditorstore'],
                     offlineeditorlength: results['offlineeditorstore'].length,
                     categories: results['categories'],
