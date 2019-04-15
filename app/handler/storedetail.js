@@ -1869,15 +1869,40 @@ class SdetailHandler extends BaseAutoBindedClass {
                     if (req.params.url == "vraj:bhoomi") {
                         seoData.seodesc = 'vraj:bhoomi';
                     }
-                    if (req.params.url == "tussah-by-siddhi") {
-                        seoData.seodesc = 'tussah-by-siddhi';
-                    }
                     if (req.params.url == "shaarav-couture") {
                         seoData.seodesc = 'shaarav-couture';
                     }
                     if (req.params.url == "orra") {
                         seoData.seodesc = 'orra';
                     }
+                    if (req.params.url == "manyavar") {
+                        seoData.seodesc = 'manyavar';
+                    }
+                    if (req.params.url == "chhapa") {
+                        seoData.seodesc = 'chhapa';
+                    }
+                    if (req.params.url == "tussah-by-siddhi") {
+                        seoData.seodesc = 'tussah-by-siddhi';
+                    }
+                    if (req.params.url == "dhara-shah-studio") {
+                        seoData.seodesc = 'dhara-shah-studio';
+                    }
+                    if (req.params.url == "aagman-sarees") {
+                        seoData.seodesc = 'aagman-sarees';
+                    }
+                    if (req.params.url == "deepkala") {
+                        seoData.seodesc = 'deepkala';
+                    }
+                    if (req.params.url == "oak-pine") {
+                        seoData.seodesc = 'oak-pine';
+                    }
+                    if (req.params.url == "runi") {
+                        seoData.seodesc = 'runi';
+                    }
+                    if (req.params.url == "atosa") {
+                        seoData.seodesc = 'atosa';
+                    }
+
 
                     res.render('storedetail', {
                         seo: true,

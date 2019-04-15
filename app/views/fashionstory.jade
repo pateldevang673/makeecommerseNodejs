@@ -10,10 +10,10 @@ section.secPad.bg-gry.blgListMainCont
         .swiper-wrapper
           - for(var x=0;x<FashionStorylength;x++)
             .swiper-slide
-              a.sclHov.blgLstImg(href='/story'+'/#{FashionStory[x]._id}')
+              a.sclHov.blgLstImg(href='/story/single'+'/#{FashionStory[x].URL}')
                 img(src=global.config.variable.apiPath+'/#{FashionStory[x].bannerImage}', alt='img')
               .blgLstInfWrp
-                a.blgLstTtle.hmstry(href='/story'+'/#{FashionStory[x]._id}') #{FashionStory[x].title}
+                a.blgLstTtle.hmstry(href='/story/single'+'/#{FashionStory[x].URL}') #{FashionStory[x].title}
                 .blgLstFtrWrp
                   .blgLstAuthInfWrap
                     if FashionStory[x].userId && FashionStory[x].userId.userImage
@@ -34,10 +34,10 @@ if DecoreStorylength > 0
           .swiper-wrapper
             - for(var x=0;x<DecoreStorylength;x++)
               .swiper-slide
-                a.sclHov.blgLstImg(href='/story'+'/#{DecoreStory[x]._id}')
+                a.sclHov.blgLstImg(href='/story/single'+'/#{DecoreStory[x].URL}')
                   img(src=global.config.variable.apiPath+'/#{DecoreStory[x].bannerImage}', alt='img')
                 .blgLstInfWrp
-                  a.blgLstTtle.hmstry(href='/story'+'/#{DecoreStory[x]._id}') #{DecoreStory[x].title}
+                  a.blgLstTtle.hmstry(href='/story/single'+'/#{DecoreStory[x].URL}') #{DecoreStory[x].title}
                   .blgLstFtrWrp
                     .blgLstAuthInfWrap
                       if DecoreStory[x].userId && DecoreStory[x].userId.userImage

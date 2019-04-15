@@ -34,9 +34,6 @@ class CatalougeHandler extends BaseAutoBindedClass {
 
     objectify(array) {
         return array.reduce(function(p, c) {
-            console.log("objectify")
-            console.log(p)
-            console.log(c)
             p[c['fieldname']] = c;
             return p;
         }, {});

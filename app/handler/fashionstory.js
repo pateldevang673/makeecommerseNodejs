@@ -6,7 +6,8 @@ const BaseAutoBindedClass = require(APP_BASE_PACKAGE_PATH + 'base-autobind');
 var request = require('request');
 var moment = require('moment');
 var url = require('url');
-const URLStore = global.config.variable.apiPath;
+// const URLStore = global.config.variable.apiPath;
+const URLStore = "http://localhost:3000";
 var urlArray = [];
 
 class FashionStoryHandler extends BaseAutoBindedClass {
@@ -34,7 +35,7 @@ class FashionStoryHandler extends BaseAutoBindedClass {
     getSingleBlog(req, res) {
         console.log("single story page")
         var optionsBlog = {
-            url: URLStore + '/story/forweb/' + req.params.id,
+            url: URLStore + '/story/forweb/' + req.params.url,
             method: 'GET',
             headers: {
                 'Authorization': "maximumvsminimumsecurity",
@@ -47,6 +48,8 @@ class FashionStoryHandler extends BaseAutoBindedClass {
             });
         }).then((results) => {
             var blog = JSON.parse(results)['data'];
+            console.log("blog------------------------------+")
+            console.log(blog.title)
             if (blog) {
                 var catBlogs = {
                     url: URLStore + '/story/?category=' + blog.category,
@@ -64,6 +67,7 @@ class FashionStoryHandler extends BaseAutoBindedClass {
                     var catBlog = JSON.parse(catBlogsdata)['data'];
                     var seoData = {
                         title: blog.title,
+                        seodesc: req.params.url,
                         description: "Zeepzoop",
                         keywords: "ZeepZoop Stories For" + blog.category,
                         image: global.config.variable.apiPath + '/' + blog.bannerImage,
@@ -87,8 +91,8 @@ class FashionStoryHandler extends BaseAutoBindedClass {
                     })
                 })
             } else {
-                res.redirect(301, '/')
-                // res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
+                // res.redirect(301, '/')
+                res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
             }
         })
     }
@@ -110,8 +114,8 @@ class FashionStoryHandler extends BaseAutoBindedClass {
             })
             .then((results) => {
                 var seoData = {
-                    title: 'The Official ZeepZoop Blog',
-                    description: 'This is the official blog of ZeepZoop. Read about most trending and latest Fashion & Brand Stories. Read Blogs from Around the World, Wedding, Home Décor, Culture & Heritage.',
+                    title: 'Fashion Stories By ZeepZoop Fashion Influencer',
+                    description: "For all the fashion lovers, there is no place better than ZeepZoop. ZeepZoop's Fashion Influencer Program where you can get paid for your fashion love.",
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',
@@ -149,8 +153,8 @@ class FashionStoryHandler extends BaseAutoBindedClass {
             })
             .then((results) => {
                 var seoData = {
-                    title: 'The Official ZeepZoop Blog',
-                    description: 'This is the official blog of ZeepZoop. Read about most trending and latest Fashion & Brand Stories. Read Blogs from Around the World, Wedding, Home Décor, Culture & Heritage.',
+                    title: "Shanaya's Fashion Story - ZeepZoop",
+                    description: "Shanaya and her fashion stories is the talk of latest fashion trends, styles and fashion style tips for girls.",
                     keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                     image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
                     type: 'website',

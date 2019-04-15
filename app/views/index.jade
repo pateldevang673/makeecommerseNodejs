@@ -44,7 +44,7 @@ section.hmeMainPrlxCont.fulHei
             li
               input#srch_blog(type='radio', name='srchTab', value='blog')
               label(for='srch_blog') Blogs
-            li
+            //- li
               input#srch_inf(type='radio', name='srchTab', value='inf')
               label(for='srch_inf') Influencers
           //- a.ctyGuideLnk(href='#') Our City Guides
@@ -164,11 +164,11 @@ section.secPad.blgListMainCont
         .swiper-wrapper
           - for (var x = 0; x < lengthStories ; x++)
             .swiper-slide
-              a.sclHov.blgLstImg(href='/story/#{stories[x]._id}')
+              a.sclHov.blgLstImg(href='/story/single/#{stories[x].URL}')
                 img(src=srcset=global.config.variable.apiPath+'/#{stories[x].bannerImage}', alt='img')
               .blgLstInfWrp
-                a.blgLstTtle.hmstry(href='/story/#{stories[x]._id}') #{stories[x].title}
-                a.blgLstFtrWrp(href='/story/#{stories[x]._id}')
+                a.blgLstTtle.hmstry(href='/story/single/#{stories[x].URL}') #{stories[x].title}
+                a.blgLstFtrWrp(href='/story/single/#{stories[x].URL}')
                   blgLstAuthInfWrap
                     if stories[x].userId && stories[x].userId.userImage
                       img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{stories[x].userId.userImage}', alt='img')
@@ -188,11 +188,11 @@ section.secPad.blgListMainCont
         .swiper-wrapper
           - for (var x = 0; x < lengthShanayStories ; x++)
             .swiper-slide
-              a.sclHov.blgLstImg(href='/story/#{Shanaystories[x]._id}')
+              a.sclHov.blgLstImg(href='/story/single/#{Shanaystories[x].URL}')
                 img(src=srcset=global.config.variable.apiPath+'/#{Shanaystories[x].bannerImage}', alt='img')
               .blgLstInfWrp
-                a.blgLstTtle.hmstry(href='/story/#{Shanaystories[x]._id}') #{Shanaystories[x].title}
-                a.blgLstFtrWrp(href='/story/#{Shanaystories[x]._id}')
+                a.blgLstTtle.hmstry(href='/story/single/#{Shanaystories[x].URL}') #{Shanaystories[x].title}
+                a.blgLstFtrWrp(href='/story/single/#{Shanaystories[x].URL}')
                   blgLstAuthInfWrap
                     if Shanaystories[x].userId && Shanaystories[x].userId.userImage
                       img.blgLstAuthImg(src=global.config.variable.apiPath+'/#{Shanaystories[x].userId.userImage}', alt='img')
@@ -329,22 +329,44 @@ br
   p.hmcntnt
     | ZeepZoop is India’s most loved online shopping guide, and we strive everyday to stay that way. ZeepZoop is designed to give its users one of a
     | kind experience. An online fashion discovery app that catalogues the best of designer studios and galleries that house modern and contemporary,
-    | Bespoke and Prete-a-Porter clothing, along with exquisite home decor and luxury lifestyle products all under one roof. ZeepZoop itemizes the 
+    | Bespoke and Prete-a-Porter clothing, along with exquisite 
+    span
+      a(href="https://www.zeepzoop.com/category/Home-Decor") home decor 
+    | and luxury lifestyle products all under one roof. ZeepZoop itemizes the 
     | finest of designers from across the country. You will designer boutiques from finest of brands. The list is curated with utmost care and 
     | precision, we make sure to dish out only the best for our customers.
 
   p.hmcntnt
     | This fashion discovery app believes in making your shopping spree time-effective. With us, you can check the boutiques and studios near you, 
     | check out the online presence of your favorite brands and designers before heading out. ZeepZoop has stores from the major cities of India, 
-    | making us a must use shopping guide for Ahmedabad, Mumbai, Delhi, Bangalore, Hyderabad, Pune, Jaipur, Kolkata, etc.
-
+    | making us a must use shopping guide for 
+    span
+      a(href="https://www.zeepzoop.com/?city=Ahmedabad") Ahmedabad, 
+    span
+      a(href="https://www.zeepzoop.com/?city=Mumbai") Mumbai, 
+    span
+      a(href="https://www.zeepzoop.com/?city=Delhi") Delhi, 
+    span
+      a(href="https://www.zeepzoop.com/?city=Bangalore") Bangalore, 
+    span
+      a(href="https://www.zeepzoop.com/?city=Hyderabad") Hyderabad, 
+    span
+      a(href="https://www.zeepzoop.com/?city=Pune") Pune, 
+    span
+      a(href="https://www.zeepzoop.com/?city=Jaipur") Jaipur, 
+    span
+      a(href="https://www.zeepzoop.com/?city=Kolkata") Kolkata, 
+    | etc.
   p.hmcntnt
     | ZeepZoop is not just a fashion discovery app, but it also provides you the best platform to showcase your fashion. You can also earn money by 
     | being active socially on the ZeepZoop App. Posting stories, commenting and building up your fashion profile. To know more check out the 
     | attractive ZeepZoop point system.
 
   p.hmcntnt
-    | You can find a myriad luxury fashion and home decor items to choose from. Pick your favorite lehengas, jewellery, sarees, stationary and 
+    | You can find a myriad luxury fashion and 
+    span
+      a(href="https://www.zeepzoop.com/category/Home-Decor") home decor 
+    | items to choose from. Pick your favorite lehengas, jewellery, sarees, stationary and 
     | accessories to choose from with our fashion discovery app.
 
 include common/footer

@@ -44,6 +44,9 @@ class BlogHandler extends BaseAutoBindedClass {
         if (req.route.path == "/auther/:authorURL") {
             res.redirect(301, '/blogs/author/' + req.params.authorURL)
         }
+        // if (req.params.authorURL == 'Shubharambh') {
+        //     res.redirect(301, '/blogs/author/Hetal-Shah')
+        // }
         console.log("Author Page");
         Promise.all([
                 this.requestAsync(req, URLStore + '/blogs/search?authorURL=' + req.params.authorURL + '&trending=true&sort=true', 'authorBlogs'),
@@ -60,7 +63,7 @@ class BlogHandler extends BaseAutoBindedClass {
             .then((results) => {
                 if (results['authorBlogs'].length > 0) {
                     var seoData = {
-                        title: 'Zeepzoop Blogs',
+                        title: 'Author of Zeepzoop Blogs',
                         description: 'Read blogs related to Art, Craft, culture, festivals, different cities, fashion, Home décor and much more. It guides you about what to buy from different cities.',
                         keywords: 'Art, Craft, culture, festivals, different cities, fashion, Home décor, E-commerce',
                         image: 'http://www.zeepzoop.com/images/zeepzoop.jpg',
@@ -69,6 +72,35 @@ class BlogHandler extends BaseAutoBindedClass {
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
+                    if (req.params.authorURL == 'Dipali-Kotadiya') {
+                        seoData.title = 'Dipali Kotadiya - ZeepZoop';
+                        seoData.description = "Dipali Kotadiya, a fashion blogger at ZeepZoop who love to see everything beautiful with good design and good art."
+                    }
+                    if (req.params.authorURL == 'Pravesh-Patel') {
+                        seoData.title = 'Pravesh Patel - ZeepZoop';
+                        seoData.description = "Pravesh Patel, a fashion blogger at ZeepZoop who's style speaks volume when it comes to trending looks."
+                    }
+                    if (req.params.authorURL == 'Zarana-Rathod') {
+                        seoData.title = 'Zarana Rathod - ZeepZoop';
+                        seoData.description = "Zarana Rathod, a fashion blogger and content marketing strategist at ZeepZoop. Her blog inspires you to revamp your wardrobe."
+                    }
+                    if (req.params.authorURL == 'Shubharambh') {
+                        seoData.title = 'Hetal Shah - ZeepZoop';
+                        seoData.description = "Hetal Shah, a Lifestyle Blogger, Content Creator and Digital Marketer at ZeepZoop. Her blogs speak about art, design culture and many more."
+                    }
+                    if (req.params.authorURL == 'Dhruvi-Savsani') {
+                        seoData.title = 'Dhruvi Savsani - ZeepZoop';
+                        seoData.description = "Dhruvi Savsani, a fashion and lifestyle content writer at ZeepZoop."
+                    }
+                    if (req.params.authorURL == 'Vanita-Jain') {
+                        seoData.title = 'Vanita Jain - ZeepZoop';
+                        seoData.description = "Vanita Jain, multi-tasker and an avid traveller who loves to write about the fashion industry at ZeepZoop."
+                    }
+                    if (req.params.authorURL == 'Bhavya-Modi') {
+                        seoData.title = 'Bhavya Modi - ZeepZoop';
+                        seoData.description = "Bhavya Modi, Founder and CEO of ZeepZoop. Loves to write about technology, fashion, digital marketing."
+                    }
+                    console.log(seoData)
                     res.render('auther', {
                         seo: true,
                         seoData: seoData,

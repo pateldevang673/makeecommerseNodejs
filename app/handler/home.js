@@ -3,7 +3,8 @@ const NotFoundError = require(APP_ERROR_PATH + 'not-found');
 const BaseAutoBindedClass = require(APP_BASE_PACKAGE_PATH + 'base-autobind');
 var request = require('request');
 var Promise = require('promise');
-const URLStore = global.config.variable.apiPath;
+// const URLStore = global.config.variable.apiPath;
+const URLStore = "http://localhost:3000";
 
 var LocalStorage = require('node-localstorage').LocalStorage,
     localStorage = new LocalStorage('./scratch');
