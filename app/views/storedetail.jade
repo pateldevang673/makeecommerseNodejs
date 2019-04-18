@@ -135,7 +135,28 @@ section.shopBothInfPgeMainCont
           - for (var x = 0; x < lengthstoreCatalogs; x++)
             .swiper-slide.sclHov
               a(href='javascript:void(0);')
-                img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='#{store.storeName}')    
+                img(src=global.config.variable.apiPath+'/#{storeCatalogs[x].catalogUrl}', alt='#{store.storeName}')
+section
+  .secPad.shopInfo(style='padding-bottom:0px;')
+    .centerAlign
+      .infoBox
+        h3(style='margin: 0px;') More Information
+        .infoData
+          ul
+            if store.storePhone
+              li
+                a.infoCall(href='javascript:void(0);')
+                  img(src='/images/baseline-call-24px.svg')
+                  span  #{store.storePhone}
+            if store.buisnessOnline==true
+              li
+                a.infoCall(href='javascript:void(0);')
+                  img(src='/images/baseline-public-24px.svg')
+                  span  #{store.webAddress}
+            //- li
+            //-   a.infoCall(href='#')
+            //-     img(src='/images/baseline-email-24px.svg')
+            //-     span  ok@ok.com
 if seoData.seodesc=="traveler's-home"
   section
     .secPad.aboutShop
@@ -1253,6 +1274,21 @@ if seoData.seodesc=="atosa"
               | #{reviews[x].description}
     .mt30
       //- // a.defBtn(href='#') See All Reviews
+section#sponsored-swiper.secPad.collection-swiper-cont.online
+  .centerAlign
+    h2.secTtle.mb2 Similar
+    .swip-ctrlWrp
+      .swiper-container
+        .swiper-wrapper
+          - for (var x = 0; x < similiarstores.length; x++)
+            if titleurl!=similiarstores[x].URL
+              .swiper-slide.sclHov
+                a(href='/brand/#{similiarstores[x].URL}')
+                  img(srcset=global.config.variable.apiPath+'/#{similiarstores[x].storeBanner} 1x', alt='img')
+                  .popGridInf
+                    .popGrdTtle #{similiarstores[x].storeName}
+      .swiper-button-prev
+      .swiper-button-next
 
 include common/footer
 script(type='text/javascript', src='//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5bb3426196915581')
@@ -1320,30 +1356,56 @@ script.
       }
     });
   })
+  var sponSwiper = new Swiper('#sponsored-swiper .swiper-container', {
+    slidesPerView: 3,
+    loop: true,
+    spaceBetween: 40,
+    slidesPerGroup: 1,
+    navigation: {
+    nextEl: '#sponsored-swiper .swiper-button-next',
+    prevEl: '#sponsored-swiper .swiper-button-prev',
+    },
+    breakpoints: {
+    480: {
+    slidesPerView: 1,
+    spaceBetween: 0
+    },
+    768: {
+    slidesPerView: 2,
+    spaceBetween: 10
+    },
+    1000: {
+    spaceBetween: 15
+    },
+    1250: {
+    spaceBetween: 30
+    }
+    }
+  });
   var newlyAddSwiper = new Swiper('.shopBothCatMainCont .swiper-container', {
-  loop: true,
-  slidesPerView: 5,
-  spaceBetween: 50,
-  slidesPerGroup: 1,
-  effect: 'coverflow',
-  slideToClickedSlide: true,
-  grabCursor: true,
-  centeredSlides: true,
-  slidesPerView: 'auto',
-  autoplay: {
-  delay: 4000,
-  disableOnInteraction: false,
-  },
-  coverflowEffect: {
-  rotate: 0,
-  stretch: 0,
-  depth: 70,
-  modifier: 3,
-  slideShadows: true,
-  },
-  breakpoints: {
-  600: {
-  spaceBetween: 20
-  }
-  }
+    loop: true,
+    slidesPerView: 5,
+    spaceBetween: 50,
+    slidesPerGroup: 1,
+    effect: 'coverflow',
+    slideToClickedSlide: true,
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    autoplay: {
+    delay: 4000,
+    disableOnInteraction: false,
+    },
+    coverflowEffect: {
+    rotate: 0,
+    stretch: 0,
+    depth: 70,
+    modifier: 3,
+    slideShadows: true,
+    },
+    breakpoints: {
+    600: {
+    spaceBetween: 20
+    }
+    }
   });

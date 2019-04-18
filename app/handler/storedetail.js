@@ -1675,250 +1675,269 @@ class SdetailHandler extends BaseAutoBindedClass {
                         resolve(body)
                     });
                 }).then((storedata) => {
-                    var storedatas = JSON.parse(storedata)['data'];
-                    if (storedatas.storeCatalogs) {
-                        var catkeyword = _.map(storedatas.categoriesIds, 'category');
-                    }
-                    var cat = '';
-
-                    if (catkeyword.length > 1) {
-                        cat = catkeyword[0] + ", " + catkeyword[1];
-                    } else {
-                        cat = catkeyword[0]
-                    }
-
-                    if (catkeyword == undefined || cat == undefined) {
-                        cat = 'Clothing Home-Decor Accessories Jewellery';
-                    }
-                    var seoData = '';
-                    // if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
-                    //     seoData = {
-                    //         title: "Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", India",
-                    //         // title: storedatas.storeName + " For " + cat + " in " + storedatas.storeCity + ", " + storedatas.storeState + " | Zeepzoop",
-                    //         description: "Check Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", " + storedatas.storeState + ".Visit Zeepzoop for " + storedatas.storeName + " address, contact number, reviews & catalogue",
-                    //         keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
-                    //         image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                    //         type: 'store',
-                    //         // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                    //         url: 'https://' + req.get('host') + req.originalUrl,
-                    //         site: 'Zeepzoop',
-                    //         domain: 'zeepzoop.com'
-                    //     }
-                    // } else if (storedatas.buisnessOnline) {
-                    //     seoData = {
-                    //         title: storedatas.storeName + " For " + cat + " Shop Online | Zeepzoop",
-                    //         description: "Check Designer " + cat + " By " + storedatas.storeName + " .Visit " + storedatas.storeName + " Website from ZeepZoop for Online Shopping.",
-                    //         keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
-                    //         image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                    //         type: 'store',
-                    //         // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                    //         url: 'https://' + req.get('host') + req.originalUrl,
-                    //         site: 'Zeepzoop',
-                    //         domain: 'zeepzoop.com'
-                    //     }
-                    // }
-
-                    if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
-                        var seoData = {
-                            title: "Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", India",
-                            description: "Check out " + storedatas.storeName + " designer " + cat + " collection on ZeepZoop. Visit ZeepZoop for " + storedatas.storeName + " catalogue, address and contact number.",
-                            keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
+                    var similiarstores = {
+                        url: URLStore + "/stores/search?search=" + store.otherKeyword + "&category=" + store.categoriesIds[0] + "&startStores=2&endStores=8",
+                        method: 'GET',
+                        headers: {
+                            'Authorization': "maximumvsminimumsecurity",
+                            'Content-Type': "application/json"
                         }
-                    } else if (storedatas.buisnessOnline) {
-                        var seoData = {
-                            title: "Designer " + cat + " in " + storedatas.storeName + " Shop Online | Zeepzoop",
-                            description: "Check out " + storedatas.storeName + " designer " + cat + " collection on ZeepZoop. Visit ZeepZoop for " + storedatas.storeName + " catalogue, address and contact number.",
-                            keywords: storedatas.storeName + " for " + cat,
-                            image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
-                            type: 'store',
-                            // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
-                            url: 'https://' + req.get('host') + req.originalUrl,
-                            site: 'Zeepzoop',
-                            domain: 'zeepzoop.com'
+                    };
+                    return new Promise(function(resolve, reject) {
+                        request(similiarstores, function(error, response, body) {
+                            resolve(body)
+                        });
+                    }).then((similiar) => {
+                        if (similiar) {
+                            var similiarstores = JSON.parse(similiar)['data'];
+                        } else {
+                            var similiarstores = [];
                         }
-                    }
-                    if (req.params.url == "darshi-shah-bhavin-trivedi") {
-                        seoData.seodesc = "darshi-shah-bhavin-trivedi";
-                    }
-                    if (req.params.url == "traveler's-home") {
-                        seoData.seodesc = "traveler's-home";
-                    }
-                    if (req.params.url == "tvak-designer-store") {
-                        seoData.seodesc = "tvak-designer-store";
-                    }
-                    if (req.params.url == "kasheesh.k") {
-                        seoData.seodesc = "kasheesh.k";
-                    }
-                    if (req.params.url == "purva-couture") {
-                        seoData.seodesc = "purva-couture";
-                    }
-                    if (req.params.url == "intelligent-idiots") {
-                        seoData.seodesc = "intelligent-idiots";
-                    }
-                    if (req.params.url == "zinzuwadia-jewellers") {
-                        seoData.seodesc = "zinzuwadia-jewellers";
-                    }
-                    if (req.params.url == "the-shoe-tales") {
-                        seoData.seodesc = "the-shoe-tales";
-                    }
-                    if (req.params.url == "sivi") {
-                        seoData.seodesc = "sivi";
-                    }
-                    if (req.params.url == "aryan's-designer-studio") {
-                        seoData.seodesc = "aryan's-designer-studio";
-                    }
-                    if (req.params.url == "studio-scarlet") {
-                        seoData.seodesc = "studio-scarlet";
-                    }
-                    if (req.params.url == "satya-paul") {
-                        seoData.seodesc = "satya-paul";
-                    }
-                    if (req.params.url == "aamod") {
-                        seoData.seodesc = "aamod";
-                    }
-                    if (req.params.url == "bandhej") {
-                        seoData.seodesc = "bandhej";
-                    }
-                    if (req.params.url == "elan-the-fashion-store") {
-                        seoData.seodesc = "elan-the-fashion-store";
-                    }
-                    if (req.params.url == "pahenava-by-purvi") {
-                        seoData.seodesc = "pahenava-by-purvi";
-                    }
-                    if (req.params.url == "be-womaniya") {
-                        seoData.seodesc = "be-womaniya";
-                    }
-                    if (req.params.url == "options") {
-                        seoData.seodesc = "options";
-                    }
-                    if (req.params.url == "siddhesh-chauhan") {
-                        seoData.seodesc = "siddhesh-chauhan";
-                    }
-                    if (req.params.url == "seasons") {
-                        seoData.seodesc = "seasons";
-                    }
-                    if (req.params.url == "foram's-fashion-story") {
-                        seoData.seodesc = "foram's-fashion-story";
-                    }
-                    if (req.params.url == "studio-virtues") {
-                        seoData.seodesc = 'studio-virtues';
-                    }
-                    if (req.params.url == "aurus-jewels") {
-                        seoData.seodesc = 'aurus-jewels';
-                    }
-                    if (req.params.url == "mortantra") {
-                        seoData.seodesc = 'mortantra';
-                    }
-                    if (req.params.url == "eshyl") {
-                        seoData.seodesc = 'eshyl';
-                    }
-                    if (req.params.url == "moh-studio") {
-                        seoData.seodesc = 'moh-studio';
-                    }
-                    if (req.params.url == "monsoon-the-designer-store") {
-                        seoData.seodesc = 'monsoon-the-designer-store';
-                    }
-                    if (req.params.url == "atulya-jewellery") {
-                        seoData.seodesc = 'atulya-jewellery';
-                    }
-                    if (req.params.url == "aesthetics") {
-                        seoData.seodesc = 'aesthetics';
-                    }
-                    if (req.params.url == "disha-vadgama") {
-                        seoData.seodesc = 'disha-vadgama';
-                    }
-                    if (req.params.url == "msafiri") {
-                        seoData.seodesc = 'msafiri';
-                    }
-                    if (req.params.url == "ekaya") {
-                        seoData.seodesc = 'ekaya';
-                    }
-                    if (req.params.url == "the-panache-raack") {
-                        seoData.seodesc = 'the-panache-raack';
-                    }
-                    if (req.params.url == "the-wardrobe-theorem") {
-                        seoData.seodesc = 'the-wardrobe-theorem';
-                    }
-                    if (req.params.url == "story-of-india") {
-                        seoData.seodesc = 'story-of-india';
-                    }
-                    if (req.params.url == "deval-the-multidesigner-store") {
-                        seoData.seodesc = 'deval-the-multidesigner-store';
-                    }
-                    if (req.params.url == "ratios") {
-                        seoData.seodesc = 'ratios';
-                    }
-                    if (req.params.url == "kzari-by-karishma-hingorani") {
-                        seoData.seodesc = 'kzari-by-karishma-hingorani';
-                    }
-                    if (req.params.url == "anokhi") {
-                        seoData.seodesc = 'anokhi';
-                    }
-                    if (req.params.url == "kathputli") {
-                        seoData.seodesc = 'kathputli';
-                    }
-                    if (req.params.url == "shyamal-and-bhumika") {
-                        seoData.seodesc = 'shyamal-and-bhumika';
-                    }
-                    if (req.params.url == "vraj:bhoomi") {
-                        seoData.seodesc = 'vraj:bhoomi';
-                    }
-                    if (req.params.url == "shaarav-couture") {
-                        seoData.seodesc = 'shaarav-couture';
-                    }
-                    if (req.params.url == "orra") {
-                        seoData.seodesc = 'orra';
-                    }
-                    if (req.params.url == "manyavar") {
-                        seoData.seodesc = 'manyavar';
-                    }
-                    if (req.params.url == "chhapa") {
-                        seoData.seodesc = 'chhapa';
-                    }
-                    if (req.params.url == "tussah-by-siddhi") {
-                        seoData.seodesc = 'tussah-by-siddhi';
-                    }
-                    if (req.params.url == "dhara-shah-studio") {
-                        seoData.seodesc = 'dhara-shah-studio';
-                    }
-                    if (req.params.url == "aagman-sarees") {
-                        seoData.seodesc = 'aagman-sarees';
-                    }
-                    if (req.params.url == "deepkala") {
-                        seoData.seodesc = 'deepkala';
-                    }
-                    if (req.params.url == "oak-pine") {
-                        seoData.seodesc = 'oak-pine';
-                    }
-                    if (req.params.url == "runi") {
-                        seoData.seodesc = 'runi';
-                    }
-                    if (req.params.url == "atosa") {
-                        seoData.seodesc = 'atosa';
-                    }
+                        var storedatas = JSON.parse(storedata)['data'];
+                        if (storedatas.storeCatalogs) {
+                            var catkeyword = _.map(storedatas.categoriesIds, 'category');
+                        }
+                        var cat = '';
 
+                        if (catkeyword.length > 1) {
+                            cat = catkeyword[0] + ", " + catkeyword[1];
+                        } else {
+                            cat = catkeyword[0]
+                        }
 
-                    res.render('storedetail', {
-                        seo: true,
-                        seoData: seoData,
-                        page: 'storedetail-page',
-                        titleurl: req.params.url,
-                        store: storedatas,
-                        storeCatalogs: storedatas.storeCatalogs,
-                        lengthstoreCatalogs: storedatas.storeCatalogs.length,
-                        storeOffers: storedatas.storeOffers,
-                        reviews: storedatas.reviews,
-                        reviewslength: storedatas.reviews.length,
-                        moment: moment,
-                        lengthstoreOffers: storedatas.storeOffers.length,
-                        shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl
-                    })
+                        if (catkeyword == undefined || cat == undefined) {
+                            cat = 'Clothing Home-Decor Accessories Jewellery';
+                        }
+                        var seoData = '';
+                        // if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
+                        //     seoData = {
+                        //         title: "Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", India",
+                        //         // title: storedatas.storeName + " For " + cat + " in " + storedatas.storeCity + ", " + storedatas.storeState + " | Zeepzoop",
+                        //         description: "Check Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", " + storedatas.storeState + ".Visit Zeepzoop for " + storedatas.storeName + " address, contact number, reviews & catalogue",
+                        //         keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
+                        //         image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                        //         type: 'store',
+                        //         // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                        //         url: 'https://' + req.get('host') + req.originalUrl,
+                        //         site: 'Zeepzoop',
+                        //         domain: 'zeepzoop.com'
+                        //     }
+                        // } else if (storedatas.buisnessOnline) {
+                        //     seoData = {
+                        //         title: storedatas.storeName + " For " + cat + " Shop Online | Zeepzoop",
+                        //         description: "Check Designer " + cat + " By " + storedatas.storeName + " .Visit " + storedatas.storeName + " Website from ZeepZoop for Online Shopping.",
+                        //         keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
+                        //         image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                        //         type: 'store',
+                        //         // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                        //         url: 'https://' + req.get('host') + req.originalUrl,
+                        //         site: 'Zeepzoop',
+                        //         domain: 'zeepzoop.com'
+                        //     }
+                        // }
+
+                        if (storedatas.buisnessOffline || storedatas.buisnessBoth) {
+                            var seoData = {
+                                title: "Designer " + cat + " By " + storedatas.storeName + " in " + storedatas.storeCity + ", India",
+                                description: "Check out " + storedatas.storeName + " designer " + cat + " collection on ZeepZoop. Visit ZeepZoop for " + storedatas.storeName + " catalogue, address and contact number.",
+                                keywords: storedatas.storeName + " in " + storedatas.storeCity + ", " + cat,
+                                image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                                type: 'store',
+                                // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                                url: 'https://' + req.get('host') + req.originalUrl,
+                                site: 'Zeepzoop',
+                                domain: 'zeepzoop.com'
+                            }
+                        } else if (storedatas.buisnessOnline) {
+                            var seoData = {
+                                title: "Designer " + cat + " in " + storedatas.storeName + " Shop Online | Zeepzoop",
+                                description: "Check out " + storedatas.storeName + " designer " + cat + " collection on ZeepZoop. Visit ZeepZoop for " + storedatas.storeName + " catalogue, address and contact number.",
+                                keywords: storedatas.storeName + " for " + cat,
+                                image: global.config.variable.apiPath + '/' + storedatas.storeLogo,
+                                type: 'store',
+                                // url: req.headers['x-forwarded-proto'] ? 'https://' + req.get('host') + req.originalUrl : 'http://' + req.get('host') + req.originalUrl,
+                                url: 'https://' + req.get('host') + req.originalUrl,
+                                site: 'Zeepzoop',
+                                domain: 'zeepzoop.com'
+                            }
+                        }
+                        if (req.params.url == "darshi-shah-bhavin-trivedi") {
+                            seoData.seodesc = "darshi-shah-bhavin-trivedi";
+                        }
+                        if (req.params.url == "traveler's-home") {
+                            seoData.seodesc = "traveler's-home";
+                        }
+                        if (req.params.url == "tvak-designer-store") {
+                            seoData.seodesc = "tvak-designer-store";
+                        }
+                        if (req.params.url == "kasheesh.k") {
+                            seoData.seodesc = "kasheesh.k";
+                        }
+                        if (req.params.url == "purva-couture") {
+                            seoData.seodesc = "purva-couture";
+                        }
+                        if (req.params.url == "intelligent-idiots") {
+                            seoData.seodesc = "intelligent-idiots";
+                        }
+                        if (req.params.url == "zinzuwadia-jewellers") {
+                            seoData.seodesc = "zinzuwadia-jewellers";
+                        }
+                        if (req.params.url == "the-shoe-tales") {
+                            seoData.seodesc = "the-shoe-tales";
+                        }
+                        if (req.params.url == "sivi") {
+                            seoData.seodesc = "sivi";
+                        }
+                        if (req.params.url == "aryan's-designer-studio") {
+                            seoData.seodesc = "aryan's-designer-studio";
+                        }
+                        if (req.params.url == "studio-scarlet") {
+                            seoData.seodesc = "studio-scarlet";
+                        }
+                        if (req.params.url == "satya-paul") {
+                            seoData.seodesc = "satya-paul";
+                        }
+                        if (req.params.url == "aamod") {
+                            seoData.seodesc = "aamod";
+                        }
+                        if (req.params.url == "bandhej") {
+                            seoData.seodesc = "bandhej";
+                        }
+                        if (req.params.url == "elan-the-fashion-store") {
+                            seoData.seodesc = "elan-the-fashion-store";
+                        }
+                        if (req.params.url == "pahenava-by-purvi") {
+                            seoData.seodesc = "pahenava-by-purvi";
+                        }
+                        if (req.params.url == "be-womaniya") {
+                            seoData.seodesc = "be-womaniya";
+                        }
+                        if (req.params.url == "options") {
+                            seoData.seodesc = "options";
+                        }
+                        if (req.params.url == "siddhesh-chauhan") {
+                            seoData.seodesc = "siddhesh-chauhan";
+                        }
+                        if (req.params.url == "seasons") {
+                            seoData.seodesc = "seasons";
+                        }
+                        if (req.params.url == "foram's-fashion-story") {
+                            seoData.seodesc = "foram's-fashion-story";
+                        }
+                        if (req.params.url == "studio-virtues") {
+                            seoData.seodesc = 'studio-virtues';
+                        }
+                        if (req.params.url == "aurus-jewels") {
+                            seoData.seodesc = 'aurus-jewels';
+                        }
+                        if (req.params.url == "mortantra") {
+                            seoData.seodesc = 'mortantra';
+                        }
+                        if (req.params.url == "eshyl") {
+                            seoData.seodesc = 'eshyl';
+                        }
+                        if (req.params.url == "moh-studio") {
+                            seoData.seodesc = 'moh-studio';
+                        }
+                        if (req.params.url == "monsoon-the-designer-store") {
+                            seoData.seodesc = 'monsoon-the-designer-store';
+                        }
+                        if (req.params.url == "atulya-jewellery") {
+                            seoData.seodesc = 'atulya-jewellery';
+                        }
+                        if (req.params.url == "aesthetics") {
+                            seoData.seodesc = 'aesthetics';
+                        }
+                        if (req.params.url == "disha-vadgama") {
+                            seoData.seodesc = 'disha-vadgama';
+                        }
+                        if (req.params.url == "msafiri") {
+                            seoData.seodesc = 'msafiri';
+                        }
+                        if (req.params.url == "ekaya") {
+                            seoData.seodesc = 'ekaya';
+                        }
+                        if (req.params.url == "the-panache-raack") {
+                            seoData.seodesc = 'the-panache-raack';
+                        }
+                        if (req.params.url == "the-wardrobe-theorem") {
+                            seoData.seodesc = 'the-wardrobe-theorem';
+                        }
+                        if (req.params.url == "story-of-india") {
+                            seoData.seodesc = 'story-of-india';
+                        }
+                        if (req.params.url == "deval-the-multidesigner-store") {
+                            seoData.seodesc = 'deval-the-multidesigner-store';
+                        }
+                        if (req.params.url == "ratios") {
+                            seoData.seodesc = 'ratios';
+                        }
+                        if (req.params.url == "kzari-by-karishma-hingorani") {
+                            seoData.seodesc = 'kzari-by-karishma-hingorani';
+                        }
+                        if (req.params.url == "anokhi") {
+                            seoData.seodesc = 'anokhi';
+                        }
+                        if (req.params.url == "kathputli") {
+                            seoData.seodesc = 'kathputli';
+                        }
+                        if (req.params.url == "shyamal-and-bhumika") {
+                            seoData.seodesc = 'shyamal-and-bhumika';
+                        }
+                        if (req.params.url == "vraj:bhoomi") {
+                            seoData.seodesc = 'vraj:bhoomi';
+                        }
+                        if (req.params.url == "shaarav-couture") {
+                            seoData.seodesc = 'shaarav-couture';
+                        }
+                        if (req.params.url == "orra") {
+                            seoData.seodesc = 'orra';
+                        }
+                        if (req.params.url == "manyavar") {
+                            seoData.seodesc = 'manyavar';
+                        }
+                        if (req.params.url == "chhapa") {
+                            seoData.seodesc = 'chhapa';
+                        }
+                        if (req.params.url == "tussah-by-siddhi") {
+                            seoData.seodesc = 'tussah-by-siddhi';
+                        }
+                        if (req.params.url == "dhara-shah-studio") {
+                            seoData.seodesc = 'dhara-shah-studio';
+                        }
+                        if (req.params.url == "aagman-sarees") {
+                            seoData.seodesc = 'aagman-sarees';
+                        }
+                        if (req.params.url == "deepkala") {
+                            seoData.seodesc = 'deepkala';
+                        }
+                        if (req.params.url == "oak-pine") {
+                            seoData.seodesc = 'oak-pine';
+                        }
+                        if (req.params.url == "runi") {
+                            seoData.seodesc = 'runi';
+                        }
+                        if (req.params.url == "atosa") {
+                            seoData.seodesc = 'atosa';
+                        }
+
+                        res.render('storedetail', {
+                            seo: true,
+                            seoData: seoData,
+                            page: 'storedetail-page',
+                            titleurl: req.params.url,
+                            store: storedatas,
+                            storeCatalogs: storedatas.storeCatalogs,
+                            lengthstoreCatalogs: storedatas.storeCatalogs.length,
+                            storeOffers: storedatas.storeOffers,
+                            reviews: storedatas.reviews,
+                            reviewslength: storedatas.reviews.length,
+                            // moment: moment,
+                            similiarstores: similiarstores,
+                            lengthstoreOffers: storedatas.storeOffers.length,
+                            shareUrl: req.protocol + '://' + req.get('host') + req.originalUrl
+                        })
+                    });
                 });
             } else {
                 res.redirect(301, '/')

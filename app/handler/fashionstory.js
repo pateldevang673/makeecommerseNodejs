@@ -45,8 +45,6 @@ class FashionStoryHandler extends BaseAutoBindedClass {
             });
         }).then((results) => {
             var blog = JSON.parse(results)['data'];
-            console.log("blog------------------------------+")
-            console.log(blog.title)
             if (blog) {
                 var catBlogs = {
                     url: URLStore + '/story/?category=' + blog.category,
@@ -88,8 +86,8 @@ class FashionStoryHandler extends BaseAutoBindedClass {
                     })
                 })
             } else {
-                // res.redirect(301, '/')
-                res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
+                res.redirect(301, '/')
+                // res.render('404', { seo: false, title: '404 page not found', page: '404-page' })
             }
         })
     }

@@ -45,9 +45,23 @@ class CategoryHandler extends BaseAutoBindedClass {
 
     getClothingstore(req, res) {
         console.log("Clothing Category Page");
+
+        if (req.query.buisnessOffline) {
+            var querys = 'buisnessOffline=true';
+        } else if (req.query.buisnessOnline) {
+            var querys = 'buisnessOnline=true';
+        } else {
+            var querys = 'buisnessOffline=true';
+        }
+        if (req.query.city) {
+            querys += "&location=" + req.query.city;
+        }
+        if (req.route.path == "/Clothing") {
+            res.redirect(301, '/category/clothing?' + querys)
+        }
+
         var mainObj = {};
         if (req.query.buisnessOffline) {
-            // var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;
             var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=5a51e507ff645771bf57dc14';
         } else if (req.query.buisnessOnline) {
             var urls = '/stores/search?trending=true&isActive=true&buisnessOnline=true&category=5a51e507ff645771bf57dc14';
@@ -98,7 +112,23 @@ class CategoryHandler extends BaseAutoBindedClass {
     }
 
     getJewellerystore(req, res) {
+
         console.log("jewellery Category Page");
+
+        if (req.query.buisnessOffline) {
+            var querys = 'buisnessOffline=true';
+        } else if (req.query.buisnessOnline) {
+            var querys = 'buisnessOnline=true';
+        } else {
+            var querys = 'buisnessOffline=true';
+        }
+        if (req.query.city) {
+            querys += "&location=" + req.query.city;
+        }
+        if (req.route.path == "/Jewellery") {
+            res.redirect(301, '/category/jewellery?' + querys)
+        }
+
         var mainObj = {};
         if (req.query.buisnessOffline) {
             // var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;
@@ -152,6 +182,21 @@ class CategoryHandler extends BaseAutoBindedClass {
 
     getAccessoriesstore(req, res) {
         console.log("Accessories Category Page");
+
+        if (req.query.buisnessOffline) {
+            var querys = 'buisnessOffline=true';
+        } else if (req.query.buisnessOnline) {
+            var querys = 'buisnessOnline=true';
+        } else {
+            var querys = 'buisnessOffline=true';
+        }
+        if (req.query.city) {
+            querys += "&location=" + req.query.city;
+        }
+        if (req.route.path == "/Accessories") {
+            res.redirect(301, '/category/accessories?' + querys)
+        }
+
         var mainObj = {};
         if (req.query.buisnessOffline) {
             // var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;
@@ -205,6 +250,21 @@ class CategoryHandler extends BaseAutoBindedClass {
 
     getHomedecorstore(req, res) {
         console.log("Home Decore Category Page");
+
+        if (req.query.buisnessOffline) {
+            var querys = 'buisnessOffline=true';
+        } else if (req.query.buisnessOnline) {
+            var querys = 'buisnessOnline=true';
+        } else {
+            var querys = 'buisnessOffline=true';
+        }
+        if (req.query.city) {
+            querys += "&location=" + req.query.city;
+        }
+        if (req.route.path == "/Home-Decor") {
+            res.redirect(301, '/category/home-decor?' + querys)
+        }
+
         var mainObj = {};
         if (req.query.buisnessOffline) {
             // var urls = '/stores/search?trending=true&isActive=true&buisnessOffline=true&category=' + req.params.id;

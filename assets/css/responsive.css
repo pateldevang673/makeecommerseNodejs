@@ -651,6 +651,9 @@ textarea.frmInpt2{height:70px}
 .newsletter-group input{width:300px;float:left;color:#878787;padding:10px 10px;border-radius:0px;border:#d9d9d9 2px solid;}
 .subscribe-btn{min-width:100px;text-transform:none;margin-left:5px;cursor:pointer;line-height:42px;height:42px;float:left;background:#c42848;color:#fff;font-size:16px;border:none;font-weight:normal;}
 }
+.aboutShopBox{padding: 4%;}
+.infoBox{width: 95%;height: 200px;}
+
 @media screen and (max-width:480px){.headLinksMainWrap>li>a{font-size:12px}
 .hmeMainPrlxWrp{top:30%;}
 .hmeSldTtle{font-size:18px;}
@@ -871,3 +874,4 @@ textarea.frmInpt{height:70px}
 .thankmain{text-align: center;margin:0%;margin-top:40%;}
 .titlethnk{font-size:40px; padding-bottom: 10px;}
 .thankdis{padding-bottom: 30px;}
+.infoBox{width: 95%;height: 200px;}

@@ -101,17 +101,17 @@ html(lang='en')
     #fb-root
     script.
       window.fbAsyncInit = function() {
-      FB.init({
-      xfbml            : true,
-      version          : 'v3.2'
-      });
+        FB.init({
+          xfbml : true,
+          version : 'v3.2'
+        });
       };
       (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
       }(document, 'script', 'facebook-jssdk'));
     .fb-customerchat(attribution='setup_tool', page_id='266063187234418')
     .loginMainCont
@@ -143,19 +143,19 @@ html(lang='en')
       nav.sideNavMainWrp
         ul
           li.categoryicon.curs
-            a(name="Clothing",id="5a51e507ff645771bf57dc14")
+            a(name="clothing",id="5a51e507ff645771bf57dc14")
               i.clthIcon
               span Clothing
           li.categoryicon.curs
-            a(name="Jewellery",id="5a51e528ff645771bf57dc15")
+            a(name="jewellery",id="5a51e528ff645771bf57dc15")
               i.jwlIcon
               span Jewellery
           li.categoryicon.curs
-            a(name="Accessories",id="5a51e544ff645771bf57dc16")
+            a(name="accessories",id="5a51e544ff645771bf57dc16")
               i.accsIcon
               span Accessories
           li.categoryicon.curs
-            a(name="Home-Decor",id="5a51e626ff645771bf57dc1a")
+            a(name="home-decor",id="5a51e626ff645771bf57dc1a")
               i.decoIcon
               span Home Decor
       .respNavSubMenus

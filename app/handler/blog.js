@@ -41,13 +41,44 @@ class BlogHandler extends BaseAutoBindedClass {
 
     getAuthorBlogs(req, res) {
         var mainObj = {};
+
         if (req.route.path == "/auther/:authorURL") {
             res.redirect(301, '/blogs/author/' + req.params.authorURL)
         }
-        // if (req.params.authorURL == 'Shubharambh') {
-        //     res.redirect(301, '/blogs/author/Hetal-Shah')
-        // }
-        console.log("Author Page");
+        if (req.params.authorURL == 'Praghti-Malhotra') {
+            res.redirect(301, '/blogs/author/praghti-malhotra')
+        }
+        if (req.params.authorURL == 'Shubharambh') {
+            res.redirect(301, '/blogs/author/shubharambh')
+        }
+        if (req.params.authorURL == 'Zeepzoop-Team') {
+            res.redirect(301, '/blogs/author/zeepzoop-team')
+        }
+        if (req.params.authorURL == 'Hetal-Shah') {
+            res.redirect(301, '/blogs/author/hetal-shah')
+        }
+        if (req.params.authorURL == 'Vanita-Jain') {
+            res.redirect(301, '/blogs/author/vanita-jain')
+        }
+        if (req.params.authorURL == 'Maitri-Patel') {
+            res.redirect(301, '/blogs/author/maitri-patel')
+        }
+        if (req.params.authorURL == 'Dhruvi-Savsani') {
+            res.redirect(301, '/blogs/author/dhruvi-savsani')
+        }
+        if (req.params.authorURL == 'Bhavya-Modi') {
+            res.redirect(301, '/blogs/author/bhavya-modi')
+        }
+        if (req.params.authorURL == 'Zarana-Rathod') {
+            res.redirect(301, '/blogs/author/zarana-rathod')
+        }
+        if (req.params.authorURL == 'Shubham-Rajpara') {
+            res.redirect(301, '/blogs/author/shubham-rajpara')
+        }
+        if (req.params.authorURL == 'Dipali-Kotadiya') {
+            res.redirect(301, '/blogs/author/dipali-kotadiya')
+        }
+
         Promise.all([
                 this.requestAsync(req, URLStore + '/blogs/search?authorURL=' + req.params.authorURL + '&trending=true&sort=true', 'authorBlogs'),
                 this.requestAsync(req, URLStore + '/blogs/search?trending=true&sort=true', 'recommendedBlogs'),
@@ -72,35 +103,34 @@ class BlogHandler extends BaseAutoBindedClass {
                         site: 'Zeepzoop',
                         domain: 'zeepzoop.com'
                     }
-                    if (req.params.authorURL == 'Dipali-Kotadiya') {
+                    if (req.params.authorURL == 'dipali-kotadiya') {
                         seoData.title = 'Dipali Kotadiya - ZeepZoop';
                         seoData.description = "Dipali Kotadiya, a fashion blogger at ZeepZoop who love to see everything beautiful with good design and good art."
                     }
-                    if (req.params.authorURL == 'Pravesh-Patel') {
+                    if (req.params.authorURL == 'pravesh-patel') {
                         seoData.title = 'Pravesh Patel - ZeepZoop';
                         seoData.description = "Pravesh Patel, a fashion blogger at ZeepZoop who's style speaks volume when it comes to trending looks."
                     }
-                    if (req.params.authorURL == 'Zarana-Rathod') {
+                    if (req.params.authorURL == 'zarana-rathod') {
                         seoData.title = 'Zarana Rathod - ZeepZoop';
                         seoData.description = "Zarana Rathod, a fashion blogger and content marketing strategist at ZeepZoop. Her blog inspires you to revamp your wardrobe."
                     }
-                    if (req.params.authorURL == 'Shubharambh') {
+                    if (req.params.authorURL == 'shubharambh') {
                         seoData.title = 'Hetal Shah - ZeepZoop';
                         seoData.description = "Hetal Shah, a Lifestyle Blogger, Content Creator and Digital Marketer at ZeepZoop. Her blogs speak about art, design culture and many more."
                     }
-                    if (req.params.authorURL == 'Dhruvi-Savsani') {
+                    if (req.params.authorURL == 'dhruvi-savsani') {
                         seoData.title = 'Dhruvi Savsani - ZeepZoop';
                         seoData.description = "Dhruvi Savsani, a fashion and lifestyle content writer at ZeepZoop."
                     }
-                    if (req.params.authorURL == 'Vanita-Jain') {
+                    if (req.params.authorURL == 'vanita-jain') {
                         seoData.title = 'Vanita Jain - ZeepZoop';
                         seoData.description = "Vanita Jain, multi-tasker and an avid traveller who loves to write about the fashion industry at ZeepZoop."
                     }
-                    if (req.params.authorURL == 'Bhavya-Modi') {
+                    if (req.params.authorURL == 'bhavya-modi') {
                         seoData.title = 'Bhavya Modi - ZeepZoop';
                         seoData.description = "Bhavya Modi, Founder and CEO of ZeepZoop. Loves to write about technology, fashion, digital marketing."
                     }
-                    console.log(seoData)
                     res.render('auther', {
                         seo: true,
                         seoData: seoData,
@@ -179,7 +209,6 @@ class BlogHandler extends BaseAutoBindedClass {
 
     getSingleBlog(req, res) {
         console.log("Single Blog Page");
-        console.log(req.params.url)
         var q = url.parse(URLStore + '/blogs/search?URL=' + req.params.url, true);
         var optionsBlog = {
             url: URLStore + '/blogs/search?URL=' + req.params.url,
