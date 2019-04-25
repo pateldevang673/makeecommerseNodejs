@@ -16,19 +16,19 @@ section.secPad.pt0
     ul.featShopMainCont.popularGridWrap
      - for (var x = 0; x < ShanayaStorylength; x++)
         li
-          a.sclHov(href='/story/#{ShanayaStory[x]._id}')
+          a.sclHov(href='/story/single/#{ShanayaStory[x].URL}')
             img(src=global.config.variable.apiPath+'/#{ShanayaStory[x].bannerImage}', alt='img')
           .featShpInfWrp
-            a.popGrdTtle(href='/story/#{ShanayaStory[x]._id}') #{ShanayaStory[x].title}
-            // .popGrdDesc #{ShanayaStory[x].storeDiscription}
-            // .featShpActBtn
-            //   a.act_icn.icn_bokMark(href='#')
-            //     i
-            //   a.act_icn.icn_sharePst(href='#')
-            //     i
-          // .featShpRate #{ShanayaStory[x].avgRating}
-    // .txtCent.mt60
-    //   a.defBtn.loadMore(id="loadmoreshop") Load More
+            a.popGrdTtle(href='/story/single/#{ShanayaStory[x].URL}') #{ShanayaStory[x].title}
+    //-         // .popGrdDesc #{ShanayaStory[x].storeDiscription}
+    //-         // .featShpActBtn
+    //-         //   a.act_icn.icn_bokMark(href='#')
+    //-         //     i
+    //-         //   a.act_icn.icn_sharePst(href='#')
+    //-         //     i
+    //-       // .featShpRate #{ShanayaStory[x].avgRating}
+    //- // .txtCent.mt60
+    //- //   a.defBtn.loadMore(id="loadmoreshop") Load More
 
 include common/footer
 script.
