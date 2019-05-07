@@ -61,6 +61,20 @@ html(lang='en')
       j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
       })(window,document,'script','dataLayer','GTM-P2XDL2G');
+    script.
+      window.fbAsyncInit = function() {
+      FB.init({
+      xfbml            : true,
+      version          : 'v3.2'
+      });
+      };
+      (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
+      fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
     script(type='application/ld+json').
       {
         "@context" : "http://schema.org",
@@ -103,6 +117,8 @@ html(lang='en')
           "https://in.pinterest.com/zeepzoopofficial/"
         ]
       }
+    #fb-root
+    .fb-customerchat(attribution='setup_tool', page_id='266063187234418')
   body(class=page)
     .loginMainCont
       .logOlay
@@ -417,20 +433,4 @@ html(lang='en')
       });
     noscript
       img(height='1', width='1', style='display:none', src='https://www.facebook.com/tr?id=2198070697115930&ev=PageView&noscript=1')
-    #fb-root
-    .fb-customerchat(attribution='setup_tool', page_id='266063187234418')
-    script.
-      window.fbAsyncInit = function() {
-      FB.init({
-      xfbml            : true,
-      version          : 'v3.2'
-      });
-      };
-      (function(d, s, id) {
-      var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id)) return;
-      js = d.createElement(s); js.id = id;
-      js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-      fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));
 
