@@ -47,6 +47,6 @@
     "rating": "^0.1.0",
     "request": "^2.88.0",
     "should": "^11.2.1",
-    "validator": "^7.0.0"
+    "validator": "^13.7.0"
   }
 }
